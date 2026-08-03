@@ -82,5 +82,33 @@
     "cjVid": "1502494542946381824",
     "costUSD": 8.85,
     "addedAt": "2026-08-03T18:01:55.864Z"
+  },
+  {
+    "id": 16,
+    "catClass": "home",
+    "price": 98,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/1621048755792.jpg",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Easy Installation Curtains For Bedroom",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊實測過質素先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Easy Installation Curtains For Bedroom",
+        "desc": "小户型也适用,省空间实用之选。团队实测质量才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Easy Installation Curtains For Bedroom",
+        "desc": "A practical, space-saving pick tested by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "1393407608219635712",
+    "cjVid": "1393407609591173120",
+    "costUSD": 4.27,
+    "addedAt": "2026-08-03T18:02:00.100Z"
   }
 ]
