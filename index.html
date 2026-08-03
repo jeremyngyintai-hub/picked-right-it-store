@@ -207,6 +207,10 @@
   .pd-trust{margin-top:30px;padding-top:22px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:8px;}
   .pd-trust div{display:flex;align-items:center;gap:8px;font-size:.84rem;color:var(--ink-soft);}
   .pd-trust svg{color:var(--accent-a);width:16px;height:16px;}
+  .pd-badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;}
+  .pd-badges span{font-size:.68rem;color:var(--ink-soft);border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-family:'Inter',sans-serif;}
+  .cart-secure{display:flex;align-items:center;justify-content:center;gap:6px;font-size:.72rem;color:var(--ink-soft);margin:8px 0 2px;}
+  .cart-secure svg{width:13px;height:13px;color:var(--sage);}
   .related-title{font-size:1.2rem;margin-bottom:22px;}
   .product-bottom-pad{padding:20px 0 80px;}
 
@@ -355,6 +359,7 @@
   <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
   <symbol id="icon-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h11v10H2z"/><path d="M13 10h5l3 3v4h-8z"/><circle cx="6" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/></symbol>
   <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 5-3.4 8-7 9-3.6-1-7-4-7-9V6z"/></symbol>
+  <symbol id="icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
 </svg>
 
 <!-- ============ HEADER ============ -->
@@ -605,9 +610,10 @@
   <div class="cart-items" id="cartItemsBox"></div>
   <div class="cart-foot">
     <div class="cart-subtotal"><span data-i18n="cart.subtotal">小計</span><b id="cartSubtotal">HK$0</b></div>
-    <button class="btn btn-primary" style="width:100%;margin-bottom:10px" onclick="checkoutCard()">
+    <button class="btn btn-primary" style="width:100%;margin-bottom:6px" onclick="checkoutCard()">
       <span id="cardCheckoutLabel">信用卡付款(自動處理)</span>
     </button>
+    <p class="cart-secure"><svg><use href="#icon-lock"/></svg><span data-i18n="cart.secureNote">SSL加密 · Stripe安全付款</span></p>
     <button class="btn btn-whatsapp" onclick="checkoutWhatsApp()">
       <svg class="icon-sm"><use href="#icon-chat"/></svg><span data-i18n="cart.checkout">透過 WhatsApp 落單</span>
     </button>
@@ -678,9 +684,9 @@ const I18N = {
     desc:'第一時間收到新品上架、限定優惠同補貨通知,唔想錯過就click低面個掣。',cta:'用WhatsApp加入',
     waMsg:'你好,我想加入揀啱嘅WhatsApp情報網,接收新品同優惠通知。'},
   product:{add:'加入購物車',added:'已加入 ✓',back:'返回產品列表',related:'你可能都啱用',
-    ship:'48小時內處理出貨,順豐站自取',guarantee:'7日試用,唔啱包退',badge:'熱賣',detailTrending:'熱賣中',reviewsWord:'則評價'},
+    ship:'48小時內處理出貨,順豐站自取',guarantee:'7日試用,唔啱包退',securePay:'Stripe安全加密付款',badge:'熱賣',detailTrending:'熱賣中',reviewsWord:'則評價'},
   cart:{title:'購物車',empty:'購物車暫時得個吉,<br>返去揀啲啱你嘅嘢啦。',subtotal:'小計',
-    checkout:'透過 WhatsApp 落單',note:'運費另計,落單後客服會盡快同你確認',remove:'移除',
+    checkout:'透過 WhatsApp 落單',note:'運費另計,落單後客服會盡快同你確認',secureNote:'SSL加密 · Stripe安全付款',remove:'移除',
     waGreeting:'你好,我想落單:',waTotal:'總計'},
   promo:{msg1:'新客戶專享:首次落單輸入優惠碼 PICKED10 即享9折',msg2:'滿HK$300免運費 · 順豐站48小時內送達'},
   footer:{desc:'香港生活選物店,由家居、美妝到電子配件,每款都經團隊實測先上架。',seriesTitle:'選物系列',
@@ -716,9 +722,9 @@ const I18N = {
     desc:'第一时间收到新品上架、限定优惠和补货通知,不想错过就点下面的按钮。',cta:'用WhatsApp加入',
     waMsg:'您好,我想加入拣啱的WhatsApp情报网,接收新品和优惠通知。'},
   product:{add:'加入购物车',added:'已加入 ✓',back:'返回产品列表',related:'你可能也用得上',
-    ship:'48小时内处理发货,顺丰站自取',guarantee:'7天试用,不满意包退',badge:'热卖',detailTrending:'热卖中',reviewsWord:'条评价'},
+    ship:'48小时内处理发货,顺丰站自取',guarantee:'7天试用,不满意包退',securePay:'Stripe安全加密付款',badge:'热卖',detailTrending:'热卖中',reviewsWord:'条评价'},
   cart:{title:'购物车',empty:'购物车暂时是空的,<br>回去挑些适合你的东西吧。',subtotal:'小计',
-    checkout:'通过 WhatsApp 下单',note:'运费另计,下单后客服会尽快与你确认',remove:'移除',
+    checkout:'通过 WhatsApp 下单',note:'运费另计,下单后客服会尽快与你确认',secureNote:'SSL加密 · Stripe安全付款',remove:'移除',
     waGreeting:'您好,我想下单:',waTotal:'总计'},
   promo:{msg1:'新客户专享:首次下单输入优惠码 PICKED10 即享9折',msg2:'满HK$300免运费 · 顺丰站48小时内送达'},
   footer:{desc:'香港生活选品店,从家居、美妆到电子配件,每款都经团队实测才上架。',seriesTitle:'选品系列',
@@ -754,9 +760,9 @@ const I18N = {
     desc:'Be the first to know about new arrivals, exclusive offers, and restocks.',cta:'Join via WhatsApp',
     waMsg:"Hi, I'd like to join the Picked Right It WhatsApp list for new arrivals and offers."},
   product:{add:'Add to Cart',added:'Added ✓',back:'Back to Products',related:'You Might Also Like',
-    ship:'Ships within 48 hours · SF Locker pickup',guarantee:'7-day trial, easy returns',badge:'Hot',detailTrending:'Trending',reviewsWord:'reviews'},
+    ship:'Ships within 48 hours · SF Locker pickup',guarantee:'7-day trial, easy returns',securePay:'Secure encrypted payment via Stripe',badge:'Hot',detailTrending:'Trending',reviewsWord:'reviews'},
   cart:{title:'Your Cart',empty:"Your cart is empty right now.<br>Go find something that's right for you.",subtotal:'Subtotal',
-    checkout:'Order via WhatsApp',note:'Shipping calculated separately — our team will confirm shortly after you order',remove:'Remove',
+    checkout:'Order via WhatsApp',note:'Shipping calculated separately — our team will confirm shortly after you order',secureNote:'SSL encrypted · Secure payment via Stripe',remove:'Remove',
     waGreeting:"Hi, I'd like to place an order:",waTotal:'Total'},
   promo:{msg1:"New here? Use code PICKED10 for 10% off your first order",msg2:'Free shipping over HK$300 · Delivered within 48 hours'},
   footer:{desc:'A Hong Kong lifestyle store spanning home goods, beauty, and everyday tech — every item tested by our team first.',
@@ -989,6 +995,10 @@ function showProduct(id, silent){
       <div class="pd-trust">
         <div><svg><use href="#icon-truck"/></svg>${t('product.ship')}</div>
         <div><svg><use href="#icon-shield"/></svg>${t('product.guarantee')}</div>
+        <div><svg><use href="#icon-lock"/></svg>${t('product.securePay')}</div>
+      </div>
+      <div class="pd-badges" aria-hidden="true">
+        <span>Visa</span><span>Mastercard</span><span>Stripe Secure</span><span>PDPO 私隱保障</span>
       </div>
     </div>`;
   document.getElementById('relatedGrid').innerHTML =
