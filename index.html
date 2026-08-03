@@ -844,11 +844,14 @@ function starsStr(rating){
 }
 
 function productCardHTML(p){
+  const visual = p.image
+    ? `<img src="${p.image}" alt="${pName(p)}" loading="lazy" style="width:100%;height:100%;object-fit:cover">`
+    : `<svg><use href="#icon-${p.icon}"/></svg>`;
   return `
   <div class="product-card">
     <div class="product-visual cat-${p.catClass}-bg" onclick="showProduct(${p.id})">
       ${p.trending ? `<span class="badge">${t('product.badge')}</span>` : ''}
-      <svg><use href="#icon-${p.icon}"/></svg>
+      ${visual}
     </div>
     <div class="product-info">
       <span class="product-cat">${CAT_LABELS[currentLang][p.catClass]}</span>
@@ -989,7 +992,7 @@ function showProduct(id, silent){
   currentProductCat = p.catClass;
   if(!silent) { showView('product'); pdQty = 1; }
   document.getElementById('pdInner').innerHTML = `
-    <div class="pd-visual cat-${p.catClass}-bg"><svg><use href="#icon-${p.icon}"/></svg></div>
+    <div class="pd-visual cat-${p.catClass}-bg">${p.image ? `<img src="${p.image}" alt="${pName(p)}" style="width:100%;height:100%;object-fit:cover">` : `<svg><use href="#icon-${p.icon}"/></svg>`}</div>
     <div class="pd-info">
       <span class="pd-cat" style="color:var(--${p.catClass==='home'?'sage':p.catClass==='beauty'?'mark':'tech'})">${CAT_LABELS[currentLang][p.catClass]}${p.trending?' · '+t('product.detailTrending'):''}</span>
       <h1>${pName(p)}</h1>
@@ -1071,7 +1074,7 @@ function renderCartDrawer(){
       const qty = cart[idStr];
       return `
       <div class="cart-row">
-        <div class="cv cat-${p.catClass}-bg"><svg><use href="#icon-${p.icon}"/></svg></div>
+        <div class="cv cat-${p.catClass}-bg">${p.image ? `<img src="${p.image}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:10px">` : `<svg><use href="#icon-${p.icon}"/></svg>`}</div>
         <div class="ci">
           <h4>${pName(p)}</h4>
           <div class="price">${fmt(p.price)}</div>
