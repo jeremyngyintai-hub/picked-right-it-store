@@ -89,10 +89,56 @@ async function getOrderDetail(accessToken, cjOrderId) {
   );
 }
 
+// 攞返CJ嘅分類樹(用嚟自動搵返「家居/美妝/電子」對應嘅categoryId,唔使人手查)
+async function getCategoryTree(accessToken) {
+  return await cjRequest("/product/getCategory", "GET", null, accessToken);
+}
+
+// 喺分類樹入面,搵返個名有包含指定關鍵字嘅categoryId清單
+function findCategoryIds(tree, keywords) {
+  const ids = [];
+  const kw = keywords.map((k) => k.toLowerCase());
+  (tree || []).forEach((first) => {
+    const firstMatch = kw.some((k) => (first.categoryFirstName || "").toLowerCase().includes(k));
+    (first.categoryFirstList || []).forEach((second) => {
+      const secondMatch = kw.some((k) => (second.categorySecondName || "").toLowerCase().includes(k));
+      (second.categorySecondList || []).forEach((third) => {
+        const thirdMatch = kw.some((k) => (third.categoryName || "").toLowerCase().includes(k));
+        if (firstMatch || secondMatch || thirdMatch) ids.push(third.categoryId);
+      });
+    });
+  });
+  return ids;
+}
+
+// 搵「熱賣趨勢」產品(searchType=2),按上架次數(listedNum)由高到低排,
+// 可以夾埋 deliveryTime 篩選,務求配合「48小時出貨」呢個承諾
+async function searchTrendingProducts(accessToken, { categoryId, deliveryTime, pageSize = 10 } = {}) {
+  const params = new URLSearchParams({
+    searchType: "2",
+    orderBy: "listedNum",
+    sort: "desc",
+    pageNum: "1",
+    pageSize: String(pageSize),
+  });
+  if (categoryId) params.set("categoryId", categoryId);
+  if (deliveryTime) params.set("deliveryTime", String(deliveryTime));
+  return await cjRequest(`/product/list?${params.toString()}`, "GET", null, accessToken);
+}
+
+// 攞單一產品嘅完整資料(包括variants/vid),畀你揀中之後補完productMap用
+async function getProductDetail(accessToken, pid) {
+  return await cjRequest(`/product/query?pid=${pid}`, "GET", null, accessToken);
+}
+
 module.exports = {
   getAccessToken,
   ensureShippingAddress,
   createDraftOrder,
   submitOrder,
   getOrderDetail,
+  getCategoryTree,
+  findCategoryIds,
+  searchTrendingProducts,
+  getProductDetail,
 };
