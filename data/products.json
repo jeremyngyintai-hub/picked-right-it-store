@@ -110,5 +110,33 @@
     "cjVid": "1393407609591173120",
     "costUSD": 4.27,
     "addedAt": "2026-08-03T18:02:00.100Z"
+  },
+  {
+    "id": 17,
+    "catClass": "home",
+    "price": 128,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/2d787d0a-010c-47a7-bc4d-27da4ca3ef00.jpg",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Dark Blue Bedroom Blackout Fabric Printed Curtains",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊實測過質素先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Dark Blue Bedroom Blackout Fabric Printed Curtains",
+        "desc": "小户型也适用,省空间实用之选。团队实测质量才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Dark Blue Bedroom Blackout Fabric Printed Curtains",
+        "desc": "A practical, space-saving pick tested by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "1450275773595389952",
+    "cjVid": "1450275773649915904",
+    "costUSD": 5.72,
+    "addedAt": "2026-08-03T18:02:05.103Z"
   }
 ]
