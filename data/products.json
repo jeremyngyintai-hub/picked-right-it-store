@@ -166,5 +166,33 @@
     "cjVid": "1392018089993965568",
     "costUSD": 1.17,
     "addedAt": "2026-08-03T18:02:10.251Z"
+  },
+  {
+    "id": 19,
+    "catClass": "beauty",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/2047/276847883414.jpg",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "500 transparent  natural fake nails",
+        "desc": "屋企就做到嘅精緻感。團隊親身試用先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "500 transparent  natural fake nails",
+        "desc": "在家也能拥有的精致感。团队亲身试用才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "500 transparent  natural fake nails",
+        "desc": "Salon-level results at home. Tested by our team before listing — ships within 48 hours."
+      }
+    },
+    "cjPid": "A5F040B6-15A0-4664-801F-3D31D7CFBE75",
+    "cjVid": "01EACD72-C8EF-424A-B279-2A1AB4AB1134",
+    "costUSD": 0.98,
+    "addedAt": "2026-08-03T18:02:14.145Z"
   }
 ]
