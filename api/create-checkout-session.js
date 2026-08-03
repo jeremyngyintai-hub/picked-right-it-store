@@ -6,7 +6,7 @@
 // ============================================================
 
 const Stripe = require("stripe");
-const productMap = require("./lib/productMap");
+const { getCatalog } = require("./lib/catalog");
 
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -21,6 +21,8 @@ module.exports = async (req, res) => {
     if (ids.length === 0) {
       return res.status(400).json({ error: "購物車係空嘅" });
     }
+
+    const productMap = await getCatalog();
 
     // 價錢一律以伺服器呢邊 productMap 為準,唔信前端傳嚟嘅價錢
     const line_items = ids.map((id) => {

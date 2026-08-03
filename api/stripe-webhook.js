@@ -13,7 +13,7 @@
 // ============================================================
 
 const Stripe = require("stripe");
-const productMap = require("./lib/productMap");
+const { getCatalog } = require("./lib/catalog");
 const cj = require("./lib/cjClient");
 
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
@@ -58,6 +58,7 @@ module.exports = async (req, res) => {
       });
       const shipping = fullSession.shipping_details || fullSession.customer_details;
       const cart = JSON.parse(session.metadata.cart);
+      const productMap = await getCatalog();
 
       const accessToken = await cj.getAccessToken();
 

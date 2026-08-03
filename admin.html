@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>揀啱 · 贏家產品管理台</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f2eef4; --card:#fbf9fb; --ink:#1f1726; --ink-soft:#726a78;
+    --accent-a:#ff3d7a; --accent-b:#5b3df5;
+    --accent-grad:linear-gradient(135deg,var(--accent-a),var(--accent-b));
+    --line:#ddd5df; --ok:#2e9e5b; --warn:#c97b1d;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Noto Sans TC','Inter',sans-serif;line-height:1.6;}
+  .wrap{max-width:1100px;margin:0 auto;padding:28px 20px 80px;}
+  h1{font-size:1.4rem;margin:0 0 4px;}
+  .sub{color:var(--ink-soft);font-size:.86rem;margin-bottom:24px;}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:20px;}
+  label{display:block;font-size:.78rem;font-weight:600;color:var(--ink-soft);margin-bottom:6px;}
+  input,select{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:10px;font-family:inherit;font-size:.9rem;background:#fff;}
+  .row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;align-items:end;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;border:none;border-radius:999px;background:var(--accent-grad);color:#fff;font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;transition:filter .15s;}
+  .btn:hover{filter:brightness(.94);}
+  .btn:disabled{opacity:.5;cursor:not-allowed;}
+  .btn-sm{padding:9px 18px;font-size:.8rem;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;}
+  .pcard{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;}
+  .pcard img{width:100%;aspect-ratio:1;object-fit:cover;background:#eee;}
+  .pcard .pi{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1;}
+  .pcard .pname{font-size:.82rem;line-height:1.4;flex:1;}
+  .pcard .meta{font-size:.74rem;color:var(--ink-soft);font-family:'Inter',sans-serif;}
+  .pcard .prices{display:flex;justify-content:space-between;font-family:'Inter',sans-serif;font-size:.82rem;}
+  .pcard .sell{font-weight:700;color:var(--accent-a);}
+  .margin-tag{font-size:.72rem;color:var(--ok);font-weight:600;}
+  .status{margin-top:14px;font-size:.85rem;padding:12px 16px;border-radius:10px;display:none;}
+  .status.ok{display:block;background:#e5f4ea;color:var(--ok);}
+  .status.err{display:block;background:#fbe9e9;color:#b3372f;}
+  .cat-tabs{display:flex;gap:8px;margin:18px 0 14px;}
+  .cat-tab{padding:8px 18px;border-radius:999px;border:1px solid var(--line);background:none;font-family:inherit;font-size:.82rem;cursor:pointer;color:var(--ink-soft);}
+  .cat-tab.on{background:var(--accent-grad);color:#fff;border-color:transparent;}
+  .note{font-size:.76rem;color:var(--ink-soft);margin-top:10px;}
+  @media(max-width:700px){.row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>贏家產品管理台</h1>
+  <p class="sub">搵CJ熱賣產品 → 設定利潤 → 一撳上架到 picked-right.it.com</p>
+
+  <div class="panel">
+    <div class="row">
+      <div>
+        <label>管理密碼</label>
+        <input type="password" id="secret" placeholder="ADMIN_SYNC_SECRET">
+      </div>
+      <div>
+        <label>利潤倍數(售價 = 成本 × 倍數)</label>
+        <input type="number" id="markup" value="2.8" step="0.1" min="1.2">
+      </div>
+      <div>
+        <button class="btn" id="loadBtn" onclick="loadWinners()">搵贏家產品</button>
+      </div>
+    </div>
+    <p class="note">倍數參考:2.5-3.0係dropshipping常見水平(要cover廣告+運費+Stripe手續費先有淨利)。改完倍數,下面啲售價會即時重新計算。</p>
+    <div class="status" id="topStatus"></div>
+  </div>
+
+  <div class="cat-tabs" id="catTabs" style="display:none">
+    <button class="cat-tab on" data-cat="home" onclick="switchCat('home',this)">家居</button>
+    <button class="cat-tab" data-cat="beauty" onclick="switchCat('beauty',this)">美妝</button>
+    <button class="cat-tab" data-cat="tech" onclick="switchCat('tech',this)">電子</button>
+  </div>
+
+  <div class="grid" id="grid"></div>
+</div>
+
+<script>
+const USD_TO_HKD = 7.8;
+let winnersData = null;
+let currentCat = 'home';
+
+function prettyPrice(raw){
+  const rounded = Math.ceil(raw/10)*10 - 2;
+  return Math.max(rounded, 48);
+}
+function parseCost(v){
+  if(v==null) return null;
+  const m = String(v).match(/[\d.]+/g);
+  return m ? parseFloat(m[0]) : null;
+}
+function setStatus(el, msg, type){
+  el.textContent = msg;
+  el.className = 'status ' + type;
+}
+
+async function loadWinners(){
+  const secret = document.getElementById('secret').value.trim();
+  const st = document.getElementById('topStatus');
+  if(!secret){ setStatus(st,'請先輸入管理密碼','err'); return; }
+  const btn = document.getElementById('loadBtn');
+  btn.disabled = true; btn.textContent = '搵緊...(約15秒)';
+  try{
+    const res = await fetch(`/api/admin/trending-picks?secret=${encodeURIComponent(secret)}`);
+    const data = await res.json();
+    if(data.error) throw new Error(data.error);
+    winnersData = data.results;
+    document.getElementById('catTabs').style.display = 'flex';
+    setStatus(st, `搵到:家居${(data.results.home||[]).length}款 · 美妝${(data.results.beauty||[]).length}款 · 電子${(data.results.tech||[]).length}款`, 'ok');
+    renderGrid();
+  }catch(e){
+    setStatus(st, '搵貨失敗:' + e.message, 'err');
+  }finally{
+    btn.disabled = false; btn.textContent = '搵贏家產品';
+  }
+}
+
+function switchCat(cat, el){
+  currentCat = cat;
+  document.querySelectorAll('.cat-tab').forEach(t=>t.classList.remove('on'));
+  el.classList.add('on');
+  renderGrid();
+}
+
+function renderGrid(){
+  const grid = document.getElementById('grid');
+  const markup = parseFloat(document.getElementById('markup').value) || 2.8;
+  const items = (winnersData && winnersData[currentCat]) || [];
+  if(items.length === 0){ grid.innerHTML = '<p style="color:var(--ink-soft)">呢個類別暫時冇結果。</p>'; return; }
+  grid.innerHTML = items.map((p,i)=>{
+    const cost = parseCost(p.cjCostUSD);
+    const sell = cost ? prettyPrice(cost * USD_TO_HKD * markup) : null;
+    const marginHKD = (cost && sell) ? Math.round(sell - cost*USD_TO_HKD) : null;
+    return `
+    <div class="pcard">
+      <img src="${p.image||''}" alt="" loading="lazy" onerror="this.style.display='none'">
+      <div class="pi">
+        <div class="pname">${p.nameEn||''}</div>
+        <div class="meta">上架數 ${p.listedNum||'-'} · 成本 US$${cost!=null?cost:'?'}</div>
+        <div class="prices"><span>賣價</span><span class="sell">${sell?('HK$'+sell):'—'}</span></div>
+        ${marginHKD!=null?`<div class="margin-tag">毛利約 HK$${marginHKD}/件(未計運費廣告)</div>`:''}
+        <button class="btn btn-sm" onclick="importProduct(${i}, this)">一撳上架</button>
+        <div class="status" id="st-${currentCat}-${i}"></div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+document.getElementById('markup').addEventListener('input', ()=>{ if(winnersData) renderGrid(); });
+
+async function importProduct(index, btn){
+  const secret = document.getElementById('secret').value.trim();
+  const markup = parseFloat(document.getElementById('markup').value) || 2.8;
+  const p = winnersData[currentCat][index];
+  const st = document.getElementById(`st-${currentCat}-${index}`);
+  btn.disabled = true; btn.textContent = '上架緊...';
+  try{
+    const res = await fetch('/api/admin/auto-import', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ secret, pid: p.cjPid, cat: currentCat, markup })
+    });
+    const data = await res.json();
+    if(data.error) throw new Error(data.error);
+    setStatus(st, `✓ 上架成功!HK$${data.product.priceHKD},毛利約HK$${data.product.estGrossMarginHKD}。等約1分鐘部署完就live。`, 'ok');
+    btn.textContent = '已上架 ✓';
+  }catch(e){
+    setStatus(st, '上架失敗:' + e.message, 'err');
+    btn.disabled = false; btn.textContent = '一撳上架';
+  }
+}
+</script>
+</body>
+</html>

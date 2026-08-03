@@ -1186,6 +1186,24 @@ applyI18n();
 setupReveal();
 setInterval(rotatePromo, 4500);
 renderProductSchema();
+
+/* ===== 載入管理台自動上架嘅動態產品 ===== */
+(async function loadDynamicProducts(){
+  try{
+    const res = await fetch('/data/products.json', {cache:'no-store'});
+    if(!res.ok) return;
+    const list = await res.json();
+    if(!Array.isArray(list) || list.length === 0) return;
+    list.forEach(p => {
+      if(!PRODUCTS.some(x => x.id === p.id)) PRODUCTS.push(p);
+    });
+    // 重新render受影響嘅區塊
+    document.getElementById('trendingGrid').innerHTML = PRODUCTS.filter(p => p.trending).map(productCardHTML).join('');
+    const activeView = document.querySelector('.view.active').id;
+    if(activeView === 'view-shop') renderShopGrid(currentProductCat);
+    renderProductSchema();
+  }catch(e){ /* 動態目錄載入失敗唔影響內置產品 */ }
+})();
 </script>
 
 </body>
