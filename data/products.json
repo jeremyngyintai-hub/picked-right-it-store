@@ -390,5 +390,33 @@
     "cjVid": "1D4CF3E8-FB84-4499-945B-043E06C6F7A0",
     "costUSD": 3.7,
     "addedAt": "2026-08-03T18:03:30.808Z"
+  },
+  {
+    "id": 27,
+    "catClass": "tech",
+    "price": 68,
+    "icon": "box",
+    "image": "https://oss-cf.cjdropshipping.com/product/2024/11/25/11/9b39f078-dbe0-41e9-b67d-2c3e0b5cab12_trans.jpeg",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Industry gaming keyboard glowing usb cable gaming keyboard",
+        "desc": "返工打機兩用嘅實用之選。團隊實測先上架,即插即用,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Industry gaming keyboard glowing usb cable gaming keyboard",
+        "desc": "办公游戏两用的实用之选。团队实测才上架,即插即用,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Industry gaming keyboard glowing usb cable gaming keyboard",
+        "desc": "A practical pick for work and play, tested by our team. Plug and play — ships within 48 hours."
+      }
+    },
+    "cjPid": "E268583E-A4C1-4638-BDF0-0C41BC46F91B",
+    "cjVid": "1C7B8263-009E-4035-8424-4715CFC1407A",
+    "costUSD": 3.11,
+    "addedAt": "2026-08-03T18:03:35.540Z"
   }
 ]
