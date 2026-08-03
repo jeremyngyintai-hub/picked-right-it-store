@@ -596,6 +596,9 @@
   <div class="cart-items" id="cartItemsBox"></div>
   <div class="cart-foot">
     <div class="cart-subtotal"><span data-i18n="cart.subtotal">小計</span><b id="cartSubtotal">HK$0</b></div>
+    <button class="btn btn-primary" style="width:100%;margin-bottom:10px" onclick="checkoutCard()">
+      <span id="cardCheckoutLabel">信用卡付款(自動處理)</span>
+    </button>
     <button class="btn btn-whatsapp" onclick="checkoutWhatsApp()">
       <svg class="icon-sm"><use href="#icon-chat"/></svg><span data-i18n="cart.checkout">透過 WhatsApp 落單</span>
     </button>
@@ -1075,6 +1078,31 @@ function closeCart(){
   document.getElementById('cartOverlay').classList.remove('show');
   document.getElementById('cartDrawer').classList.remove('show');
 }
+async function checkoutCard(){
+  const ids = Object.keys(cart);
+  if (ids.length === 0) return;
+  const label = document.getElementById('cardCheckoutLabel');
+  const original = label.textContent;
+  label.textContent = '處理緊...';
+  try {
+    const res = await fetch('/api/create-checkout-session', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ cart })
+    });
+    const data = await res.json();
+    if (data.url) {
+      window.location.href = data.url;
+    } else {
+      alert('結帳暫時未能開啟,請WhatsApp我哋。');
+      label.textContent = original;
+    }
+  } catch (e) {
+    alert('結帳暫時未能開啟,請WhatsApp我哋。');
+    label.textContent = original;
+  }
+}
+
 function checkoutWhatsApp(){
   const ids = Object.keys(cart);
   if(ids.length === 0) return;
