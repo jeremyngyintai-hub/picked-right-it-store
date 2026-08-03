@@ -1,24 +1,70 @@
 // ============================================================
 // GET /api/admin/trending-picks?secret=xxx
-// 自動喺CJ搵「家居/美妝/電子」熱賣候選產品
+// 自動喺CJ搵「家居/美妝/電子」熱賣候選產品(有速度控制版)
 // ============================================================
 
-const cj = require("../lib/cjClient");
-
-// 每個系列直接用CJ第一層分類名匹配(對返debug見到嘅真實名稱)
 const CATEGORY_KEYWORDS = {
-  home: ["Home, Garden & Furniture", "Home Improvement", "Home Appliances"],
+  home: ["Home, Garden & Furniture", "Home Improvement"],
   beauty: ["Health, Beauty & Hair"],
-  tech: ["Consumer Electronics", "Phones & Accessories", "Computer & Office"],
+  tech: ["Consumer Electronics", "Phones & Accessories"],
 };
 
 const USD_TO_HKD = 7.8;
 const MARKUP = 2.8;
+const CJ_BASE = "https://developers.cjdropshipping.com/api2.0/v1";
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// CJ價錢可能係 "2.62 -- 20.29" 呢種範圍,取低位做成本基準
+function parseCostUSD(sellPrice) {
+  if (sellPrice == null) return null;
+  const str = String(sellPrice);
+  const nums = str.match(/[\d.]+/g);
+  if (!nums || nums.length === 0) return null;
+  return parseFloat(nums[0]);
+}
 
 function toRetailPriceHKD(costUSD) {
-  const raw = Number(costUSD) * USD_TO_HKD * MARKUP;
+  const cost = parseCostUSD(costUSD);
+  if (cost == null) return null;
+  const raw = cost * USD_TO_HKD * MARKUP;
   const rounded = Math.ceil(raw / 10) * 10 - 2;
   return Math.max(rounded, 48);
+}
+
+async function getAccessToken() {
+  const res = await fetch(`${CJ_BASE}/authentication/getAccessToken`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ apiKey: process.env.CJ_API_KEY }),
+  });
+  const data = await res.json();
+  if (!data.result) throw new Error(`CJ auth: ${data.message}`);
+  return data.data.accessToken;
+}
+
+async function cjGet(path, accessToken) {
+  const res = await fetch(`${CJ_BASE}${path}`, {
+    headers: { "CJ-Access-Token": accessToken },
+  });
+  const data = await res.json();
+  if (!data.result && !data.success) throw new Error(data.message || "CJ error");
+  return data.data;
+}
+
+function findCategoryIds(tree, keywords) {
+  const ids = [];
+  const kw = keywords.map((k) => k.toLowerCase());
+  (tree || []).forEach((first) => {
+    const firstMatch = kw.some((k) => (first.categoryFirstName || "").toLowerCase().includes(k));
+    (first.categoryFirstList || []).forEach((second) => {
+      const secondMatch = kw.some((k) => (second.categorySecondName || "").toLowerCase().includes(k));
+      (second.categorySecondList || []).forEach((third) => {
+        if (firstMatch || secondMatch) ids.push(third.categoryId);
+      });
+    });
+  });
+  return ids;
 }
 
 module.exports = async (req, res) => {
@@ -27,35 +73,34 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const accessToken = await cj.getAccessToken();
-    const tree = await cj.getCategoryTree(accessToken);
+    const accessToken = await getAccessToken();
+    await sleep(1100);
+    const tree = await cjGet("/product/getCategory", accessToken);
+    await sleep(1100);
 
     const results = {};
-    const debug = { matchedCategoryIds: {}, rawCandidatesFound: {}, errors: [] };
+    const debug = { rawCandidatesFound: {}, errors: [] };
 
     for (const [ourCat, keywords] of Object.entries(CATEGORY_KEYWORDS)) {
-      const categoryIds = cj.findCategoryIds(tree, keywords);
-      debug.matchedCategoryIds[ourCat] = categoryIds.length;
+      const categoryIds = findCategoryIds(tree, keywords);
       let candidates = [];
 
-      // 唔用trending篩選,改用「最多人上架」排序,逐個分類搵
-      for (const categoryId of categoryIds.slice(0, 8)) {
-        if (candidates.length >= 10) break;
+      // 每個系列淨係查2個分類,每次query之間停1.1秒,避免撞QPS上限
+      for (const categoryId of categoryIds.slice(0, 2)) {
         try {
           const params = new URLSearchParams({
             categoryId,
             orderBy: "listedNum",
             sort: "desc",
             pageNum: "1",
-            pageSize: "5",
+            pageSize: "10",
           });
-          const list = await require("../lib/cjClient").rawGet
-            ? null
-            : await cjListRaw(accessToken, params);
+          const list = await cjGet(`/product/list?${params.toString()}`, accessToken);
           if (list && list.list) candidates.push(...list.list);
         } catch (e) {
           debug.errors.push(`${ourCat}: ${e.message}`);
         }
+        await sleep(1100);
       }
 
       debug.rawCandidatesFound[ourCat] = candidates.length;
@@ -83,7 +128,7 @@ module.exports = async (req, res) => {
     }
 
     res.status(200).json({
-      note: "建議售價=CJ成本xUSD匯率x2.8倍再調靚尾數。上架前記得人手覆核,並用pid攞返variants(vid)。",
+      note: "建議售價=CJ成本下限xUSD匯率x2.8倍。上架前記得人手覆核,並用pid攞返variants(vid)。",
       debug,
       results,
     });
@@ -92,14 +137,3 @@ module.exports = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
-
-// 直接call CJ product/list(唔經searchType篩選)
-async function cjListRaw(accessToken, params) {
-  const res = await fetch(
-    `https://developers.cjdropshipping.com/api2.0/v1/product/list?${params.toString()}`,
-    { headers: { "CJ-Access-Token": accessToken } }
-  );
-  const data = await res.json();
-  if (!data.result && !data.success) throw new Error(data.message || "CJ list error");
-  return data.data;
-}
