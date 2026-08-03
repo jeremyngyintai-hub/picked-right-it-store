@@ -138,5 +138,33 @@
     "cjVid": "1450275773649915904",
     "costUSD": 5.72,
     "addedAt": "2026-08-03T18:02:05.103Z"
+  },
+  {
+    "id": 18,
+    "catClass": "beauty",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/1620717888281.jpg",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Detachable Artistic Wearable Finished Fake Nails False Nails",
+        "desc": "屋企就做到嘅精緻感。團隊親身試用先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "Detachable Artistic Wearable Finished Fake Nails False Nails",
+        "desc": "在家也能拥有的精致感。团队亲身试用才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "Detachable Artistic Wearable Finished Fake Nails False Nails",
+        "desc": "Salon-level results at home. Tested by our team before listing — ships within 48 hours."
+      }
+    },
+    "cjPid": "1392018088622428160",
+    "cjVid": "1392018089993965568",
+    "costUSD": 1.17,
+    "addedAt": "2026-08-03T18:02:10.251Z"
   }
 ]
