@@ -334,5 +334,33 @@
     "cjVid": "1386914149497442304",
     "costUSD": 4.19,
     "addedAt": "2026-08-03T18:03:22.045Z"
+  },
+  {
+    "id": 25,
+    "catClass": "tech",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20200605/1078843471762.jpg",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Electronic cigarette lighter",
+        "desc": "返工打機兩用嘅實用之選。團隊實測先上架,即插即用,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Electronic cigarette lighter",
+        "desc": "办公游戏两用的实用之选。团队实测才上架,即插即用,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Electronic cigarette lighter",
+        "desc": "A practical pick for work and play, tested by our team. Plug and play — ships within 48 hours."
+      }
+    },
+    "cjPid": "6824F6AC-F587-4298-95F3-0B8DE3399CB8",
+    "cjVid": "1FCC8ECC-5218-426F-9DD1-4A5292A20DC4",
+    "costUSD": 1.6,
+    "addedAt": "2026-08-03T18:03:26.610Z"
   }
 ]
