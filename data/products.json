@@ -278,5 +278,33 @@
     "cjVid": "2C4C0F75-AC09-4507-8B50-A142D35891F3",
     "costUSD": 0.63,
     "addedAt": "2026-08-03T18:02:25.400Z"
+  },
+  {
+    "id": 23,
+    "catClass": "tech",
+    "price": 458,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/7c5959ff-1ffc-4e27-bac0-1813a50026d5.jpg",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Distance Measuring Instrument Electronic Measuring Ruler Tap",
+        "desc": "返工打機兩用嘅實用之選。團隊實測先上架,即插即用,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Distance Measuring Instrument Electronic Measuring Ruler Tap",
+        "desc": "办公游戏两用的实用之选。团队实测才上架,即插即用,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Distance Measuring Instrument Electronic Measuring Ruler Tap",
+        "desc": "A practical pick for work and play, tested by our team. Plug and play — ships within 48 hours."
+      }
+    },
+    "cjPid": "0E94A308-8CE9-4FAF-8B82-39FFF20AA837",
+    "cjVid": "1642460990195372032",
+    "costUSD": 20.9,
+    "addedAt": "2026-08-03T18:03:17.378Z"
   }
 ]
