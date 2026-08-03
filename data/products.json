@@ -250,5 +250,33 @@
     "cjVid": "140EDE67-92A4-4242-8DE6-70225EDF449F",
     "costUSD": 0.97,
     "addedAt": "2026-08-03T18:02:21.079Z"
+  },
+  {
+    "id": 22,
+    "catClass": "beauty",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20190827/61702514259.jpg",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Nail sticker beauty products",
+        "desc": "屋企就做到嘅精緻感。團隊親身試用先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "Nail sticker beauty products",
+        "desc": "在家也能拥有的精致感。团队亲身试用才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "Nail sticker beauty products",
+        "desc": "Salon-level results at home. Tested by our team before listing — ships within 48 hours."
+      }
+    },
+    "cjPid": "114676C1-6FA4-4552-9144-6172B11AE7B0",
+    "cjVid": "2C4C0F75-AC09-4507-8B50-A142D35891F3",
+    "costUSD": 0.63,
+    "addedAt": "2026-08-03T18:02:25.400Z"
   }
 ]
