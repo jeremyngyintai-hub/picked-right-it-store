@@ -54,5 +54,33 @@
     "cjVid": "0CD2BEEA-8CA0-41B5-AD5F-BE24F4F1565B",
     "costUSD": 0.93,
     "addedAt": "2026-08-03T18:01:52.389Z"
+  },
+  {
+    "id": 15,
+    "catClass": "home",
+    "price": 198,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/d3ab8af8-f120-4e6c-9d16-62d053f2e9f9.jpg",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Solid Color Simple Modern Light Luxury Living Room Chenille ",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊實測過質素先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Solid Color Simple Modern Light Luxury Living Room Chenille ",
+        "desc": "小户型也适用,省空间实用之选。团队实测质量才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Solid Color Simple Modern Light Luxury Living Room Chenille ",
+        "desc": "A practical, space-saving pick tested by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "1502494542795386880",
+    "cjVid": "1502494542946381824",
+    "costUSD": 8.85,
+    "addedAt": "2026-08-03T18:01:55.864Z"
   }
 ]
