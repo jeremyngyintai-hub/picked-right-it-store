@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>揀啱 PICKED RIGHT IT — 香港生活選物</title>
+<meta name="description" content="揀啱・香港生活選物店。家居、美妝(PDRN韓系護膚)、電子配件,每款團隊實測先上架。48小時內處理出貨,順豐站自取,7日試用包退。">
+<meta property="og:title" content="揀啱 PICKED RIGHT IT — 香港生活選物">
+<meta property="og:description" content="唔係乜都賣,而係乜都幫你揀好。家居、美妝、電子配件,團隊實測先上架,香港48小時直送。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_HK">
+<meta property="og:url" content="https://picked-right.it.com">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://picked-right.it.com">
+<script type="application/ld+json" id="productSchema"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -1124,10 +1133,34 @@ document.querySelectorAll('.main-nav a').forEach(a => {
   });
 });
 
+function renderProductSchema(){
+  const items = PRODUCTS.map(p => ({
+    "@type": "Product",
+    "name": p.i18n['en'].name,
+    "description": p.i18n['en'].desc,
+    "sku": String(p.id),
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "HKD",
+      "price": p.price,
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": p.rating,
+      "reviewCount": p.reviews
+    }
+  }));
+  const schema = { "@context": "https://schema.org", "@graph": items };
+  const el = document.getElementById('productSchema');
+  if (el) el.textContent = JSON.stringify(schema);
+}
+
 /* ================= INIT ================= */
 applyI18n();
 setupReveal();
 setInterval(rotatePromo, 4500);
+renderProductSchema();
 </script>
 
 </body>
