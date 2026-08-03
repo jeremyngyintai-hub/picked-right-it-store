@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "id": 13,
+    "catClass": "tech",
+    "price": 98,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/1619500209930.jpg",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Glowing Gaming Mouse Gaming Wired Mouse",
+        "desc": "返工打機兩用嘅實用之選。團隊實測先上架,即插即用,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Glowing Gaming Mouse Gaming Wired Mouse",
+        "desc": "办公游戏两用的实用之选。团队实测才上架,即插即用,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Glowing Gaming Mouse Gaming Wired Mouse",
+        "desc": "A practical pick for work and play, tested by our team. Plug and play — ships within 48 hours."
+      }
+    },
+    "cjPid": "1386914148104933376",
+    "cjVid": "1386914149497442304",
+    "costUSD": 4.19,
+    "addedAt": "2026-08-03T17:49:23.273Z"
+  }
+]
