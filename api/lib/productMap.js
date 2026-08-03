@@ -23,4 +23,8 @@ module.exports = {
   7: { name: "磁吸無線充電座",     sellPriceHKD: 178, cjPid: "REPLACE_ME", cjVid: "REPLACE_ME" },
   8: { name: "真無線藍牙耳機",     sellPriceHKD: 328, cjPid: "REPLACE_ME", cjVid: "REPLACE_ME" },
   9: { name: "手機摺疊支架",       sellPriceHKD: 88,  cjPid: "REPLACE_ME", cjVid: "REPLACE_ME" },
+  // ===== 由 trending-picks 搵返嚟嘅新產品(pid已填,vid要用 get-variants 工具攞) =====
+  10: { name: "RGB發光電競滑鼠",        sellPriceHKD: 98,  cjPid: "136691414810493376", cjVid: "REPLACE_ME" },
+  11: { name: "發光電競鍵鼠套裝",       sellPriceHKD: 128, cjPid: "FB9C42CE-3605-4AF1-8CCB-E96509C222B5", cjVid: "REPLACE_ME" },
+  12: { name: "Press-On免膠假指甲",     sellPriceHKD: 58,  cjPid: "1392018088622428160", cjVid: "REPLACE_ME" },
 };
