@@ -362,5 +362,33 @@
     "cjVid": "1FCC8ECC-5218-426F-9DD1-4A5292A20DC4",
     "costUSD": 1.6,
     "addedAt": "2026-08-03T18:03:26.610Z"
+  },
+  {
+    "id": 26,
+    "catClass": "tech",
+    "price": 88,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20200302/1647892699218.jpg",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "GTX300 Gaming CF LOL Gaming Keyboard Mouse Glowing Set",
+        "desc": "返工打機兩用嘅實用之選。團隊實測先上架,即插即用,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "GTX300 Gaming CF LOL Gaming Keyboard Mouse Glowing Set",
+        "desc": "办公游戏两用的实用之选。团队实测才上架,即插即用,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "GTX300 Gaming CF LOL Gaming Keyboard Mouse Glowing Set",
+        "desc": "A practical pick for work and play, tested by our team. Plug and play — ships within 48 hours."
+      }
+    },
+    "cjPid": "FB9C42CE-3605-4AF1-8CCB-E96509C222B5",
+    "cjVid": "1D4CF3E8-FB84-4499-945B-043E06C6F7A0",
+    "costUSD": 3.7,
+    "addedAt": "2026-08-03T18:03:30.808Z"
   }
 ]
