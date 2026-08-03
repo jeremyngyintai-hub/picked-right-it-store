@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>揀啱 PICKED RIGHT IT — 香港生活選物</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f2eef4;
+    --card:#fbf9fb;
+    --ink:#1f1726;
+    --ink-soft:#726a78;
+    --mark:#9c2f5c;
+    --mark-soft:#f2dbe6;
+    --sage:#5c7a68;
+    --sage-soft:#dde8e0;
+    --tech:#3d4f6f;
+    --tech-soft:#dbe0ea;
+    --line:#ddd5df;
+    --paper-inv:#f4f1f5;
+    --accent-a:#ff3d7a;
+    --accent-b:#5b3df5;
+    --accent-grad:linear-gradient(135deg,var(--accent-a),var(--accent-b));
+    --wa-green:#25d366;
+    --wa-green-dark:#1da851;
+    --radius:20px;
+    --font-display:'Noto Serif TC',serif;
+    --font-body:'Noto Sans TC',sans-serif;
+  }
+  body[data-lang="zh-Hans"]{--font-display:'Noto Serif SC',serif;--font-body:'Noto Sans SC',sans-serif;}
+  body[data-lang="en"]{--font-display:'Fraunces','Noto Serif TC',serif;--font-body:'Inter','Noto Sans TC',sans-serif;}
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);font-weight:400;line-height:1.7;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:var(--font-display);font-weight:500;margin:0;letter-spacing:-.005em;}
+  a{color:inherit;text-decoration:none;cursor:pointer;}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+  img{max-width:100%;display:block;}
+  .eyebrow{font-family:'Inter',sans-serif;font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);}
+  .icon{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+  .icon-sm{width:16px;height:16px;}
+  :focus-visible{outline:2px solid var(--accent-a);outline-offset:3px;}
+  @media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important;}}
+
+  #heroGrad stop:first-child{stop-color:var(--accent-a);}
+  #heroGrad stop:last-child{stop-color:var(--accent-b);}
+  .grad-stroke path{stroke:url(#heroGrad);}
+
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  .view{display:none;}
+  .view.active{display:block;animation:fadeIn .5s ease both;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* promo bar */
+  .promo-bar{background:var(--ink);color:#fff;text-align:center;padding:9px 16px;font-size:.78rem;font-family:'Inter',sans-serif;letter-spacing:.02em;}
+  #promoText{display:inline-block;transition:opacity .4s ease;}
+
+  /* header */
+  .site-header{position:sticky;top:0;z-index:40;background:rgba(238,237,231,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
+  .header-inner{max-width:1140px;margin:0 auto;padding:13px 24px;display:flex;align-items:center;gap:16px;}
+  .nav-toggle{display:none;width:36px;height:36px;align-items:center;justify-content:center;flex:none;}
+  .logo{display:flex;align-items:center;gap:10px;margin-right:auto;}
+  .logo-mark{position:relative;width:38px;height:38px;flex:none;color:var(--mark);}
+  .logo-mark svg{position:absolute;inset:0;width:100%;height:100%;}
+  .logo-mark span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.05rem;font-weight:600;color:var(--ink);}
+  .logo-text{display:flex;flex-direction:column;line-height:1.1;}
+  .logo-text b{font-family:var(--font-display);font-size:1.15rem;font-weight:600;}
+  .logo-text em{font-style:normal;font-family:'Inter',sans-serif;font-size:.6rem;letter-spacing:.2em;color:var(--ink-soft);}
+  .main-nav{display:flex;gap:26px;}
+  .main-nav a{font-size:.92rem;color:var(--ink-soft);position:relative;padding:4px 0;}
+  .main-nav a:hover,.main-nav a.on{color:var(--ink);}
+  .main-nav a.on::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:2px;background:var(--accent-grad);}
+  .lang-switch{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none;}
+  .lang-switch button{padding:7px 11px;font-size:.7rem;font-family:'Inter',sans-serif;font-weight:600;color:var(--ink-soft);transition:all .15s ease;}
+  .lang-switch button.on{background:var(--accent-grad);color:#fff;}
+  .cart-btn{position:relative;width:38px;height:38px;display:flex;align-items:center;justify-content:center;flex:none;}
+  .cart-count{position:absolute;top:-2px;right:-4px;background:var(--accent-grad);color:#fff;font-family:'Inter',sans-serif;font-size:.62rem;font-weight:700;min-width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;padding:0 3px;}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 28px;font-size:.88rem;font-weight:500;letter-spacing:.02em;border-radius:999px;transition:transform .15s ease, filter .2s ease, background .2s ease;}
+  .btn-primary{background:var(--accent-grad);color:#fff;box-shadow:0 10px 24px -8px rgba(255,61,122,.5);}
+  .btn-primary:hover{filter:brightness(.96);box-shadow:0 14px 30px -8px rgba(255,61,122,.6);}
+  .btn-outline{border:1px solid var(--ink);color:var(--ink);}
+  .btn-outline:hover{background:var(--ink);color:var(--paper-inv);}
+  .btn:active{transform:scale(.97);}
+  .btn-whatsapp{background:var(--wa-green);color:#fff;width:100%;}
+  .btn-whatsapp:hover{background:var(--wa-green-dark);}
+
+  /* hero */
+  .hero{padding:60px 0 48px;overflow:hidden;position:relative;}
+  .hero-watermark{position:absolute;top:-30%;left:-12%;width:62%;min-width:420px;color:var(--ink);opacity:.04;pointer-events:none;z-index:0;}
+  .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;}
+  .hero h1{font-size:clamp(2.3rem,6vw,4rem);line-height:1.28;font-weight:600;}
+  .circled{position:relative;white-space:nowrap;display:inline-block;}
+  .circled-svg{position:absolute;left:-8%;top:-20%;width:116%;height:145%;pointer-events:none;stroke-width:3.4;color:var(--accent-a);}
+  .hero p.lead{margin:22px 0 20px;color:var(--ink-soft);font-size:1.02rem;max-width:34em;}
+  .hero-trustline{font-size:.85rem;color:var(--ink-soft);font-family:'Inter',sans-serif;margin:18px 0 0;}
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;}
+  .hero-visual{position:relative;aspect-ratio:1/1;max-width:380px;justify-self:end;}
+  .hero-visual::before{content:"";position:absolute;inset:-14%;background:var(--accent-grad);filter:blur(70px);opacity:.28;border-radius:50%;z-index:-1;}
+  .hero-visual .disc{position:absolute;inset:8%;border-radius:50%;background:var(--card);border:1px solid var(--line);}
+  .hero-visual .float-icon{position:absolute;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 26px rgba(31,23,38,.1);animation:floaty 4s ease-in-out infinite;}
+  .hero-visual .float-icon svg{width:24px;height:24px;stroke-width:2.2;}
+  @keyframes floaty{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+  .fi-1{top:2%;left:8%;background:var(--sage-soft);color:var(--sage);animation-delay:.2s;}
+  .fi-2{top:18%;right:0;background:var(--mark-soft);color:var(--mark);animation-delay:1s;}
+  .fi-3{bottom:10%;left:0;background:var(--tech-soft);color:var(--tech);animation-delay:1.6s;}
+  .fi-4{bottom:0;right:16%;background:var(--card);color:var(--ink);border:1px solid var(--line);animation-delay:.6s;}
+  .hero-visual .center-mark{position:absolute;inset:26%;color:var(--mark);}
+
+  /* marquee */
+  .marquee{overflow:hidden;background:var(--ink);color:var(--paper-inv);padding:13px 0;}
+  .marquee-track{display:flex;gap:40px;white-space:nowrap;width:max-content;animation:marquee 20s linear infinite;}
+  .marquee-track .mq-group{display:flex;gap:40px;align-items:center;}
+  .marquee-track span.word{font-family:'Inter',sans-serif;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;}
+  .marquee-track svg{width:13px;height:13px;color:var(--accent-a);flex:none;}
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* trust */
+  .trust{border-bottom:1px solid var(--line);}
+  .trust-inner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding:20px 0;}
+  .trust-item{display:flex;align-items:center;gap:10px;font-size:.86rem;color:var(--ink-soft);}
+  .trust-item svg{color:var(--accent-a);flex:none;}
+
+  section.block{padding:72px 0;}
+  .block-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:36px;flex-wrap:wrap;}
+  .block-head h2{font-size:clamp(1.55rem,3vw,2.15rem);}
+  .block-head .eyebrow{display:block;margin-bottom:10px;}
+  .link-more{font-size:.86rem;border-bottom:1px solid var(--ink);padding-bottom:2px;}
+
+  /* process */
+  .process{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+  .process-step{position:relative;padding-top:52px;border-top:1px solid var(--line);}
+  .process-step .num{position:absolute;top:-.55em;left:0;font-family:var(--font-display);font-size:2.6rem;color:transparent;-webkit-text-stroke:1px var(--ink-soft);opacity:.5;}
+  .process-step h3{font-size:1.1rem;margin-bottom:10px;}
+  .process-step p{color:var(--ink-soft);font-size:.92rem;margin:0;}
+
+  /* category cards */
+  .cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .cat-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;display:flex;flex-direction:column;gap:18px;transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;}
+  .cat-card:hover{transform:translateY(-4px);box-shadow:0 22px 30px -16px rgba(31,23,38,.35),0 16px 32px -10px rgba(255,61,122,.22);border-color:var(--accent-a);}
+  .cat-icon{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .3s ease;}
+  .cat-card:hover .cat-icon{transform:rotate(-6deg) scale(1.06);}
+  .cat-icon svg{width:26px;height:26px;stroke-width:2.2;}
+  .cat-home .cat-icon{background:var(--sage-soft);color:var(--sage);}
+  .cat-beauty .cat-icon{background:var(--mark-soft);color:var(--mark);}
+  .cat-tech .cat-icon{background:var(--tech-soft);color:var(--tech);}
+  .cat-card h3{font-size:1.2rem;}
+  .cat-card p{color:var(--ink-soft);font-size:.88rem;margin:0;flex:1;}
+  .cat-card .cat-link{font-size:.82rem;display:flex;align-items:center;gap:6px;}
+
+  /* products */
+  .filter-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;}
+  .filter-pill{padding:9px 18px;border:1px solid var(--line);border-radius:999px;font-size:.84rem;color:var(--ink-soft);transition:all .15s ease;}
+  .filter-pill.on{background:var(--accent-grad);color:#fff;border-color:transparent;}
+  .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .product-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;}
+  .product-card:hover{transform:translateY(-4px);box-shadow:0 22px 30px -16px rgba(31,23,38,.35),0 16px 32px -10px rgba(255,61,122,.22);border-color:var(--accent-a);}
+  .product-visual{aspect-ratio:4/3;position:relative;display:flex;align-items:center;justify-content:center;cursor:pointer;}
+  .product-visual svg{width:38%;height:38%;stroke-width:2;transition:transform .3s ease;}
+  .product-card:hover .product-visual svg{transform:scale(1.08);}
+  .cat-home-bg{background:var(--sage-soft);color:var(--sage);}
+  .cat-beauty-bg{background:var(--mark-soft);color:var(--mark);}
+  .cat-tech-bg{background:var(--tech-soft);color:var(--tech);}
+  .badge{position:absolute;top:10px;left:10px;background:var(--accent-grad);color:#fff;font-size:.66rem;font-weight:600;letter-spacing:.06em;padding:5px 10px;border-radius:999px;animation:pulseBadge 2.2s ease-in-out infinite;}
+  @keyframes pulseBadge{0%,100%{transform:scale(1);}50%{transform:scale(1.07);}}
+  .product-info{padding:16px 18px 18px;}
+  .product-cat{font-size:.7rem;letter-spacing:.1em;color:var(--ink-soft);text-transform:uppercase;font-family:'Inter',sans-serif;}
+  .product-info h3{font-size:1rem;font-weight:400;font-family:var(--font-body);margin:6px 0 8px;cursor:pointer;}
+  .rating-row{display:flex;align-items:center;gap:6px;margin-bottom:10px;}
+  .rating-row .stars{font-size:.85rem;letter-spacing:1px;line-height:1;color:var(--accent-a);}
+  .rating-row .rnum{font-size:.74rem;color:var(--ink-soft);font-family:'Inter',sans-serif;}
+  .product-price{font-family:'Inter',sans-serif;font-weight:600;font-size:1.02rem;margin-bottom:14px;}
+  .btn-add{width:100%;padding:11px;border:1px solid var(--ink);border-radius:999px;font-size:.82rem;transition:all .15s ease;}
+  .btn-add:hover{background:var(--ink);color:var(--paper-inv);}
+  .btn-add.added{background:var(--sage);border-color:var(--sage);color:#fff;}
+
+  /* product detail */
+  .pd-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:48px 0 72px;align-items:flex-start;}
+  .pd-visual{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;}
+  .pd-visual svg{width:34%;height:34%;stroke-width:1.6;}
+  .back-link{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;color:var(--ink-soft);margin-bottom:22px;}
+  .back-link svg{width:16px;height:16px;}
+  .pd-cat{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-family:'Inter',sans-serif;}
+  .pd-info h1{font-size:1.9rem;margin:12px 0 12px;font-weight:600;}
+  .pd-price{font-family:'Inter',sans-serif;font-weight:600;font-size:1.5rem;margin:10px 0 20px;}
+  .pd-desc{color:var(--ink-soft);font-size:.96rem;margin-bottom:28px;max-width:34em;}
+  .qty-row{display:flex;align-items:center;gap:18px;margin-bottom:22px;flex-wrap:wrap;}
+  .qty-stepper{display:flex;align-items:center;border:1px solid var(--line);border-radius:999px;overflow:hidden;}
+  .qty-stepper button{width:38px;height:38px;display:flex;align-items:center;justify-content:center;}
+  .qty-stepper span{width:34px;text-align:center;font-family:'Inter',sans-serif;}
+  .pd-trust{margin-top:30px;padding-top:22px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:8px;}
+  .pd-trust div{display:flex;align-items:center;gap:8px;font-size:.84rem;color:var(--ink-soft);}
+  .pd-trust svg{color:var(--accent-a);width:16px;height:16px;}
+  .related-title{font-size:1.2rem;margin-bottom:22px;}
+  .product-bottom-pad{padding:20px 0 80px;}
+
+  /* reviews */
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .review-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;display:flex;flex-direction:column;gap:14px;}
+  .review-stars{color:var(--accent-a);letter-spacing:2px;font-size:.9rem;}
+  .review-quote{font-size:.92rem;color:var(--ink);line-height:1.7;flex:1;margin:0;}
+  .review-who{display:flex;align-items:center;gap:12px;margin-top:6px;}
+  .review-avatar{width:38px;height:38px;border-radius:50%;background:var(--accent-grad);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;font-weight:600;font-size:.85rem;flex:none;}
+  .review-name{font-size:.86rem;font-weight:500;}
+  .review-tag{font-size:.74rem;color:var(--ink-soft);}
+
+  /* differentiation */
+  .diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .diff-card{border-radius:var(--radius);padding:32px 28px;}
+  .diff-card.them{background:var(--card);border:1px solid var(--line);opacity:.75;}
+  .diff-card.us{background:var(--ink);color:var(--paper-inv);position:relative;overflow:hidden;}
+  .diff-card.us::before{content:"";position:absolute;top:-40%;right:-20%;width:70%;height:140%;background:var(--accent-grad);opacity:.25;filter:blur(50px);}
+  .diff-card h3{font-size:1.15rem;margin-bottom:18px;position:relative;font-family:'Inter',sans-serif;font-weight:600;}
+  .diff-card ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;position:relative;}
+  .diff-card li{display:flex;gap:10px;font-size:.88rem;align-items:flex-start;}
+  .diff-card.them li::before{content:"–";color:var(--ink-soft);flex:none;}
+  .diff-card.us li::before{content:"✓";color:var(--accent-a);flex:none;font-weight:700;}
+
+  /* newsletter */
+  .newsletter{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .newsletter .wrap{padding:56px 24px;text-align:center;}
+  .newsletter h2{font-size:clamp(1.4rem,3vw,1.9rem);margin:12px 0 12px;}
+  .newsletter p{color:var(--ink-soft);font-size:.94rem;max-width:36em;margin:0 auto 26px;}
+
+  /* story */
+  .story{background:var(--ink);color:var(--paper-inv);}
+  .story .wrap{padding:72px 24px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+  .story .eyebrow{color:#a9a49a;}
+  .story h2{font-size:clamp(1.5rem,3vw,2rem);margin:14px 0 18px;}
+  .story p{color:#c9c5ba;font-size:.95rem;max-width:34em;}
+  .story-mark{justify-self:center;width:180px;height:180px;color:var(--mark);position:relative;}
+  .story-mark span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:2.6rem;color:var(--paper-inv);}
+
+  /* footer */
+  footer{padding:56px 0 32px;border-top:1px solid var(--line);}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;margin-bottom:40px;}
+  .footer-grid h4{font-size:.82rem;letter-spacing:.06em;margin-bottom:14px;font-family:'Inter',sans-serif;font-weight:600;}
+  .footer-grid p,.footer-grid a{color:var(--ink-soft);font-size:.86rem;}
+  .footer-grid a{display:block;margin-bottom:8px;}
+  .footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.78rem;color:var(--ink-soft);border-top:1px solid var(--line);padding-top:22px;}
+
+  /* cart drawer */
+  .cart-overlay{position:fixed;inset:0;background:rgba(31,23,38,.4);z-index:60;opacity:0;pointer-events:none;transition:opacity .25s ease;}
+  .cart-overlay.show{opacity:1;pointer-events:auto;}
+  .cart-drawer{position:fixed;top:0;right:0;bottom:0;width:400px;max-width:92vw;background:var(--paper);z-index:61;transform:translateX(100%);transition:transform .3s ease;display:flex;flex-direction:column;box-shadow:-12px 0 30px rgba(0,0,0,.12);}
+  .cart-drawer.show{transform:translateX(0);}
+  .cart-head{display:flex;align-items:center;justify-content:space-between;padding:20px 22px;border-bottom:1px solid var(--line);}
+  .cart-head h3{font-size:1.1rem;}
+  .cart-items{flex:1;overflow-y:auto;padding:10px 22px;}
+  .cart-row{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);}
+  .cart-row .cv{width:56px;height:56px;flex:none;display:flex;align-items:center;justify-content:center;border-radius:10px;}
+  .cart-row .cv svg{width:26px;height:26px;stroke-width:2;}
+  .cart-row .ci{flex:1;}
+  .cart-row .ci h4{font-size:.88rem;font-weight:400;margin:0 0 4px;}
+  .cart-row .ci .price{font-family:'Inter',sans-serif;font-size:.86rem;font-weight:600;}
+  .cart-row .actions{display:flex;align-items:center;justify-content:space-between;margin-top:8px;}
+  .cart-row .qty-stepper button{width:26px;height:26px;}
+  .cart-row .qty-stepper span{width:24px;font-size:.82rem;}
+  .cart-row .remove{font-size:.76rem;color:var(--ink-soft);text-decoration:underline;}
+  .cart-empty{padding:60px 0;text-align:center;color:var(--ink-soft);font-size:.9rem;}
+  .cart-foot{padding:20px 22px;border-top:1px solid var(--line);}
+  .cart-subtotal{display:flex;justify-content:space-between;margin-bottom:16px;font-size:.95rem;}
+  .cart-subtotal b{font-family:'Inter',sans-serif;}
+  .cart-note{font-size:.74rem;color:var(--ink-soft);margin-top:10px;text-align:center;}
+
+  /* sticky mobile add-to-cart bar */
+  .sticky-bar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--card);border-top:1px solid var(--line);padding:12px 16px;padding-bottom:calc(12px + env(safe-area-inset-bottom));align-items:center;justify-content:space-between;gap:14px;box-shadow:0 -10px 26px rgba(0,0,0,.1);}
+  .sticky-bar .sb-info{overflow:hidden;flex:1;}
+  .sticky-bar .sb-info div:first-child{font-size:.84rem;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .sticky-bar .sb-info div:last-child{font-family:'Inter',sans-serif;font-weight:700;color:var(--accent-a);font-size:.92rem;}
+  .sticky-bar .btn{flex:none;padding:12px 22px;}
+
+  @media (max-width:860px){
+    .hero-inner{grid-template-columns:1fr;}
+    .hero-visual{justify-self:center;margin-top:20px;}
+    .process,.cat-grid,.product-grid,.reviews-grid{grid-template-columns:repeat(2,1fr);}
+    .diff-grid{grid-template-columns:1fr;}
+    .pd-inner{grid-template-columns:1fr;gap:30px;padding:32px 0 56px;}
+    .story .wrap{grid-template-columns:1fr;text-align:center;}
+    .story-mark{order:-1;}
+    .footer-grid{grid-template-columns:1fr;gap:24px;}
+  }
+  @media (max-width:640px){
+    .header-inner{gap:10px;}
+    .main-nav{position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:6px 24px;display:none;}
+    .main-nav.show{display:flex;}
+    .main-nav a{padding:12px 0;border-bottom:1px solid var(--line);}
+    .main-nav a:last-child{border-bottom:none;}
+    .nav-toggle{display:flex;}
+    .logo-text{display:none;}
+    .lang-switch button{padding:6px 8px;font-size:.64rem;}
+    .process,.cat-grid,.product-grid,.reviews-grid{grid-template-columns:1fr;}
+    .trust-inner{flex-direction:column;}
+    .sticky-bar.show{display:flex;}
+    .product-bottom-pad{padding-bottom:132px;}
+  }
+</style>
+</head>
+<body data-lang="zh-Hant">
+
+<div class="promo-bar"><span id="promoText"></span></div>
+
+<!-- ============ SVG SYMBOL LIBRARY ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"/><stop offset="100%"/>
+    </linearGradient>
+  </defs>
+  <symbol id="mark-circle" viewBox="0 0 100 100">
+    <path d="M50,8 C22,6 6,28 8,50 C10,74 28,92 52,90 C76,92 94,70 92,46 C90,20 74,6 50,8 Z" fill="none" stroke="currentColor" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="icon-box" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="9" y="26" width="46" height="29" rx="1.5"/><path d="M9 26 L32 12 L55 26"/><path d="M32 12 L32 55" stroke-dasharray="4 5"/>
+  </symbol>
+  <symbol id="icon-fan" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="32" cy="32" r="3.5"/><path d="M32 32 C19 21 18 8 32 8 C33 20 37 27 32 32Z"/><path d="M32 32 C45 24 57 28 56 41 C44 41 36 36 32 32Z"/><path d="M32 32 C25 45 12 45 11 32 C24 27 32 28 32 32Z"/>
+  </symbol>
+  <symbol id="icon-droplet" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32 7 C43 24 51 34 51 43 C51 53 43 59 32 59 C21 59 13 53 13 43 C13 34 21 24 32 7Z"/>
+  </symbol>
+  <symbol id="icon-ring" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="32" cy="32" r="21"/><circle cx="32" cy="32" r="9"/>
+  </symbol>
+  <symbol id="icon-bolt" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M35 6 L15 36 L28 36 L26 58 L49 27 L34 27 Z"/>
+  </symbol>
+  <symbol id="icon-earbud" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="21" cy="29" rx="8" ry="12"/><path d="M21 41 L21 49 C21 53 25 55 27 51"/><ellipse cx="45" cy="29" rx="8" ry="12"/><path d="M45 41 L45 49 C45 53 41 55 39 51"/>
+  </symbol>
+  <symbol id="icon-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 3h2l2.4 12.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="9.5" cy="20" r="1.4"/><circle cx="17.5" cy="20" r="1.4"/>
+  </symbol>
+  <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></symbol>
+  <symbol id="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="icon-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M5 12h14"/></symbol>
+  <symbol id="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 1 3 6.2L4 20l1.6-3.8A7.96 7.96 0 0 1 4 12Z"/></symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="icon-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 7h11v10H2z"/><path d="M13 10h5l3 3v4h-8z"/><circle cx="6" cy="19" r="1.6"/><circle cx="17" cy="19" r="1.6"/></symbol>
+  <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 5-3.4 8-7 9-3.6-1-7-4-7-9V6z"/></symbol>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="header-inner">
+    <button class="nav-toggle" onclick="document.getElementById('mainNav').classList.toggle('show')" aria-label="開啟選單">
+      <svg class="icon"><use href="#icon-menu"/></svg>
+    </button>
+    <a class="logo" onclick="showView('home')">
+      <span class="logo-mark"><svg viewBox="0 0 100 100"><use href="#mark-circle"/></svg><span id="logoChar">揀</span></span>
+      <span class="logo-text"><b id="logoBig">揀啱</b><em id="logoSmall">PICKED&nbsp;RIGHT&nbsp;IT</em></span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a data-i18n="nav.home" onclick="showView('home')">首頁</a>
+      <a data-i18n="nav.all" onclick="showShop('all')">全部</a>
+      <a data-i18n="cat.home" onclick="showShop('home')">家居</a>
+      <a data-i18n="cat.beauty" onclick="showShop('beauty')">美妝</a>
+      <a data-i18n="cat.tech" onclick="showShop('tech')">電子</a>
+    </nav>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button id="langBtn-zh-Hant" onclick="setLang('zh-Hant')">繁</button>
+      <button id="langBtn-zh-Hans" onclick="setLang('zh-Hans')">简</button>
+      <button id="langBtn-en" onclick="setLang('en')">EN</button>
+    </div>
+    <button class="cart-btn" onclick="openCart()" aria-label="購物車">
+      <svg class="icon"><use href="#icon-cart"/></svg>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<main id="app">
+
+  <!-- ============ HOME VIEW ============ -->
+  <section id="view-home" class="view active">
+
+    <div class="hero wrap">
+      <svg class="hero-watermark" viewBox="0 0 100 100" aria-hidden="true"><use href="#mark-circle"/></svg>
+      <div class="hero-inner">
+        <div>
+          <span class="eyebrow" data-i18n="hero.eyebrow">香港生活選物 · 每週更新</span>
+          <h1>
+            <span data-i18n="hero.h1a">幫你由幾百款貨中</span><br>
+            <span class="circled">
+              <span data-i18n="hero.h1circled">揀啱</span>
+              <svg class="circled-svg grad-stroke" viewBox="0 0 100 60" preserveAspectRatio="none"><use href="#mark-circle"/></svg>
+            </span>
+            <span data-i18n="hero.h1b">一件</span>
+          </h1>
+          <p class="lead" data-i18n="hero.lead">家居、美妝、電子小物,我哋逐款試用先上架。唔使自己喺淘寶大海度搵,揀啱幫你篩走9成唔啱嘅選擇。</p>
+          <div class="hero-ctas">
+            <button class="btn btn-primary" data-i18n="hero.cta1" onclick="showShop('all')">即刻揀</button>
+            <button class="btn btn-outline" data-i18n="hero.cta2" onclick="document.getElementById('processSection').scrollIntoView({behavior:'smooth'})">了解點揀</button>
+          </div>
+          <p class="hero-trustline" data-i18n="hero.trustline">★ 4.8/5 · 已服務2,000+位香港客戶</p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="disc"></div>
+          <div class="center-mark"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><use href="#mark-circle"/></svg></div>
+          <div class="float-icon fi-1"><svg><use href="#icon-droplet"/></svg></div>
+          <div class="float-icon fi-2"><svg><use href="#icon-bolt"/></svg></div>
+          <div class="float-icon fi-3"><svg><use href="#icon-box"/></svg></div>
+          <div class="float-icon fi-4"><svg><use href="#icon-earbud"/></svg></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" id="marqueeTrack"></div>
+    </div>
+
+    <div class="trust">
+      <div class="wrap trust-inner">
+        <div class="trust-item"><svg class="icon-sm"><use href="#icon-truck"/></svg><span data-i18n="trust.0">48小時內處理出貨</span></div>
+        <div class="trust-item"><svg class="icon-sm"><use href="#icon-box"/></svg><span data-i18n="trust.1">順豐站 / 智能櫃自取</span></div>
+        <div class="trust-item"><svg class="icon-sm"><use href="#icon-chat"/></svg><span data-i18n="trust.2">WhatsApp 真人客服</span></div>
+        <div class="trust-item"><svg class="icon-sm"><use href="#icon-shield"/></svg><span data-i18n="trust.3">7日試用,唔啱包退</span></div>
+      </div>
+    </div>
+
+    <section class="block reveal" id="processSection">
+      <div class="wrap">
+        <div class="block-head">
+          <div><span class="eyebrow" data-i18n="process.eyebrow">我哋點揀</span><h2 data-i18n="process.title">由揀貨到送到你手,三步</h2></div>
+        </div>
+        <div class="process">
+          <div class="process-step"><span class="num">01</span><h3 data-i18n="process.steps.0.title">精選</h3><p data-i18n="process.steps.0.desc">每款產品經過團隊實測,先睇質素同耐用度,先決定上唔上架。</p></div>
+          <div class="process-step"><span class="num">02</span><h3 data-i18n="process.steps.1.title">直送</h3><p data-i18n="process.steps.1.desc">香港倉直發,支援順豐站、智能櫃自取,唔使成日喺屋企等收件。</p></div>
+          <div class="process-step"><span class="num">03</span><h3 data-i18n="process.steps.2.title">保證</h3><p data-i18n="process.steps.2.desc">唔啱用?7日內可退換,唔會齋得個「落單易、退款難」。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block reveal" style="padding-top:0">
+      <div class="wrap">
+        <div class="block-head">
+          <div><span class="eyebrow" data-i18n="categories.eyebrow">三大選物系列</span><h2 data-i18n="categories.title">揀返適合你屋企嘅類別</h2></div>
+        </div>
+        <div class="cat-grid">
+          <div class="cat-card cat-home">
+            <div class="cat-icon"><svg><use href="#icon-box"/></svg></div>
+            <h3 data-i18n="categories.cards.home.title">家居生活</h3>
+            <p data-i18n="categories.cards.home.desc">啱晒香港細單位嘅收納、靜音家電同小物,慳位又實用。</p>
+            <a class="cat-link" data-i18n="categories.cards.home.link" onclick="showShop('home')">睇家居選物</a>
+          </div>
+          <div class="cat-card cat-beauty">
+            <div class="cat-icon"><svg><use href="#icon-droplet"/></svg></div>
+            <h3 data-i18n="categories.cards.beauty.title">美妝護理</h3>
+            <p data-i18n="categories.cards.beauty.desc">主打韓系PDRN成分護膚,同輕巧美容儀器,自己屋企都可以做medi-facial。</p>
+            <a class="cat-link" data-i18n="categories.cards.beauty.link" onclick="showShop('beauty')">睇美妝選物</a>
+          </div>
+          <div class="cat-card cat-tech">
+            <div class="cat-icon"><svg><use href="#icon-bolt"/></svg></div>
+            <h3 data-i18n="categories.cards.tech.title">電子配件</h3>
+            <p data-i18n="categories.cards.tech.desc">充電、耳機、手機支架,返工放假都用得著嘅日常科技小物。</p>
+            <a class="cat-link" data-i18n="categories.cards.tech.link" onclick="showShop('tech')">睇電子選物</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block reveal" style="padding-top:0">
+      <div class="wrap">
+        <div class="block-head">
+          <div><span class="eyebrow" data-i18n="trending.eyebrow">呢刻最多人揀</span><h2 data-i18n="trending.title">熱賣推薦</h2></div>
+          <a class="link-more" data-i18n="trending.more" onclick="showShop('all')">睇晒全部產品</a>
+        </div>
+        <div class="product-grid" id="trendingGrid"></div>
+      </div>
+    </section>
+
+    <section class="block reveal" style="padding-top:0">
+      <div class="wrap">
+        <div class="block-head">
+          <div><span class="eyebrow" data-i18n="reviews.eyebrow">真實客戶評價</span><h2 data-i18n="reviews.title">佢哋都揀啱咗</h2></div>
+        </div>
+        <div class="reviews-grid" id="reviewsGrid"></div>
+      </div>
+    </section>
+
+    <section class="block reveal" style="padding-top:0">
+      <div class="wrap">
+        <div class="block-head">
+          <div><span class="eyebrow" data-i18n="diff.eyebrow">點解揀我哋</span><h2 data-i18n="diff.title">同一般網購平台有咩唔同</h2></div>
+        </div>
+        <div class="diff-grid">
+          <div class="diff-card them">
+            <h3 id="diffThemTitle">一般網購平台</h3>
+            <ul id="diffThemList"></ul>
+          </div>
+          <div class="diff-card us">
+            <h3 id="diffUsTitle">揀啱</h3>
+            <ul id="diffUsList"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story reveal">
+      <div class="wrap">
+        <div>
+          <span class="eyebrow" data-i18n="story.eyebrow">關於揀啱</span>
+          <h2 data-i18n="story.title">唔係乜都賣,而係乜都幫你揀好</h2>
+          <p data-i18n="story.desc">市面上嘅選擇太多,揀啱嘅角色好簡單:喺你買之前,我哋已經幫你試用、比較、篩走唔值得嘅選擇。你見到嘅每一款,都係我哋覺得「啱」先會放上嚟。</p>
+        </div>
+        <div class="story-mark"><svg viewBox="0 0 100 100" style="width:100%;height:100%"><use href="#mark-circle"/></svg><span id="storyMarkChar">啱</span></div>
+      </div>
+    </section>
+
+    <section class="newsletter reveal">
+      <div class="wrap">
+        <span class="eyebrow" data-i18n="newsletter.eyebrow">揀啱情報網</span>
+        <h2 data-i18n="newsletter.title">加入WhatsApp情報網,新客戶即享9折</h2>
+        <p data-i18n="newsletter.desc">第一時間收到新品上架、限定優惠同補貨通知,唔想錯過就click低面個掣。</p>
+        <button class="btn btn-primary" onclick="joinWhatsAppList()">
+          <svg class="icon-sm"><use href="#icon-chat"/></svg><span data-i18n="newsletter.cta">用WhatsApp加入</span>
+        </button>
+      </div>
+    </section>
+
+  </section>
+
+  <!-- ============ SHOP VIEW ============ -->
+  <section id="view-shop" class="view">
+    <div class="wrap" style="padding:40px 24px 80px">
+      <div class="block-head">
+        <div><span class="eyebrow" id="shopEyebrow">全部產品</span><h2 id="shopTitle">全部選物</h2></div>
+      </div>
+      <div class="filter-row" id="filterRow"></div>
+      <div class="product-grid" id="shopGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCT DETAIL VIEW ============ -->
+  <section id="view-product" class="view">
+    <div class="wrap">
+      <div style="padding-top:32px">
+        <a class="back-link" onclick="showShop(currentProductCat || 'all')"><svg><use href="#icon-chevron"/></svg><span data-i18n="product.back">返回產品列表</span></a>
+      </div>
+      <div class="pd-inner" id="pdInner"></div>
+      <div class="product-bottom-pad">
+        <h3 class="related-title" data-i18n="product.related">你可能都啱用</h3>
+        <div class="product-grid" id="relatedGrid"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="margin-bottom:14px">
+          <span class="logo-mark"><svg viewBox="0 0 100 100"><use href="#mark-circle"/></svg><span>揀</span></span>
+          <span class="logo-text" style="display:flex" id="footerLogo"><b>揀啱</b><em>PICKED&nbsp;RIGHT&nbsp;IT</em></span>
+        </div>
+        <p data-i18n="footer.desc">香港生活選物店,由家居、美妝到電子配件,每款都經團隊實測先上架。</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.seriesTitle">選物系列</h4>
+        <a data-i18n="cat.home" onclick="showShop('home')">家居生活</a>
+        <a data-i18n="cat.beauty" onclick="showShop('beauty')">美妝護理</a>
+        <a data-i18n="cat.tech" onclick="showShop('tech')">電子配件</a>
+      </div>
+      <div>
+        <h4 data-i18n="footer.contactTitle">聯絡我哋</h4>
+        <a href="#" onclick="return false" data-i18n="footer.link1">WhatsApp 客服</a>
+        <a href="#" onclick="return false" data-i18n="footer.link2">送貨與退換政策</a>
+        <a href="#" onclick="return false" data-i18n="footer.link3">常見問題</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.copyright">© 2026 揀啱 PICKED RIGHT IT. 版權所有。</span>
+      <span data-i18n="footer.tagline">由香港出發,直送到你手。</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="購物車">
+  <div class="cart-head">
+    <h3 data-i18n="cart.title">購物車</h3>
+    <button onclick="closeCart()" aria-label="關閉購物車"><svg class="icon"><use href="#icon-close"/></svg></button>
+  </div>
+  <div class="cart-items" id="cartItemsBox"></div>
+  <div class="cart-foot">
+    <div class="cart-subtotal"><span data-i18n="cart.subtotal">小計</span><b id="cartSubtotal">HK$0</b></div>
+    <button class="btn btn-whatsapp" onclick="checkoutWhatsApp()">
+      <svg class="icon-sm"><use href="#icon-chat"/></svg><span data-i18n="cart.checkout">透過 WhatsApp 落單</span>
+    </button>
+    <p class="cart-note" data-i18n="cart.note">運費另計,落單後客服會盡快同你確認</p>
+  </div>
+</aside>
+
+<!-- ============ STICKY MOBILE ADD-TO-CART BAR ============ -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="sb-info">
+    <div id="stickyName"></div>
+    <div id="stickyPrice"></div>
+  </div>
+  <button class="btn btn-primary" id="stickyAddBtn" onclick="stickyAdd()"></button>
+</div>
+
+<script>
+/* ================= I18N META ================= */
+const LANG_META = {
+  'zh-Hant':{htmlLang:'zh-Hant-HK', logoBig:'揀啱', logoSmall:'PICKED\u00A0RIGHT\u00A0IT', logoChar:'揀', storyChar:'啱'},
+  'zh-Hans':{htmlLang:'zh-Hans-CN', logoBig:'拣啱', logoSmall:'PICKED\u00A0RIGHT\u00A0IT', logoChar:'拣', storyChar:'啱'},
+  'en':{htmlLang:'en', logoBig:'Picked Right It', logoSmall:'揀啱 GAAN·NGAAM', logoChar:'P', storyChar:'R'}
+};
+
+const CAT_LABELS = {
+  'zh-Hant':{all:'全部',home:'家居',beauty:'美妝',tech:'電子'},
+  'zh-Hans':{all:'全部',home:'家居',beauty:'美妆',tech:'电子'},
+  'en':{all:'All',home:'Home & Living',beauty:'Beauty',tech:'Tech'}
+};
+const SHOP_TITLES = {
+  'zh-Hant':{all:'全部選物',home:'家居選物',beauty:'美妝選物',tech:'電子選物'},
+  'zh-Hans':{all:'全部选品',home:'家居选品',beauty:'美妆选品',tech:'电子选品'},
+  'en':{all:'All Products',home:'Home & Living Edit',beauty:'Beauty Edit',tech:'Tech Edit'}
+};
+const SHOP_EYEBROWS = {
+  'zh-Hant':{all:'全部產品',home:'家居 · 系列',beauty:'美妝 · 系列',tech:'電子 · 系列'},
+  'zh-Hans':{all:'全部产品',home:'家居 · 系列',beauty:'美妆 · 系列',tech:'电子 · 系列'},
+  'en':{all:'All Products',home:'Home & Living',beauty:'Beauty',tech:'Tech'}
+};
+
+const I18N = {
+'zh-Hant':{
+  nav:{home:'首頁',all:'全部'},
+  hero:{eyebrow:'香港生活選物 · 每週更新',h1a:'幫你由幾百款貨中',h1circled:'揀啱',h1b:'一件',
+    lead:'家居、美妝、電子小物,我哋逐款試用先上架。唔使自己喺淘寶大海度搵,揀啱幫你篩走9成唔啱嘅選擇。',cta1:'即刻揀',cta2:'了解點揀',
+    trustline:'★ 4.8/5 · 已服務2,000+位香港客戶'},
+  trust:['48小時內處理出貨','順豐站 / 智能櫃自取','WhatsApp 真人客服','7日試用,唔啱包退'],
+  marquee:['家居生活','美妝護理','電子配件'],
+  process:{eyebrow:'我哋點揀',title:'由揀貨到送到你手,三步',steps:[
+    {title:'精選',desc:'每款產品經過團隊實測,先睇質素同耐用度,先決定上唔上架。'},
+    {title:'直送',desc:'香港倉直發,支援順豐站、智能櫃自取,唔使成日喺屋企等收件。'},
+    {title:'保證',desc:'唔啱用?7日內可退換,唔會齋得個「落單易、退款難」。'}]},
+  categories:{eyebrow:'三大選物系列',title:'揀返適合你屋企嘅類別',cards:{
+    home:{title:'家居生活',desc:'啱晒香港細單位嘅收納、靜音家電同小物,慳位又實用。',link:'睇家居選物'},
+    beauty:{title:'美妝護理',desc:'主打韓系PDRN成分護膚,同輕巧美容儀器,自己屋企都可以做medi-facial。',link:'睇美妝選物'},
+    tech:{title:'電子配件',desc:'充電、耳機、手機支架,返工放假都用得著嘅日常科技小物。',link:'睇電子選物'}}},
+  trending:{eyebrow:'呢刻最多人揀',title:'熱賣推薦',more:'睇晒全部產品'},
+  reviews:{eyebrow:'真實客戶評價',title:'佢哋都揀啱咗',items:[
+    {avatar:'陳',name:'陳小姐',tag:'家居生活 · 已購買',quote:'個收納箱質素幾好,重要係摺得返平,唔用嗰陣唔佔位,啱晒我間劏房。',rating:5},
+    {avatar:'李',name:'李太',tag:'美妝護理 · 已購買',quote:'用開PDRN面霜大概兩星期,皮膚明顯冇咁乾,質地又清爽,啱夏天用。',rating:5},
+    {avatar:'M',name:'Marcus',tag:'電子配件 · 已購買',quote:'耳機降噪幾正,落單嗰晚已經有客服覆WhatsApp確認,第二日就到順豐站。',rating:4}]},
+  diff:{eyebrow:'點解揀我哋',title:'同一般網購平台有咩唔同',themTitle:'一般網購平台',usTitle:'揀啱',
+    themPoints:['成千上萬選擇,要自己慢慢篩','跨境直送,通常要等7-14日','客服機械人回覆,答非所問','質素參差,靠賭運氣'],
+    usPoints:['每款產品團隊實測先上架','香港倉直發,48小時內處理','WhatsApp真人客服親自跟進','7日試用,唔啱包退']},
+  story:{eyebrow:'關於揀啱',title:'唔係乜都賣,而係乜都幫你揀好',
+    desc:'市面上嘅選擇太多,揀啱嘅角色好簡單:喺你買之前,我哋已經幫你試用、比較、篩走唔值得嘅選擇。你見到嘅每一款,都係我哋覺得「啱」先會放上嚟。'},
+  newsletter:{eyebrow:'揀啱情報網',title:'加入WhatsApp情報網,新客戶即享9折',
+    desc:'第一時間收到新品上架、限定優惠同補貨通知,唔想錯過就click低面個掣。',cta:'用WhatsApp加入',
+    waMsg:'你好,我想加入揀啱嘅WhatsApp情報網,接收新品同優惠通知。'},
+  product:{add:'加入購物車',added:'已加入 ✓',back:'返回產品列表',related:'你可能都啱用',
+    ship:'48小時內處理出貨,順豐站自取',guarantee:'7日試用,唔啱包退',badge:'熱賣',detailTrending:'熱賣中',reviewsWord:'則評價'},
+  cart:{title:'購物車',empty:'購物車暫時得個吉,<br>返去揀啲啱你嘅嘢啦。',subtotal:'小計',
+    checkout:'透過 WhatsApp 落單',note:'運費另計,落單後客服會盡快同你確認',remove:'移除',
+    waGreeting:'你好,我想落單:',waTotal:'總計'},
+  promo:{msg1:'新客戶專享:首次落單輸入優惠碼 PICKED10 即享9折',msg2:'滿HK$300免運費 · 順豐站48小時內送達'},
+  footer:{desc:'香港生活選物店,由家居、美妝到電子配件,每款都經團隊實測先上架。',seriesTitle:'選物系列',
+    contactTitle:'聯絡我哋',link1:'WhatsApp 客服',link2:'送貨與退換政策',link3:'常見問題',
+    copyright:'© 2026 揀啱 PICKED RIGHT IT. 版權所有。',tagline:'由香港出發,直送到你手。'}
+},
+'zh-Hans':{
+  nav:{home:'首页',all:'全部'},
+  hero:{eyebrow:'香港生活选物 · 每周更新',h1a:'帮你从几百款商品中',h1circled:'选对',h1b:'一件',
+    lead:'家居、美妆、电子小物,我们逐款试用后才上架。不用自己在电商海洋里大海捞针,拣啱帮你筛走九成不合适的选择。',cta1:'立即选购',cta2:'了解我们怎么选',
+    trustline:'★ 4.8/5 · 已服务2,000+位香港客户'},
+  trust:['48小时内处理发货','顺丰站 / 智能柜自取','WhatsApp真人客服','7天试用,不满意包退'],
+  marquee:['家居生活','美妆护理','电子配件'],
+  process:{eyebrow:'我们怎么选',title:'从选品到送到你手,三步',steps:[
+    {title:'精选',desc:'每款产品都经团队实测,先看质量与耐用度,再决定是否上架。'},
+    {title:'直送',desc:'香港仓直发,支持顺丰站、智能柜自取,不用整天在家等收件。'},
+    {title:'保证',desc:'用得不满意?7天内可退换,不会只是"下单容易、退款难"。'}]},
+  categories:{eyebrow:'三大选品系列',title:'选出适合你家的类别',cards:{
+    home:{title:'家居生活',desc:'专为香港细小单位设计的收纳、静音家电与小物,省空间又实用。',link:'查看家居选品'},
+    beauty:{title:'美妆护理',desc:'主打韩系PDRN成分护肤品,搭配轻巧美容仪,在家也能做medi-facial。',link:'查看美妆选品'},
+    tech:{title:'电子配件',desc:'充电、耳机、手机支架,上班放假都用得上的日常科技小物。',link:'查看电子选品'}}},
+  trending:{eyebrow:'此刻最多人选',title:'热卖推荐',more:'查看全部产品'},
+  reviews:{eyebrow:'真实客户评价',title:'他们也选对了',items:[
+    {avatar:'陈',name:'陈小姐',tag:'家居生活 · 已购买',quote:'收纳箱质量不错,重点是能折叠收平,不用的时候不占地方,很适合小户型。',rating:5},
+    {avatar:'李',name:'李太太',tag:'美妆护理 · 已购买',quote:'用PDRN面霜大概两周,皮肤明显没那么干,质地清爽,夏天用刚好。',rating:5},
+    {avatar:'M',name:'Marcus',tag:'电子配件 · 已购买',quote:'耳机降噪效果不错,下单当晚客服就用WhatsApp确认订单,第二天就到顺丰站取货了。',rating:4}]},
+  diff:{eyebrow:'为什么选我们',title:'和一般网购平台有什么不同',themTitle:'一般网购平台',usTitle:'拣啱',
+    themPoints:['成千上万个选择,要自己慢慢筛选','跨境直送,通常要等7-14天','客服机器人回复,答非所问','质量参差,全靠运气'],
+    usPoints:['每款产品团队实测才上架','香港仓直发,48小时内处理','WhatsApp真人客服亲自跟进','7天试用,不满意包退']},
+  story:{eyebrow:'关于拣啱',title:'不是什么都卖,而是什么都帮你选好',
+    desc:'市面上的选择太多,拣啱的角色很简单:在你下单之前,我们已经帮你试用、比较、筛走不值得的选择。你看到的每一款,都是我们认为"对"才会上架的。'},
+  newsletter:{eyebrow:'拣啱情报网',title:'加入WhatsApp情报网,新客户即享9折',
+    desc:'第一时间收到新品上架、限定优惠和补货通知,不想错过就点下面的按钮。',cta:'用WhatsApp加入',
+    waMsg:'您好,我想加入拣啱的WhatsApp情报网,接收新品和优惠通知。'},
+  product:{add:'加入购物车',added:'已加入 ✓',back:'返回产品列表',related:'你可能也用得上',
+    ship:'48小时内处理发货,顺丰站自取',guarantee:'7天试用,不满意包退',badge:'热卖',detailTrending:'热卖中',reviewsWord:'条评价'},
+  cart:{title:'购物车',empty:'购物车暂时是空的,<br>回去挑些适合你的东西吧。',subtotal:'小计',
+    checkout:'通过 WhatsApp 下单',note:'运费另计,下单后客服会尽快与你确认',remove:'移除',
+    waGreeting:'您好,我想下单:',waTotal:'总计'},
+  promo:{msg1:'新客户专享:首次下单输入优惠码 PICKED10 即享9折',msg2:'满HK$300免运费 · 顺丰站48小时内送达'},
+  footer:{desc:'香港生活选品店,从家居、美妆到电子配件,每款都经团队实测才上架。',seriesTitle:'选品系列',
+    contactTitle:'联系我们',link1:'WhatsApp客服',link2:'配送与退换政策',link3:'常见问题',
+    copyright:'© 2026 拣啱 PICKED RIGHT IT. 版权所有。',tagline:'从香港出发,直送到你手。'}
+},
+'en':{
+  nav:{home:'Home',all:'All'},
+  hero:{eyebrow:'Hong Kong Lifestyle Edit · Updated Weekly',h1a:'We narrow down hundreds of products',h1circled:'so you pick right',h1b:'every time',
+    lead:"Home goods, skincare, and everyday tech — each one tested by our team before it earns a place on the shelf. Skip the endless scroll; we've already filtered out the 90% that isn't worth your time.",
+    cta1:'Start Browsing',cta2:'How We Curate',trustline:'★ 4.8/5 · Trusted by 2,000+ Hong Kong customers'},
+  trust:['Ships within 48 hours','SF Locker & Store Pickup','Real Humans on WhatsApp','7-Day Trial, Easy Returns'],
+  marquee:['Home & Living','Beauty','Tech'],
+  process:{eyebrow:'How We Curate',title:'Three steps from shelf to your door',steps:[
+    {title:'Curate',desc:"Every product is tested in-house for quality and durability before it's approved for listing."},
+    {title:'Deliver',desc:'Shipped from our Hong Kong warehouse, with SF Locker and store pickup — no waiting around all day.'},
+    {title:'Guarantee',desc:'Not the right fit? Return it within 7 days. No fine print, no runaround.'}]},
+  categories:{eyebrow:'Three Curated Edits',title:'Find the edit that fits your home',cards:{
+    home:{title:'Home & Living',desc:"Storage, quiet appliances, and small essentials designed for Hong Kong's compact spaces.",link:'Shop Home & Living'},
+    beauty:{title:'Beauty & Care',desc:'K-beauty PDRN skincare paired with compact devices — a medi-facial routine, right at home.',link:'Shop Beauty'},
+    tech:{title:'Everyday Tech',desc:'Chargers, earbuds, and phone stands for the daily commute and the weekend off.',link:'Shop Tech'}}},
+  trending:{eyebrow:'Trending Right Now',title:'Bestsellers',more:'View All Products'},
+  reviews:{eyebrow:'What Customers Say',title:'They Picked Right It Too',items:[
+    {avatar:'C',name:'Ms. Chan',tag:'Home & Living · Verified Buyer',quote:"The storage box folds flat when I'm not using it, perfect for my small apartment. Good quality for the price.",rating:5},
+    {avatar:'L',name:'Mrs. Lee',tag:'Beauty & Care · Verified Buyer',quote:"After about two weeks with the PDRN cream, my skin feels noticeably less dry. Lightweight texture, great for summer.",rating:5},
+    {avatar:'M',name:'Marcus',tag:'Tech · Verified Buyer',quote:"Noise cancellation is solid, and their WhatsApp team confirmed my order the same night. Picked it up at the SF locker the next day.",rating:4}]},
+  diff:{eyebrow:'Why Picked Right It',title:"How We're Different From a Typical Marketplace",themTitle:'A Typical Marketplace',usTitle:'Picked Right It',
+    themPoints:['Thousands of listings — you do all the filtering','Cross-border shipping, often 7–14 days','Chatbot replies that miss the point',"Inconsistent quality, it's a gamble"],
+    usPoints:['Every product tested in-house before listing','Shipped from our HK warehouse within 48 hours','Real humans on WhatsApp, not a bot','7-day trial with easy returns']},
+  story:{eyebrow:'About Picked Right It',title:"We don't sell everything — we pick what's worth it",
+    desc:"There's too much out there to choose from. Our job is simple: test it, compare it, and cut what isn't worth your money before it ever reaches you. If it's on our shelf, we've already decided it's right."},
+  newsletter:{eyebrow:'Join the List',title:'Join Our WhatsApp List — Get 10% Off Your First Order',
+    desc:'Be the first to know about new arrivals, exclusive offers, and restocks.',cta:'Join via WhatsApp',
+    waMsg:"Hi, I'd like to join the Picked Right It WhatsApp list for new arrivals and offers."},
+  product:{add:'Add to Cart',added:'Added ✓',back:'Back to Products',related:'You Might Also Like',
+    ship:'Ships within 48 hours · SF Locker pickup',guarantee:'7-day trial, easy returns',badge:'Hot',detailTrending:'Trending',reviewsWord:'reviews'},
+  cart:{title:'Your Cart',empty:"Your cart is empty right now.<br>Go find something that's right for you.",subtotal:'Subtotal',
+    checkout:'Order via WhatsApp',note:'Shipping calculated separately — our team will confirm shortly after you order',remove:'Remove',
+    waGreeting:"Hi, I'd like to place an order:",waTotal:'Total'},
+  promo:{msg1:"New here? Use code PICKED10 for 10% off your first order",msg2:'Free shipping over HK$300 · Delivered within 48 hours'},
+  footer:{desc:'A Hong Kong lifestyle store spanning home goods, beauty, and everyday tech — every item tested by our team first.',
+    seriesTitle:'Shop by Edit',contactTitle:'Get in Touch',link1:'WhatsApp Support',link2:'Shipping & Returns',link3:'FAQ',
+    copyright:'© 2026 Picked Right It. All rights reserved.',tagline:'Shipped from Hong Kong, straight to your door.'}
+}};
+
+/* ================= PRODUCT DATA ================= */
+const PRODUCTS = [
+  {id:1,catClass:'home',price:168,icon:'box',trending:false,rating:4.7,reviews:156,i18n:{
+    'zh-Hant':{name:'三件套摺疊收納箱',desc:'軟身牛津布配摺疊支架,唔用嘅時候可以摺得平,啱晒香港細單位。三個尺寸一套,分類衣物、雜物都啱用。'},
+    'zh-Hans':{name:'三件套折叠收纳箱',desc:'软身牛津布搭配可折叠支架,不用时能收得平整,专为香港的小户型设计。一套三种尺寸,分类收纳衣物和杂物都合适。'},
+    'en':{name:'Foldable Storage Box Set (3-Piece)',desc:"Soft Oxford fabric with a collapsible frame that folds flat when not in use — built for Hong Kong's compact apartments. Three sizes in one set."}}},
+  {id:2,catClass:'home',price:128,icon:'fan',trending:false,rating:4.5,reviews:98,i18n:{
+    'zh-Hant':{name:'靜音迷你風扇',desc:'USB充電,三段風速,運行聲浪低過30分貝。放喺床頭、書枱都唔嘈,租樓一族必備。'},
+    'zh-Hans':{name:'静音迷你风扇',desc:'USB充电,三档风速可调,运行噪音低于30分贝。放在床头或书桌都不吵,适合租房一族。'},
+    'en':{name:'Silent Mini Desk Fan',desc:'USB-powered with three speed settings and noise under 30 decibels. Quiet enough for your bedside or desk.'}}},
+  {id:3,catClass:'home',price:158,icon:'droplet',trending:false,rating:4.6,reviews:210,i18n:{
+    'zh-Hant':{name:'USB香薰加濕器',desc:'300ml水箱,7色氛圍燈,靜音運作。返工放喺公司枱面都得,滋潤又唔怕嘈到同事。'},
+    'zh-Hans':{name:'USB香薰加湿器',desc:'300毫升水箱,7色氛围灯,静音运行。放在办公桌上也没问题,滋润空气又不打扰同事。'},
+    'en':{name:'USB Aroma Humidifier',desc:'300ml tank with 7-colour ambient lighting and silent operation. Compact enough for any desk.'}}},
+  {id:4,catClass:'beauty',price:268,icon:'droplet',trending:true,rating:4.8,reviews:342,i18n:{
+    'zh-Hant':{name:'PDRN鮭魚精華面霜',desc:'韓國醫美熱門成分PDRN(鮭魚DNA修復因子),主打修護肌膚屏障、提升保濕力。質地清爽唔黐立立。'},
+    'zh-Hans':{name:'PDRN鲑鱼精华面霜',desc:'采用韩国医美热门成分PDRN(鲑鱼DNA修复因子),有助修护肌肤屏障、提升保湿力。质地清爽不粘腻。'},
+    'en':{name:'PDRN Salmon Serum Cream',desc:'Formulated with PDRN, a trending ingredient in Korean medical aesthetics, to help repair the skin barrier and boost hydration.'}}},
+  {id:5,catClass:'beauty',price:198,icon:'droplet',trending:true,rating:4.7,reviews:189,i18n:{
+    'zh-Hant':{name:'PDRN保濕爽膚水',desc:'同系列爽膚水,可以疊搽面霜加強保濕效果。敏感肌都岩用,配方溫和唔刺激。'},
+    'zh-Hans':{name:'PDRN保湿爽肤水',desc:'可叠加面霜使用,加强保湿效果。配方温和,敏感肌也适用。'},
+    'en':{name:'PDRN Hydrating Toner',desc:'Layer under the PDRN cream for extra hydration. Gentle formula suitable for sensitive skin.'}}},
+  {id:6,catClass:'beauty',price:398,icon:'ring',trending:false,rating:4.4,reviews:76,i18n:{
+    'zh-Hant':{name:'LED光療美容儀',desc:'紅光+藍光雙模式,每日用10分鐘,幫助提亮膚色同舒緩暗瘡困擾。USB充電,出門都帶得走。'},
+    'zh-Hans':{name:'LED光疗美容仪',desc:'红光+蓝光双模式,每天使用10分钟,有助提亮肤色、舒缓痘痘困扰。USB充电,便于携带。'},
+    'en':{name:'LED Light Therapy Device',desc:'Dual red and blue light modes. Just 10 minutes a day to even skin tone and calm breakouts.'}}},
+  {id:7,catClass:'tech',price:178,icon:'bolt',trending:false,rating:4.6,reviews:133,i18n:{
+    'zh-Hant':{name:'磁吸無線充電座',desc:'支援磁吸快充,三合一座台式設計,手機、耳機、手錶一次過叉電,枱面靚咁擺齊晒。'},
+    'zh-Hans':{name:'磁吸无线充电座',desc:'支持磁吸快充,三合一设计,手机、耳机、手表可同时充电,桌面整洁不杂乱。'},
+    'en':{name:'Magnetic Wireless Charging Stand',desc:'Magnetic fast charging in a 3-in-1 dock — charge your phone, earbuds, and watch at once.'}}},
+  {id:8,catClass:'tech',price:328,icon:'earbud',trending:true,rating:4.8,reviews:421,i18n:{
+    'zh-Hant':{name:'真無線藍牙耳機',desc:'主動降噪,續航8小時(連充電盒24小時),防水防汗,運動返工都啱用。'},
+    'zh-Hans':{name:'真无线蓝牙耳机',desc:'主动降噪,续航8小时(配充电盒达24小时),防水防汗,通勤运动皆宜。'},
+    'en':{name:'True Wireless Earbuds',desc:'Active noise cancellation, 8-hour playback (24 with the case), sweat and water resistant.'}}},
+  {id:9,catClass:'tech',price:88,icon:'box',trending:false,rating:4.5,reviews:264,i18n:{
+    'zh-Hant':{name:'手機摺疊支架',desc:'鋁合金材質,多角度調節,追劇、開會用嚟企手機啱晒,摺埋落袋方便帶出街。'},
+    'zh-Hans':{name:'手机折叠支架',desc:'铝合金材质,多角度可调节,追剧、开会立手机都合适,折叠后方便放进包里。'},
+    'en':{name:'Foldable Phone Stand',desc:'Aluminium build with multi-angle adjustment. Folds flat to slip into your bag.'}}},
+];
+const WHATSAPP_NUMBER = "85290000000"; // TODO: 換成你哋真實嘅 WhatsApp Business 號碼
+
+let currentLang = 'zh-Hant';
+let cart = {};
+let currentProductCat = 'all';
+let pdQty = 1;
+let lastProductId = null;
+let promoIndex = 0;
+
+/* ================= HELPERS ================= */
+function t(path){
+  return path.split('.').reduce((o,k)=> (o!==undefined && o!==null) ? o[k] : undefined, I18N[currentLang]);
+}
+function fmt(n){ return "HK$" + n.toLocaleString(); }
+function findProduct(id){ return PRODUCTS.find(p => p.id === id); }
+function pName(p){ return p.i18n[currentLang].name; }
+function pDesc(p){ return p.i18n[currentLang].desc; }
+function starsStr(rating){
+  const r = Math.round(rating);
+  return '★'.repeat(r) + '☆'.repeat(5-r);
+}
+
+function productCardHTML(p){
+  return `
+  <div class="product-card">
+    <div class="product-visual cat-${p.catClass}-bg" onclick="showProduct(${p.id})">
+      ${p.trending ? `<span class="badge">${t('product.badge')}</span>` : ''}
+      <svg><use href="#icon-${p.icon}"/></svg>
+    </div>
+    <div class="product-info">
+      <span class="product-cat">${CAT_LABELS[currentLang][p.catClass]}</span>
+      <h3 onclick="showProduct(${p.id})">${pName(p)}</h3>
+      <div class="rating-row"><span class="stars">${starsStr(p.rating)}</span><span class="rnum">${p.rating} (${p.reviews})</span></div>
+      <div class="product-price">${fmt(p.price)}</div>
+      <button class="btn-add" id="add-${p.id}" onclick="addToCart(${p.id}, this)">${t('product.add')}</button>
+    </div>
+  </div>`;
+}
+
+/* ================= I18N APPLY ================= */
+function applyI18n(){
+  document.body.dataset.lang = currentLang;
+  document.documentElement.lang = LANG_META[currentLang].htmlLang;
+  document.getElementById('logoBig').textContent = LANG_META[currentLang].logoBig;
+  document.getElementById('logoSmall').textContent = LANG_META[currentLang].logoSmall;
+  document.getElementById('logoChar').textContent = LANG_META[currentLang].logoChar;
+  document.getElementById('storyMarkChar').textContent = LANG_META[currentLang].storyChar;
+  document.getElementById('footerLogo').innerHTML = `<b>${LANG_META[currentLang].logoBig}</b><em>${LANG_META[currentLang].logoSmall}</em>`;
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const val = t(el.dataset.i18n);
+    if(val === undefined) return;
+    if(String(val).includes('<br>')) el.innerHTML = val; else el.textContent = val;
+  });
+
+  ['zh-Hant','zh-Hans','en'].forEach(l => {
+    document.getElementById('langBtn-' + l).classList.toggle('on', l === currentLang);
+  });
+
+  renderMarquee();
+  renderReviews();
+  renderDiff();
+  updatePromoText();
+  document.getElementById('trendingGrid').innerHTML = PRODUCTS.filter(p => p.trending).map(productCardHTML).join('');
+
+  const activeView = document.querySelector('.view.active').id;
+  if(activeView === 'view-shop'){ renderFilters(currentProductCat); renderShopTitle(currentProductCat); renderShopGrid(currentProductCat); }
+  if(activeView === 'view-product' && lastProductId){ showProduct(lastProductId, true); }
+  if(document.getElementById('cartDrawer').classList.contains('show')) renderCartDrawer();
+}
+
+function setLang(lang){
+  currentLang = lang;
+  applyI18n();
+}
+
+function renderMarquee(){
+  const words = I18N[currentLang].marquee;
+  const group = words.map(w => `<span class="word">${w}</span><svg><use href="#mark-circle"/></svg>`).join('');
+  document.getElementById('marqueeTrack').innerHTML = `<div class="mq-group">${group}</div><div class="mq-group">${group}</div>`;
+}
+
+function renderReviews(){
+  const items = I18N[currentLang].reviews.items;
+  document.getElementById('reviewsGrid').innerHTML = items.map(r => `
+    <div class="review-card">
+      <div class="review-stars">${starsStr(r.rating)}</div>
+      <p class="review-quote">&ldquo;${r.quote}&rdquo;</p>
+      <div class="review-who">
+        <div class="review-avatar">${r.avatar}</div>
+        <div><div class="review-name">${r.name}</div><div class="review-tag">${r.tag}</div></div>
+      </div>
+    </div>`).join('');
+}
+
+function renderDiff(){
+  const d = I18N[currentLang].diff;
+  document.getElementById('diffThemTitle').textContent = d.themTitle;
+  document.getElementById('diffUsTitle').textContent = d.usTitle;
+  document.getElementById('diffThemList').innerHTML = d.themPoints.map(p=>`<li>${p}</li>`).join('');
+  document.getElementById('diffUsList').innerHTML = d.usPoints.map(p=>`<li>${p}</li>`).join('');
+}
+
+function updatePromoText(){
+  const msgs = [t('promo.msg1'), t('promo.msg2')];
+  document.getElementById('promoText').textContent = msgs[promoIndex % msgs.length];
+}
+function rotatePromo(){
+  const el = document.getElementById('promoText');
+  el.style.opacity = 0;
+  setTimeout(()=>{ promoIndex++; updatePromoText(); el.style.opacity = 1; }, 400);
+}
+
+function joinWhatsAppList(){
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(t('newsletter.waMsg'))}`;
+  window.open(url, '_blank');
+}
+
+/* ================= SCROLL REVEAL ================= */
+function setupReveal(){
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const els = document.querySelectorAll('#view-home .reveal');
+  if(reduced){ els.forEach(el=>el.classList.add('in')); return; }
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){ entry.target.classList.add('in'); obs.unobserve(entry.target); }
+    });
+  }, {threshold:0.12});
+  els.forEach(el=>obs.observe(el));
+}
+
+/* ================= VIEW SWITCHING ================= */
+function showView(name){
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.getElementById('view-' + name).classList.add('active');
+  document.getElementById('stickyBar').classList.toggle('show', name === 'product');
+  window.scrollTo({top:0, behavior:'smooth'});
+  document.getElementById('mainNav').classList.remove('show');
+}
+
+function showShop(catKey){
+  currentProductCat = catKey;
+  showView('shop');
+  renderShopTitle(catKey);
+  renderFilters(catKey);
+  renderShopGrid(catKey);
+}
+function renderShopTitle(catKey){
+  document.getElementById('shopTitle').textContent = SHOP_TITLES[currentLang][catKey];
+  document.getElementById('shopEyebrow').textContent = SHOP_EYEBROWS[currentLang][catKey];
+}
+function renderFilters(active){
+  const cats = ['all','home','beauty','tech'];
+  document.getElementById('filterRow').innerHTML = cats.map(c =>
+    `<button class="filter-pill ${c===active?'on':''}" onclick="showShop('${c}')">${CAT_LABELS[currentLang][c]}</button>`
+  ).join('');
+}
+function renderShopGrid(catKey){
+  const list = catKey === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.catClass === catKey);
+  document.getElementById('shopGrid').innerHTML = list.map(productCardHTML).join('');
+}
+
+function showProduct(id, silent){
+  const p = findProduct(id);
+  lastProductId = id;
+  currentProductCat = p.catClass;
+  if(!silent) { showView('product'); pdQty = 1; }
+  document.getElementById('pdInner').innerHTML = `
+    <div class="pd-visual cat-${p.catClass}-bg"><svg><use href="#icon-${p.icon}"/></svg></div>
+    <div class="pd-info">
+      <span class="pd-cat" style="color:var(--${p.catClass==='home'?'sage':p.catClass==='beauty'?'mark':'tech'})">${CAT_LABELS[currentLang][p.catClass]}${p.trending?' · '+t('product.detailTrending'):''}</span>
+      <h1>${pName(p)}</h1>
+      <div class="rating-row"><span class="stars">${starsStr(p.rating)}</span><span class="rnum">${p.rating} (${p.reviews} ${t('product.reviewsWord')})</span></div>
+      <div class="pd-price">${fmt(p.price)}</div>
+      <p class="pd-desc">${pDesc(p)}</p>
+      <div class="qty-row">
+        <div class="qty-stepper">
+          <button onclick="stepQty(-1)" aria-label="-"><svg class="icon-sm"><use href="#icon-minus"/></svg></button>
+          <span id="pdQty">${pdQty}</span>
+          <button onclick="stepQty(1)" aria-label="+"><svg class="icon-sm"><use href="#icon-plus"/></svg></button>
+        </div>
+        <button class="btn btn-primary" id="pdAddBtn" onclick="addPdToCart(${p.id})">${t('product.add')}</button>
+      </div>
+      <div class="pd-trust">
+        <div><svg><use href="#icon-truck"/></svg>${t('product.ship')}</div>
+        <div><svg><use href="#icon-shield"/></svg>${t('product.guarantee')}</div>
+      </div>
+    </div>`;
+  document.getElementById('relatedGrid').innerHTML =
+    PRODUCTS.filter(x => x.catClass === p.catClass && x.id !== p.id).slice(0,3).map(productCardHTML).join('');
+  updateStickyBar(p);
+  if(!silent) window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function stepQty(delta){
+  pdQty = Math.max(1, pdQty + delta);
+  document.getElementById('pdQty').textContent = pdQty;
+}
+function addPdToCart(id){
+  addToCart(id, document.getElementById('pdAddBtn'), pdQty);
+  pdQty = 1;
+  document.getElementById('pdQty').textContent = 1;
+}
+
+/* ================= STICKY MOBILE BAR ================= */
+function updateStickyBar(p){
+  document.getElementById('stickyName').textContent = pName(p);
+  document.getElementById('stickyPrice').textContent = fmt(p.price);
+  document.getElementById('stickyAddBtn').textContent = t('product.add');
+  document.getElementById('stickyBar').dataset.pid = p.id;
+}
+function stickyAdd(){
+  const id = Number(document.getElementById('stickyBar').dataset.pid);
+  addToCart(id, document.getElementById('stickyAddBtn'), 1);
+}
+
+/* ================= CART LOGIC ================= */
+function addToCart(id, btnEl, qty){
+  qty = qty || 1;
+  cart[id] = (cart[id] || 0) + qty;
+  renderCartCount();
+  if(btnEl){
+    const original = btnEl.textContent;
+    btnEl.textContent = t('product.added');
+    btnEl.classList.add('added');
+    setTimeout(() => { btnEl.textContent = original; btnEl.classList.remove('added'); }, 1100);
+  }
+}
+function renderCartCount(){
+  const total = Object.values(cart).reduce((a,b) => a+b, 0);
+  document.getElementById('cartCount').textContent = total;
+}
+function cartSubtotal(){
+  return Object.entries(cart).reduce((sum, [id,qty]) => sum + findProduct(Number(id)).price * qty, 0);
+}
+function renderCartDrawer(){
+  const ids = Object.keys(cart);
+  const box = document.getElementById('cartItemsBox');
+  if(ids.length === 0){
+    box.innerHTML = `<div class="cart-empty">${t('cart.empty')}</div>`;
+  } else {
+    box.innerHTML = ids.map(idStr => {
+      const p = findProduct(Number(idStr));
+      const qty = cart[idStr];
+      return `
+      <div class="cart-row">
+        <div class="cv cat-${p.catClass}-bg"><svg><use href="#icon-${p.icon}"/></svg></div>
+        <div class="ci">
+          <h4>${pName(p)}</h4>
+          <div class="price">${fmt(p.price)}</div>
+          <div class="actions">
+            <div class="qty-stepper">
+              <button onclick="changeCartQty(${p.id}, -1)" aria-label="-"><svg class="icon-sm"><use href="#icon-minus"/></svg></button>
+              <span>${qty}</span>
+              <button onclick="changeCartQty(${p.id}, 1)" aria-label="+"><svg class="icon-sm"><use href="#icon-plus"/></svg></button>
+            </div>
+            <a class="remove" onclick="removeFromCart(${p.id})">${t('cart.remove')}</a>
+          </div>
+        </div>
+      </div>`;
+    }).join('');
+  }
+  document.getElementById('cartSubtotal').textContent = fmt(cartSubtotal());
+}
+function changeCartQty(id, delta){
+  cart[id] = (cart[id] || 0) + delta;
+  if(cart[id] <= 0) delete cart[id];
+  renderCartCount();
+  renderCartDrawer();
+}
+function removeFromCart(id){
+  delete cart[id];
+  renderCartCount();
+  renderCartDrawer();
+}
+function openCart(){
+  renderCartDrawer();
+  document.getElementById('cartOverlay').classList.add('show');
+  document.getElementById('cartDrawer').classList.add('show');
+}
+function closeCart(){
+  document.getElementById('cartOverlay').classList.remove('show');
+  document.getElementById('cartDrawer').classList.remove('show');
+}
+function checkoutWhatsApp(){
+  const ids = Object.keys(cart);
+  if(ids.length === 0) return;
+  let msg = t('cart.waGreeting') + "\n";
+  ids.forEach(idStr => {
+    const p = findProduct(Number(idStr));
+    msg += `- ${pName(p)} x${cart[idStr]} (${fmt(p.price)})\n`;
+  });
+  msg += `\n${t('cart.waTotal')}: ${fmt(cartSubtotal())}`;
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+  window.open(url, '_blank');
+}
+
+/* ================= NAV ACTIVE STATE ================= */
+document.querySelectorAll('.main-nav a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.querySelectorAll('.main-nav a').forEach(x => x.classList.remove('on'));
+    a.classList.add('on');
+  });
+});
+
+/* ================= INIT ================= */
+applyI18n();
+setupReveal();
+setInterval(rotatePromo, 4500);
+</script>
+
+</body>
+</html>
