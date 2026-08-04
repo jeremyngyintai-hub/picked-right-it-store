@@ -2455,5 +2455,301 @@
     "cjVid": "1455000172298899456",
     "costUSD": 6.79,
     "addedAt": "2026-08-04T09:51:21.019Z"
+  },
+  {
+    "id": 81,
+    "catClass": "pets",
+    "price": 78,
+    "icon": "box",
+    "image": "https://oss-cf.cjdropshipping.com/product/2024/03/12/07/52bbfde8-5aac-434b-9bec-2614a889ebf6.jpg",
+    "images": [
+      "https://oss-cf.cjdropshipping.com/product/2024/03/12/07/52bbfde8-5aac-434b-9bec-2614a889ebf6.jpg",
+      "https://oss-cf.cjdropshipping.com/product/2024/01/15/01/2ce27668-aaff-4810-b999-ceeefd4a66ca.jpg",
+      "https://oss-cf.cjdropshipping.com/product/2024/01/15/01/12083f80-fd7b-44e7-a7a8-248fbac93761.jpg",
+      "https://oss-cf.cjdropshipping.com/product/2024/01/15/01/0e37c6ed-d93f-410e-aec5-1e88c90d2402_trans.jpeg",
+      "https://oss-cf.cjdropshipping.com/product/2024/01/15/01/404d6b89-01a9-46ae-8a08-c39af071d03b_trans.jpeg",
+      "https://oss-cf.cjdropshipping.com/product/2024/01/15/01/0957c870-d200-4b91-99d4-b59e3631131c_trans.jpeg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Smart Cat Toys Rolling Ball Pet Cat Owner Interactive Pets T",
+        "desc": "毛孩都值得好嘢。團隊嚴選用料先上架,主子鍾意先算數,落單48小時內安排出貨。"
+      },
+      "zh-Hans": {
+        "name": "Smart Cat Toys Rolling Ball Pet Cat Owner Interactive Pets T",
+        "desc": "毛孩也值得好东西。团队严选用料才上架,下单48小时内安排发货。"
+      },
+      "en": {
+        "name": "Smart Cat Toys Rolling Ball Pet Cat Owner Interactive Pets T",
+        "desc": "Your furry friend deserves the good stuff. Carefully selected by our team."
+      }
+    },
+    "cjPid": "1746705645098774528",
+    "cjVid": "1746705645203632128",
+    "costUSD": 3.35,
+    "addedAt": "2026-08-04T09:51:25.583Z"
+  },
+  {
+    "id": 82,
+    "catClass": "pets",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/220cb7e8-3360-4d03-9a09-32b88d398609.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/220cb7e8-3360-4d03-9a09-32b88d398609.jpg",
+      "https://cf.cjdropshipping.com/b679ae2f-b863-48a6-bcf2-c6092b64cc9d.jpg",
+      "https://cf.cjdropshipping.com/012522da-8c31-41a9-86e1-10614b3bc6d5.jpg",
+      "https://cf.cjdropshipping.com/60852f31-22ef-417c-8bb0-e536ef9a340a.jpg",
+      "https://cf.cjdropshipping.com/09366bdf-4647-4cd1-ba5a-1e583690f24c.jpg",
+      "https://cf.cjdropshipping.com/5641fd51-a51a-477d-9de7-03a8ce467007.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Chew Toys For Dog Teeth Cleaning",
+        "desc": "毛孩都值得好嘢。團隊嚴選用料先上架,主子鍾意先算數,落單48小時內安排出貨。"
+      },
+      "zh-Hans": {
+        "name": "Chew Toys For Dog Teeth Cleaning",
+        "desc": "毛孩也值得好东西。团队严选用料才上架,下单48小时内安排发货。"
+      },
+      "en": {
+        "name": "Chew Toys For Dog Teeth Cleaning",
+        "desc": "Your furry friend deserves the good stuff. Carefully selected by our team."
+      }
+    },
+    "cjPid": "1442659129305993216",
+    "cjVid": "1442659129377296384",
+    "costUSD": 0.74,
+    "addedAt": "2026-08-04T09:51:26.948Z"
+  },
+  {
+    "id": 83,
+    "catClass": "pets",
+    "price": 78,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20200424/1570534526163.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/20200424/1570534526163.jpg",
+      "https://cf.cjdropshipping.com/203107/13962352131883.png",
+      "https://cf.cjdropshipping.com/203107/1558972698040.png",
+      "https://cf.cjdropshipping.com/20200424/994878531569.jpg?cid=2508281903011938705&cid=2602230620141602005",
+      "https://cf.cjdropshipping.com/203107/6456014163032.png",
+      "https://cf.cjdropshipping.com/20200424/55334443051333.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Suction Cup Pets Toys",
+        "desc": "毛孩都值得好嘢。團隊嚴選用料先上架,主子鍾意先算數,落單48小時內安排出貨。"
+      },
+      "zh-Hans": {
+        "name": "Suction Cup Pets Toys",
+        "desc": "毛孩也值得好东西。团队严选用料才上架,下单48小时内安排发货。"
+      },
+      "en": {
+        "name": "Suction Cup Pets Toys",
+        "desc": "Your furry friend deserves the good stuff. Carefully selected by our team."
+      }
+    },
+    "cjPid": "1D145224-CBCD-4EE4-9579-AE73B8979F84",
+    "cjVid": "03B7AF21-4DC8-4F74-BDC2-39CE741143C3",
+    "costUSD": 3.53,
+    "addedAt": "2026-08-04T09:51:28.345Z"
+  },
+  {
+    "id": 84,
+    "catClass": "pets",
+    "price": 48,
+    "icon": "box",
+    "image": "https://oss-cf.cjdropshipping.com/product/2024/09/19/05/fb4026cc-ce45-4deb-a099-eb5793183e1a.jpg",
+    "images": [
+      "https://oss-cf.cjdropshipping.com/product/2024/09/19/05/fb4026cc-ce45-4deb-a099-eb5793183e1a.jpg",
+      "https://oss-cf.cjdropshipping.com/product/2024/09/03/07/5f499a40-e78b-4a7a-a173-554a066e6ca5_trans.jpeg",
+      "https://oss-cf.cjdropshipping.com/product/2024/09/03/07/a4212df3-774f-4236-ba87-27aaf28b2145_trans.jpeg",
+      "https://oss-cf.cjdropshipping.com/product/2024/09/03/07/dc94f86d-2e74-45a4-92da-fcdbaee84d7f_trans.jpeg",
+      "https://oss-cf.cjdropshipping.com/product/2024/09/03/07/ca7cd050-5e49-4117-8fe2-76998c1eeb2a_trans.jpeg",
+      "https://oss-cf.cjdropshipping.com/product/2026/04/02/06/185e37bd-a5d4-4a86-814b-7d27259bdd5e.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Interactive Cat Toy Ball Super Drive Cat Rolling Ball",
+        "desc": "毛孩都值得好嘢。團隊嚴選用料先上架,主子鍾意先算數,落單48小時內安排出貨。"
+      },
+      "zh-Hans": {
+        "name": "Interactive Cat Toy Ball Super Drive Cat Rolling Ball",
+        "desc": "毛孩也值得好东西。团队严选用料才上架,下单48小时内安排发货。"
+      },
+      "en": {
+        "name": "Interactive Cat Toy Ball Super Drive Cat Rolling Ball",
+        "desc": "Your furry friend deserves the good stuff. Carefully selected by our team."
+      }
+    },
+    "cjPid": "2409030737241626200",
+    "cjVid": "2409030737241626400",
+    "costUSD": 0.95,
+    "addedAt": "2026-08-04T09:51:29.737Z"
+  },
+  {
+    "id": 85,
+    "catClass": "pets",
+    "price": 58,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/quick/product/d1db310f-6007-4f97-ab9c-916dd1e5661e.jpg?bid=2408190230121928200",
+    "images": [
+      "https://cf.cjdropshipping.com/quick/product/d1db310f-6007-4f97-ab9c-916dd1e5661e.jpg?bid=2408190230121928200",
+      "https://cf.cjdropshipping.com/quick/product/c9d0c6fa-dbe5-4382-ad06-580ddddf9e81.jpg",
+      "https://cf.cjdropshipping.com/17065728/2401300743530323100.jpg",
+      "https://cf.cjdropshipping.com/17065728/2401300743540328500.jpg",
+      "https://cf.cjdropshipping.com/quick/product/d1db310f-6007-4f97-ab9c-916dd1e5661e.jpg",
+      "https://cf.cjdropshipping.com/quick/product/9e9e44fc-d60f-4748-b8f5-d06e7dbcd8d1.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Dog Tumbler Toys Increases Pet IQ Interactive Slow Feeder Fo",
+        "desc": "毛孩都值得好嘢。團隊嚴選用料先上架,主子鍾意先算數,落單48小時內安排出貨。"
+      },
+      "zh-Hans": {
+        "name": "Dog Tumbler Toys Increases Pet IQ Interactive Slow Feeder Fo",
+        "desc": "毛孩也值得好东西。团队严选用料才上架,下单48小时内安排发货。"
+      },
+      "en": {
+        "name": "Dog Tumbler Toys Increases Pet IQ Interactive Slow Feeder Fo",
+        "desc": "Your furry friend deserves the good stuff. Carefully selected by our team."
+      }
+    },
+    "cjPid": "1752236157095653376",
+    "cjVid": "1752236157204705280",
+    "costUSD": 2.3,
+    "addedAt": "2026-08-04T09:51:31.052Z"
+  },
+  {
+    "id": 86,
+    "catClass": "pets",
+    "price": 298,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/15613056/15688835640514.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/15613056/15688835640514.jpg",
+      "https://cf.cjdropshipping.com/20190624/1542123131887.png",
+      "https://cf.cjdropshipping.com/15613056/1507411015396.jpg",
+      "https://cf.cjdropshipping.com/15613056/11966702800089.jpg",
+      "https://cf.cjdropshipping.com/15613056/5685868413750.jpg",
+      "https://cf.cjdropshipping.com/20190624/2665773311603.png"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Creative Cat Pet LED Laser Funny Toy Smart Automatic Cat Exe",
+        "desc": "毛孩都值得好嘢。團隊嚴選用料先上架,主子鍾意先算數,落單48小時內安排出貨。"
+      },
+      "zh-Hans": {
+        "name": "Creative Cat Pet LED Laser Funny Toy Smart Automatic Cat Exe",
+        "desc": "毛孩也值得好东西。团队严选用料才上架,下单48小时内安排发货。"
+      },
+      "en": {
+        "name": "Creative Cat Pet LED Laser Funny Toy Smart Automatic Cat Exe",
+        "desc": "Your furry friend deserves the good stuff. Carefully selected by our team."
+      }
+    },
+    "cjPid": "E321E9EF-5F9A-44B8-902F-7289897E2542",
+    "cjVid": "1A5B9555-8FA4-4992-B274-0E44EC2E0CA1",
+    "costUSD": 13.46,
+    "addedAt": "2026-08-04T09:51:32.786Z"
+  },
+  {
+    "id": 87,
+    "catClass": "pets",
+    "price": 48,
+    "icon": "box",
+    "image": "https://oss-cf.cjdropshipping.com/product/2025/01/13/06/308d1486-64be-463c-a2ec-d5368d110f4f.jpg",
+    "images": [
+      "https://oss-cf.cjdropshipping.com/product/2025/01/13/06/308d1486-64be-463c-a2ec-d5368d110f4f.jpg",
+      "https://oss-cf.cjdropshipping.com/product/2024/12/20/08/8215b2cc-12ea-4e11-857c-4519f8944b96_trans.jpeg",
+      "https://oss-cf.cjdropshipping.com/product/2024/12/20/08/3ea34d8b-3a6d-41e6-81ad-b8648c058a5f_trans.jpeg",
+      "https://oss-cf.cjdropshipping.com/product/2024/12/20/08/b4898358-ea48-48b5-ba1a-70b70c325ab6_trans.jpeg",
+      "https://oss-cf.cjdropshipping.com/product/2024/12/20/08/d9f47803-ccac-4eb3-891a-c11d37ccc3ed_trans.jpeg",
+      "https://oss-cf.cjdropshipping.com/product/2024/12/20/08/c5a34755-8abd-413f-bd46-e93767872eee_trans.jpeg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "New Interactive Cat Toys Ball Auto Electric Rolling Ball Toy",
+        "desc": "毛孩都值得好嘢。團隊嚴選用料先上架,主子鍾意先算數,落單48小時內安排出貨。"
+      },
+      "zh-Hans": {
+        "name": "New Interactive Cat Toys Ball Auto Electric Rolling Ball Toy",
+        "desc": "毛孩也值得好东西。团队严选用料才上架,下单48小时内安排发货。"
+      },
+      "en": {
+        "name": "New Interactive Cat Toys Ball Auto Electric Rolling Ball Toy",
+        "desc": "Your furry friend deserves the good stuff. Carefully selected by our team."
+      }
+    },
+    "cjPid": "2412200801291624100",
+    "cjVid": "2412200801291624500",
+    "costUSD": 1.74,
+    "addedAt": "2026-08-04T09:51:34.263Z"
+  },
+  {
+    "id": 88,
+    "catClass": "pets",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/1523d10e-d162-4c0a-8752-6467108442ac.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/1523d10e-d162-4c0a-8752-6467108442ac.jpg",
+      "https://cf.cjdropshipping.com/8dd8600c-52ab-439c-9269-504c5ebaa0c8.jpg",
+      "https://oss-cf.cjdropshipping.com/product/2025/04/07/11/932dca8f-0114-4767-831a-3c3d513aea37.jpg",
+      "https://cf.cjdropshipping.com/2a889e05-6dae-4533-8234-5c1cb3fb4c19.jpg",
+      "https://cf.cjdropshipping.com/9110beea-3bbb-4858-862b-d1aadbb8b8fd.png",
+      "https://cf.cjdropshipping.com/2ba9eae7-8f41-410e-b845-14a96de01954.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Cat Toy Self-Hi Sucker Spring Rabbit Hair Ball Interactive P",
+        "desc": "毛孩都值得好嘢。團隊嚴選用料先上架,主子鍾意先算數,落單48小時內安排出貨。"
+      },
+      "zh-Hans": {
+        "name": "Cat Toy Self-Hi Sucker Spring Rabbit Hair Ball Interactive P",
+        "desc": "毛孩也值得好东西。团队严选用料才上架,下单48小时内安排发货。"
+      },
+      "en": {
+        "name": "Cat Toy Self-Hi Sucker Spring Rabbit Hair Ball Interactive P",
+        "desc": "Your furry friend deserves the good stuff. Carefully selected by our team."
+      }
+    },
+    "cjPid": "1551858812582375424",
+    "cjVid": "1551858812611735552",
+    "costUSD": 1.11,
+    "addedAt": "2026-08-04T09:51:35.715Z"
   }
 ]
