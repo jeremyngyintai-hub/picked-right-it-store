@@ -1,1 +1,675 @@
-[]
+[
+  {
+    "id": 13,
+    "catClass": "home",
+    "price": 138,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/57e449e5-ba3f-4536-9893-c1ff9f5f33a5.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/57e449e5-ba3f-4536-9893-c1ff9f5f33a5.jpg",
+      "https://cf.cjdropshipping.com/24c1b04e-d0dc-49ce-9fd1-fa9eef90b88a.jpg",
+      "https://cf.cjdropshipping.com/3fb9b7f2-067e-48a7-884c-3ff2e7dc2eae.jpg",
+      "https://cf.cjdropshipping.com/8f893461-94c6-4b62-90ee-2da8b7d1c8ec.jpg",
+      "https://cf.cjdropshipping.com/35980b12-0b21-4f0c-a7bf-87d6677ae1a5.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Waterproof Shower Curtain Spring Spun Polyester Shower Curta",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Waterproof Shower Curtain Spring Spun Polyester Shower Curta",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Waterproof Shower Curtain Spring Spun Polyester Shower Curta",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "1618798381453815808",
+    "cjVid": "1618798381533507584",
+    "shipUSD": 4.7,
+    "variants": [
+      {
+        "vid": "1618798381533507584",
+        "name": "Waterproof Shower Curtain Spring Spun Polyester Shower Curtain 120x180cm"
+      },
+      {
+        "vid": "1618798381537701888",
+        "name": "Waterproof Shower Curtain Spring Spun Polyester Shower Curtain 150x180cm"
+      },
+      {
+        "vid": "1618798381537701889",
+        "name": "Waterproof Shower Curtain Spring Spun Polyester Shower Curtain 180x180cm"
+      },
+      {
+        "vid": "1618798381537701890",
+        "name": "Waterproof Shower Curtain Spring Spun Polyester Shower Curtain 200x180cm"
+      }
+    ],
+    "costUSD": 4.47,
+    "addedAt": "2026-08-04T13:13:18.410Z"
+  },
+  {
+    "id": 14,
+    "catClass": "home",
+    "price": 88,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20190926/1149112468787.png",
+    "images": [
+      "https://cf.cjdropshipping.com/20190926/1149112468787.png",
+      "https://cf.cjdropshipping.com/20190926/306586076646.png"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Home decor tapestry tarpaulin",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Home decor tapestry tarpaulin",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Home decor tapestry tarpaulin",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "C32C305D-2EE7-4696-8BB1-F33230A51310",
+    "cjVid": "5AAB5FD8-20E4-4D22-8300-82334F29F5F6",
+    "shipUSD": 3.19,
+    "variants": [
+      {
+        "vid": "5AAB5FD8-20E4-4D22-8300-82334F29F5F6",
+        "name": "Home decor tapestry tarpaulin 150x130cm"
+      },
+      {
+        "vid": "A8A57272-132C-40D9-B5A3-CC5D76E0623E",
+        "name": "Home decor tapestry tarpaulin 150x100cm"
+      }
+    ],
+    "costUSD": 2.9,
+    "addedAt": "2026-08-04T13:13:22.113Z"
+  },
+  {
+    "id": 15,
+    "catClass": "home",
+    "price": 88,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20190329/1374415483454.JPG",
+    "images": [
+      "https://cf.cjdropshipping.com/20190329/1374415483454.JPG"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Galaxy Hanging Wall Tapestry Hippie Retro Home Decor Yoga Be",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Galaxy Hanging Wall Tapestry Hippie Retro Home Decor Yoga Be",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Galaxy Hanging Wall Tapestry Hippie Retro Home Decor Yoga Be",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "DE2E1A7B-7266-4631-A570-ADF78C1F33EF",
+    "cjVid": "6263DB26-4FAE-44B6-B6DA-B4AEF7FA0084",
+    "shipUSD": 3.19,
+    "variants": [
+      {
+        "vid": "6263DB26-4FAE-44B6-B6DA-B4AEF7FA0084",
+        "name": "Galaxy Hanging Wall Tapestry Hippie Retro Home Decor Yoga Beach Mat Picture color 150x130cm"
+      },
+      {
+        "vid": "81894A17-F27A-4BB1-8DC4-A1059B377896",
+        "name": "Galaxy Hanging Wall Tapestry Hippie Retro Home Decor Yoga Beach Mat Picture 150x230cm thick"
+      },
+      {
+        "vid": "9381F7AA-F8E4-4021-9886-D32D74752D32",
+        "name": "Galaxy Hanging Wall Tapestry Hippie Retro Home Decor Yoga Beach Mat Picture color 150x100cm"
+      },
+      {
+        "vid": "AAC0EF34-AF31-4B7A-B043-F1ECAB9A710F",
+        "name": "Galaxy Hanging Wall Tapestry Hippie Retro Home Decor Yoga Beach Mat Picture color 150x230cm"
+      },
+      {
+        "vid": "C8411EFF-40D8-4534-8D37-3BE9AFF3FAB8",
+        "name": "Galaxy Hanging Wall Tapestry Hippie Retro Home Decor Yoga Beach Mat Picture 150x130cm thick"
+      },
+      {
+        "vid": "E7C3DB33-BF51-4A14-B12C-942E8CA30C37",
+        "name": "Galaxy Hanging Wall Tapestry Hippie Retro Home Decor Yoga Beach Mat Picture 150x100cm thick"
+      }
+    ],
+    "costUSD": 2.9,
+    "addedAt": "2026-08-04T13:13:26.162Z"
+  },
+  {
+    "id": 16,
+    "catClass": "home",
+    "price": 368,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/b336f998-e897-42f6-8d2c-ffdc1d6972e4.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/b336f998-e897-42f6-8d2c-ffdc1d6972e4.jpg",
+      "https://cf.cjdropshipping.com/14e535a4-320b-4e48-b4bb-3405b3c5b408.jpg",
+      "https://cf.cjdropshipping.com/a3110ec0-7a49-47e5-9ab4-384fdea10c03.jpg",
+      "https://cf.cjdropshipping.com/ffe434b9-e974-4e8d-bce0-dcbd94e40143.jpg",
+      "https://cf.cjdropshipping.com/7901d637-9e5e-4b49-8b7a-3881593a2553.jpg",
+      "https://cf.cjdropshipping.com/0f8560e6-6519-438a-9efe-1cc5328a95ad.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Soft Gauze Curtain Semi-Shading Rolling Curtain Roll-Up Curt",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Soft Gauze Curtain Semi-Shading Rolling Curtain Roll-Up Curt",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Soft Gauze Curtain Semi-Shading Rolling Curtain Roll-Up Curt",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "1610482594481713152",
+    "cjVid": "1610482594813063168",
+    "shipUSD": 6.25,
+    "variants": [
+      {
+        "vid": "1610482594813063168",
+        "name": "Soft Gauze Curtain Semi-Shading Rolling Curtain Roll-Up Curtain Electric Zebra Curtain Marshmallow One square meter"
+      },
+      {
+        "vid": "1610482594817257472",
+        "name": "Soft Gauze Curtain Semi-Shading Rolling Curtain Roll-Up Curtain Electric Zebra Curtain Sweet apricot One square meter"
+      },
+      {
+        "vid": "1610482594817257473",
+        "name": "Soft Gauze Curtain Semi-Shading Rolling Curtain Roll-Up Curtain Electric Zebra Curtain Lemon green One square meter"
+      },
+      {
+        "vid": "1610482594821451776",
+        "name": "Soft Gauze Curtain Semi-Shading Rolling Curtain Roll-Up Curtain Electric Zebra Curtain Champagne Gray One square meter"
+      },
+      {
+        "vid": "1610482594821451777",
+        "name": "Soft Gauze Curtain Semi-Shading Rolling Curtain Roll-Up Curtain Electric Zebra Curtain Glacier gray One square meter"
+      },
+      {
+        "vid": "1610482594821451778",
+        "name": "Soft Gauze Curtain Semi-Shading Rolling Curtain Roll-Up Curtain Electric Zebra Curtain Blue One square meter"
+      },
+      {
+        "vid": "1610482594825646080",
+        "name": "Soft Gauze Curtain Semi-Shading Rolling Curtain Roll-Up Curtain Electric Zebra Curtain Cantaloupe color One square meter"
+      },
+      {
+        "vid": "1610482594825646081",
+        "name": "Soft Gauze Curtain Semi-Shading Rolling Curtain Roll-Up Curtain Electric Zebra Curtain Matcha One square meter"
+      },
+      {
+        "vid": "1610482594825646082",
+        "name": "Soft Gauze Curtain Semi-Shading Rolling Curtain Roll-Up Curtain Electric Zebra Curtain Ice coffee One square meter"
+      },
+      {
+        "vid": "1610482594829840384",
+        "name": "Soft Gauze Curtain Semi-Shading Rolling Curtain Roll-Up Curtain Electric Zebra Curtain Chocolate color One square meter"
+      },
+      {
+        "vid": "1610482594829840385",
+        "name": "Soft Gauze Curtain Semi-Shading Rolling Curtain Roll-Up Curtain Electric Zebra Curtain Black One square meter"
+      },
+      {
+        "vid": "1610482594829840386",
+        "name": "Soft Gauze Curtain Semi-Shading Rolling Curtain Roll-Up Curtain Electric Zebra Curtain White One square meter"
+      }
+    ],
+    "costUSD": 14.69,
+    "addedAt": "2026-08-04T13:13:29.403Z"
+  },
+  {
+    "id": 17,
+    "catClass": "home",
+    "price": 68,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/1620801848057.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/1620801848057.jpg",
+      "https://cf.cjdropshipping.com/1620801848357.jpg",
+      "https://cf.cjdropshipping.com/1620801848051.jpg",
+      "https://cf.cjdropshipping.com/1620801848052.jpg",
+      "https://cf.cjdropshipping.com/1620801848058.jpg",
+      "https://cf.cjdropshipping.com/1620801848346.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "1392372605478113280",
+    "cjVid": "1392372606862233600",
+    "shipUSD": 3.25,
+    "variants": [
+      {
+        "vid": "1392372606862233600",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Bright red 1X2M rod type"
+      },
+      {
+        "vid": "1392372606870622208",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Bright red 1X2M Velcro type"
+      },
+      {
+        "vid": "1392372606879010816",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Bright red 1X2M hook type"
+      },
+      {
+        "vid": "1392372606887399424",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Rose Red 1X2M rod type"
+      },
+      {
+        "vid": "1392372606929342464",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Rose Red 1X2M Velcro type"
+      },
+      {
+        "vid": "1392372606937731072",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Rose Red 1X2M hook type"
+      },
+      {
+        "vid": "1392372606950313984",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Wine Red 1X2M rod type"
+      },
+      {
+        "vid": "1392372606958702592",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Wine Red 1X2M Velcro type"
+      },
+      {
+        "vid": "1392372606971285504",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Wine Red 1X2M hook type"
+      },
+      {
+        "vid": "1392372606979674112",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Orange 1X2M rod type"
+      },
+      {
+        "vid": "1392372606988062720",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Orange 1X2M Velcro type"
+      },
+      {
+        "vid": "1392372606996451328",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Orange 1X2M hook type"
+      },
+      {
+        "vid": "1392372607009034240",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Pink 1X2M rod type"
+      },
+      {
+        "vid": "1392372607017422848",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Pink 1X2M Velcro type"
+      },
+      {
+        "vid": "1392372607025811456",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Pink 1X2M hook type"
+      },
+      {
+        "vid": "1392372607034200064",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Champagne 1X2M rod type"
+      },
+      {
+        "vid": "1392372607046782976",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Champagne 1X2M Velcro type"
+      },
+      {
+        "vid": "1392372607055171584",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Champagne 1X2M hook type"
+      },
+      {
+        "vid": "1392372607063560192",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Dark coffee 1X2M rod type"
+      },
+      {
+        "vid": "1392372607071948800",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Dark coffee 1X2M Velcro type"
+      },
+      {
+        "vid": "1392372607080337408",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Dark coffee 1X2M hook type"
+      },
+      {
+        "vid": "1392372607088726016",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Light Purple 1X2M rod type"
+      },
+      {
+        "vid": "1392372607097114624",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Light Purple 1X2M Velcro type"
+      },
+      {
+        "vid": "1392372607105503232",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Light Purple 1X2M hook type"
+      },
+      {
+        "vid": "1392372607113891840",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Grass green 1X2M rod type"
+      },
+      {
+        "vid": "1392372607122280448",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Grass green 1X2M Velcro type"
+      },
+      {
+        "vid": "1392372607134863360",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen Grass green 1X2M hook type"
+      },
+      {
+        "vid": "1392372607143251968",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen silver gray 1X2M rod type"
+      },
+      {
+        "vid": "1392372607151640576",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen silver gray 1X2M Velcro type"
+      },
+      {
+        "vid": "1392372607160029184",
+        "name": "Door Curtain Dilver Thread Curtain Partition Curtain Hanging Curtain Window Screen silver gray 1X2M hook type"
+      }
+    ],
+    "costUSD": 1.59,
+    "addedAt": "2026-08-04T13:13:32.680Z"
+  },
+  {
+    "id": 18,
+    "catClass": "home",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/copy/1532573883386-20180726105609.png?bid=1794279675821301760",
+    "images": [
+      "https://cf.cjdropshipping.com/copy/1532573883386-20180726105609.png?bid=1794279675821301760",
+      "https://cf.cjdropshipping.com/1622603806640.jpg",
+      "https://oss-cf.cjdropshipping.com/product/2024/01/18/06/ab1168d1-4829-4c01-97c4-aaa41de4085a.jpg",
+      "https://cf.cjdropshipping.com/copy/1532573937475-20180726105449.png?bid=1794279673812226048",
+      "https://cf.cjdropshipping.com/copy/1532573874169-20180726105625.png",
+      "https://cf.cjdropshipping.com/copy/1532573948419-20180726105509.png"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transpa",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transpa",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transpa",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "63490302-A156-44DF-9523-E90F58EE9E96",
+    "cjVid": "0E5BE00C-28CF-4F2E-AA50-C97E6755A4D5",
+    "shipUSD": 2.55,
+    "variants": [
+      {
+        "vid": "0E5BE00C-28CF-4F2E-AA50-C97E6755A4D5",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Red 100×200cm"
+      },
+      {
+        "vid": "1399933267884511232",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Black 100x270cm"
+      },
+      {
+        "vid": "1399933267892899840",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Brown 100x270cm"
+      },
+      {
+        "vid": "1399933267901288448",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Fruit green 100x270cm"
+      },
+      {
+        "vid": "1399933267909677056",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Golden 100x270cm"
+      },
+      {
+        "vid": "1399933267918065664",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Peacock blue 100x270cm"
+      },
+      {
+        "vid": "1399933267922259968",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Purple 100x270cm"
+      },
+      {
+        "vid": "1399933267930648576",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Red 100x270cm"
+      },
+      {
+        "vid": "1399933267939037184",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom White 100x270cm"
+      },
+      {
+        "vid": "1399933267947425792",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Navy blue 100x270cm"
+      },
+      {
+        "vid": "1399933267951620096",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Pink 100x270cm"
+      },
+      {
+        "vid": "1399933267960008704",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Rose Red 100x270cm"
+      },
+      {
+        "vid": "1399933267968397312",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Sky blue 100x270cm"
+      },
+      {
+        "vid": "1399933267972591616",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Orange 100x270cm"
+      },
+      {
+        "vid": "1399933267980980224",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Navy blue 100x200cm"
+      },
+      {
+        "vid": "1399933267989368832",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Pink 100x200cm"
+      },
+      {
+        "vid": "1399933267997757440",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Rose Red 100x200cm"
+      },
+      {
+        "vid": "1399933268001951744",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Sky blue 100x200cm"
+      },
+      {
+        "vid": "1A73CAD7-3DCF-4633-B3A7-D14B9753CA7C",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Fruit green 100×200cm"
+      },
+      {
+        "vid": "1EBB8092-4695-4A17-8CAA-7F2AB48B7761",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom White 100×200cm"
+      },
+      {
+        "vid": "25FB5473-8056-4F70-A562-D0832790085E",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Orange 100×200cm"
+      },
+      {
+        "vid": "62AD0381-D680-4977-808D-C608934F2C53",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Purple 100×200cm"
+      },
+      {
+        "vid": "6F53D969-32E8-4D0F-A6F9-4148F1A73261",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Brown 100×200cm"
+      },
+      {
+        "vid": "747C40EC-C9D6-452F-BC2C-BC351F846EF8",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Black 100×200cm"
+      },
+      {
+        "vid": "7D755FBA-E5C9-4727-910C-8B4438236E06",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Peacock blue 100×200cm"
+      },
+      {
+        "vid": "9D713ED6-FE17-4931-9D6E-C8330F3FB025",
+        "name": "Curtains Solid Tulle Modern Curtains For Living Room Transparent Tulle Curtains Window Sheer For The Bedroom Golden 100×200cm"
+      }
+    ],
+    "costUSD": 1.1,
+    "addedAt": "2026-08-04T13:13:36.458Z"
+  },
+  {
+    "id": 19,
+    "catClass": "home",
+    "price": 78,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20190808/875646246107.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/20190808/875646246107.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Furniture print tapestry",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Furniture print tapestry",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Furniture print tapestry",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "7F11B058-12C8-4A5C-B28C-B91F0D0437B6",
+    "cjVid": "1BBD854B-B287-44E0-ADFD-DF9AFCACC896",
+    "shipUSD": 2.97,
+    "variants": [
+      {
+        "vid": "1BBD854B-B287-44E0-ADFD-DF9AFCACC896",
+        "name": "Furniture print tapestry 150x100CM"
+      },
+      {
+        "vid": "1E59439C-8CA6-4A0A-AC8D-EE527A37140A",
+        "name": "Furniture print tapestry 150x100cm thick"
+      },
+      {
+        "vid": "766ADAA5-6C97-4260-B991-616C19C09CD8",
+        "name": "Furniture print tapestry 150x130CM"
+      },
+      {
+        "vid": "85991998-7D28-4811-B6C4-06099AF11602",
+        "name": "Furniture print tapestry 150x130cm thick"
+      },
+      {
+        "vid": "DB25C92B-BC9E-4B6A-9B90-88B16852D190",
+        "name": "Furniture print tapestry 150x230cm thick"
+      },
+      {
+        "vid": "E915501C-5DD3-4C24-A7D4-BAB53BFA8042",
+        "name": "Furniture print tapestry 150x230CM"
+      }
+    ],
+    "costUSD": 2.57,
+    "addedAt": "2026-08-04T13:13:40.041Z"
+  },
+  {
+    "id": 20,
+    "catClass": "home",
+    "price": 108,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/15689952/727927852509.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/15689952/727927852509.jpg",
+      "https://cf.cjdropshipping.com/20210126/1781615661688.jpg",
+      "https://cf.cjdropshipping.com/20190921/952949126173.jpg",
+      "https://cf.cjdropshipping.com/20190921/2241872761569.jpg",
+      "https://cf.cjdropshipping.com/20190921/4747539699976.jpg",
+      "https://cf.cjdropshipping.com/15689952/791943459076.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Polygon Printing Tassel Round Bath Towel Yoga Mat",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Polygon Printing Tassel Round Bath Towel Yoga Mat",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Polygon Printing Tassel Round Bath Towel Yoga Mat",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "2951B184-2825-4E63-895A-5008BD36DBF3",
+    "cjVid": "3E9886DF-662A-4EC5-8BF7-CFBAEEFDC2AC",
+    "shipUSD": 2.97,
+    "variants": [
+      {
+        "vid": "3E9886DF-662A-4EC5-8BF7-CFBAEEFDC2AC",
+        "name": "Polygon Printing Tassel Round Bath Towel Yoga Mat Yellow B"
+      },
+      {
+        "vid": "538A1BEA-B12B-40E3-A4E2-7BE1E405300C",
+        "name": "Polygon Printing Tassel Round Bath Towel Yoga Mat Light Blue"
+      },
+      {
+        "vid": "5DBF606F-07A6-45A0-8CDE-6ED4C180AB01",
+        "name": "Polygon Printing Tassel Round Bath Towel Yoga Mat Blue"
+      },
+      {
+        "vid": "614B7553-80F9-49FD-B3B7-3F7B803B2B7D",
+        "name": "Polygon Printing Tassel Round Bath Towel Yoga Mat Purple"
+      },
+      {
+        "vid": "9F442F63-B0E9-4D99-9B4D-FB5D11B9829F",
+        "name": "Polygon Printing Tassel Round Bath Towel Yoga Mat Pink"
+      },
+      {
+        "vid": "D326B9B3-EB03-459D-A0BD-6EFE56C9E14F",
+        "name": "Polygon Printing Tassel Round Bath Towel Yoga Mat Yellow"
+      }
+    ],
+    "costUSD": 3.91,
+    "addedAt": "2026-08-04T13:13:43.461Z"
+  }
+]
