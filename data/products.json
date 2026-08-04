@@ -559,5 +559,145 @@
     "cjVid": "78D16290-FAF5-4F35-BB75-56416509045E",
     "costUSD": 2.57,
     "addedAt": "2026-08-04T09:48:27.172Z"
+  },
+  {
+    "id": 29,
+    "catClass": "home",
+    "price": 188,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/153cff4d-fad8-4b4b-bcc7-819e4508a06d.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/153cff4d-fad8-4b4b-bcc7-819e4508a06d.jpg",
+      "https://cf.cjdropshipping.com/445694ea-d63c-4a2b-90ef-6ce0b2d151b2.jpg",
+      "https://cf.cjdropshipping.com/b8fda5e4-9e71-498b-b4dc-47a79b3d639f.jpg",
+      "https://cf.cjdropshipping.com/736091fb-1846-48d2-8a49-91cc5a007700.jpg",
+      "https://cf.cjdropshipping.com/a3d55599-9658-4b4d-9be4-0bbf5fb21fcc.jpg",
+      "https://cf.cjdropshipping.com/55d5479d-1a2d-49e9-8fa2-10b55fa8a627.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Nordic Simple Hollow Star Princess Wind Bedroom Blackout Cur",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Nordic Simple Hollow Star Princess Wind Bedroom Blackout Cur",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Nordic Simple Hollow Star Princess Wind Bedroom Blackout Cur",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "1564478383818551296",
+    "cjVid": "1564478383894048768",
+    "costUSD": 8.46,
+    "addedAt": "2026-08-04T09:48:32.009Z"
+  },
+  {
+    "id": 30,
+    "catClass": "home",
+    "price": 98,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/0fff4e8d-eced-463d-9cb0-f8e4f13bb9b6.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/0fff4e8d-eced-463d-9cb0-f8e4f13bb9b6.jpg",
+      "https://cf.cjdropshipping.com/2a5af8bc-b018-40bb-82a0-eff5cfb1388f.jpg",
+      "https://cf.cjdropshipping.com/fc099758-eff4-450b-9f6d-2fdc9abceb4d.jpg",
+      "https://cf.cjdropshipping.com/64282115-eb48-4fca-acff-ea8b2dd32a0f.jpg",
+      "https://oss-cf.cjdropshipping.com/product/2025/06/14/06/d8a94d0f-9bbc-44ea-b16b-07dc80bfaa6e.jpg",
+      "https://oss-cf.cjdropshipping.com/product/2025/06/14/06/d47cbe44-1907-42d3-b864-b48f755cf8f3.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Full Blackout Hot Sale Curtain With Black Lining On The Back",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Full Blackout Hot Sale Curtain With Black Lining On The Back",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Full Blackout Hot Sale Curtain With Black Lining On The Back",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "1463737109629243392",
+    "cjVid": "1463737109704740864",
+    "costUSD": 4.44,
+    "addedAt": "2026-08-04T09:48:33.329Z"
+  },
+  {
+    "id": 31,
+    "catClass": "home",
+    "price": 58,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20190826/349539456218.png",
+    "images": [
+      "https://cf.cjdropshipping.com/20190826/349539456218.png",
+      "https://cf.cjdropshipping.com/20190826/3087306538388.png"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Home decor tapestry tarpaulin",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Home decor tapestry tarpaulin",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Home decor tapestry tarpaulin",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "483F8FD2-B04E-45D0-83FA-6490F5C3A2EB",
+    "cjVid": "5D1E54C7-6534-4509-9ABC-1D6C7AEA0134",
+    "costUSD": 2.57,
+    "addedAt": "2026-08-04T09:48:34.653Z"
+  },
+  {
+    "id": 32,
+    "catClass": "home",
+    "price": 68,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20190826/7143542540243.png",
+    "images": [
+      "https://cf.cjdropshipping.com/20190826/7143542540243.png",
+      "https://cf.cjdropshipping.com/20190826/5059158295513.png"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Home decor tapestry tarpaulin",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Home decor tapestry tarpaulin",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Home decor tapestry tarpaulin",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "519BCED3-97EE-48C3-95F8-0008E9F382A9",
+    "cjVid": "8EBFFB1D-D419-42AD-9EF7-480AB2DC50B6",
+    "costUSD": 2.88,
+    "addedAt": "2026-08-04T09:48:36.145Z"
   }
 ]
