@@ -22890,5 +22890,508 @@
     ],
     "costUSD": 5.03,
     "addedAt": "2026-08-04T16:18:51.499Z"
+  },
+  {
+    "id": 301,
+    "catClass": "auto",
+    "price": 398,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/2047/781137236919.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/2047/781137236919.jpg",
+      "https://cf.cjdropshipping.com/2047/384110091504.jpg",
+      "https://cf.cjdropshipping.com/20200301/405469469596.png",
+      "https://cf.cjdropshipping.com/20200305/2357707869398.jpg",
+      "https://cf.cjdropshipping.com/2047/1105324900622.jpg",
+      "https://cf.cjdropshipping.com/2047/479520189156.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Car vacuum cleaner dual-use family car",
+        "desc": "架車嘅實用升級。團隊嚴選易裝款式先上架,新手都裝到。"
+      },
+      "zh-Hans": {
+        "name": "Car vacuum cleaner dual-use family car",
+        "desc": "爱车的实用升级。团队严选易装款式才上架,新手也能装。"
+      },
+      "en": {
+        "name": "Car vacuum cleaner dual-use family car",
+        "desc": "A practical upgrade for your car — installation-hand-picked by our team."
+      }
+    },
+    "cjPid": "79622ACA-CD12-4F46-9852-83494D47DF61",
+    "cjVid": "05F3AA95-7194-4BD1-882D-BE9F649EAB54",
+    "shipUSD": 7.64,
+    "variants": [
+      {
+        "vid": "05F3AA95-7194-4BD1-882D-BE9F649EAB54",
+        "name": "Car vacuum cleaner dual-use family car Car models set1"
+      },
+      {
+        "vid": "10DC7AB1-5FFE-42EA-BF79-72EFE262264E",
+        "name": "Car vacuum cleaner dual-use family car USB set1"
+      },
+      {
+        "vid": "1A6C5F7D-B03B-481A-938B-017084000C01",
+        "name": "Car vacuum cleaner dual-use family car Wireless"
+      },
+      {
+        "vid": "1AB702B2-8B5C-43B1-BEF6-B3EB8C4BA248",
+        "name": "Car vacuum cleaner dual-use family car USB set2"
+      },
+      {
+        "vid": "3A969106-893F-40FC-B466-4B9824E1E463",
+        "name": "Car vacuum cleaner dual-use family car 6000PaUSB white"
+      },
+      {
+        "vid": "6D696879-7F46-4B4F-BE5B-972670151C87",
+        "name": "Car vacuum cleaner dual-use family car 6000PaUSB black"
+      },
+      {
+        "vid": "71478760-7F4F-406B-AE1D-A965067750C6",
+        "name": "Car vacuum cleaner dual-use family car Wire"
+      },
+      {
+        "vid": "8CEF9C5F-408C-4549-9225-6487BAD67B81",
+        "name": "Car vacuum cleaner dual-use family car Car models set2"
+      }
+    ],
+    "costUSD": 15.56,
+    "addedAt": "2026-08-04T16:18:58.704Z"
+  },
+  {
+    "id": 302,
+    "catClass": "auto",
+    "price": 228,
+    "icon": "box",
+    "image": "https://oss-cf.cjdropshipping.com/product/2024/01/13/09/f2b41145-c238-45b7-a18d-a03b1cd845fc.jpg",
+    "images": [
+      "https://oss-cf.cjdropshipping.com/product/2024/01/13/09/f2b41145-c238-45b7-a18d-a03b1cd845fc.jpg",
+      "https://oss-cf.cjdropshipping.com/product/2024/01/13/09/ff5bd0e1-ec81-413b-8f78-bcdf5b44c1c7.jpg",
+      "https://cf.cjdropshipping.com/1616660777176.jpg",
+      "https://cf.cjdropshipping.com/1616664876435.jpg",
+      "https://cf.cjdropshipping.com/0097b6e5-8830-4836-a072-8b7091efbbc2.jpg",
+      "https://cf.cjdropshipping.com/1616660777169.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Mini Fashion Car High-Power Car Vacuum Cleaner",
+        "desc": "架車嘅實用升級。團隊嚴選易裝款式先上架,新手都裝到。"
+      },
+      "zh-Hans": {
+        "name": "Mini Fashion Car High-Power Car Vacuum Cleaner",
+        "desc": "爱车的实用升级。团队严选易装款式才上架,新手也能装。"
+      },
+      "en": {
+        "name": "Mini Fashion Car High-Power Car Vacuum Cleaner",
+        "desc": "A practical upgrade for your car — installation-hand-picked by our team."
+      }
+    },
+    "cjPid": "1375002228309495808",
+    "cjVid": "1375002229664256000",
+    "shipUSD": 6.74,
+    "variants": [
+      {
+        "vid": "1375002229664256000",
+        "name": "Mini Fashion Car High-Power Car Vacuum Cleaner White"
+      },
+      {
+        "vid": "1375002229702004736",
+        "name": "Mini Fashion Car High-Power Car Vacuum Cleaner Black"
+      },
+      {
+        "vid": "1375002229739753472",
+        "name": "Mini Fashion Car High-Power Car Vacuum Cleaner Green"
+      },
+      {
+        "vid": "1451388772066398208",
+        "name": "Mini Fashion Car High-Power Car Vacuum Cleaner Black with Yellow M gloves"
+      },
+      {
+        "vid": "1451388772070592512",
+        "name": "Mini Fashion Car High-Power Car Vacuum Cleaner Green with Yellow M gloves"
+      },
+      {
+        "vid": "1451388772070592513",
+        "name": "Mini Fashion Car High-Power Car Vacuum Cleaner White with Yellow M gloves"
+      },
+      {
+        "vid": "1746097799076253696",
+        "name": "Mini Fashion Car High-Power Car Vacuum Cleaner Black SetA"
+      },
+      {
+        "vid": "1746097799139168256",
+        "name": "Mini Fashion Car High-Power Car Vacuum Cleaner Black SetB"
+      },
+      {
+        "vid": "1746097799214665728",
+        "name": "Mini Fashion Car High-Power Car Vacuum Cleaner White SetA"
+      },
+      {
+        "vid": "1746097799428575232",
+        "name": "Mini Fashion Car High-Power Car Vacuum Cleaner White SetB"
+      }
+    ],
+    "costUSD": 8,
+    "addedAt": "2026-08-04T16:19:02.271Z"
+  },
+  {
+    "id": 303,
+    "catClass": "auto",
+    "price": 278,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/dc4b37b3-b819-4724-a5c2-ff5820352835.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/dc4b37b3-b819-4724-a5c2-ff5820352835.jpg",
+      "https://cf.cjdropshipping.com/ebadff7a-07ce-472b-9c71-d653921cda64.png",
+      "https://cf.cjdropshipping.com/6d364968-4e81-4b93-ad3b-14905e917f60.png",
+      "https://cf.cjdropshipping.com/169853db-2610-4d3a-bd88-3f886bff19fc.jpg",
+      "https://cf.cjdropshipping.com/0461a6f6-4e4e-440b-8be6-89f1e7d06fd5.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Car Door Handle Decorative Sticker Accessories",
+        "desc": "架車嘅實用升級。團隊嚴選易裝款式先上架,新手都裝到。"
+      },
+      "zh-Hans": {
+        "name": "Car Door Handle Decorative Sticker Accessories",
+        "desc": "爱车的实用升级。团队严选易装款式才上架,新手也能装。"
+      },
+      "en": {
+        "name": "Car Door Handle Decorative Sticker Accessories",
+        "desc": "A practical upgrade for your car — installation-hand-picked by our team."
+      }
+    },
+    "cjPid": "1494570839587295232",
+    "cjVid": "1494570839704735744",
+    "shipUSD": 3.17,
+    "variants": [
+      {
+        "vid": "1494570839704735744",
+        "name": "Car Door Handle Decorative Sticker Accessories Bright black"
+      },
+      {
+        "vid": "1494570839704735745",
+        "name": "Car Door Handle Decorative Sticker Accessories Carbon fiber pattern"
+      }
+    ],
+    "costUSD": 11.4,
+    "addedAt": "2026-08-04T16:19:05.846Z"
+  },
+  {
+    "id": 304,
+    "catClass": "auto",
+    "price": 258,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/b627957d-e258-4c26-8539-ee2468c3707e.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/b627957d-e258-4c26-8539-ee2468c3707e.jpg",
+      "https://cf.cjdropshipping.com/0dfd2f6b-c25a-41dd-9bfc-5d100e8e915a.jpg",
+      "https://cf.cjdropshipping.com/5d6ce76f-ac2e-487e-8950-2dbdf57da574.jpg",
+      "https://cf.cjdropshipping.com/9d51ad01-1030-4a31-9323-133be18803c3.jpg",
+      "https://cf.cjdropshipping.com/f4bba039-00e7-423c-92d9-7b6125233c5e.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Car Mini Portable Electric Smart Wireless Digital Inflator",
+        "desc": "架車嘅實用升級。團隊嚴選易裝款式先上架,新手都裝到。"
+      },
+      "zh-Hans": {
+        "name": "Car Mini Portable Electric Smart Wireless Digital Inflator",
+        "desc": "爱车的实用升级。团队严选易装款式才上架,新手也能装。"
+      },
+      "en": {
+        "name": "Car Mini Portable Electric Smart Wireless Digital Inflator",
+        "desc": "A practical upgrade for your car — installation-hand-picked by our team."
+      }
+    },
+    "cjPid": "1546792710718369792",
+    "cjVid": "1546792710798061568",
+    "shipUSD": 6.3,
+    "variants": [
+      {
+        "vid": "1546792710798061568",
+        "name": "Car Mini Portable Electric Smart Wireless Digital Inflator USB rechargeable air pump USB"
+      }
+    ],
+    "costUSD": 9.45,
+    "addedAt": "2026-08-04T16:19:09.097Z"
+  },
+  {
+    "id": 305,
+    "catClass": "auto",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/0508a418-06e3-4dba-9f36-9c3830db2103.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/0508a418-06e3-4dba-9f36-9c3830db2103.jpg",
+      "https://cf.cjdropshipping.com/f9bbb6c7-c047-4c94-b958-ad5a9c509e37.jpg",
+      "https://cf.cjdropshipping.com/260a08a9-ad97-4aae-be4e-aa8c492fab7a.jpg",
+      "https://cf.cjdropshipping.com/5a5d0371-a561-45c4-8df9-ae93d636f6f4.jpg",
+      "https://cf.cjdropshipping.com/85479430-151b-4055-b772-3f123777297d.png",
+      "https://cf.cjdropshipping.com/f3b2a561-3064-443e-88c2-0b742bd9de14.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat",
+        "desc": "架車嘅實用升級。團隊嚴選易裝款式先上架,新手都裝到。"
+      },
+      "zh-Hans": {
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat",
+        "desc": "爱车的实用升级。团队严选易装款式才上架,新手也能装。"
+      },
+      "en": {
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat",
+        "desc": "A practical upgrade for your car — installation-hand-picked by our team."
+      }
+    },
+    "cjPid": "1436198256316125184",
+    "cjVid": "1436198256374845440",
+    "shipUSD": 2.63,
+    "variants": [
+      {
+        "vid": "1436198256374845440",
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat Back Hanger Storage Hook Phone Holder Auto Fastener Clip Beige 1pc"
+      },
+      {
+        "vid": "1436198256387428352",
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat Back Hanger Storage Hook Phone Holder Auto Fastener Clip Red 1pc"
+      },
+      {
+        "vid": "1436198256395816960",
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat Back Hanger Storage Hook Phone Holder Auto Fastener Clip Blue 1pc"
+      },
+      {
+        "vid": "1436198256404205568",
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat Back Hanger Storage Hook Phone Holder Auto Fastener Clip Yellow 1pc"
+      },
+      {
+        "vid": "1602636300069384192",
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat Back Hanger Storage Hook Phone Holder Auto Fastener Clip Beige 2pc"
+      },
+      {
+        "vid": "1602636300073578496",
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat Back Hanger Storage Hook Phone Holder Auto Fastener Clip Beige 4pc"
+      },
+      {
+        "vid": "1602636300073578497",
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat Back Hanger Storage Hook Phone Holder Auto Fastener Clip Beige 6pc"
+      },
+      {
+        "vid": "1602636300077772800",
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat Back Hanger Storage Hook Phone Holder Auto Fastener Clip Beige 8pc"
+      },
+      {
+        "vid": "1602636300077772801",
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat Back Hanger Storage Hook Phone Holder Auto Fastener Clip Blue 2pc"
+      },
+      {
+        "vid": "1602636300077772802",
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat Back Hanger Storage Hook Phone Holder Auto Fastener Clip Blue 4pc"
+      },
+      {
+        "vid": "1602636300081967104",
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat Back Hanger Storage Hook Phone Holder Auto Fastener Clip Blue 6pc"
+      },
+      {
+        "vid": "1602636300081967105",
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat Back Hanger Storage Hook Phone Holder Auto Fastener Clip Blue 8pc"
+      },
+      {
+        "vid": "1602636300081967106",
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat Back Hanger Storage Hook Phone Holder Auto Fastener Clip Red 2pc"
+      },
+      {
+        "vid": "1602636300081967107",
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat Back Hanger Storage Hook Phone Holder Auto Fastener Clip Red 4pc"
+      },
+      {
+        "vid": "1602636300086161408",
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat Back Hanger Storage Hook Phone Holder Auto Fastener Clip Red 6pc"
+      },
+      {
+        "vid": "1602636300086161409",
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat Back Hanger Storage Hook Phone Holder Auto Fastener Clip Red 8pc"
+      },
+      {
+        "vid": "1602636300086161410",
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat Back Hanger Storage Hook Phone Holder Auto Fastener Clip Yellow 2pc"
+      },
+      {
+        "vid": "1602636300090355712",
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat Back Hanger Storage Hook Phone Holder Auto Fastener Clip Yellow 4pc"
+      },
+      {
+        "vid": "1602636300090355713",
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat Back Hanger Storage Hook Phone Holder Auto Fastener Clip Yellow 6pc"
+      },
+      {
+        "vid": "1602636300090355714",
+        "name": "Car Headrest Hook Phone Car Holder Car Hanger For A4 B6 Seat Back Hanger Storage Hook Phone Holder Auto Fastener Clip Yellow 8pc"
+      }
+    ],
+    "costUSD": 1.06,
+    "addedAt": "2026-08-04T16:19:12.359Z"
+  },
+  {
+    "id": 306,
+    "catClass": "auto",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20180827/3191919958655.png",
+    "images": [
+      "https://cf.cjdropshipping.com/20180827/3191919958655.png",
+      "https://cf.cjdropshipping.com/15139584/1730896730_1504623468.jpg",
+      "https://cf.cjdropshipping.com/20180827/1883959417681.png",
+      "https://cf.cjdropshipping.com/20180827/7624601931740.png"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Headlight Eyelash Sticker Car Eyelashes Car False Eyelashes ",
+        "desc": "架車嘅實用升級。團隊嚴選易裝款式先上架,新手都裝到。"
+      },
+      "zh-Hans": {
+        "name": "Headlight Eyelash Sticker Car Eyelashes Car False Eyelashes ",
+        "desc": "爱车的实用升级。团队严选易装款式才上架,新手也能装。"
+      },
+      "en": {
+        "name": "Headlight Eyelash Sticker Car Eyelashes Car False Eyelashes ",
+        "desc": "A practical upgrade for your car — installation-hand-picked by our team."
+      }
+    },
+    "cjPid": "B690F942-5A07-43E1-9E5C-B0C94672554D",
+    "cjVid": "37772245-C632-4CDE-AACC-A0542AA85C79",
+    "shipUSD": 2.45,
+    "variants": [
+      {
+        "vid": "37772245-C632-4CDE-AACC-A0542AA85C79",
+        "name": "Headlight Eyelash Sticker Car Eyelashes Car False Eyelashes Car Sticker Electric Eye Sticker 2 Pack default"
+      }
+    ],
+    "costUSD": 0.38,
+    "addedAt": "2026-08-04T16:19:15.730Z"
+  },
+  {
+    "id": 307,
+    "catClass": "auto",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/8f7c5250-d5fd-4087-83f5-1f215dae9103.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/8f7c5250-d5fd-4087-83f5-1f215dae9103.jpg",
+      "https://cf.cjdropshipping.com/50f65e64-4a26-4ef7-8e1e-aeb15a07b1fb.jpg",
+      "https://cf.cjdropshipping.com/5c5206a5-6d63-4067-8b55-1673b6030309.jpg",
+      "https://cf.cjdropshipping.com/6c7cf459-ce75-498b-ae4d-2ed300b7b1a5.jpg",
+      "https://cf.cjdropshipping.com/879b5a14-48ed-4c7a-8c82-ae1181f087d3.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Car Door Body Reflective Car Sticker Car Sticker",
+        "desc": "架車嘅實用升級。團隊嚴選易裝款式先上架,新手都裝到。"
+      },
+      "zh-Hans": {
+        "name": "Car Door Body Reflective Car Sticker Car Sticker",
+        "desc": "爱车的实用升级。团队严选易装款式才上架,新手也能装。"
+      },
+      "en": {
+        "name": "Car Door Body Reflective Car Sticker Car Sticker",
+        "desc": "A practical upgrade for your car — installation-hand-picked by our team."
+      }
+    },
+    "cjPid": "1419851510027784192",
+    "cjVid": "1419851511357378560",
+    "shipUSD": 2.35,
+    "variants": [
+      {
+        "vid": "1419851511357378560",
+        "name": "Car Door Body Reflective Car Sticker Car Sticker White"
+      },
+      {
+        "vid": "1419851511365767168",
+        "name": "Car Door Body Reflective Car Sticker Car Sticker Black"
+      }
+    ],
+    "costUSD": 0.25,
+    "addedAt": "2026-08-04T16:19:19.355Z"
+  },
+  {
+    "id": 308,
+    "catClass": "auto",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20200827/3381221885114.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/20200827/3381221885114.jpg",
+      "https://cf.cjdropshipping.com/20200827/262225737645.jpg",
+      "https://cf.cjdropshipping.com/20200827/1621038544782.jpg",
+      "https://cf.cjdropshipping.com/b85d07f2-27db-4189-ae87-2ff4900401d5.jpg",
+      "https://cf.cjdropshipping.com/20200827/1357612910127.jpg",
+      "https://cf.cjdropshipping.com/20200827/4684526363228.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Auto Headrest Hangers",
+        "desc": "架車嘅實用升級。團隊嚴選易裝款式先上架,新手都裝到。"
+      },
+      "zh-Hans": {
+        "name": "Auto Headrest Hangers",
+        "desc": "爱车的实用升级。团队严选易装款式才上架,新手也能装。"
+      },
+      "en": {
+        "name": "Auto Headrest Hangers",
+        "desc": "A practical upgrade for your car — installation-hand-picked by our team."
+      }
+    },
+    "cjPid": "7A0A16A6-6483-4EB5-8746-EFB01FBE22DB",
+    "cjVid": "1440636686747963392",
+    "shipUSD": 2.44,
+    "variants": [
+      {
+        "vid": "1440636686747963392",
+        "name": "Auto Headrest Hangers Black 2pcs"
+      },
+      {
+        "vid": "1459724978671980544",
+        "name": "Auto Headrest Hangers Black Q1pc"
+      },
+      {
+        "vid": "F381B840-C854-4FFB-A031-1119A99625A0",
+        "name": "Auto Headrest Hangers Black Q4pcs set"
+      }
+    ],
+    "costUSD": 0.1,
+    "addedAt": "2026-08-04T16:19:22.549Z"
   }
 ]
