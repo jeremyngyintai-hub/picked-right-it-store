@@ -2751,5 +2751,153 @@
     "cjVid": "1551858812611735552",
     "costUSD": 1.11,
     "addedAt": "2026-08-04T09:51:35.715Z"
+  },
+  {
+    "id": 89,
+    "catClass": "pets",
+    "price": 48,
+    "icon": "box",
+    "image": "https://oss-cf.cjdropshipping.com/product/2025/06/08/09/a446a832-4912-475c-8f5d-afd6b290de12_fine.jpeg",
+    "images": [
+      "https://oss-cf.cjdropshipping.com/product/2025/06/08/09/a446a832-4912-475c-8f5d-afd6b290de12_fine.jpeg",
+      "https://oss-cf.cjdropshipping.com/product/2025/06/08/09/6f45abe6-bccd-435a-b810-31e66aaf2b89_fine.jpeg",
+      "https://cf.cjdropshipping.com/1617590052202.jpg",
+      "https://cf.cjdropshipping.com/007cb404-6a5c-42fa-88ab-9fa9d18f9a98.jpg",
+      "https://cf.cjdropshipping.com/1617590052234.jpg",
+      "https://cf.cjdropshipping.com/1617590052251.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Pet Slow Feeder Dog Toy Cute Funny Rubber Dog Ball Toy",
+        "desc": "毛孩都值得好嘢。團隊嚴選用料先上架,主子鍾意先算數,落單48小時內安排出貨。"
+      },
+      "zh-Hans": {
+        "name": "Pet Slow Feeder Dog Toy Cute Funny Rubber Dog Ball Toy",
+        "desc": "毛孩也值得好东西。团队严选用料才上架,下单48小时内安排发货。"
+      },
+      "en": {
+        "name": "Pet Slow Feeder Dog Toy Cute Funny Rubber Dog Ball Toy",
+        "desc": "Your furry friend deserves the good stuff. Carefully selected by our team."
+      }
+    },
+    "cjPid": "F8014147-62B0-4D81-BB57-845645AB7AAF",
+    "cjVid": "0CD3B6DE-7419-4749-BE73-997695C6710A",
+    "costUSD": 0.93,
+    "addedAt": "2026-08-04T09:51:40.805Z"
+  },
+  {
+    "id": 90,
+    "catClass": "pets",
+    "price": 88,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/2039/3959501656728.png",
+    "images": [
+      "https://cf.cjdropshipping.com/2039/3959501656728.png",
+      "https://cf.cjdropshipping.com/202909/2545899960556.jpg",
+      "https://cf.cjdropshipping.com/1614955146802.jpg",
+      "https://cf.cjdropshipping.com/202909/6824874504232.jpg",
+      "https://cf.cjdropshipping.com/15706368/2931846459171.jpg",
+      "https://cf.cjdropshipping.com/202909/378262138602.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Pet Cat Toy Electronic Motion Cat Toy Interactive",
+        "desc": "毛孩都值得好嘢。團隊嚴選用料先上架,主子鍾意先算數,落單48小時內安排出貨。"
+      },
+      "zh-Hans": {
+        "name": "Pet Cat Toy Electronic Motion Cat Toy Interactive",
+        "desc": "毛孩也值得好东西。团队严选用料才上架,下单48小时内安排发货。"
+      },
+      "en": {
+        "name": "Pet Cat Toy Electronic Motion Cat Toy Interactive",
+        "desc": "Your furry friend deserves the good stuff. Carefully selected by our team."
+      }
+    },
+    "cjPid": "E7727ADD-FE52-4F14-9F28-B26D9E108FC2",
+    "cjVid": "1367847485682356224",
+    "costUSD": 3.85,
+    "addedAt": "2026-08-04T09:51:42.159Z"
+  },
+  {
+    "id": 91,
+    "catClass": "pets",
+    "price": 148,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20200310/288934368752.png",
+    "images": [
+      "https://cf.cjdropshipping.com/20200310/288934368752.png",
+      "https://cf.cjdropshipping.com/20200310/745534870477.png",
+      "https://cf.cjdropshipping.com/20200310/2937517187637.jpg",
+      "https://cf.cjdropshipping.com/20200310/8187388171917.jpg",
+      "https://cf.cjdropshipping.com/20200310/3285675788181.png",
+      "https://oss-cf.cjdropshipping.com/product/2024/01/21/09/3930a21d-9938-4d25-8559-79449ca92528.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Funny cat artifact cat toys",
+        "desc": "毛孩都值得好嘢。團隊嚴選用料先上架,主子鍾意先算數,落單48小時內安排出貨。"
+      },
+      "zh-Hans": {
+        "name": "Funny cat artifact cat toys",
+        "desc": "毛孩也值得好东西。团队严选用料才上架,下单48小时内安排发货。"
+      },
+      "en": {
+        "name": "Funny cat artifact cat toys",
+        "desc": "Your furry friend deserves the good stuff. Carefully selected by our team."
+      }
+    },
+    "cjPid": "A4F2FA7F-EBAD-4206-8B4F-70406C0922E8",
+    "cjVid": "3CB2841B-ED13-420E-AE71-D4E8F7AAE26A",
+    "costUSD": 6.61,
+    "addedAt": "2026-08-04T09:51:43.541Z"
+  },
+  {
+    "id": 92,
+    "catClass": "pets",
+    "price": 188,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/80bc667f-3e7f-4203-bc6f-31e539741543.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/80bc667f-3e7f-4203-bc6f-31e539741543.jpg",
+      "https://cf.cjdropshipping.com/89da5f2b-8268-41eb-90e9-6f27f8ddcabd.jpg",
+      "https://cf.cjdropshipping.com/8508a30a-f3f1-4d18-8ae2-5687736421a8.jpg",
+      "https://cf.cjdropshipping.com/e9154d83-1724-4433-8c31-47bdbb8c5310.jpg",
+      "https://cf.cjdropshipping.com/48608d76-9f73-4e3a-916e-5e53ee64842e.jpg",
+      "https://cf.cjdropshipping.com/91db205d-c349-43ea-a24f-a0c39334e5ec.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Enjoying Electric Intelligent Bite Resistant Cat Toys Pet Pr",
+        "desc": "毛孩都值得好嘢。團隊嚴選用料先上架,主子鍾意先算數,落單48小時內安排出貨。"
+      },
+      "zh-Hans": {
+        "name": "Enjoying Electric Intelligent Bite Resistant Cat Toys Pet Pr",
+        "desc": "毛孩也值得好东西。团队严选用料才上架,下单48小时内安排发货。"
+      },
+      "en": {
+        "name": "Enjoying Electric Intelligent Bite Resistant Cat Toys Pet Pr",
+        "desc": "Your furry friend deserves the good stuff. Carefully selected by our team."
+      }
+    },
+    "cjPid": "1586184997667614720",
+    "cjVid": "1586184997755695104",
+    "costUSD": 8.46,
+    "addedAt": "2026-08-04T09:51:44.911Z"
   }
 ]
