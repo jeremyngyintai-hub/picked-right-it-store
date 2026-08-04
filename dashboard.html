@@ -14,10 +14,27 @@
     --panel:rgba(255,255,255,.045); --panel2:rgba(255,255,255,.07);
     --line:rgba(255,255,255,.1); --line2:rgba(255,255,255,.18);
     --tx:#efeaf6; --tx-soft:#9a92a8;
-    --pink:#ff3d7a; --violet:#8b5cf6; --cyan:#3de0ff; --ok:#3ddc84; --warn:#ffb547; --err:#ff5c5c;
+    --pink:#ff3d7a; --violet:#8b5cf6; --cyan:#3de0ff; --num:#3de0ff; --numglow:rgba(61,224,255,.5); --ok:#3ddc84; --warn:#ffb547; --err:#ff5c5c;
     --grad:linear-gradient(135deg,var(--pink),var(--violet));
     --mono:'JetBrains Mono',monospace;
   }
+  [data-theme="light"]{
+    --bg:#f2eef4; --bg2:#ffffff;
+    --panel:rgba(31,23,38,.035); --panel2:rgba(31,23,38,.06);
+    --line:rgba(31,23,38,.12); --line2:rgba(31,23,38,.22);
+    --tx:#241a2e; --tx-soft:#6f6680;
+    --num:#0b8fb5; --numglow:rgba(11,143,181,.25);
+    --ok:#1f9d55; --warn:#b97a10; --err:#d13c3c;
+  }
+  [data-theme="light"] body::before{opacity:.5;}
+  [data-theme="light"] .topbar{background:rgba(242,238,244,.85);}
+  [data-theme="light"] .field input, [data-theme="light"] .name-in, [data-theme="light"] .price-in{background:#fff;}
+  [data-theme="light"] .schip{background:#fff;}
+  [data-theme="light"] .btn-dark{background:rgba(31,23,38,.06);}
+  [data-theme="light"] .btn-dark:hover{background:rgba(31,23,38,.11);}
+  [data-theme="light"] .pcard .imgbox, [data-theme="light"] .prow img{background:#eee6ef;}
+  [data-theme="light"] .floatbar{background:rgba(255,255,255,.94);}
+  [data-theme="light"] .toast{background:#fff;color:var(--tx);}
   *{box-sizing:border-box;}
   body{margin:0;background:var(--bg);color:var(--tx);font-family:'Noto Sans TC','Inter',sans-serif;line-height:1.6;min-height:100vh;
     background-image:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(139,92,246,.16),transparent),
@@ -35,7 +52,7 @@
   .brand-mark svg{position:absolute;inset:0;width:100%;height:100%;}
   .brand-mark span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif TC',serif;font-weight:600;font-size:1rem;color:var(--tx);}
   .brand-text b{font-family:'Noto Serif TC',serif;font-size:1.02rem;display:block;line-height:1.1;}
-  .brand-text em{font-style:normal;font-family:var(--mono);font-size:.56rem;letter-spacing:.3em;color:var(--cyan);}
+  .brand-text em{font-style:normal;font-family:var(--mono);font-size:.56rem;letter-spacing:.3em;color:var(--num);}
   .spacer{flex:1;}
   .live-dot{display:flex;align-items:center;gap:7px;font-size:.72rem;font-family:var(--mono);color:var(--tx-soft);}
   .live-dot i{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 10px var(--ok);animation:pulse 2s infinite;}
@@ -70,7 +87,7 @@
   .stat-strip{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;display:none;}
   .stat-strip.show{display:flex;}
   .schip{font-family:var(--mono);font-size:.72rem;border:1px solid var(--line);background:rgba(0,0,0,.25);border-radius:999px;padding:7px 14px;color:var(--tx-soft);}
-  .schip b{color:var(--cyan);}
+  .schip b{color:var(--num);}
 
   /* discover grid */
   .cat-tabs{display:none;gap:8px;margin:4px 0 14px;flex-wrap:wrap;align-items:center;}
@@ -94,7 +111,7 @@
   .meta{font-size:.66rem;color:var(--tx-soft);font-family:var(--mono);}
   .prices{display:flex;justify-content:space-between;align-items:baseline;}
   .prices .lbl{font-size:.7rem;color:var(--tx-soft);}
-  .sell{font-family:var(--mono);font-weight:600;font-size:1rem;color:var(--cyan);text-shadow:0 0 12px rgba(61,224,255,.5);}
+  .sell{font-family:var(--mono);font-weight:600;font-size:1rem;color:var(--num);text-shadow:0 0 12px var(--numglow);}
   .margin-tag{font-size:.66rem;font-family:var(--mono);color:var(--ok);}
 
   .loadmore-row{margin:18px 0 0;text-align:center;}
@@ -113,7 +130,7 @@
   .name-in{width:100%;font-size:.84rem;padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:rgba(0,0,0,.3);color:var(--tx);}
   .name-in:focus{outline:none;border-color:var(--violet);}
   .prow .rmeta{font-size:.64rem;color:var(--tx-soft);font-family:var(--mono);margin-top:4px;}
-  .price-in{width:100%;font-family:var(--mono);font-weight:600;text-align:right;padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:rgba(0,0,0,.3);color:var(--cyan);}
+  .price-in{width:100%;font-family:var(--mono);font-weight:600;text-align:right;padding:9px 12px;border:1px solid var(--line);border-radius:10px;background:rgba(0,0,0,.3);color:var(--num);}
   .price-in:focus{outline:none;border-color:var(--violet);}
   .price-in.changed{border-color:var(--warn);box-shadow:0 0 12px -4px rgba(255,181,71,.5);}
   .rmargin{font-size:.64rem;font-family:var(--mono);color:var(--ok);text-align:right;margin-top:4px;}
@@ -150,13 +167,13 @@
   @media(max-width:860px){.chart-grid{grid-template-columns:1fr;}.pnl-row{font-size:.64rem;}.perf-row{grid-template-columns:1fr 60px 50px;} .perf-row .hide-m{display:none;}}
   .kpi{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px 18px;}
   .kpi .kl{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--tx-soft);font-family:var(--mono);}
-  .kpi .kv{font-family:var(--mono);font-weight:600;font-size:1.5rem;color:var(--cyan);text-shadow:0 0 14px rgba(61,224,255,.45);margin-top:4px;}
+  .kpi .kv{font-family:var(--mono);font-weight:600;font-size:1.5rem;color:var(--num);text-shadow:0 0 14px var(--numglow);margin-top:4px;}
   .srow{display:grid;grid-template-columns:1fr 120px 90px;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);}
   .srow:last-child{border-bottom:none;}
   .sbar-wrap{height:8px;background:rgba(0,0,0,.35);border-radius:99px;overflow:hidden;margin-top:6px;}
   .sbar{height:100%;background:var(--grad);border-radius:99px;box-shadow:0 0 10px rgba(255,61,122,.6);}
   .srow .sname{font-size:.82rem;}
-  .srow .srev{font-family:var(--mono);font-weight:600;color:var(--cyan);text-align:right;}
+  .srow .srev{font-family:var(--mono);font-weight:600;color:var(--num);text-align:right;}
   .srow .sqty{font-family:var(--mono);font-size:.76rem;color:var(--tx-soft);text-align:right;}
   .delist-badge{display:inline-block;font-size:.6rem;font-family:var(--mono);color:var(--warn);border:1px solid rgba(255,181,71,.4);border-radius:6px;padding:2px 7px;margin-top:4px;}
   @media(max-width:860px){.kpi-row{grid-template-columns:repeat(2,1fr);}}
@@ -186,7 +203,9 @@
     <span class="brand-text"><b>Command Center</b><em>PICKED&nbsp;RIGHT&nbsp;IT</em></span>
     <span class="spacer"></span>
     <span class="live-dot"><i></i>SYSTEM ONLINE</span>
-    <a class="nav-link" href="/" target="_blank">開啟商店 ↗</a>
+    <button class="nav-link" id="themeBtn" onclick="toggleTheme()" style="cursor:pointer;background:none">☀️</button>
+    <button class="nav-link" id="langBtn" onclick="toggleDashLang()" style="cursor:pointer;background:none">EN</button>
+    <a class="nav-link" href="/" target="_blank" data-dt="openStore">開啟商店 ↗</a>
   </div>
 </div>
 
@@ -195,44 +214,44 @@
   <!-- command bar -->
   <div class="cmdbar">
     <div class="field">
-      <label>Access Key · 管理密碼</label>
+      <label data-dt="lblKey">Access Key · 管理密碼</label>
       <input type="password" id="secret" placeholder="ADMIN_SYNC_SECRET" autocomplete="off">
     </div>
     <div class="field">
-      <label>Markup · 利潤倍數</label>
+      <label data-dt="lblMarkup">Markup · 利潤倍數</label>
       <input type="number" id="markup" value="2.8" step="0.1" min="1.2">
     </div>
-    <button class="btn" id="scanBtn" onclick="loadWinners(1)">⚡ 掃描贏家產品</button>
-    <button class="btn btn-dark" id="syncBtn" onclick="syncPrices()">🔄 同步CJ價格</button>
+    <button class="btn" id="scanBtn" onclick="loadWinners(1)" data-dt="btnScan">⚡ 掃描贏家產品</button>
+    <button class="btn btn-dark" id="syncBtn" onclick="syncPrices()" data-dt="btnSync">🔄 同步CJ價格</button>
   </div>
   <div class="status" id="topStatus"></div>
   <div class="stat-strip" id="statStrip"></div>
 
   <!-- mode tabs -->
   <div class="mode-tabs">
-    <button class="mode-tab on" id="mt-discover" onclick="switchMode('discover')">🛰 搵貨上架</button>
-    <button class="mode-tab" id="mt-manage" onclick="switchMode('manage')">📦 產品管理</button>
-    <button class="mode-tab" id="mt-sales" onclick="switchMode('sales')">📊 銷售數據</button>
+    <button class="mode-tab on" id="mt-discover" onclick="switchMode('discover')" data-dt="tabDiscover">🛰 搵貨上架</button>
+    <button class="mode-tab" id="mt-manage" onclick="switchMode('manage')" data-dt="tabManage">📦 產品管理</button>
+    <button class="mode-tab" id="mt-sales" onclick="switchMode('sales')" data-dt="tabSales">📊 銷售數據</button>
   </div>
 
   <!-- ============ DISCOVER VIEW ============ -->
   <div class="view on" id="view-discover">
     <div class="cat-tabs" id="catTabs">
       <span id="catTabBtns" style="display:contents"></span>
-      <label class="selall"><input type="checkbox" id="selAll" onchange="toggleSelectAll(this.checked)"> 全選本頁</label>
+      <label class="selall"><input type="checkbox" id="selAll" onchange="toggleSelectAll(this.checked)"> <span data-dt="selAllLbl">全選本頁</span></label>
     </div>
     <div class="grid" id="grid"></div>
     <div class="loadmore-row" id="loadmoreRow" style="display:none">
-      <button class="btn btn-dark" id="moreBtn" onclick="loadWinners(currentPage+1)">載入更多結果(第 <span id="nextPageNum">2</span> 頁)</button>
+      <button class="btn btn-dark" id="moreBtn" onclick="loadWinners(currentPage+1)"><span id="moreBtnLbl">載入更多結果(第 </span><span id="nextPageNum">2</span><span id="moreBtnLbl2"> 頁)</span></button>
     </div>
   </div>
 
   <!-- ============ MANAGE VIEW ============ -->
   <div class="view" id="view-manage">
     <div style="display:flex;gap:10px;margin-bottom:12px;justify-content:flex-end">
-      <button class="btn btn-sm btn-dark" onclick="loadProducts()">↻ 重新載入</button>
-      <button class="btn btn-sm btn-dark" onclick="exportCSV()">⬇ 匯出CSV</button>
-      <button class="btn btn-sm btn-dark" onclick="runMaintain()">🧹 執行自動落架</button>
+      <button class="btn btn-sm btn-dark" onclick="loadProducts()" data-dt="btnReload">↻ 重新載入</button>
+      <button class="btn btn-sm btn-dark" onclick="exportCSV()" data-dt="btnCsv">⬇ 匯出CSV</button>
+      <button class="btn btn-sm btn-dark" onclick="runMaintain()" data-dt="btnMaintain">🧹 執行自動落架</button>
     </div>
     <div class="mpanel" id="plist"><p class="empty">輸入密碼後撳「📦 產品管理」會自動載入。</p></div>
   </div>
@@ -241,17 +260,17 @@
   <div class="view" id="view-sales">
     <div class="kpi-row" id="kpiRow"></div>
     <div class="chart-grid">
-      <div class="mpanel chart-card"><div class="chart-title">30日營業額 vs 毛利(每日)</div><canvas id="chDaily"></canvas></div>
-      <div class="mpanel chart-card"><div class="chart-title">30日瀏覽量趨勢</div><canvas id="chViews"></canvas></div>
-      <div class="mpanel chart-card"><div class="chart-title">每週營業額(近8週)</div><canvas id="chWeek"></canvas></div>
-      <div class="mpanel chart-card"><div class="chart-title">每月營業額(近6個月)</div><canvas id="chMonth"></canvas></div>
+      <div class="mpanel chart-card"><div class="chart-title" data-dt="chDailyT">30日營業額 vs 毛利(每日)</div><canvas id="chDaily"></canvas></div>
+      <div class="mpanel chart-card"><div class="chart-title" data-dt="chViewsT">30日瀏覽量趨勢</div><canvas id="chViews"></canvas></div>
+      <div class="mpanel chart-card"><div class="chart-title" data-dt="chWeekT">每週營業額(近8週)</div><canvas id="chWeek"></canvas></div>
+      <div class="mpanel chart-card"><div class="chart-title" data-dt="chMonthT">每月營業額(近6個月)</div><canvas id="chMonth"></canvas></div>
     </div>
     <div class="mpanel" style="margin-top:14px">
-      <div class="chart-title" style="padding-top:8px">近7日 P&L 明細</div>
+      <div class="chart-title" style="padding-top:8px" data-dt="pnlT">近7日 P&L 明細</div>
       <div id="pnlTable"></div>
     </div>
     <div class="mpanel" style="margin-top:14px">
-      <div class="chart-title" style="padding-top:8px">產品表現(瀏覽 → 銷量 → 轉換率)</div>
+      <div class="chart-title" style="padding-top:8px" data-dt="perfT">產品表現(瀏覽 → 銷量 → 轉換率)</div>
       <div id="prodPerf"><p class="empty">輸入密碼後撳「📊 銷售數據」會自動載入。</p></div>
     </div>
   </div>
@@ -260,27 +279,64 @@
 
 <!-- batch import floating bar -->
 <div class="floatbar" id="batchBar">
-  <span class="fb-info">已揀 <b id="selCount">0</b> 件</span>
-  <button class="btn btn-sm btn-dark" onclick="clearSelection()">清除</button>
-  <button class="btn btn-sm" id="batchBtn" onclick="batchImport()">🚀 批量上架</button>
+  <span class="fb-info" id="selCountWrap">已揀 <b id="selCount">0</b> 件</span>
+  <button class="btn btn-sm btn-dark" onclick="clearSelection()" data-dt="btnClear">清除</button>
+  <button class="btn btn-sm" id="batchBtn" onclick="batchImport()" data-dt="btnBatch">🚀 批量上架</button>
 </div>
 
 <!-- manage save floating bar -->
 <div class="floatbar" id="saveBar">
   <span class="fb-info" id="changesSummary"></span>
-  <button class="btn btn-sm btn-dark" onclick="resetChanges()">還原</button>
-  <button class="btn btn-sm" id="saveBtn" onclick="saveAll()">💾 一次過儲存</button>
+  <button class="btn btn-sm btn-dark" onclick="resetChanges()" data-dt="btnReset">還原</button>
+  <button class="btn btn-sm" id="saveBtn" onclick="saveAll()" data-dt="btnSave">💾 一次過儲存</button>
 </div>
 
 <div class="toast" id="toast"></div>
 
 <script>
 const USD_TO_HKD = 7.8;
-const CATS = [
-  {key:'home', label:'🏠 家居'}, {key:'beauty', label:'💄 美妝'}, {key:'tech', label:'⚡ 電子'},
-  {key:'pets', label:'🐾 寵物'}, {key:'baby', label:'🧸 母嬰玩具'}, {key:'sports', label:'⛺ 運動戶外'},
-  {key:'accessories', label:'💍 飾物配件'}, {key:'bags', label:'👜 袋&鞋'}, {key:'auto', label:'🚗 汽車用品'}
-];
+
+/* ===== 主題 + 語言 ===== */
+let DTHEME = 'dark', DLANG = 'zh';
+try{ DTHEME = localStorage.getItem('dash-theme')||'dark'; DLANG = localStorage.getItem('dash-lang')||'zh'; }catch(e){}
+const DI = {
+ zh:{openStore:'開啟商店 ↗',pageTitle:'贏家產品管理台',pageSub:'搵CJ熱賣產品 → 設定利潤倍數 → 一撳上架,約1分鐘後自動live喺商店。',
+  lblKey:'Access Key · 管理密碼',lblMarkup:'Markup · 利潤倍數',btnScan:'⚡ 掃描贏家產品',btnSync:'🔄 同步CJ價格',
+  tabDiscover:'🛰 搵貨上架',tabManage:'📦 產品管理',tabSales:'📊 銷售數據',selAllLbl:'全選本頁',
+  btnReload:'↻ 重新載入',btnCsv:'⬇ 匯出CSV',btnMaintain:'🧹 執行自動落架',btnClear:'清除',btnBatch:'🚀 批量上架',btnReset:'還原',btnSave:'💾 一次過儲存',
+  chDailyT:'30日營業額 vs 毛利(每日)',chViewsT:'30日瀏覽量趨勢',chWeekT:'每週營業額(近8週)',chMonthT:'每月營業額(近6個月)',pnlT:'近7日 P&L 明細',perfT:'產品表現(瀏覽 → 銷量 → 轉換率)',
+  scanning:'掃描緊...(9大類·約40秒)',needKey:'請先輸入管理密碼',loadMore:'載入更多結果(第',page:'頁)',selCountA:'已揀 ',selCountB:' 件',
+  kRev:'30日營業額',kProfit:'30日毛利(扣成本+手續費)',kOrders:'30日訂單 / 平均單值',kViews:'30日瀏覽量 / 轉換率',
+  colDate:'日期',colRev:'營業額',colCost:'貨品成本',colFee:'手續費(估)',colProfit:'毛利',colOrders:'訂單',
+  colProduct:'產品',colViews:'瀏覽',colQty:'銷量',colConv:'轉換率',margin:'毛利',sold:'賣出',pcs:'件',
+  catHome:'🏠 家居',catBeauty:'💄 美妝',catTech:'⚡ 電子',catPets:'🐾 寵物',catBaby:'🧸 母嬰玩具',catSports:'⛺ 運動戶外',catAccessories:'💍 飾物配件',catBags:'👜 袋&鞋',catAuto:'🚗 汽車用品'},
+ en:{openStore:'Open Store ↗',pageTitle:'Winner Product Console',pageSub:'Scan CJ bestsellers → set your markup → one-click import. Live on the store in ~1 minute.',
+  lblKey:'Access Key',lblMarkup:'Markup Multiplier',btnScan:'⚡ Scan Winners',btnSync:'🔄 Sync CJ Prices',
+  tabDiscover:'🛰 Discover',tabManage:'📦 Products',tabSales:'📊 Analytics',selAllLbl:'Select page',
+  btnReload:'↻ Reload',btnCsv:'⬇ Export CSV',btnMaintain:'🧹 Run Auto-Delist',btnClear:'Clear',btnBatch:'🚀 Batch Import',btnReset:'Reset',btnSave:'💾 Save All',
+  chDailyT:'Revenue vs Profit — Daily (30d)',chViewsT:'Page Views Trend (30d)',chWeekT:'Weekly Revenue (8 wks)',chMonthT:'Monthly Revenue (6 mo)',pnlT:'P&L — Last 7 Days',perfT:'Product Performance (Views → Sales → Conversion)',
+  scanning:'Scanning... (9 categories · ~40s)',needKey:'Enter the access key first',loadMore:'Load more (page ',page:')',selCountA:'',selCountB:' selected',
+  kRev:'Revenue (30d)',kProfit:'Gross Profit (30d)',kOrders:'Orders / Avg Order (30d)',kViews:'Views / Conversion (30d)',
+  colDate:'Date',colRev:'Revenue',colCost:'COGS',colFee:'Fees (est)',colProfit:'Profit',colOrders:'Orders',
+  colProduct:'Product',colViews:'Views',colQty:'Sold',colConv:'Conv.',margin:'margin',sold:'sold',pcs:'',
+  catHome:'🏠 Home',catBeauty:'💄 Beauty',catTech:'⚡ Tech',catPets:'🐾 Pets',catBaby:'🧸 Baby & Kids',catSports:'⛺ Sports',catAccessories:'💍 Accessories',catBags:'👜 Bags & Shoes',catAuto:'🚗 Auto'}
+};
+function dt(k){ return (DI[DLANG]&&DI[DLANG][k])||DI.zh[k]||k; }
+function applyTheme(){
+  document.documentElement.setAttribute('data-theme', DTHEME);
+  document.getElementById('themeBtn').textContent = DTHEME==='dark'?'☀️':'🌙';
+}
+function toggleTheme(){ DTHEME = DTHEME==='dark'?'light':'dark'; try{localStorage.setItem('dash-theme',DTHEME);}catch(e){} applyTheme(); }
+function applyDashLang(){
+  document.querySelectorAll('[data-dt]').forEach(el=>{ el.textContent = dt(el.dataset.dt); });
+  document.getElementById('langBtn').textContent = DLANG==='zh'?'EN':'中';
+  renderCatTabs();
+  if(winnersData) renderGrid();
+  if(typeof working!=='undefined' && working.length) renderList();
+}
+function toggleDashLang(){ DLANG = DLANG==='zh'?'en':'zh'; try{localStorage.setItem('dash-lang',DLANG);}catch(e){} applyDashLang(); }
+
+const CATS = ['home','beauty','tech','pets','baby','sports','accessories','bags','auto'].map(k=>({key:k, get label(){ return dt('cat'+k.charAt(0).toUpperCase()+k.slice(1)); }}));
 let winnersData = Object.fromEntries(CATS.map(c=>[c.key,[]]));
 function renderCatTabs(){
   document.getElementById('catTabBtns').innerHTML = CATS.map(c=>
@@ -315,10 +371,10 @@ function switchMode(m){
 
 /* ---------- discover ---------- */
 async function loadWinners(page){
-  if(!secretVal()){ setStatus('請先輸入管理密碼','err'); return; }
+  if(!secretVal()){ setStatus(dt('needKey'),'err'); return; }
   currentPage = page || 1;
   const btn = document.getElementById('scanBtn');
-  btn.disabled = true; btn.textContent = '掃描緊...(9大類·約40秒)';
+  btn.disabled = true; btn.textContent = dt('scanning');
   document.getElementById('catTabs').classList.add('show');
   if(currentPage === 1){
     selected.clear(); updateBatchBar();
@@ -349,12 +405,14 @@ async function loadWinners(page){
     renderGrid();
     document.getElementById('loadmoreRow').style.display='block';
     document.getElementById('nextPageNum').textContent = currentPage+1;
+    document.getElementById('moreBtnLbl').textContent = dt('loadMore');
+    document.getElementById('moreBtnLbl2').textContent = dt('page');
     toast(`掃描完成 · 累計 ${CATS.reduce((s,cc)=>s+(winnersData[cc.key]||[]).length,0)} 款`,'ok');
   }catch(e){
     setStatus('掃描失敗:'+e.message,'err');
     if(currentPage===1) document.getElementById('grid').innerHTML='';
   }finally{
-    btn.disabled=false; btn.textContent='⚡ 掃描贏家產品';
+    btn.disabled=false; btn.textContent=dt('btnScan');
   }
 }
 
@@ -387,7 +445,7 @@ function renderGrid(){
         <div class="pname">${p.nameEn||''}</div>
         <div class="meta">LISTED ${(p.listedNum||0).toLocaleString()} · COST $${cost!=null?cost:'?'}</div>
         <div class="prices"><span class="lbl">賣價</span><span class="sell">HK$${sell||'—'}</span></div>
-        ${margin!=null?`<div class="margin-tag">+HK$${margin}/件 毛利</div>`:''}
+        ${margin!=null?`<div class="margin-tag">+HK$${margin} ${dt('margin')}</div>`:''}
       </div>
     </div>`;
   }).join('');
@@ -410,7 +468,7 @@ function toggleSelectAll(checked){
 }
 function clearSelection(){ selected.clear(); document.getElementById('selAll').checked=false; renderGrid(); updateBatchBar(); }
 function updateBatchBar(){
-  document.getElementById('selCount').textContent = selected.size;
+  document.getElementById('selCountWrap').innerHTML = dt('selCountA')+'<b id="selCount">'+selected.size+'</b>'+dt('selCountB');
   document.getElementById('batchBar').classList.toggle('show', selected.size>0 && document.getElementById('view-discover').classList.contains('on'));
 }
 
@@ -446,7 +504,7 @@ async function batchImport(){
 
 /* ---------- price sync ---------- */
 async function syncPrices(){
-  if(!secretVal()){ setStatus('請先輸入管理密碼','err'); return; }
+  if(!secretVal()){ setStatus(dt('needKey'),'err'); return; }
   const btn=document.getElementById('syncBtn');
   btn.disabled=true; btn.textContent='同步緊...';
   try{
@@ -467,7 +525,7 @@ async function syncPrices(){
 
 /* ---------- manage ---------- */
 async function loadProducts(){
-  if(!secretVal()){ setStatus('請先輸入管理密碼','err'); return; }
+  if(!secretVal()){ setStatus(dt('needKey'),'err'); return; }
   document.getElementById('plist').innerHTML='<div class="skel" style="height:70px;margin:12px 0"></div>'.repeat(3);
   try{
     const res = await fetch(`/api/admin/manage-products?secret=${encodeURIComponent(secretVal())}`);
@@ -494,12 +552,12 @@ function renderList(){
       <img src="${p.image||''}" loading="lazy" onerror="this.style.visibility='hidden'">
       <div>
         <input class="name-in" value="${name.replace(/"/g,'&quot;')}" oninput="editName(${i},this.value)" ${p._deleted?'disabled':''}>
-        <div class="rmeta">#${p.id} · ${p.catClass.toUpperCase()} · COST ${costHKD!=null?('HK$'+costHKD):'?'} · 賣出 ${p.soldQty||0} 件 · ${(p.addedAt||'').slice(0,10)}</div>
+        <div class="rmeta">#${p.id} · ${p.catClass.toUpperCase()} · COST ${costHKD!=null?('HK$'+costHKD):'?'} · ${dt('sold')} ${p.soldQty||0}${dt('pcs')?' '+dt('pcs'):''} · ${(p.addedAt||'').slice(0,10)}</div>
         ${p.delisted?'<span class="delist-badge">⚠ 自動落架中(前台隱藏)</span>':''}
       </div>
       <div>
         <input type="number" class="price-in ${isPriceChanged(i)?'changed':''}" value="${p.price}" min="1" oninput="editPrice(${i},this)" ${p._deleted?'disabled':''}>
-        <div class="rmargin ${margin!=null&&margin<0?'neg':''}" id="rm-${i}">${margin!=null?('毛利 HK$'+margin):''}</div>
+        <div class="rmargin ${margin!=null&&margin<0?'neg':''}" id="rm-${i}">${margin!=null?(dt('margin')+' HK$'+margin):''}</div>
       </div>
       <div style="display:flex;flex-direction:column;gap:6px">
         ${p.delisted?`<button class="del-btn" style="color:var(--ok);border-color:rgba(61,220,132,.4)" onclick="relist(${i})">上返架</button>`:''}
@@ -516,7 +574,7 @@ function editPrice(i,el){
   el.classList.toggle('changed',isPriceChanged(i));
   const costHKD=working[i].costUSD?Math.round(working[i].costUSD*USD_TO_HKD):null;
   const rm=document.getElementById('rm-'+i);
-  if(costHKD!=null&&rm){ const m=working[i].price-costHKD; rm.textContent='毛利 HK$'+m; rm.classList.toggle('neg',m<0); }
+  if(costHKD!=null&&rm){ const m=working[i].price-costHKD; rm.textContent=dt('margin')+' HK$'+m; rm.classList.toggle('neg',m<0); }
   updateSaveBar();
 }
 function toggleDelete(i){ working[i]._deleted=!working[i]._deleted; renderList(); }
@@ -540,7 +598,7 @@ function exportCSV(){
   toast('CSV已下載','ok');
 }
 async function runMaintain(){
-  if(!secretVal()){ setStatus('請先輸入管理密碼','err'); return; }
+  if(!secretVal()){ setStatus(dt('needKey'),'err'); return; }
   toast('執行緊自動落架檢查...');
   try{
     const res=await fetch(`/api/cron/store-maintain?secret=${encodeURIComponent(secretVal())}`);
@@ -562,7 +620,7 @@ function mkChart(id, cfg){
   charts[id] = new Chart(ctx, cfg);
 }
 async function loadSales(){
-  if(!secretVal()){ setStatus('請先輸入管理密碼','err'); return; }
+  if(!secretVal()){ setStatus(dt('needKey'),'err'); return; }
   document.getElementById('kpiRow').innerHTML='';
   document.getElementById('prodPerf').innerHTML='<div class="skel" style="height:60px;margin:10px 0"></div>'.repeat(3);
   try{
@@ -573,10 +631,10 @@ async function loadSales(){
 
     // KPIs
     document.getElementById('kpiRow').innerHTML=`
-      <div class="kpi"><div class="kl">30日營業額</div><div class="kv">HK$${s.revenue30HKD.toLocaleString()}</div></div>
-      <div class="kpi"><div class="kl">30日毛利(扣成本+手續費)</div><div class="kv" style="color:${s.profit30HKD>=0?'var(--ok)':'var(--err)'}">HK$${s.profit30HKD.toLocaleString()}</div></div>
-      <div class="kpi"><div class="kl">30日訂單 / 平均單值</div><div class="kv">${s.orders30} <span style="font-size:.85rem">· HK$${s.avgOrderHKD}</span></div></div>
-      <div class="kpi"><div class="kl">30日瀏覽量 / 轉換率</div><div class="kv">${s.views30.toLocaleString()} <span style="font-size:.85rem">· ${s.convRate30!=null?s.convRate30+'%':'—'}</span></div></div>`;
+      <div class="kpi"><div class="kl">${dt('kRev')}</div><div class="kv">HK$${s.revenue30HKD.toLocaleString()}</div></div>
+      <div class="kpi"><div class="kl">${dt('kProfit')}</div><div class="kv" style="color:${s.profit30HKD>=0?'var(--ok)':'var(--err)'}">HK$${s.profit30HKD.toLocaleString()}</div></div>
+      <div class="kpi"><div class="kl">${dt('kOrders')}</div><div class="kv">${s.orders30} <span style="font-size:.85rem">· HK$${s.avgOrderHKD}</span></div></div>
+      <div class="kpi"><div class="kl">${dt('kViews')}</div><div class="kv">${s.views30.toLocaleString()} <span style="font-size:.85rem">· ${s.convRate30!=null?s.convRate30+'%':'—'}</span></div></div>`;
 
     const labels = data.daily.map(d=>d.label);
     // 每日營業額vs毛利
@@ -600,13 +658,13 @@ async function loadSales(){
     // 近7日P&L
     const last7 = data.daily.slice(-7).reverse();
     document.getElementById('pnlTable').innerHTML =
-      `<div class="pnl-row head"><span>日期</span><span>營業額</span><span>貨品成本</span><span>手續費(估)</span><span>毛利</span><span>訂單</span></div>` +
+      `<div class="pnl-row head"><span>${dt('colDate')}</span><span>${dt('colRev')}</span><span>${dt('colCost')}</span><span>${dt('colFee')}</span><span>${dt('colProfit')}</span><span>${dt('colOrders')}</span></div>` +
       last7.map(d=>`<div class="pnl-row"><span>${d.label}</span><span>HK$${d.revenue}</span><span>HK$${d.cost}</span><span>HK$${d.stripeFee}</span><span class="${d.profit>=0?'pnl-pos':'pnl-neg'}">HK$${d.profit}</span><span>${d.orders}</span></div>`).join('');
 
     // 產品表現
     if((data.products||[]).length){
       document.getElementById('prodPerf').innerHTML =
-        `<div class="perf-row head"><span>產品</span><span class="num">瀏覽</span><span class="num">銷量</span><span class="num hide-m">營業額</span><span class="num hide-m">轉換率</span></div>` +
+        `<div class="perf-row head"><span>${dt('colProduct')}</span><span class="num">${dt('colViews')}</span><span class="num">${dt('colQty')}</span><span class="num hide-m">${dt('colRev')}</span><span class="num hide-m">${dt('colConv')}</span></div>` +
         data.products.map(x=>{
           const conv = x.convRate!=null ? x.convRate : null;
           return `<div class="perf-row">
@@ -666,7 +724,8 @@ async function saveAll(){
   finally{ btn.disabled=false; btn.textContent='💾 一次過儲存'; }
 }
 
-renderCatTabs();
+applyTheme();
+applyDashLang();
 
 /* manage tab載入trigger */
 document.getElementById('mt-manage').addEventListener('click',()=>{ if(!manageLoaded && secretVal()) loadProducts(); });
