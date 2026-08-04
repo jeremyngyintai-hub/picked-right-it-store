@@ -1283,5 +1283,150 @@
     "cjVid": "05A91F46-F69D-414B-A41F-5F5988BF3EF0",
     "costUSD": 7.56,
     "addedAt": "2026-08-04T09:49:15.136Z"
+  },
+  {
+    "id": 49,
+    "catClass": "beauty",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/15440256/1434328953089.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/15440256/1434328953089.jpg",
+      "https://cf.cjdropshipping.com/15440256/1455472023750.jpg",
+      "https://cf.cjdropshipping.com/15440256/2026403253996.jpg",
+      "https://cf.cjdropshipping.com/15440256/3678086901792.jpg",
+      "https://cf.cjdropshipping.com/15440256/2052043328496.jpg",
+      "https://cf.cjdropshipping.com/15440256/653171017180.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "1pcs Nail Sticker Butterfly Flower Water Transfer Decal Slid",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "1pcs Nail Sticker Butterfly Flower Water Transfer Decal Slid",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "1pcs Nail Sticker Butterfly Flower Water Transfer Decal Slid",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "474DEBE8-313E-49C9-9DC3-D288B995ED9A",
+    "cjVid": "0430E029-1848-498C-9EDA-C48C09CB6F6E",
+    "costUSD": 0.08,
+    "addedAt": "2026-08-04T09:49:19.608Z"
+  },
+  {
+    "id": 50,
+    "catClass": "beauty",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/1612790235427.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/1612790235427.jpg",
+      "https://cf.cjdropshipping.com/1612790235426.jpg",
+      "https://cf.cjdropshipping.com/1612790235441.jpg",
+      "https://cf.cjdropshipping.com/1612790231540.jpg",
+      "https://cf.cjdropshipping.com/1612790240251.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "DIY Decorative Nail Decoration Nail Art Stickers",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "DIY Decorative Nail Decoration Nail Art Stickers",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "DIY Decorative Nail Decoration Nail Art Stickers",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "1358767676650033152",
+    "cjVid": "1358767676708753408",
+    "costUSD": 0.47,
+    "addedAt": "2026-08-04T09:49:20.939Z"
+  },
+  {
+    "id": 51,
+    "catClass": "beauty",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/1617853105514.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/1617853105514.jpg",
+      "https://cf.cjdropshipping.com/1617853161471.jpg",
+      "https://cf.cjdropshipping.com/1617863147081.jpg",
+      "https://cf.cjdropshipping.com/1617853185482.jpg",
+      "https://cf.cjdropshipping.com/1617853105513.jpg",
+      "https://cf.cjdropshipping.com/1617853105515.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Glitter   Nails Crystal Diamond Powder Net Celebrity Vibrato",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "Glitter   Nails Crystal Diamond Powder Net Celebrity Vibrato",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "Glitter   Nails Crystal Diamond Powder Net Celebrity Vibrato",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "1380004061390180352",
+    "cjVid": "1380004062807855104",
+    "costUSD": 0.35,
+    "addedAt": "2026-08-04T09:49:22.346Z"
+  },
+  {
+    "id": 52,
+    "catClass": "beauty",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/2047/1218026827941.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/2047/1218026827941.jpg",
+      "https://cf.cjdropshipping.com/2047/1882634437523.jpg",
+      "https://cf.cjdropshipping.com/15762528/3045499454756.jpg",
+      "https://cf.cjdropshipping.com/2047/3119945280365.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "500 tablets of transparent natural color ballet fake nails",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "500 tablets of transparent natural color ballet fake nails",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "500 tablets of transparent natural color ballet fake nails",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "4B952FC8-C339-4F23-A378-518065374045",
+    "cjVid": "4BDE1BAA-9B31-4192-BAD3-5B95ADB474ED",
+    "costUSD": 1.78,
+    "addedAt": "2026-08-04T09:49:23.724Z"
   }
 ]
