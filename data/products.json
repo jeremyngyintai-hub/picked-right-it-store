@@ -671,5 +671,552 @@
     ],
     "costUSD": 3.91,
     "addedAt": "2026-08-04T13:13:43.461Z"
+  },
+  {
+    "id": 21,
+    "catClass": "home",
+    "price": 78,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20190816/960693307474.png",
+    "images": [
+      "https://cf.cjdropshipping.com/20190816/960693307474.png",
+      "https://cf.cjdropshipping.com/20190816/273373171070.png"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Home decor tapestry tarpaulin",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Home decor tapestry tarpaulin",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Home decor tapestry tarpaulin",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "5A4CEC0F-0E30-4B7E-9B68-FD075C7EC949",
+    "cjVid": "15E57777-7CEB-4724-8D6D-5175AEE35B37",
+    "shipUSD": 2.97,
+    "variants": [
+      {
+        "vid": "15E57777-7CEB-4724-8D6D-5175AEE35B37",
+        "name": "Home decor tapestry tarpaulin 150x130cm"
+      },
+      {
+        "vid": "2028279A-F0C7-4C83-A323-76C777B408BA",
+        "name": "Home decor tapestry tarpaulin 150x100cm thick"
+      },
+      {
+        "vid": "9CC2781F-5B74-4E4D-93D6-B55AC05D5ADB",
+        "name": "Home decor tapestry tarpaulin 150x100cm"
+      },
+      {
+        "vid": "A9F7E22F-A199-4FD9-B950-A223695B34C2",
+        "name": "Home decor tapestry tarpaulin 150x130cm thick"
+      },
+      {
+        "vid": "C7F65F25-C69A-4071-9378-58AD0D30A83C",
+        "name": "Home decor tapestry tarpaulin 150x230cm thick"
+      }
+    ],
+    "costUSD": 2.57,
+    "addedAt": "2026-08-04T13:13:50.030Z"
+  },
+  {
+    "id": 22,
+    "catClass": "home",
+    "price": 88,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20190329/2877056629074.png",
+    "images": [
+      "https://cf.cjdropshipping.com/20190329/2877056629074.png",
+      "https://cf.cjdropshipping.com/8fdd1eea-b339-40ea-9f29-0b0badbbef10.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Cute Cat Tapestry Living Room House Decoration Tapestry Wall",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Cute Cat Tapestry Living Room House Decoration Tapestry Wall",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Cute Cat Tapestry Living Room House Decoration Tapestry Wall",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "67634E2D-778F-4465-997B-0B710FEBC327",
+    "cjVid": "0B6450F0-CD1B-4F20-8D82-EC57074FC1CB",
+    "shipUSD": 3.19,
+    "variants": [
+      {
+        "vid": "0B6450F0-CD1B-4F20-8D82-EC57074FC1CB",
+        "name": "Cute Cat Tapestry Living Room House Decoration Tapestry Wall Hanging Room Decor Aesthetic 130x150cm"
+      },
+      {
+        "vid": "73F42CB1-2423-4E0D-832C-410B98F7114A",
+        "name": "Cute Cat Tapestry Living Room House Decoration Tapestry Wall Hanging Room Decor Aesthetic 150x230cm thick"
+      },
+      {
+        "vid": "825DDD58-CCB9-492E-ACD0-DBD0AE735CCB",
+        "name": "Cute Cat Tapestry Living Room House Decoration Tapestry Wall Hanging Room Decor Aesthetic 150x100cm thick"
+      },
+      {
+        "vid": "AB184AF8-F6E8-4D9B-8A02-9D5BC2EFFC41",
+        "name": "Cute Cat Tapestry Living Room House Decoration Tapestry Wall Hanging Room Decor Aesthetic 100x150cm"
+      },
+      {
+        "vid": "F0FCA268-35E9-479D-9E2B-6D05FB289695",
+        "name": "Cute Cat Tapestry Living Room House Decoration Tapestry Wall Hanging Room Decor Aesthetic 150x130cm thick"
+      },
+      {
+        "vid": "F9B2D799-6FA1-4071-9B49-8FD8C94FDE35",
+        "name": "Cute Cat Tapestry Living Room House Decoration Tapestry Wall Hanging Room Decor Aesthetic 230x150cm"
+      }
+    ],
+    "costUSD": 2.9,
+    "addedAt": "2026-08-04T13:13:53.317Z"
+  },
+  {
+    "id": 23,
+    "catClass": "home",
+    "price": 98,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/225bd84a-32c7-4349-85cb-168185373579.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/225bd84a-32c7-4349-85cb-168185373579.jpg",
+      "https://cf.cjdropshipping.com/d0075afc-6434-43c0-8df5-ee7a8cf0e046.jpg",
+      "https://cf.cjdropshipping.com/2b46968f-da8c-4db9-9771-7938ef6a9767.jpg",
+      "https://cf.cjdropshipping.com/b2b9bde5-2a52-43a8-92a0-466f5745cab7.jpg",
+      "https://cf.cjdropshipping.com/7d461758-11c0-4084-ab3f-12c00b92a2ce.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Handmade Dream Catcher Tree Tapestry Home",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Handmade Dream Catcher Tree Tapestry Home",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Handmade Dream Catcher Tree Tapestry Home",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "1445289276995670016",
+    "cjVid": "1445289277058584576",
+    "shipUSD": 4.62,
+    "variants": [
+      {
+        "vid": "1445289277058584576",
+        "name": "Handmade Dream Catcher Tree Tapestry Home 73X18cm"
+      }
+    ],
+    "costUSD": 2.82,
+    "addedAt": "2026-08-04T13:13:56.551Z"
+  },
+  {
+    "id": 24,
+    "catClass": "home",
+    "price": 128,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/1617849607969.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/1617849607969.jpg",
+      "https://cf.cjdropshipping.com/1617849607970.jpg",
+      "https://cf.cjdropshipping.com/1617849607974.jpg",
+      "https://cf.cjdropshipping.com/1617849607973.jpg",
+      "https://cf.cjdropshipping.com/1617849607972.jpg",
+      "https://cf.cjdropshipping.com/1617850448754.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterpr",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterpr",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterpr",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "1379991706086281216",
+    "cjVid": "1379991707533316096",
+    "shipUSD": 3.98,
+    "variants": [
+      {
+        "vid": "1379991707533316096",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Grey A"
+      },
+      {
+        "vid": "1379991707596230656",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Grey B"
+      },
+      {
+        "vid": "1379991707659145216",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Grey C"
+      },
+      {
+        "vid": "1379991707717865472",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Grey D"
+      },
+      {
+        "vid": "1379991707776585728",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Khaki A"
+      },
+      {
+        "vid": "1379991707839500288",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Khaki B"
+      },
+      {
+        "vid": "1379991707902414848",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Khaki C"
+      },
+      {
+        "vid": "1379991707961135104",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Khaki D"
+      },
+      {
+        "vid": "1379991708019855360",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Beige A"
+      },
+      {
+        "vid": "1379991708082769920",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Beige B"
+      },
+      {
+        "vid": "1379991708145684480",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Beige C"
+      },
+      {
+        "vid": "1379991708204404736",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Beige D"
+      },
+      {
+        "vid": "1379991708263124992",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Coffee A"
+      },
+      {
+        "vid": "1379991708326039552",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Coffee B"
+      },
+      {
+        "vid": "1379991708384759808",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Coffee C"
+      },
+      {
+        "vid": "1379991708447674368",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Coffee D"
+      },
+      {
+        "vid": "1379991708506394624",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Navy Blue A"
+      },
+      {
+        "vid": "1379991708569309184",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Navy Blue B"
+      },
+      {
+        "vid": "1379991708628029440",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Navy Blue C"
+      },
+      {
+        "vid": "1379991708690944000",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Navy Blue D"
+      },
+      {
+        "vid": "1379991708749664256",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Light Blue A"
+      },
+      {
+        "vid": "1379991708812578816",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Light Blue B"
+      },
+      {
+        "vid": "1379991708904853504",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Light Blue C"
+      },
+      {
+        "vid": "1379991708963573760",
+        "name": "Simple Full Blackout Solid Color Fine Linen Blackout Waterproof Sunscreen Heat Insulation Curtain Light Blue D"
+      }
+    ],
+    "costUSD": 4.19,
+    "addedAt": "2026-08-04T13:13:59.676Z"
+  },
+  {
+    "id": 25,
+    "catClass": "home",
+    "price": 78,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20190831/5684751193393.png",
+    "images": [
+      "https://cf.cjdropshipping.com/20190831/5684751193393.png",
+      "https://cf.cjdropshipping.com/20190831/36435159220327.png"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Home decor tapestry tarpaulin",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Home decor tapestry tarpaulin",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Home decor tapestry tarpaulin",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "34901B45-6B8C-4776-AF2D-123514BEE446",
+    "cjVid": "0318DC55-925B-4E2D-8DDB-C759C201CBB9",
+    "shipUSD": 2.97,
+    "variants": [
+      {
+        "vid": "0318DC55-925B-4E2D-8DDB-C759C201CBB9",
+        "name": "Home decor tapestry tarpaulin 150x100cm"
+      },
+      {
+        "vid": "33B9B92B-4FA6-4C73-894D-7F884B16C0F6",
+        "name": "Home decor tapestry tarpaulin 150x130cm"
+      }
+    ],
+    "costUSD": 2.57,
+    "addedAt": "2026-08-04T13:14:02.759Z"
+  },
+  {
+    "id": 26,
+    "catClass": "home",
+    "price": 108,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/quick/product/ec6f3d5b-24b8-417e-9229-d8ea5f8f139b.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/quick/product/ec6f3d5b-24b8-417e-9229-d8ea5f8f139b.jpg",
+      "https://cf.cjdropshipping.com/quick/product/61060e45-3a13-48da-8fe2-2e3b8a32a265.jpg",
+      "https://cf.cjdropshipping.com/quick/product/c15ec66d-63a3-40ea-9a73-1b1614262446.jpg",
+      "https://cf.cjdropshipping.com/quick/product/f0cb2c2e-82b1-48d6-85ae-98c2216aff42.jpg",
+      "https://cf.cjdropshipping.com/quick/product/70fcdec9-22be-4c6e-b94b-c8624a1d28a2.jpg",
+      "https://cf.cjdropshipping.com/quick/product/9f4fe4a1-e657-413f-89a2-c7a888b2526f.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "1770792814083842048",
+    "cjVid": "1770792814167728128",
+    "shipUSD": 3.72,
+    "variants": [
+      {
+        "vid": "1770792814167728128",
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains Dark Gray 100x130 Punch 1PCs"
+      },
+      {
+        "vid": "1770792814230642688",
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains Dark Gray 100x200 Punch 1PCs"
+      },
+      {
+        "vid": "1770792814293557248",
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains Dark Gray 100x250 Punch 1PCs"
+      },
+      {
+        "vid": "1770792814352277504",
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains Dark Gray 132x160 Punch 1PCs"
+      },
+      {
+        "vid": "1770792814415192064",
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains Dark Gray 132x213 Punch 1PCs"
+      },
+      {
+        "vid": "1770792814473912320",
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains Light Gray 100x130 Punch 1PCs"
+      },
+      {
+        "vid": "1770792814536826880",
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains Light Gray 100x200 Punch 1PCs"
+      },
+      {
+        "vid": "1770792814595547136",
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains Light Gray 100x250 Punch 1PCs"
+      },
+      {
+        "vid": "1770792814658461696",
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains Light Gray 132x160 Punch 1PCs"
+      },
+      {
+        "vid": "1770792814721376256",
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains Light Gray 132x213 Punch 1PCs"
+      },
+      {
+        "vid": "1770792814784290816",
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains Black 100x130 Punch 1PCs"
+      },
+      {
+        "vid": "1770792814847205376",
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains Black 100x200 Punch 1PCs"
+      },
+      {
+        "vid": "1770792814914314240",
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains Black 100x250 Punch 1PCs"
+      },
+      {
+        "vid": "1770792814985617408",
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains Black 132x160 Punch 1PCs"
+      },
+      {
+        "vid": "1770792815052726272",
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains Black 132x213 Punch 1PCs"
+      },
+      {
+        "vid": "1770792815124029440",
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains Navy Blue 100x130 Punch 1PCs"
+      },
+      {
+        "vid": "1770792815195332608",
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains Navy Blue 100x200 Punch 1PCs"
+      },
+      {
+        "vid": "1770792815270830080",
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains Navy Blue 100x250 Punch 1PCs"
+      },
+      {
+        "vid": "1770792815337938944",
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains Navy Blue 132x160 Punch 1PCs"
+      },
+      {
+        "vid": "1770792815400853504",
+        "name": "Modern Minimalist Furnishings Decorative Blackout Curtains Navy Blue 132x213 Punch 1PCs"
+      }
+    ],
+    "costUSD": 3.35,
+    "addedAt": "2026-08-04T13:14:06.329Z"
+  },
+  {
+    "id": 27,
+    "catClass": "home",
+    "price": 88,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20190826/207278274966.png",
+    "images": [
+      "https://cf.cjdropshipping.com/20190826/207278274966.png",
+      "https://cf.cjdropshipping.com/20190826/1961065189319.png"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Home decor tapestry tarpaulin",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Home decor tapestry tarpaulin",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Home decor tapestry tarpaulin",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "6324C639-51B3-4FE5-9A89-DEF7B7FE0EA4",
+    "cjVid": "4DFF3A6A-DE08-4EB7-BCD5-1E478598969C",
+    "shipUSD": 3.19,
+    "variants": [
+      {
+        "vid": "4DFF3A6A-DE08-4EB7-BCD5-1E478598969C",
+        "name": "Home decor tapestry tarpaulin 150x130cm"
+      },
+      {
+        "vid": "4E128CCB-F1DA-439F-914A-62ADE95568A1",
+        "name": "Home decor tapestry tarpaulin 150x100cm"
+      }
+    ],
+    "costUSD": 2.9,
+    "addedAt": "2026-08-04T13:14:09.468Z"
+  },
+  {
+    "id": 28,
+    "catClass": "home",
+    "price": 78,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20190827/6941260559555.png",
+    "images": [
+      "https://cf.cjdropshipping.com/20190827/6941260559555.png",
+      "https://cf.cjdropshipping.com/20190827/1259013486747.png"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Home decor tapestry tarpaulin",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Home decor tapestry tarpaulin",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Home decor tapestry tarpaulin",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "2AEFA7C3-9C8E-4102-967F-14C68A3683E6",
+    "cjVid": "55E07154-BB43-489D-9872-CD029BB4CA8E",
+    "shipUSD": 2.97,
+    "variants": [
+      {
+        "vid": "55E07154-BB43-489D-9872-CD029BB4CA8E",
+        "name": "Home decor tapestry tarpaulin 150x100cm"
+      },
+      {
+        "vid": "A1738E7E-BE6C-4A08-821E-81680DF71D84",
+        "name": "Home decor tapestry tarpaulin 150x130cm"
+      }
+    ],
+    "costUSD": 2.57,
+    "addedAt": "2026-08-04T13:14:12.897Z"
   }
 ]
