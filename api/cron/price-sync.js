@@ -127,10 +127,11 @@ module.exports = async (req, res) => {
           continue;
         }
 
-        // 鎖定上架時嘅倍數:原賣價 ÷ (原成本×匯率)
-        const lockedMarkup = p.price / (p.costUSD * USD_TO_HKD);
+        // 鎖定上架時嘅倍數(先扣走運費部分再計):倍數 = (原賣價 − 運費HKD) ÷ (原貨價HKD)
+        const shipHKD = (p.shipUSD || 0) * USD_TO_HKD;
+        const lockedMarkup = (p.price - shipHKD) / (p.costUSD * USD_TO_HKD);
         const effectiveMarkup = Math.max(lockedMarkup, MIN_MARKUP);
-        const newPrice = prettyPrice(newCostUSD * USD_TO_HKD * effectiveMarkup);
+        const newPrice = prettyPrice(newCostUSD * USD_TO_HKD * effectiveMarkup + shipHKD);
 
         report.updated.push({
           id: p.id,

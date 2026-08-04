@@ -54,8 +54,16 @@ module.exports = async (req, res) => {
       phone_number_collection: { enabled: true },
       success_url: `${process.env.SITE_URL}/?order=success`,
       cancel_url: `${process.env.SITE_URL}/?order=cancelled`,
-      // metadata 會喺 webhook 度攞返,用嚟知道呢張單買咗啲乜
-      metadata: { cart: JSON.stringify(cart) },
+      // metadata 會喺 webhook 度攞返;每個value上限500字,
+      // 所以將cart JSON斬做450字一段,分開儲(cart, cart1, cart2...)
+      metadata: (() => {
+        const s = JSON.stringify(cart);
+        const meta = {};
+        for (let i = 0; i * 450 < s.length && i < 20; i++) {
+          meta[i === 0 ? "cart" : `cart${i}`] = s.slice(i * 450, (i + 1) * 450);
+        }
+        return meta;
+      })(),
     });
 
     res.status(200).json({ url: session.url });

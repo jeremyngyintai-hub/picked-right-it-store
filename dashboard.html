@@ -63,7 +63,7 @@
   .wrap{max-width:1280px;margin:0 auto;padding:26px 22px 140px;position:relative;z-index:1;}
 
   /* command bar */
-  .cmdbar{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;display:grid;grid-template-columns:1.1fr .7fr auto auto;gap:12px;align-items:end;backdrop-filter:blur(6px);}
+  .cmdbar{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:18px;display:grid;grid-template-columns:1fr .55fr .55fr auto auto;gap:12px;align-items:end;backdrop-filter:blur(6px);}
   label{display:block;font-size:.66rem;font-weight:700;color:var(--tx-soft);margin-bottom:6px;letter-spacing:.14em;text-transform:uppercase;font-family:var(--mono);}
   .field input{width:100%;padding:12px 15px;border:1px solid var(--line);border-radius:12px;font-size:.9rem;background:rgba(0,0,0,.3);color:var(--tx);transition:all .15s;}
   .field input:focus{outline:none;border-color:var(--violet);box-shadow:0 0 0 3px rgba(139,92,246,.18);}
@@ -191,6 +191,7 @@
     .wrap{padding:16px 12px 170px;}
     .cmdbar{grid-template-columns:1fr 1fr;padding:14px;gap:10px;}
     .cmdbar .field:first-child{grid-column:span 2;}
+    .cmdbar>button{grid-column:span 1;}
     .cmdbar .btn{width:100%;padding:12px 10px;font-size:.8rem;}
     .mode-tabs{width:100%;display:flex;}
     .mode-tab{flex:1;padding:10px 6px;font-size:.78rem;text-align:center;}
@@ -254,6 +255,10 @@
     <div class="field">
       <label data-dt="lblMarkup">Markup · 利潤倍數</label>
       <input type="number" id="markup" value="2.8" step="0.1" min="1.2">
+    </div>
+    <div class="field">
+      <label data-dt="lblShip">預估運費 US$/件</label>
+      <input type="number" id="shipEst" value="5" step="0.5" min="0">
     </div>
     <button class="btn" id="scanBtn" onclick="loadWinners(1)" data-dt="btnScan">⚡ 掃描贏家產品</button>
     <button class="btn btn-dark" id="syncBtn" onclick="syncPrices()" data-dt="btnSync">🔄 同步CJ價格</button>
@@ -335,24 +340,24 @@ let DTHEME = 'dark', DLANG = 'zh';
 try{ DTHEME = localStorage.getItem('dash-theme')||'dark'; DLANG = localStorage.getItem('dash-lang')||'zh'; }catch(e){}
 const DI = {
  zh:{openStore:'開啟商店 ↗',pageTitle:'贏家產品管理台',pageSub:'搵CJ熱賣產品 → 設定利潤倍數 → 一撳上架,約1分鐘後自動live喺商店。',
-  lblKey:'Access Key · 管理密碼',lblMarkup:'Markup · 利潤倍數',btnScan:'⚡ 掃描贏家產品',btnSync:'🔄 同步CJ價格',
+  lblKey:'Access Key · 管理密碼',lblMarkup:'Markup · 利潤倍數',lblShip:'預估運費 US$/件',btnScan:'⚡ 掃描贏家產品',btnSync:'🔄 同步CJ價格',
   tabDiscover:'🛰 搵貨上架',tabManage:'📦 產品管理',tabSales:'📊 銷售數據',selAllLbl:'全選本頁',
   btnReload:'↻ 重新載入',btnCsv:'⬇ 匯出CSV',btnMaintain:'🧹 執行自動落架',btnClear:'清除',btnBatch:'🚀 批量上架',btnReset:'還原',btnSave:'💾 一次過儲存',
   chDailyT:'30日營業額 vs 毛利(每日)',chViewsT:'30日瀏覽量趨勢',chWeekT:'每週營業額(近8週)',chMonthT:'每月營業額(近6個月)',pnlT:'近7日 P&L 明細',perfT:'產品表現(瀏覽 → 銷量 → 轉換率)',
   scanning:'掃描緊...(9大類·約40秒)',needKey:'請先輸入管理密碼',loadMore:'載入更多結果(第',page:'頁)',selCountA:'已揀 ',selCountB:' 件',
   kRev:'30日營業額',kProfit:'30日毛利(扣成本+手續費)',kOrders:'30日訂單 / 平均單值',kViews:'30日瀏覽量 / 轉換率',
   colDate:'日期',colRev:'營業額',colCost:'貨品成本',colFee:'手續費(估)',colProfit:'毛利',colOrders:'訂單',
-  colProduct:'產品',colViews:'瀏覽',colQty:'銷量',colConv:'轉換率',margin:'毛利',sold:'賣出',pcs:'件',linkCJ:'CJ原頁 ↗',linkStore:'商店頁 ↗',
+  colProduct:'產品',colViews:'瀏覽',colQty:'銷量',colConv:'轉換率',margin:'毛利',sold:'賣出',pcs:'件',linkCJ:'CJ原頁 ↗',linkStore:'商店頁 ↗',shipLbl:'運',inclShip:'(連運)',
   catHome:'🏠 家居',catBeauty:'💄 美妝',catTech:'⚡ 電子',catPets:'🐾 寵物',catBaby:'🧸 母嬰玩具',catSports:'⛺ 運動戶外',catAccessories:'💍 飾物配件',catBags:'👜 袋&鞋',catAuto:'🚗 汽車用品'},
  en:{openStore:'Open Store ↗',pageTitle:'Winner Product Console',pageSub:'Scan CJ bestsellers → set your markup → one-click import. Live on the store in ~1 minute.',
-  lblKey:'Access Key',lblMarkup:'Markup Multiplier',btnScan:'⚡ Scan Winners',btnSync:'🔄 Sync CJ Prices',
+  lblKey:'Access Key',lblMarkup:'Markup Multiplier',lblShip:'Est. Shipping US$/pc',btnScan:'⚡ Scan Winners',btnSync:'🔄 Sync CJ Prices',
   tabDiscover:'🛰 Discover',tabManage:'📦 Products',tabSales:'📊 Analytics',selAllLbl:'Select page',
   btnReload:'↻ Reload',btnCsv:'⬇ Export CSV',btnMaintain:'🧹 Run Auto-Delist',btnClear:'Clear',btnBatch:'🚀 Batch Import',btnReset:'Reset',btnSave:'💾 Save All',
   chDailyT:'Revenue vs Profit — Daily (30d)',chViewsT:'Page Views Trend (30d)',chWeekT:'Weekly Revenue (8 wks)',chMonthT:'Monthly Revenue (6 mo)',pnlT:'P&L — Last 7 Days',perfT:'Product Performance (Views → Sales → Conversion)',
   scanning:'Scanning... (9 categories · ~40s)',needKey:'Enter the access key first',loadMore:'Load more (page ',page:')',selCountA:'',selCountB:' selected',
   kRev:'Revenue (30d)',kProfit:'Gross Profit (30d)',kOrders:'Orders / Avg Order (30d)',kViews:'Views / Conversion (30d)',
   colDate:'Date',colRev:'Revenue',colCost:'COGS',colFee:'Fees (est)',colProfit:'Profit',colOrders:'Orders',
-  colProduct:'Product',colViews:'Views',colQty:'Sold',colConv:'Conv.',margin:'margin',sold:'sold',pcs:'',linkCJ:'View on CJ ↗',linkStore:'Store page ↗',
+  colProduct:'Product',colViews:'Views',colQty:'Sold',colConv:'Conv.',margin:'margin',sold:'sold',pcs:'',linkCJ:'View on CJ ↗',linkStore:'Store page ↗',shipLbl:'ship',inclShip:' (incl. ship)',
   catHome:'🏠 Home',catBeauty:'💄 Beauty',catTech:'⚡ Tech',catPets:'🐾 Pets',catBaby:'🧸 Baby & Kids',catSports:'⛺ Sports',catAccessories:'💍 Accessories',catBags:'👜 Bags & Shoes',catAuto:'🚗 Auto'}
 };
 function dt(k){ return (DI[DLANG]&&DI[DLANG][k])||DI.zh[k]||k; }
@@ -465,8 +470,9 @@ function renderGrid(){
   if(items.length===0){ grid.innerHTML='<p class="empty">// NO DATA — 撳「掃描贏家產品」開始</p>'; return; }
   grid.innerHTML = items.map((p,i)=>{
     const cost = parseCost(p.cjCostUSD);
-    const sell = cost ? prettyPrice(cost*USD_TO_HKD*markup) : null;
-    const margin = (cost&&sell) ? Math.round(sell-cost*USD_TO_HKD) : null;
+    const shipEst = parseFloat(document.getElementById('shipEst').value) || 0;
+    const sell = cost ? prettyPrice(cost*USD_TO_HKD*markup + shipEst*USD_TO_HKD) : null;
+    const margin = (cost&&sell) ? Math.round(sell-(cost+shipEst)*USD_TO_HKD) : null;
     const key = currentCat+'|'+p.cjPid;
     return `
     <div class="pcard ${selected.has(key)?'selected':''}" id="card-${i}">
@@ -477,7 +483,7 @@ function renderGrid(){
       </div>
       <div class="pi">
         <div class="pname">${p.nameEn||''}</div>
-        <div class="meta" style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">LISTED ${(p.listedNum||0).toLocaleString()} · $${cost!=null?cost:'?'} <a class="qlink" href="https://www.cjdropshipping.com/product/-p-${p.cjPid}.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CJ ↗</a></div>
+        <div class="meta" style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">LISTED ${(p.listedNum||0).toLocaleString()} · $${cost!=null?cost:'?'}+$${shipEst} ${dt('shipLbl')} <a class="qlink" href="https://www.cjdropshipping.com/product/-p-${p.cjPid}.html" target="_blank" rel="noopener" onclick="event.stopPropagation()">CJ ↗</a></div>
         <div class="prices"><span class="lbl">賣價</span><span class="sell">HK$${sell||'—'}</span></div>
         ${margin!=null?`<div class="margin-tag">+HK$${margin} ${dt('margin')}</div>`:''}
       </div>
@@ -486,6 +492,7 @@ function renderGrid(){
 }
 
 document.getElementById('markup').addEventListener('input',()=>{ renderGrid(); });
+document.getElementById('shipEst').addEventListener('input',()=>{ if(winnersData) renderGrid(); });
 
 /* ---------- selection & batch ---------- */
 function toggleSelect(key, idx){
@@ -520,7 +527,7 @@ async function batchImport(){
     try{
       const res = await fetch('/api/admin/auto-import',{
         method:'POST',headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({secret:secretVal(), markup, items:chunk})
+        body:JSON.stringify({secret:secretVal(), markup, shipEstUSD: parseFloat(document.getElementById('shipEst').value)||5, items:chunk})
       });
       const data = await res.json();
       if(data.error && !data.report) throw new Error(data.error);
@@ -579,14 +586,14 @@ function renderList(){
   if(working.length===0){ box.innerHTML='<p class="empty">// 未有經Dashboard上架嘅產品</p>'; updateSaveBar(); return; }
   box.innerHTML = working.map((p,i)=>{
     const name=(p.i18n&&p.i18n['zh-Hant']&&p.i18n['zh-Hant'].name)||'';
-    const costHKD = p.costUSD?Math.round(p.costUSD*USD_TO_HKD):null;
+    const costHKD = p.costUSD?Math.round((p.costUSD+(p.shipUSD||0))*USD_TO_HKD):null;
     const margin = costHKD!=null?p.price-costHKD:null;
     return `
     <div class="prow ${p._deleted?'deleted':''}">
       <img src="${p.image||''}" loading="lazy" onerror="this.style.visibility='hidden'">
       <div>
         <input class="name-in" value="${name.replace(/"/g,'&quot;')}" oninput="editName(${i},this.value)" ${p._deleted?'disabled':''}>
-        <div class="rmeta">#${p.id} · ${p.catClass.toUpperCase()} · COST ${costHKD!=null?('HK$'+costHKD):'?'} · ${dt('sold')} ${p.soldQty||0}${dt('pcs')?' '+dt('pcs'):''} · ${(p.addedAt||'').slice(0,10)}</div>
+        <div class="rmeta">#${p.id} · ${p.catClass.toUpperCase()} · COST ${costHKD!=null?('HK$'+costHKD+(p.shipUSD?dt('inclShip'):'')):'?'} · ${dt('sold')} ${p.soldQty||0}${dt('pcs')?' '+dt('pcs'):''} · ${(p.addedAt||'').slice(0,10)}</div>
         <div class="rlinks">
           <a class="qlink" href="https://www.cjdropshipping.com/product/-p-${p.cjPid}.html" target="_blank" rel="noopener">${dt('linkCJ')}</a>
           <a class="qlink" href="/?p=${p.id}" target="_blank" rel="noopener">${dt('linkStore')}</a>
@@ -610,7 +617,7 @@ function editName(i,v){ if(!working[i].i18n)working[i].i18n={'zh-Hant':{},'zh-Ha
 function editPrice(i,el){
   working[i].price=parseInt(el.value)||0;
   el.classList.toggle('changed',isPriceChanged(i));
-  const costHKD=working[i].costUSD?Math.round(working[i].costUSD*USD_TO_HKD):null;
+  const costHKD=working[i].costUSD?Math.round((working[i].costUSD+(working[i].shipUSD||0))*USD_TO_HKD):null;
   const rm=document.getElementById('rm-'+i);
   if(costHKD!=null&&rm){ const m=working[i].price-costHKD; rm.textContent=dt('margin')+' HK$'+m; rm.classList.toggle('neg',m<0); }
   updateSaveBar();
@@ -623,7 +630,7 @@ function exportCSV(){
   const rows = [['ID','名稱','類別','售價HKD','成本USD','毛利HKD','累計銷量','狀態','CJ_PID','CJ_VID','上架日期']];
   src.forEach(p=>{
     const name=(p.i18n&&p.i18n['zh-Hant']&&p.i18n['zh-Hant'].name)||'';
-    const costHKD=p.costUSD?Math.round(p.costUSD*USD_TO_HKD):'';
+    const costHKD=p.costUSD?Math.round((p.costUSD+(p.shipUSD||0))*USD_TO_HKD):'';
     rows.push([p.id,name,p.catClass,p.price,p.costUSD||'',costHKD!==''?p.price-costHKD:'',p.soldQty||0,p.delisted?'已落架':'上架中',p.cjPid,p.cjVid,(p.addedAt||'').slice(0,10)]);
   });
   const csv='\ufeff'+rows.map(r=>r.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(',')).join('\n');

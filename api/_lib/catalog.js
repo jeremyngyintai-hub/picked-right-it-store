@@ -17,6 +17,7 @@ async function getCatalog() {
           name: (p.i18n && p.i18n["zh-Hant"] && p.i18n["zh-Hant"].name) || `Product ${p.id}`,
           sellPriceHKD: p.price,
           costUSD: p.costUSD || null,
+          shipUSD: p.shipUSD || 0,
           cjPid: p.cjPid,
           cjVid: p.cjVid,
           variants: p.variants || [],

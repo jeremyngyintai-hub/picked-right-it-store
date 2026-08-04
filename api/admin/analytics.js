@@ -42,7 +42,7 @@ module.exports = async (req, res) => {
       (pj || []).forEach((p) => {
         productMeta[p.id] = {
           name: (p.i18n?.["zh-Hant"]?.name) || `#${p.id}`,
-          costHKD: p.costUSD ? Math.round(p.costUSD * USD_TO_HKD) : null,
+          costHKD: p.costUSD ? Math.round((p.costUSD + (p.shipUSD || 0)) * USD_TO_HKD) : null,
           delisted: !!p.delisted,
         };
       });

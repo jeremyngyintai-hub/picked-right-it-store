@@ -145,6 +145,7 @@ module.exports = async (req, res) => {
   if (queue.length === 0) return res.status(400).json({ error: "要提供 pid 或 items" });
 
   const mk = parseFloat(markup) || 2.8;
+  const shipEstUSD = Math.max(0, parseFloat(req.body.shipEstUSD) || 5); // 查唔到真實運費時嘅預估值
   const report = { imported: [], skipped: [], errors: [] };
 
   try {
@@ -179,7 +180,24 @@ module.exports = async (req, res) => {
         if (!chosenVariant) throw new Error("冇variants,無法自動落單");
 
         const costUSD = parseCostUSD(chosenVariant.variantSellPrice) || parseCostUSD(p.sellPrice) || 0;
-        const finalPrice = parseInt(item.priceHKD) || prettyPrice(costUSD * USD_TO_HKD * mk);
+
+        // === 查CJ寄香港嘅真實運費(揀最平物流);失敗就用預估 ===
+        let shipUSD = shipEstUSD;
+        try {
+          await sleep(1100);
+          const fRes = await fetch(`${CJ_BASE}/logistic/freightCalculate`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", "CJ-Access-Token": accessToken },
+            body: JSON.stringify({ startCountryCode: "CN", endCountryCode: "HK", products: [{ quantity: 1, vid: chosenVariant.vid }] }),
+          });
+          const fData = await fRes.json();
+          const opts = (fData && fData.data) || [];
+          const prices = opts.map((o) => parseFloat(o.logisticPrice)).filter((x) => !isNaN(x) && x > 0);
+          if (prices.length) shipUSD = Math.min(...prices);
+        } catch {}
+
+        // 售價 = 貨價×倍數 + 運費直通(運費唔賺唔蝕),調靚尾數
+        const finalPrice = parseInt(item.priceHKD) || prettyPrice(costUSD * USD_TO_HKD * mk + shipUSD * USD_TO_HKD);
         const copy = draftCopy(p.productNameEn, itemCat);
         const images = (p.productImageSet || [p.bigImage].filter(Boolean)).slice(0, 6);
         const video = p.productVideo || p.video || "";
@@ -198,6 +216,7 @@ module.exports = async (req, res) => {
           i18n: copy,
           cjPid: item.pid,
           cjVid: chosenVariant.vid,
+          shipUSD: Math.round(shipUSD * 100) / 100,
           variants: variants.slice(0, 60).map((v) => ({ vid: v.vid, name: v.variantNameEn || v.variantKey || "" })),
           costUSD,
           addedAt: new Date().toISOString(),
@@ -206,7 +225,8 @@ module.exports = async (req, res) => {
           id: nextId,
           name: copy["zh-Hant"].name,
           priceHKD: finalPrice,
-          estGrossMarginHKD: Math.round(finalPrice - costUSD * USD_TO_HKD),
+          shipUSD: Math.round(shipUSD * 100) / 100,
+          estGrossMarginHKD: Math.round(finalPrice - (costUSD + shipUSD) * USD_TO_HKD),
         });
         nextId++;
         anyAdded = true;

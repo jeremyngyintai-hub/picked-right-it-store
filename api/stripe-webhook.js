@@ -58,7 +58,14 @@ module.exports = async (req, res) => {
         expand: ["customer_details"],
       });
       const shipping = fullSession.shipping_details || fullSession.customer_details;
-      const cart = JSON.parse(session.metadata.cart);
+      // 重組斬件儲存嘅cart(cart, cart1, cart2...)
+      let cartStr = session.metadata.cart || "";
+      for (let i = 1; i < 20; i++) {
+        const part = session.metadata[`cart${i}`];
+        if (!part) break;
+        cartStr += part;
+      }
+      const cart = JSON.parse(cartStr);
       const productMap = await getCatalog();
 
       // ===== 銷售記錄(KV有設定先做,失敗唔影響落單流程)=====
@@ -76,7 +83,7 @@ module.exports = async (req, res) => {
             return {
               id: Number(pid), name: nm, qty,
               priceHKD: prod.sellPriceHKD || 0,
-              costHKD: prod.costUSD ? Math.round(prod.costUSD * 7.8) : null,
+              costHKD: prod.costUSD ? Math.round((prod.costUSD + (prod.shipUSD || 0)) * 7.8) : null,
             };
           });
           const totalHKD = items.reduce((s, it) => s + it.priceHKD * it.qty, 0);
@@ -100,6 +107,9 @@ module.exports = async (req, res) => {
       const products = Object.entries(cart).map(([key, qty]) => {
         const [pid, vid] = String(key).split("::");
         const p = productMap[pid];
+        if (!p || !p.cjPid || p.cjPid === "REPLACE_ME") {
+          throw new Error(`產品#${pid}對唔返CJ資料(可能已落架/未填pid),要人手上CJ補單`);
+        }
         return { cjPid: p.cjPid, cjVid: vid || p.cjVid, quantity: qty };
       });
 
