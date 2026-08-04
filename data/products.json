@@ -2899,5 +2899,297 @@
     "cjVid": "1586184997755695104",
     "costUSD": 8.46,
     "addedAt": "2026-08-04T09:51:44.911Z"
+  },
+  {
+    "id": 93,
+    "catClass": "baby",
+    "price": 368,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/6e5b52cc-25da-4869-b34a-7d300d276c2f.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/6e5b52cc-25da-4869-b34a-7d300d276c2f.jpg",
+      "https://cf.cjdropshipping.com/e045e06c-4884-430e-b8f0-3c38e03ac0af.jpg",
+      "https://cf.cjdropshipping.com/018b45d9-2bb0-40cf-bc08-e1d9f38136a6.jpg",
+      "https://cf.cjdropshipping.com/bb9c6e57-7543-4b61-b262-3b4763629205.jpg",
+      "https://cf.cjdropshipping.com/8775f02b-b966-4534-a451-712437793794.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Electronic dog toy",
+        "desc": "陪住小朋友成長嘅好幫手。團隊嚴選用料先上架,爸媽買得放心。"
+      },
+      "zh-Hans": {
+        "name": "Electronic dog toy",
+        "desc": "陪伴孩子成长的好帮手。团队严选用料才上架,爸妈买得放心。"
+      },
+      "en": {
+        "name": "Electronic dog toy",
+        "desc": "A trusted companion for growing kids — carefully selected by our team."
+      }
+    },
+    "cjPid": "D6E01323-0846-45EA-A69B-78EEEEA94FBE",
+    "cjVid": "8B776476-DE03-4F20-A6CC-DD46C33E1CA3",
+    "costUSD": 16.82,
+    "addedAt": "2026-08-04T09:52:07.440Z"
+  },
+  {
+    "id": 94,
+    "catClass": "baby",
+    "price": 168,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/45f0739d-9e32-469c-aa90-17924cb9334e.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/45f0739d-9e32-469c-aa90-17924cb9334e.jpg",
+      "https://cf.cjdropshipping.com/2061/2066534466915.jpg",
+      "https://cf.cjdropshipping.com/2061/1970094373284.jpg",
+      "https://cf.cjdropshipping.com/2061/475202716628.jpg",
+      "https://cf.cjdropshipping.com/2061/9124643030124.jpg",
+      "https://cf.cjdropshipping.com/2061/844933042639.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Baby Toys Magnetic Stick Building Blocks Game Magnets Childr",
+        "desc": "陪住小朋友成長嘅好幫手。團隊嚴選用料先上架,爸媽買得放心。"
+      },
+      "zh-Hans": {
+        "name": "Baby Toys Magnetic Stick Building Blocks Game Magnets Childr",
+        "desc": "陪伴孩子成长的好帮手。团队严选用料才上架,爸妈买得放心。"
+      },
+      "en": {
+        "name": "Baby Toys Magnetic Stick Building Blocks Game Magnets Childr",
+        "desc": "A trusted companion for growing kids — carefully selected by our team."
+      }
+    },
+    "cjPid": "9DDFBF12-81F9-4D99-9A1E-950412C1352A",
+    "cjVid": "0C08B2F8-C15F-44E1-98BF-C680DD0ED09B",
+    "costUSD": 7.76,
+    "addedAt": "2026-08-04T09:52:09.485Z"
+  },
+  {
+    "id": 95,
+    "catClass": "baby",
+    "price": 48,
+    "icon": "box",
+    "image": "https://oss-cf.cjdropshipping.com/product/2024/12/31/05/19f45e39-fea5-447f-a819-93e0acf1a579.jpg",
+    "images": [
+      "https://oss-cf.cjdropshipping.com/product/2024/12/31/05/19f45e39-fea5-447f-a819-93e0acf1a579.jpg",
+      "https://oss-cf.cjdropshipping.com/product/2024/12/31/05/71d90b51-8ad4-4a21-b083-de7bd58d94ea.jpg",
+      "https://cf.cjdropshipping.com/15266016/374241808816.png",
+      "https://cf.cjdropshipping.com/15266016/4326029660160.png",
+      "https://cf.cjdropshipping.com/15266016/767491447648.png",
+      "https://oss-cf.cjdropshipping.com/product/2024/12/31/05/de8bfded-9942-4b3d-9188-97da46b9bf5d.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Wooden Train Three-section Tractor Toy Childrens Intelligen",
+        "desc": "陪住小朋友成長嘅好幫手。團隊嚴選用料先上架,爸媽買得放心。"
+      },
+      "zh-Hans": {
+        "name": "Wooden Train Three-section Tractor Toy Childrens Intelligen",
+        "desc": "陪伴孩子成长的好帮手。团队严选用料才上架,爸妈买得放心。"
+      },
+      "en": {
+        "name": "Wooden Train Three-section Tractor Toy Childrens Intelligen",
+        "desc": "A trusted companion for growing kids — carefully selected by our team."
+      }
+    },
+    "cjPid": "67429115-D5F2-4F6B-8759-3DD8EC67A3B8",
+    "cjVid": "D0DC9107-12D7-4E77-9FAC-BE4B50155125",
+    "costUSD": 2.11,
+    "addedAt": "2026-08-04T09:52:11.518Z"
+  },
+  {
+    "id": 96,
+    "catClass": "baby",
+    "price": 308,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20200430/1410541782588.png",
+    "images": [
+      "https://cf.cjdropshipping.com/20200430/1410541782588.png",
+      "https://cf.cjdropshipping.com/20200430/1320245002395.png",
+      "https://cf.cjdropshipping.com/20200430/2660389594975.png",
+      "https://cf.cjdropshipping.com/20200430/260447899052.png",
+      "https://cf.cjdropshipping.com/20200430/47377612864.jpg",
+      "https://cf.cjdropshipping.com/20200430/4466382314418.png"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Kids educational toys Preschool",
+        "desc": "陪住小朋友成長嘅好幫手。團隊嚴選用料先上架,爸媽買得放心。"
+      },
+      "zh-Hans": {
+        "name": "Kids educational toys Preschool",
+        "desc": "陪伴孩子成长的好帮手。团队严选用料才上架,爸妈买得放心。"
+      },
+      "en": {
+        "name": "Kids educational toys Preschool",
+        "desc": "A trusted companion for growing kids — carefully selected by our team."
+      }
+    },
+    "cjPid": "7181E80B-BE0E-4FD0-A76F-471299DF4189",
+    "cjVid": "03EA1DEB-4AA9-4895-ACD5-45C716F14FC2",
+    "costUSD": 14.07,
+    "addedAt": "2026-08-04T09:52:13.237Z"
+  },
+  {
+    "id": 97,
+    "catClass": "baby",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/2062/1310695968311.png",
+    "images": [
+      "https://cf.cjdropshipping.com/2062/1310695968311.png",
+      "https://cf.cjdropshipping.com/15165792/2649244449182.jpg",
+      "https://cf.cjdropshipping.com/15165792/6022234930250.jpg",
+      "https://cf.cjdropshipping.com/15165792/2143298408294.jpg",
+      "https://cf.cjdropshipping.com/20200102/5159250928310.png",
+      "https://cf.cjdropshipping.com/15165792/687131458605.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Ergonomic Frog Children Baby Potty Toilet",
+        "desc": "陪住小朋友成長嘅好幫手。團隊嚴選用料先上架,爸媽買得放心。"
+      },
+      "zh-Hans": {
+        "name": "Ergonomic Frog Children Baby Potty Toilet",
+        "desc": "陪伴孩子成长的好帮手。团队严选用料才上架,爸妈买得放心。"
+      },
+      "en": {
+        "name": "Ergonomic Frog Children Baby Potty Toilet",
+        "desc": "A trusted companion for growing kids — carefully selected by our team."
+      }
+    },
+    "cjPid": "FD76B872-075A-468D-B064-E8D7DE7C672D",
+    "cjVid": "02A6A933-983F-495C-B02C-43FC273B8421",
+    "costUSD": 1.5,
+    "addedAt": "2026-08-04T09:52:15.126Z"
+  },
+  {
+    "id": 98,
+    "catClass": "baby",
+    "price": 108,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20190304/813209973532.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/20190304/813209973532.jpg",
+      "https://cf.cjdropshipping.com/2060/2081849828161.jpg",
+      "https://cf.cjdropshipping.com/15516288/1042451070430.jpg",
+      "https://cf.cjdropshipping.com/ad215ae4-b8b3-4871-a7b8-15e011c29f42.png",
+      "https://cf.cjdropshipping.com/2a9736d0-8253-4048-8e8c-4c5da1f3c9ab.jpg",
+      "https://cf.cjdropshipping.com/15516288/940640436054.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Creative Building Kits Educational Blocks Sets",
+        "desc": "陪住小朋友成長嘅好幫手。團隊嚴選用料先上架,爸媽買得放心。"
+      },
+      "zh-Hans": {
+        "name": "Creative Building Kits Educational Blocks Sets",
+        "desc": "陪伴孩子成长的好帮手。团队严选用料才上架,爸妈买得放心。"
+      },
+      "en": {
+        "name": "Creative Building Kits Educational Blocks Sets",
+        "desc": "A trusted companion for growing kids — carefully selected by our team."
+      }
+    },
+    "cjPid": "6EA42E98-B840-431A-929D-4CF2CBC800B9",
+    "cjVid": "1377904283500023808",
+    "costUSD": 4.96,
+    "addedAt": "2026-08-04T09:52:16.605Z"
+  },
+  {
+    "id": 99,
+    "catClass": "baby",
+    "price": 68,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/2052/749243032360.png",
+    "images": [
+      "https://cf.cjdropshipping.com/2052/749243032360.png",
+      "https://oss-cf.cjdropshipping.com/product/2024/05/06/10/aedca127-9eb6-4edc-a3c0-c1744930b7c6.jpg",
+      "https://cf.cjdropshipping.com/2052/2149169845890.png"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Building Blocks Mini Dinosaur Bricks Figures Kids Toys For C",
+        "desc": "陪住小朋友成長嘅好幫手。團隊嚴選用料先上架,爸媽買得放心。"
+      },
+      "zh-Hans": {
+        "name": "Building Blocks Mini Dinosaur Bricks Figures Kids Toys For C",
+        "desc": "陪伴孩子成长的好帮手。团队严选用料才上架,爸妈买得放心。"
+      },
+      "en": {
+        "name": "Building Blocks Mini Dinosaur Bricks Figures Kids Toys For C",
+        "desc": "A trusted companion for growing kids — carefully selected by our team."
+      }
+    },
+    "cjPid": "37756204-A920-48F5-9C06-059E8758D90D",
+    "cjVid": "9C199BD4-C981-4423-8564-9E3AB75D26E6",
+    "costUSD": 2.96,
+    "addedAt": "2026-08-04T09:52:18.030Z"
+  },
+  {
+    "id": 100,
+    "catClass": "baby",
+    "price": 128,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/1616993772129.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/1616993772129.jpg",
+      "https://cf.cjdropshipping.com/1616993772417.jpg",
+      "https://cf.cjdropshipping.com/1616993772409.jpg",
+      "https://cf.cjdropshipping.com/1616993772425.jpg",
+      "https://cf.cjdropshipping.com/1616993772119.jpg",
+      "https://cf.cjdropshipping.com/1616993772106.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Multifunctional Dog Leash For Pets",
+        "desc": "陪住小朋友成長嘅好幫手。團隊嚴選用料先上架,爸媽買得放心。"
+      },
+      "zh-Hans": {
+        "name": "Multifunctional Dog Leash For Pets",
+        "desc": "陪伴孩子成长的好帮手。团队严选用料才上架,爸妈买得放心。"
+      },
+      "en": {
+        "name": "Multifunctional Dog Leash For Pets",
+        "desc": "A trusted companion for growing kids — carefully selected by our team."
+      }
+    },
+    "cjPid": "1376399357498232832",
+    "cjVid": "1376399358857187328",
+    "costUSD": 5.51,
+    "addedAt": "2026-08-04T09:52:19.648Z"
   }
 ]
