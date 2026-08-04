@@ -14735,5 +14735,1083 @@
     ],
     "costUSD": 7.82,
     "addedAt": "2026-08-04T16:07:16.563Z"
+  },
+  {
+    "id": 189,
+    "catClass": "sports",
+    "price": 248,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/quick/product/5acb800e-80e9-4a01-ab1e-8be500df05f5.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/quick/product/5acb800e-80e9-4a01-ab1e-8be500df05f5.jpg",
+      "https://cf.cjdropshipping.com/quick/product/b0d714d8-a2b6-4431-bf29-9f9de560f52f.jpg",
+      "https://cf.cjdropshipping.com/quick/product/9bd89f0e-cd1a-4279-938d-a7f1dd1ac803.jpg",
+      "https://cf.cjdropshipping.com/quick/product/916c51b0-9058-41dc-82a9-abe56b59e982.jpg",
+      "https://cf.cjdropshipping.com/quick/product/ca17db54-46ea-4d74-b243-76f98ccd1b93.jpg",
+      "https://cf.cjdropshipping.com/quick/product/a57b3770-4d91-4159-a8c3-f8a9ddeb962c.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Mens Lightweight Fashion Trendy Sneakers",
+        "desc": "行山跑步健身都用得著。團隊嚴選耐用款式先上架,運動裝備一步到位。"
+      },
+      "zh-Hans": {
+        "name": "Mens Lightweight Fashion Trendy Sneakers",
+        "desc": "登山跑步健身都用得上。团队严选耐用款式才上架,运动装备一步到位。"
+      },
+      "en": {
+        "name": "Mens Lightweight Fashion Trendy Sneakers",
+        "desc": "Built for hikes, runs, and workouts — durability-hand-picked by our team."
+      }
+    },
+    "cjPid": "2409200759351613500",
+    "cjVid": "2409200759351614400",
+    "shipUSD": 5.35,
+    "variants": [
+      {
+        "vid": "2409200759351614400",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Gray 40"
+      },
+      {
+        "vid": "2409200759351614600",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Gray 41"
+      },
+      {
+        "vid": "2409200759351614700",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Gray 42"
+      },
+      {
+        "vid": "2409200759351614900",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Gray 43"
+      },
+      {
+        "vid": "2409200759351615100",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Gray 44"
+      },
+      {
+        "vid": "2409200759351615300",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Gray 45"
+      },
+      {
+        "vid": "2409200759351615400",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Gray 46"
+      },
+      {
+        "vid": "2409200759351615600",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Gray 47"
+      },
+      {
+        "vid": "2409200759351615800",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Black 40"
+      },
+      {
+        "vid": "2409200759351615900",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Black 41"
+      },
+      {
+        "vid": "2409200759351616100",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Black 42"
+      },
+      {
+        "vid": "2409200759351616300",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Black 43"
+      },
+      {
+        "vid": "2409200759351616400",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Black 44"
+      },
+      {
+        "vid": "2409200759351616600",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Black 45"
+      },
+      {
+        "vid": "2409200759351616800",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Black 46"
+      },
+      {
+        "vid": "2409200759351617000",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Black 47"
+      },
+      {
+        "vid": "2409200759351617100",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Green 40"
+      },
+      {
+        "vid": "2409200759351617300",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Green 41"
+      },
+      {
+        "vid": "2409200759351617500",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Green 42"
+      },
+      {
+        "vid": "2409200759351617700",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Green 43"
+      },
+      {
+        "vid": "2409200759351617800",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Green 44"
+      },
+      {
+        "vid": "2409200759351618000",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Green 45"
+      },
+      {
+        "vid": "2409200759351618400",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Green 46"
+      },
+      {
+        "vid": "2409200759351618700",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Green 47"
+      },
+      {
+        "vid": "2409200759351618900",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Dark Blue 40"
+      },
+      {
+        "vid": "2409200759351619000",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Dark Blue 41"
+      },
+      {
+        "vid": "2409200759351619200",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Dark Blue 42"
+      },
+      {
+        "vid": "2409200759351619600",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Dark Blue 43"
+      },
+      {
+        "vid": "2409200759351619700",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Dark Blue 44"
+      },
+      {
+        "vid": "2409200759351619900",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Dark Blue 45"
+      },
+      {
+        "vid": "2409200759361610100",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Dark Blue 46"
+      },
+      {
+        "vid": "2409200759361610300",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Dark Blue 47"
+      },
+      {
+        "vid": "2409270807321620600",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Yellow 40"
+      },
+      {
+        "vid": "2409270807321620800",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Yellow 41"
+      },
+      {
+        "vid": "2409270807321620900",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Yellow 42"
+      },
+      {
+        "vid": "2409270807321621100",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Yellow 43"
+      },
+      {
+        "vid": "2409270807321621300",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Yellow 44"
+      },
+      {
+        "vid": "2409270807321621400",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Yellow 45"
+      },
+      {
+        "vid": "2409270807321621600",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Yellow 46"
+      },
+      {
+        "vid": "2409270807321621800",
+        "name": "Men's Lightweight Fashion Trendy Sneakers Yellow 47"
+      }
+    ],
+    "costUSD": 9.08,
+    "addedAt": "2026-08-04T16:07:24.679Z"
+  },
+  {
+    "id": 190,
+    "catClass": "sports",
+    "price": 378,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/1622190492367.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/1622190492367.jpg",
+      "https://cf.cjdropshipping.com/1622190492366.jpg",
+      "https://cf.cjdropshipping.com/1622190492400.jpg",
+      "https://cf.cjdropshipping.com/6303be9f-5b3c-4c64-bdde-e7b445db6e1f.jpg",
+      "https://cf.cjdropshipping.com/1622190492397.jpg",
+      "https://cf.cjdropshipping.com/1622190492398.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Fall MenS Low-Top Round Toe Injection Shoes Sports Daily Sp",
+        "desc": "行山跑步健身都用得著。團隊嚴選耐用款式先上架,運動裝備一步到位。"
+      },
+      "zh-Hans": {
+        "name": "Fall MenS Low-Top Round Toe Injection Shoes Sports Daily Sp",
+        "desc": "登山跑步健身都用得上。团队严选耐用款式才上架,运动装备一步到位。"
+      },
+      "en": {
+        "name": "Fall MenS Low-Top Round Toe Injection Shoes Sports Daily Sp",
+        "desc": "Built for hikes, runs, and workouts — durability-hand-picked by our team."
+      }
+    },
+    "cjPid": "1398195109425713152",
+    "cjVid": "1398195110814027776",
+    "shipUSD": 7.42,
+    "variants": [
+      {
+        "vid": "1398195110814027776",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Black 39"
+      },
+      {
+        "vid": "1398195110826610688",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Black 40"
+      },
+      {
+        "vid": "1398195110834999296",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Black 41"
+      },
+      {
+        "vid": "1398195110843387904",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Black 42"
+      },
+      {
+        "vid": "1398195110851776512",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Black 43"
+      },
+      {
+        "vid": "1398195110855970816",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Black 44"
+      },
+      {
+        "vid": "1398195110864359424",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Orange 39"
+      },
+      {
+        "vid": "1398195110872748032",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Orange 40"
+      },
+      {
+        "vid": "1398195110885330944",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Orange 41"
+      },
+      {
+        "vid": "1398195110893719552",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Orange 42"
+      },
+      {
+        "vid": "1398195110902108160",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Orange 43"
+      },
+      {
+        "vid": "1398195110910496768",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Orange 44"
+      },
+      {
+        "vid": "1398195110918885376",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Green 39"
+      },
+      {
+        "vid": "1398195110931468288",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Green 40"
+      },
+      {
+        "vid": "1398195110939856896",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Green 41"
+      },
+      {
+        "vid": "1398195110948245504",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Green 42"
+      },
+      {
+        "vid": "1398195110956634112",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Green 43"
+      },
+      {
+        "vid": "1398195110965022720",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Green 44"
+      },
+      {
+        "vid": "1399354310772527104",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Black 45"
+      },
+      {
+        "vid": "1399354310785110016",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Black 46"
+      },
+      {
+        "vid": "1399354310793498624",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Green 45"
+      },
+      {
+        "vid": "1399354310806081536",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Green 46"
+      },
+      {
+        "vid": "1399354310814470144",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Orange 45"
+      },
+      {
+        "vid": "1399354310827053056",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Orange 46"
+      },
+      {
+        "vid": "1409326158058754048",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Black Blue 39"
+      },
+      {
+        "vid": "1409326158075531264",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Black Blue 40"
+      },
+      {
+        "vid": "1409326158092308480",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Black Blue 41"
+      },
+      {
+        "vid": "1409326158104891392",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Black Blue 42"
+      },
+      {
+        "vid": "1409326158121668608",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Black Blue 43"
+      },
+      {
+        "vid": "1409326158134251520",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Black Blue 44"
+      },
+      {
+        "vid": "1409326158142640128",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Black Blue 45"
+      },
+      {
+        "vid": "1409326158155223040",
+        "name": "Fall Men'S Low-Top Round Toe Injection Shoes Sports Daily Sports Old Shoes Black Blue 46"
+      }
+    ],
+    "costUSD": 14.3,
+    "addedAt": "2026-08-04T16:07:29.705Z"
+  },
+  {
+    "id": 191,
+    "catClass": "sports",
+    "price": 238,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/239886c7-2a53-439d-bd77-e5f284387389.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/239886c7-2a53-439d-bd77-e5f284387389.jpg",
+      "https://cf.cjdropshipping.com/79fa18f2-0405-4ead-af55-49f6d1bca732.jpg",
+      "https://cf.cjdropshipping.com/44e3d808-44e5-4912-a5e5-99a6b19d7581.jpg",
+      "https://cf.cjdropshipping.com/df0044ab-2761-42be-aa20-64c0da5a49dd.jpg",
+      "https://cf.cjdropshipping.com/6c7fff39-9304-4a4a-b12b-489dc070d680.jpg",
+      "https://cf.cjdropshipping.com/e0243ded-aa41-4c1a-b723-f742e3908360.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Men Sneakers Winter Warm Sports Shoes With Plush",
+        "desc": "行山跑步健身都用得著。團隊嚴選耐用款式先上架,運動裝備一步到位。"
+      },
+      "zh-Hans": {
+        "name": "Men Sneakers Winter Warm Sports Shoes With Plush",
+        "desc": "登山跑步健身都用得上。团队严选耐用款式才上架,运动装备一步到位。"
+      },
+      "en": {
+        "name": "Men Sneakers Winter Warm Sports Shoes With Plush",
+        "desc": "Built for hikes, runs, and workouts — durability-hand-picked by our team."
+      }
+    },
+    "cjPid": "1593072815199637504",
+    "cjVid": "1593072815237386240",
+    "shipUSD": 4.26,
+    "variants": [
+      {
+        "vid": "1593072815237386240",
+        "name": "Black-Size38"
+      },
+      {
+        "vid": "1593072815237386241",
+        "name": "Grey-Size38"
+      },
+      {
+        "vid": "1593072815237386242",
+        "name": "Black-Size39"
+      },
+      {
+        "vid": "1593072815237386243",
+        "name": "Grey-Size39"
+      },
+      {
+        "vid": "1593072815237386244",
+        "name": "Black-Size40"
+      },
+      {
+        "vid": "1593072815237386245",
+        "name": "Grey-Size40"
+      },
+      {
+        "vid": "1593072815237386246",
+        "name": "Black-Size41"
+      },
+      {
+        "vid": "1593072815237386247",
+        "name": "Grey-Size41"
+      },
+      {
+        "vid": "1593072815237386248",
+        "name": "Black-Size42"
+      },
+      {
+        "vid": "1593072815237386249",
+        "name": "Grey-Size42"
+      },
+      {
+        "vid": "1593072815237386250",
+        "name": "Black-Size43"
+      },
+      {
+        "vid": "1593072815237386251",
+        "name": "Grey-Size43"
+      },
+      {
+        "vid": "1593072815237386252",
+        "name": "Black-Size44"
+      },
+      {
+        "vid": "1593072815237386253",
+        "name": "Grey-Size44"
+      },
+      {
+        "vid": "1593072815237386254",
+        "name": "Black-Size45"
+      },
+      {
+        "vid": "1593072815237386255",
+        "name": "Grey-Size45"
+      },
+      {
+        "vid": "1593072815237386256",
+        "name": "Black-Size46"
+      },
+      {
+        "vid": "1593072815237386257",
+        "name": "Grey-Size46"
+      }
+    ],
+    "costUSD": 9.05,
+    "addedAt": "2026-08-04T16:07:32.949Z"
+  },
+  {
+    "id": 192,
+    "catClass": "sports",
+    "price": 628,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/074ae975-8c04-4bde-8b66-6ca3aca04052.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/074ae975-8c04-4bde-8b66-6ca3aca04052.jpg",
+      "https://cf.cjdropshipping.com/0061033b-a0a4-4dcd-838f-0efe6b66e5a1.jpg",
+      "https://cf.cjdropshipping.com/56b27d99-9613-4852-b9b5-99f378219b0b.jpg",
+      "https://cf.cjdropshipping.com/39df11ad-2ef7-4c70-9387-abdbe3642f5b.jpg",
+      "https://cf.cjdropshipping.com/aa542b05-7734-4f59-804f-76dc1b1081eb.jpg",
+      "https://cf.cjdropshipping.com/dee938a3-e115-47a9-9ece-1d2511642a3a.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Hollow Stretch Platform Heightened Casual Sneakers",
+        "desc": "行山跑步健身都用得著。團隊嚴選耐用款式先上架,運動裝備一步到位。"
+      },
+      "zh-Hans": {
+        "name": "Hollow Stretch Platform Heightened Casual Sneakers",
+        "desc": "登山跑步健身都用得上。团队严选耐用款式才上架,运动装备一步到位。"
+      },
+      "en": {
+        "name": "Hollow Stretch Platform Heightened Casual Sneakers",
+        "desc": "Built for hikes, runs, and workouts — durability-hand-picked by our team."
+      }
+    },
+    "cjPid": "1419187734056144896",
+    "cjVid": "1419187736719527936",
+    "shipUSD": 7.1,
+    "variants": [
+      {
+        "vid": "1419187736719527936",
+        "name": "Hollow Stretch Platform Heightened Casual Sneakers Black 35"
+      },
+      {
+        "vid": "1419187736727916544",
+        "name": "Hollow Stretch Platform Heightened Casual Sneakers Black 36"
+      },
+      {
+        "vid": "1419187736736305152",
+        "name": "Hollow Stretch Platform Heightened Casual Sneakers Black 37"
+      },
+      {
+        "vid": "1419187736744693760",
+        "name": "Hollow Stretch Platform Heightened Casual Sneakers Black 38"
+      },
+      {
+        "vid": "1419187736753082368",
+        "name": "Hollow Stretch Platform Heightened Casual Sneakers Black 39"
+      },
+      {
+        "vid": "1419187736761470976",
+        "name": "Hollow Stretch Platform Heightened Casual Sneakers Grey 35"
+      },
+      {
+        "vid": "1419187736769859584",
+        "name": "Hollow Stretch Platform Heightened Casual Sneakers Grey 36"
+      },
+      {
+        "vid": "1419187736778248192",
+        "name": "Hollow Stretch Platform Heightened Casual Sneakers Grey 37"
+      },
+      {
+        "vid": "1419187736786636800",
+        "name": "Hollow Stretch Platform Heightened Casual Sneakers Grey 38"
+      },
+      {
+        "vid": "1419187736795025408",
+        "name": "Hollow Stretch Platform Heightened Casual Sneakers Grey 39"
+      }
+    ],
+    "costUSD": 25.88,
+    "addedAt": "2026-08-04T16:07:36.429Z"
+  },
+  {
+    "id": 193,
+    "catClass": "sports",
+    "price": 198,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/2047/2532884715457.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/2047/2532884715457.jpg",
+      "https://cf.cjdropshipping.com/2047/8314685472017.jpg",
+      "https://cf.cjdropshipping.com/2047/1364337334777.jpg",
+      "https://cf.cjdropshipping.com/2047/1558220029975.jpg",
+      "https://cf.cjdropshipping.com/2047/1452764497808.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Air permeable dance shoes with flying mesh",
+        "desc": "行山跑步健身都用得著。團隊嚴選耐用款式先上架,運動裝備一步到位。"
+      },
+      "zh-Hans": {
+        "name": "Air permeable dance shoes with flying mesh",
+        "desc": "登山跑步健身都用得上。团队严选耐用款式才上架,运动装备一步到位。"
+      },
+      "en": {
+        "name": "Air permeable dance shoes with flying mesh",
+        "desc": "Built for hikes, runs, and workouts — durability-hand-picked by our team."
+      }
+    },
+    "cjPid": "1412929D-372F-4936-9EFC-108437CCFD0E",
+    "cjVid": "007B6FA4-2DA8-45AA-9DDA-B72DECC55849",
+    "shipUSD": 5.84,
+    "variants": [
+      {
+        "vid": "007B6FA4-2DA8-45AA-9DDA-B72DECC55849",
+        "name": "Air permeable dance shoes with flying mesh Black grey 39"
+      },
+      {
+        "vid": "0AF167E7-91C6-44FA-9245-D3424F6179CF",
+        "name": "Air permeable dance shoes with flying mesh Black grey 35"
+      },
+      {
+        "vid": "16721E64-3558-434E-AEE2-A7B5AC165DE3",
+        "name": "Air permeable dance shoes with flying mesh Black purple 37"
+      },
+      {
+        "vid": "1A0DA241-F0F9-45FD-BAF0-FA9364B7FD1C",
+        "name": "Air permeable dance shoes with flying mesh Black purple 36"
+      },
+      {
+        "vid": "1C4E9E66-3343-4EE8-AD55-DCF7927A0357",
+        "name": "Air permeable dance shoes with flying mesh Black rose red 39"
+      },
+      {
+        "vid": "36568CE8-8106-473F-BEDC-4582D1DD40DA",
+        "name": "Air permeable dance shoes with flying mesh Black grey 38"
+      },
+      {
+        "vid": "466DCC4D-743B-4CBC-8BBA-D36E14E79C4B",
+        "name": "Air permeable dance shoes with flying mesh Black grey 36"
+      },
+      {
+        "vid": "6C6C8C07-9C2A-4006-AD56-6D20707505A8",
+        "name": "Air permeable dance shoes with flying mesh Black purple 35"
+      },
+      {
+        "vid": "8E8C873A-8788-4CB1-A7D6-E4918A3D2F03",
+        "name": "Air permeable dance shoes with flying mesh Black rose red 36"
+      },
+      {
+        "vid": "95144592-AF0A-4EDB-8F3C-241AFB1DEF7A",
+        "name": "Air permeable dance shoes with flying mesh Black rose red 40"
+      },
+      {
+        "vid": "9E3440EA-3849-4ABF-9113-663A67E38F66",
+        "name": "Air permeable dance shoes with flying mesh Black purple 38"
+      },
+      {
+        "vid": "A68100D2-F5A3-41BB-8231-771BB66F9AD1",
+        "name": "Air permeable dance shoes with flying mesh Black rose red 37"
+      },
+      {
+        "vid": "B23116A9-8390-4212-9B06-0E31657EC76F",
+        "name": "Air permeable dance shoes with flying mesh Black grey 40"
+      },
+      {
+        "vid": "C3E9470D-A329-4529-BA24-71ECAA949E4B",
+        "name": "Air permeable dance shoes with flying mesh Black rose red 38"
+      },
+      {
+        "vid": "CC93C00C-0BD8-4EB5-A4B7-6634E746FF4D",
+        "name": "Air permeable dance shoes with flying mesh Black grey 37"
+      },
+      {
+        "vid": "E44B46A9-3271-468E-B1DB-39C2AB4B1E02",
+        "name": "Air permeable dance shoes with flying mesh Black purple 40"
+      },
+      {
+        "vid": "EBEBF8A7-31BA-4A3C-A1C2-9176F7B0B08E",
+        "name": "Air permeable dance shoes with flying mesh Black rose red 35"
+      },
+      {
+        "vid": "F192145E-4699-4823-BCE3-0F35F5C3B7DE",
+        "name": "Air permeable dance shoes with flying mesh Black purple 39"
+      }
+    ],
+    "costUSD": 6.94,
+    "addedAt": "2026-08-04T16:07:40.097Z"
+  },
+  {
+    "id": 194,
+    "catClass": "sports",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20200424/1732375446071.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/20200424/1732375446071.jpg",
+      "https://cf.cjdropshipping.com/20200424/1551191013613.jpg",
+      "https://cf.cjdropshipping.com/20200424/2304857247886.jpg",
+      "https://cf.cjdropshipping.com/20200424/1583659153644.jpg",
+      "https://cf.cjdropshipping.com/20200424/4829488620687.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Open-back non-slip gym indoor floor socks",
+        "desc": "行山跑步健身都用得著。團隊嚴選耐用款式先上架,運動裝備一步到位。"
+      },
+      "zh-Hans": {
+        "name": "Open-back non-slip gym indoor floor socks",
+        "desc": "登山跑步健身都用得上。团队严选耐用款式才上架,运动装备一步到位。"
+      },
+      "en": {
+        "name": "Open-back non-slip gym indoor floor socks",
+        "desc": "Built for hikes, runs, and workouts — durability-hand-picked by our team."
+      }
+    },
+    "cjPid": "B477FE62-14D5-43C8-B945-6AD943EDC79A",
+    "cjVid": "33B02B9D-7E40-43D3-8293-17D64A2C051B",
+    "shipUSD": 2.47,
+    "variants": [
+      {
+        "vid": "33B02B9D-7E40-43D3-8293-17D64A2C051B",
+        "name": "Open-back non-slip gym indoor floor socks Purple"
+      },
+      {
+        "vid": "359BBB36-22B1-478B-85C6-F1535412FF0A",
+        "name": "Open-back non-slip gym indoor floor socks Black"
+      },
+      {
+        "vid": "71FA5BE4-CCE3-420C-BFEF-DDB08753083C",
+        "name": "Open-back non-slip gym indoor floor socks Green"
+      },
+      {
+        "vid": "A433D5BA-D22A-48F6-8FDC-DEC60727F6CD",
+        "name": "Open-back non-slip gym indoor floor socks Blue"
+      },
+      {
+        "vid": "B194B5E3-33DC-4479-99D6-D512758C6968",
+        "name": "Open-back non-slip gym indoor floor socks Orange"
+      },
+      {
+        "vid": "BF8BF5B6-7F04-44CD-A064-3F3F48936281",
+        "name": "Open-back non-slip gym indoor floor socks Beige"
+      }
+    ],
+    "costUSD": 0.83,
+    "addedAt": "2026-08-04T16:07:44.029Z"
+  },
+  {
+    "id": 195,
+    "catClass": "sports",
+    "price": 238,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/190f428e-2f4e-44c4-bbde-3625c8c47a89.jpeg",
+    "images": [
+      "https://cf.cjdropshipping.com/190f428e-2f4e-44c4-bbde-3625c8c47a89.jpeg",
+      "https://cf.cjdropshipping.com/4e22a81a-0a2f-461b-9df4-a432e8f9783f.jpeg",
+      "https://cf.cjdropshipping.com/50ee6175-b6f6-4ce3-8166-174d8cb3f8ec.jpeg",
+      "https://cf.cjdropshipping.com/299e73c2-8fd4-4021-aa0b-9f5e4283b5a3.jpeg",
+      "https://cf.cjdropshipping.com/3a7b1e2e-9677-4364-ad0a-d85ab1e1baa5.jpeg",
+      "https://cf.cjdropshipping.com/84da9212-aec6-4af1-bf86-394f9ee612ec.png"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Mens Soft Sole Lightweight Mesh Sports Shoes",
+        "desc": "行山跑步健身都用得著。團隊嚴選耐用款式先上架,運動裝備一步到位。"
+      },
+      "zh-Hans": {
+        "name": "Mens Soft Sole Lightweight Mesh Sports Shoes",
+        "desc": "登山跑步健身都用得上。团队严选耐用款式才上架,运动装备一步到位。"
+      },
+      "en": {
+        "name": "Mens Soft Sole Lightweight Mesh Sports Shoes",
+        "desc": "Built for hikes, runs, and workouts — durability-hand-picked by our team."
+      }
+    },
+    "cjPid": "1645978692998410240",
+    "cjVid": "1645978693082296320",
+    "shipUSD": 4.77,
+    "variants": [
+      {
+        "vid": "1645978693082296320",
+        "name": "Men's Soft Sole Lightweight Mesh Sports Shoes White 39"
+      },
+      {
+        "vid": "1645978693145210880",
+        "name": "Men's Soft Sole Lightweight Mesh Sports Shoes White 40"
+      },
+      {
+        "vid": "1645978693208125440",
+        "name": "Men's Soft Sole Lightweight Mesh Sports Shoes White 41"
+      },
+      {
+        "vid": "1645978693275234304",
+        "name": "Men's Soft Sole Lightweight Mesh Sports Shoes White 42"
+      },
+      {
+        "vid": "1645978693338148864",
+        "name": "Men's Soft Sole Lightweight Mesh Sports Shoes White 43"
+      },
+      {
+        "vid": "1645978693401063424",
+        "name": "Men's Soft Sole Lightweight Mesh Sports Shoes White 44"
+      },
+      {
+        "vid": "1645978693468172288",
+        "name": "Men's Soft Sole Lightweight Mesh Sports Shoes Black 39"
+      },
+      {
+        "vid": "1645978693531086848",
+        "name": "Men's Soft Sole Lightweight Mesh Sports Shoes Black 40"
+      },
+      {
+        "vid": "1645978693589807104",
+        "name": "Men's Soft Sole Lightweight Mesh Sports Shoes Black 41"
+      },
+      {
+        "vid": "1645978693652721664",
+        "name": "Men's Soft Sole Lightweight Mesh Sports Shoes Black 42"
+      },
+      {
+        "vid": "1645978693719830528",
+        "name": "Men's Soft Sole Lightweight Mesh Sports Shoes Black 43"
+      },
+      {
+        "vid": "1645978693782745088",
+        "name": "Men's Soft Sole Lightweight Mesh Sports Shoes Black 44"
+      }
+    ],
+    "costUSD": 8.83,
+    "addedAt": "2026-08-04T16:07:47.452Z"
+  },
+  {
+    "id": 196,
+    "catClass": "sports",
+    "price": 158,
+    "icon": "box",
+    "image": "https://oss-cf.cjdropshipping.com/product/2023/12/26/04/b99a049a-d620-4771-a07f-e1bf3c13ce2d_trans.jpeg",
+    "images": [
+      "https://oss-cf.cjdropshipping.com/product/2023/12/26/04/b99a049a-d620-4771-a07f-e1bf3c13ce2d_trans.jpeg",
+      "https://oss-cf.cjdropshipping.com/product/2023/12/26/04/db874dd6-8243-4df8-86c0-589bab6c89d6_trans.jpeg",
+      "https://oss-cf.cjdropshipping.com/product/2023/12/26/04/7b129f2c-8420-4550-9094-20a43a79db0c_trans.jpeg",
+      "https://oss-cf.cjdropshipping.com/product/2023/12/26/04/32d0227c-177c-4628-9f50-61482cad7554_trans.jpeg",
+      "https://oss-cf.cjdropshipping.com/product/2023/12/26/04/c60b4341-c350-4c54-95f2-9c011575dbbc_trans.jpeg",
+      "https://cf.cjdropshipping.com/quick/product/72f484b6-b7c7-4bec-bd39-2eb093e2bc4f.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom",
+        "desc": "行山跑步健身都用得著。團隊嚴選耐用款式先上架,運動裝備一步到位。"
+      },
+      "zh-Hans": {
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom",
+        "desc": "登山跑步健身都用得上。团队严选耐用款式才上架,运动装备一步到位。"
+      },
+      "en": {
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom",
+        "desc": "Built for hikes, runs, and workouts — durability-hand-picked by our team."
+      }
+    },
+    "cjPid": "1739505792056832000",
+    "cjVid": "1739505792165883904",
+    "shipUSD": 3.8,
+    "variants": [
+      {
+        "vid": "1739505792165883904",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Skin Color 55cm 34"
+      },
+      {
+        "vid": "1739505792258158592",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Skin Color 55cm 35"
+      },
+      {
+        "vid": "1739505792346238976",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Skin Color 55cm 36"
+      },
+      {
+        "vid": "1739505792434319360",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Skin Color 55cm 37"
+      },
+      {
+        "vid": "1739505792522399744",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Skin Color 55cm 38"
+      },
+      {
+        "vid": "1739505792614674432",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Skin Color 55cm 39"
+      },
+      {
+        "vid": "1739505792702754816",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Skin Color 55cm 40"
+      },
+      {
+        "vid": "1739505792795029504",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Skin Color 55cm 41"
+      },
+      {
+        "vid": "1739505792883109888",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Skin Color 55cm 42"
+      },
+      {
+        "vid": "1739505792975384576",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Black 55cm 34"
+      },
+      {
+        "vid": "1739505793067659264",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Black 55cm 35"
+      },
+      {
+        "vid": "1739505793159933952",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Black 55cm 36"
+      },
+      {
+        "vid": "1739505793252208640",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Black 55cm 37"
+      },
+      {
+        "vid": "1739505793340289024",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Black 55cm 38"
+      },
+      {
+        "vid": "1739505793432563712",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Black 55cm 39"
+      },
+      {
+        "vid": "1739505793520644096",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Black 55cm 40"
+      },
+      {
+        "vid": "1739505793608724480",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Black 55cm 41"
+      },
+      {
+        "vid": "1739505793700999168",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Black 55cm 42"
+      },
+      {
+        "vid": "1739505793793273856",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Brown 55cm 34"
+      },
+      {
+        "vid": "1739505793881354240",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Brown 55cm 35"
+      },
+      {
+        "vid": "1739505793973628928",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Brown 55cm 36"
+      },
+      {
+        "vid": "1739505794061709312",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Brown 55cm 37"
+      },
+      {
+        "vid": "1739505794149789696",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Brown 55cm 38"
+      },
+      {
+        "vid": "1739505794237870080",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Brown 55cm 39"
+      },
+      {
+        "vid": "1739505794330144768",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Brown 55cm 40"
+      },
+      {
+        "vid": "1739505794422419456",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Brown 55cm 41"
+      },
+      {
+        "vid": "1739505794510499840",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Brown 55cm 42"
+      },
+      {
+        "vid": "1739505794602774528",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Skin Color 75cm 34"
+      },
+      {
+        "vid": "1739505794690854912",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Skin Color 75cm 35"
+      },
+      {
+        "vid": "1739505794778935296",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Skin Color 75cm 36"
+      },
+      {
+        "vid": "1739505794871209984",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Skin Color 75cm 37"
+      },
+      {
+        "vid": "1739505794959290368",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Skin Color 75cm 38"
+      },
+      {
+        "vid": "1739505795047370752",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Skin Color 75cm 39"
+      },
+      {
+        "vid": "1739505795139645440",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Skin Color 75cm 40"
+      },
+      {
+        "vid": "1739505795227725824",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Skin Color 75cm 41"
+      },
+      {
+        "vid": "1739505795320000512",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Skin Color 75cm 42"
+      },
+      {
+        "vid": "1739505795408080896",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Black 75cm 34"
+      },
+      {
+        "vid": "1739505795500355584",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Black 75cm 35"
+      },
+      {
+        "vid": "1739505795588435968",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Black 75cm 36"
+      },
+      {
+        "vid": "1739505795680710656",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Black 75cm 37"
+      },
+      {
+        "vid": "1739505795768791040",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Black 75cm 38"
+      },
+      {
+        "vid": "1739505795856871424",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Black 75cm 39"
+      },
+      {
+        "vid": "1739505795949146112",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Black 75cm 40"
+      },
+      {
+        "vid": "1739505796037226496",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Black 75cm 41"
+      },
+      {
+        "vid": "1739505796125306880",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Black 75cm 42"
+      },
+      {
+        "vid": "1739505796217581568",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Brown 75cm 34"
+      },
+      {
+        "vid": "1739505796305661952",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Brown 75cm 35"
+      },
+      {
+        "vid": "1739505796397936640",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Brown 75cm 36"
+      },
+      {
+        "vid": "1739505796486017024",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Brown 75cm 37"
+      },
+      {
+        "vid": "1739505796574097408",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Brown 75cm 38"
+      },
+      {
+        "vid": "1739505796666372096",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Brown 75cm 39"
+      },
+      {
+        "vid": "1739505796758646784",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Brown 75cm 40"
+      },
+      {
+        "vid": "1739505796850921472",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Brown 75cm 41"
+      },
+      {
+        "vid": "1739505796959973376",
+        "name": "Latin Dance High Heel Dancing Shoes Soft Bottom Brown 75cm 42"
+      }
+    ],
+    "costUSD": 5.94,
+    "addedAt": "2026-08-04T16:07:51.477Z"
   }
 ]
