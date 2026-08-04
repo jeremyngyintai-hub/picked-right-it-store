@@ -3483,5 +3483,151 @@
     "cjVid": "2F59B383-9412-4C4A-BDFC-94680347E884",
     "costUSD": 1.66,
     "addedAt": "2026-08-04T09:52:36.930Z"
+  },
+  {
+    "id": 109,
+    "catClass": "baby",
+    "price": 88,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/2043/8974171298164.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/2043/8974171298164.jpg",
+      "https://cf.cjdropshipping.com/2043/1676544980514.jpg",
+      "https://cf.cjdropshipping.com/2043/703572841436.jpg",
+      "https://cf.cjdropshipping.com/2043/215630821322.jpg",
+      "https://cf.cjdropshipping.com/2043/828714171908.jpg",
+      "https://cf.cjdropshipping.com/2043/289587242610.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Bite-resistant pets remove bad breath",
+        "desc": "陪住小朋友成長嘅好幫手。團隊嚴選用料先上架,爸媽買得放心。"
+      },
+      "zh-Hans": {
+        "name": "Bite-resistant pets remove bad breath",
+        "desc": "陪伴孩子成长的好帮手。团队严选用料才上架,爸妈买得放心。"
+      },
+      "en": {
+        "name": "Bite-resistant pets remove bad breath",
+        "desc": "A trusted companion for growing kids — carefully selected by our team."
+      }
+    },
+    "cjPid": "F1CB2559-228B-49E1-94A8-45C4D7E80A72",
+    "cjVid": "0F036313-7BEE-4533-851F-77B28CC0EAE9",
+    "costUSD": 3.85,
+    "addedAt": "2026-08-04T09:52:41.638Z"
+  },
+  {
+    "id": 110,
+    "catClass": "baby",
+    "price": 228,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/15142176/2734118489_1075603318.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/15142176/2734118489_1075603318.jpg",
+      "https://cf.cjdropshipping.com/15142176/2732074747_1075603318.jpg",
+      "https://cf.cjdropshipping.com/15142176/2732071826_1075603318.jpg",
+      "https://cf.cjdropshipping.com/15142176/2734112715_1075603318.jpg",
+      "https://cf.cjdropshipping.com/15142176/2735148159_1075603318.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "20 songs, walking, singing, twisting, twisting, twisting, ti",
+        "desc": "陪住小朋友成長嘅好幫手。團隊嚴選用料先上架,爸媽買得放心。"
+      },
+      "zh-Hans": {
+        "name": "20 songs, walking, singing, twisting, twisting, twisting, ti",
+        "desc": "陪伴孩子成长的好帮手。团队严选用料才上架,爸妈买得放心。"
+      },
+      "en": {
+        "name": "20 songs, walking, singing, twisting, twisting, twisting, ti",
+        "desc": "A trusted companion for growing kids — carefully selected by our team."
+      }
+    },
+    "cjPid": "13F3ACFD-D7F7-4AA1-BA84-9BCA45526547",
+    "cjVid": "6F3FCCD6-6B27-4B6D-BEAD-8F24AE340349",
+    "costUSD": 10.19,
+    "addedAt": "2026-08-04T09:52:43.052Z"
+  },
+  {
+    "id": 111,
+    "catClass": "baby",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/aadeea07-1299-49f7-aa6b-d1fb4abfcea7.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/aadeea07-1299-49f7-aa6b-d1fb4abfcea7.jpg",
+      "https://cf.cjdropshipping.com/15366816/1442303419011.jpg",
+      "https://cf.cjdropshipping.com/15366816/847952201994.jpg",
+      "https://cf.cjdropshipping.com/15366816/691075177288.jpg",
+      "https://cf.cjdropshipping.com/20180912/3446575151746.png",
+      "https://cf.cjdropshipping.com/c5aa9a92-59f5-4f85-870e-0933b68855b5.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "80PCS wooden educational toys educational development baby k",
+        "desc": "陪住小朋友成長嘅好幫手。團隊嚴選用料先上架,爸媽買得放心。"
+      },
+      "zh-Hans": {
+        "name": "80PCS wooden educational toys educational development baby k",
+        "desc": "陪伴孩子成长的好帮手。团队严选用料才上架,爸妈买得放心。"
+      },
+      "en": {
+        "name": "80PCS wooden educational toys educational development baby k",
+        "desc": "A trusted companion for growing kids — carefully selected by our team."
+      }
+    },
+    "cjPid": "E7EB899E-56F7-4798-9E24-62E4D26E8C40",
+    "cjVid": "096064D2-BE0A-4409-84B6-14E1B6BFE39E",
+    "costUSD": 0.5,
+    "addedAt": "2026-08-04T09:52:44.377Z"
+  },
+  {
+    "id": 112,
+    "catClass": "baby",
+    "price": 388,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/1613027656611.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/1613027656611.jpg",
+      "https://cf.cjdropshipping.com/1613027656610.jpg",
+      "https://cf.cjdropshipping.com/1613027656603.jpg",
+      "https://cf.cjdropshipping.com/1613027656607.jpg",
+      "https://cf.cjdropshipping.com/1613027656608.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Electric Remote Control Smart Robot Dog Smart Childrens Ele",
+        "desc": "陪住小朋友成長嘅好幫手。團隊嚴選用料先上架,爸媽買得放心。"
+      },
+      "zh-Hans": {
+        "name": "Electric Remote Control Smart Robot Dog Smart Childrens Ele",
+        "desc": "陪伴孩子成长的好帮手。团队严选用料才上架,爸妈买得放心。"
+      },
+      "en": {
+        "name": "Electric Remote Control Smart Robot Dog Smart Childrens Ele",
+        "desc": "A trusted companion for growing kids — carefully selected by our team."
+      }
+    },
+    "cjPid": "1359763644052803584",
+    "cjVid": "1359763645399175168",
+    "costUSD": 17.41,
+    "addedAt": "2026-08-04T09:52:45.683Z"
   }
 ]
