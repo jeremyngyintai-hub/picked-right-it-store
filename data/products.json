@@ -4944,5 +4944,152 @@
     "cjVid": "15666C1D-CA7A-47AB-8050-7951A6AEC0C3",
     "costUSD": 0.76,
     "addedAt": "2026-08-04T09:54:57.381Z"
+  },
+  {
+    "id": 149,
+    "catClass": "accessories",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/15096384/4349036536_405081226.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/15096384/4349036536_405081226.jpg",
+      "https://cf.cjdropshipping.com/15096384/4353759203_405081226.jpg",
+      "https://cf.cjdropshipping.com/15096384/4353762197_405081226.jpg",
+      "https://cf.cjdropshipping.com/15096384/4350760728_405081226.jpg",
+      "https://cf.cjdropshipping.com/15096384/4353756539_405081226.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "New Pearl butterfly necklace, earrings, bridal jewelry set, ",
+        "desc": "日常造型點睛之選。團隊嚴選質感先上架,返工約會都襯得起。"
+      },
+      "zh-Hans": {
+        "name": "New Pearl butterfly necklace, earrings, bridal jewelry set, ",
+        "desc": "日常造型点睛之选。团队严选质感才上架,上班约会都配得上。"
+      },
+      "en": {
+        "name": "New Pearl butterfly necklace, earrings, bridal jewelry set, ",
+        "desc": "The finishing touch to any look — carefully selected by our team."
+      }
+    },
+    "cjPid": "5B55F29A-1F5E-4035-B1FF-0ABF297B5EF9",
+    "cjVid": "73BC446E-99B5-42D0-8E3A-2535610F6471",
+    "costUSD": 1.71,
+    "addedAt": "2026-08-04T09:55:02.477Z"
+  },
+  {
+    "id": 150,
+    "catClass": "accessories",
+    "price": 58,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/0538846f-3929-43cb-90d8-b2352e49f393.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/0538846f-3929-43cb-90d8-b2352e49f393.jpg",
+      "https://cf.cjdropshipping.com/39dfc2f8-2753-4027-be09-e2ee3b12c785.jpg",
+      "https://cf.cjdropshipping.com/10a8efa2-2399-4f99-beb9-acb0f97de017.jpg",
+      "https://cf.cjdropshipping.com/62c1ebc8-30aa-4ac6-95ee-45b41043fcb1.jpg",
+      "https://cf.cjdropshipping.com/9762e377-73ec-4438-95aa-913d7afbbb27.jpg",
+      "https://cf.cjdropshipping.com/bbe8164c-5189-4b8f-b4bc-ea57aa364732.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Bridal Rhinestone Zircon Earring Necklace",
+        "desc": "日常造型點睛之選。團隊嚴選質感先上架,返工約會都襯得起。"
+      },
+      "zh-Hans": {
+        "name": "Bridal Rhinestone Zircon Earring Necklace",
+        "desc": "日常造型点睛之选。团队严选质感才上架,上班约会都配得上。"
+      },
+      "en": {
+        "name": "Bridal Rhinestone Zircon Earring Necklace",
+        "desc": "The finishing touch to any look — carefully selected by our team."
+      }
+    },
+    "cjPid": "1603682949113851904",
+    "cjVid": "1603712624053727232",
+    "costUSD": 2.68,
+    "addedAt": "2026-08-04T09:55:04.447Z"
+  },
+  {
+    "id": 151,
+    "catClass": "accessories",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/15095520/4394533106_1297013011.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/15095520/4394533106_1297013011.jpg",
+      "https://cf.cjdropshipping.com/15095520/4394524471_1297013011.jpg",
+      "https://cf.cjdropshipping.com/15095520/4397796997_1297013011.jpg",
+      "https://cf.cjdropshipping.com/15095520/4394527384_1297013011.jpg",
+      "https://cf.cjdropshipping.com/15095520/4397811395_1297013011.jpg",
+      "https://cf.cjdropshipping.com/15095520/4397805473_1297013011.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Foreign trade explosion bride alloy diamond necklace earring",
+        "desc": "日常造型點睛之選。團隊嚴選質感先上架,返工約會都襯得起。"
+      },
+      "zh-Hans": {
+        "name": "Foreign trade explosion bride alloy diamond necklace earring",
+        "desc": "日常造型点睛之选。团队严选质感才上架,上班约会都配得上。"
+      },
+      "en": {
+        "name": "Foreign trade explosion bride alloy diamond necklace earring",
+        "desc": "The finishing touch to any look — carefully selected by our team."
+      }
+    },
+    "cjPid": "0A847945-28D0-49B8-8492-458191500B1C",
+    "cjVid": "6A4427C7-614A-4104-8FF6-57936B56F037",
+    "costUSD": 1.14,
+    "addedAt": "2026-08-04T09:55:05.896Z"
+  },
+  {
+    "id": 152,
+    "catClass": "accessories",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/15095520/3622976331_1127554960.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/15095520/3622976331_1127554960.jpg",
+      "https://cf.cjdropshipping.com/15095520/3816551523_1127554960.jpg",
+      "https://cf.cjdropshipping.com/15095520/3816554164_1127554960.jpg",
+      "https://cf.cjdropshipping.com/15095520/3622979095_1127554960.jpg",
+      "https://cf.cjdropshipping.com/15095520/3624121518_1127554960.jpg",
+      "https://cf.cjdropshipping.com/15095520/3624226215_1127554960.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Aliexpress selling jewelry red peach Earring Necklace bride ",
+        "desc": "日常造型點睛之選。團隊嚴選質感先上架,返工約會都襯得起。"
+      },
+      "zh-Hans": {
+        "name": "Aliexpress selling jewelry red peach Earring Necklace bride ",
+        "desc": "日常造型点睛之选。团队严选质感才上架,上班约会都配得上。"
+      },
+      "en": {
+        "name": "Aliexpress selling jewelry red peach Earring Necklace bride ",
+        "desc": "The finishing touch to any look — carefully selected by our team."
+      }
+    },
+    "cjPid": "4D3AA295-EF15-4F24-ABD8-B5D8FAFB68C8",
+    "cjVid": "2FEBA2D4-25A8-4287-8874-A03EBA72D5D7",
+    "costUSD": 0.6,
+    "addedAt": "2026-08-04T09:55:07.275Z"
   }
 ]
