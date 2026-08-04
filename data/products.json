@@ -21390,5 +21390,385 @@
     ],
     "costUSD": 2.16,
     "addedAt": "2026-08-04T16:14:05.463Z"
+  },
+  {
+    "id": 277,
+    "catClass": "bags",
+    "price": 4128,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/93839245-30eb-44fe-ba98-a65bfc601d08.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/93839245-30eb-44fe-ba98-a65bfc601d08.jpg",
+      "https://cf.cjdropshipping.com/5d36b29e-5fdc-4342-821a-c8f7b3e42f0b.jpg",
+      "https://cf.cjdropshipping.com/227e3be1-5129-40ce-bc35-7189c1b28260.jpg",
+      "https://cf.cjdropshipping.com/def853de-936c-4355-a7d8-0b447c6ff56d.jpg",
+      "https://cf.cjdropshipping.com/009aad69-dd6d-4c1f-93b2-d32e2e5cc5ec.jpg",
+      "https://cf.cjdropshipping.com/38bc8eee-9832-4be9-90b0-5412c88a5538.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Daily Outdoor Large-capacity Travel Handmade Vegetable Tanne",
+        "desc": "返工返學旅行都啱用。團隊嚴選做工先上架,實用又襯衫。"
+      },
+      "zh-Hans": {
+        "name": "Daily Outdoor Large-capacity Travel Handmade Vegetable Tanne",
+        "desc": "上班上学旅行都合适。团队严选做工才上架,实用又百搭。"
+      },
+      "en": {
+        "name": "Daily Outdoor Large-capacity Travel Handmade Vegetable Tanne",
+        "desc": "For work, school, and travel — carefully selected by our team."
+      }
+    },
+    "cjPid": "1644215160405495808",
+    "cjVid": "1644215160506159104",
+    "shipUSD": 8.19,
+    "variants": [
+      {
+        "vid": "1644215160506159104",
+        "name": "Daily Outdoor Large-capacity Travel Handmade Vegetable Tanned Cowhide Handbag Shoulder Tote Bag Black"
+      }
+    ],
+    "costUSD": 186.04,
+    "addedAt": "2026-08-04T16:14:13.440Z"
+  },
+  {
+    "id": 278,
+    "catClass": "bags",
+    "price": 168,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/76e29b18-ffd7-449e-bfc4-fe147a209f42.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/76e29b18-ffd7-449e-bfc4-fe147a209f42.jpg",
+      "https://cf.cjdropshipping.com/ce4bc071-5c98-406c-b568-5fabefa4a6a7.jpg",
+      "https://cf.cjdropshipping.com/c745e2e7-91bc-4676-a6b1-46971762877f.jpg",
+      "https://cf.cjdropshipping.com/c5656455-2a6d-46b2-9724-265093f59df1.jpg",
+      "https://cf.cjdropshipping.com/5a677589-4d53-46da-b1ec-11caded44601.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Laptop Bag Waterproof 15.6Inch Leisure",
+        "desc": "返工返學旅行都啱用。團隊嚴選做工先上架,實用又襯衫。"
+      },
+      "zh-Hans": {
+        "name": "Laptop Bag Waterproof 15.6Inch Leisure",
+        "desc": "上班上学旅行都合适。团队严选做工才上架,实用又百搭。"
+      },
+      "en": {
+        "name": "Laptop Bag Waterproof 15.6Inch Leisure",
+        "desc": "For work, school, and travel — carefully selected by our team."
+      }
+    },
+    "cjPid": "1620228356069404672",
+    "cjVid": "1620228356098764800",
+    "shipUSD": 4.26,
+    "variants": [
+      {
+        "vid": "1620228356098764800",
+        "name": "Laptop Bag Waterproof 15.6Inch Leisure Grey 15.6inches"
+      },
+      {
+        "vid": "1620228356102959104",
+        "name": "Laptop Bag Waterproof 15.6Inch Leisure Black 15.6inches"
+      },
+      {
+        "vid": "1620228356102959105",
+        "name": "Laptop Bag Waterproof 15.6Inch Leisure Blue 15.6inches"
+      }
+    ],
+    "costUSD": 6.24,
+    "addedAt": "2026-08-04T16:14:16.754Z"
+  },
+  {
+    "id": 279,
+    "catClass": "bags",
+    "price": 308,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/15130080/2256138918_1448623844.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/15130080/2256138918_1448623844.jpg",
+      "https://cf.cjdropshipping.com/15130080/2256150876_1448623844.jpg",
+      "https://cf.cjdropshipping.com/15130080/2256153274_1448623844.jpg",
+      "https://cf.cjdropshipping.com/15130080/2254115831_1448623844.jpg",
+      "https://cf.cjdropshipping.com/15130080/2254112773_1448623844.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "The original design of explosion models male package busines",
+        "desc": "返工返學旅行都啱用。團隊嚴選做工先上架,實用又襯衫。"
+      },
+      "zh-Hans": {
+        "name": "The original design of explosion models male package busines",
+        "desc": "上班上学旅行都合适。团队严选做工才上架,实用又百搭。"
+      },
+      "en": {
+        "name": "The original design of explosion models male package busines",
+        "desc": "For work, school, and travel — carefully selected by our team."
+      }
+    },
+    "cjPid": "7B97EE76-7F8A-45AB-9AA6-168291D1398F",
+    "cjVid": "C36CA26C-2934-4255-9FDD-83B77BE15C37",
+    "shipUSD": 6.13,
+    "variants": [
+      {
+        "vid": "C36CA26C-2934-4255-9FDD-83B77BE15C37",
+        "name": "The original design of explosion models 2020 male package business package Crazy Horse Leather Handbag briefcase men's classic single shoulder bagThe original design of explosion models 2020 male package business package Crazy Horse Leather Handbag briefcase men's classic single shoulder bag Coffee"
+      }
+    ],
+    "costUSD": 11.6,
+    "addedAt": "2026-08-04T16:14:20.104Z"
+  },
+  {
+    "id": 280,
+    "catClass": "bags",
+    "price": 408,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/quick/product/54e7bac1-2942-41bc-adf1-3c5a10a5d3b0.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/quick/product/54e7bac1-2942-41bc-adf1-3c5a10a5d3b0.jpg",
+      "https://oss-cf.cjdropshipping.com/product/2024/04/14/10/69dde7db-9593-49c8-abc5-63df52eae960_trans.jpeg",
+      "https://cf.cjdropshipping.com/quick/product/b3582df4-1089-4e29-9274-3a33ac976e5e.jpg",
+      "https://oss-cf.cjdropshipping.com/product/2024/04/14/10/79e818e8-1d0b-426c-af09-fc44b863bde9_trans.jpeg",
+      "https://cf.cjdropshipping.com/quick/product/3e35fede-48a8-4584-8309-4037cdb78cf8.jpg",
+      "https://cf.cjdropshipping.com/quick/product/5f756c4b-e072-4711-9de4-0095c1f0992c.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Mens Official Document Leather Casual Computer Bag Shoulder",
+        "desc": "返工返學旅行都啱用。團隊嚴選做工先上架,實用又襯衫。"
+      },
+      "zh-Hans": {
+        "name": "Mens Official Document Leather Casual Computer Bag Shoulder",
+        "desc": "上班上学旅行都合适。团队严选做工才上架,实用又百搭。"
+      },
+      "en": {
+        "name": "Mens Official Document Leather Casual Computer Bag Shoulder",
+        "desc": "For work, school, and travel — carefully selected by our team."
+      }
+    },
+    "cjPid": "1779450788398501888",
+    "cjVid": "1779450788469805056",
+    "shipUSD": 5.47,
+    "variants": [
+      {
+        "vid": "1779450788469805056",
+        "name": "Men's Official Document Leather Casual Computer Bag Shoulder Crossbody Black"
+      },
+      {
+        "vid": "1779450788524331008",
+        "name": "Men's Official Document Leather Casual Computer Bag Shoulder Crossbody Brown"
+      }
+    ],
+    "costUSD": 16.63,
+    "addedAt": "2026-08-04T16:14:23.896Z"
+  },
+  {
+    "id": 281,
+    "catClass": "bags",
+    "price": 118,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/eb12279c-50ae-419d-94cf-19f67f37e6f5.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/eb12279c-50ae-419d-94cf-19f67f37e6f5.jpg",
+      "https://cf.cjdropshipping.com/6736d17a-c144-4adf-aeff-168dfa35ef2e.jpg",
+      "https://cf.cjdropshipping.com/6d39a997-9199-421c-9c5f-c4e176bd843c.jpg",
+      "https://cf.cjdropshipping.com/d2b18f3d-81db-4170-b8e4-dfe310801c82.jpg",
+      "https://cf.cjdropshipping.com/93cdd0a1-b02d-4a92-b49e-b4128b7bbbb2.jpg",
+      "https://cf.cjdropshipping.com/eeb94e51-cf03-4b75-8ab3-d62ffdaa7038.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Portable Laptop Bag Multi-function Cross Body",
+        "desc": "返工返學旅行都啱用。團隊嚴選做工先上架,實用又襯衫。"
+      },
+      "zh-Hans": {
+        "name": "Portable Laptop Bag Multi-function Cross Body",
+        "desc": "上班上学旅行都合适。团队严选做工才上架,实用又百搭。"
+      },
+      "en": {
+        "name": "Portable Laptop Bag Multi-function Cross Body",
+        "desc": "For work, school, and travel — carefully selected by our team."
+      }
+    },
+    "cjPid": "1653683239321612288",
+    "cjVid": "1653683239397109760",
+    "shipUSD": 4.06,
+    "variants": [
+      {
+        "vid": "1653683239397109760",
+        "name": "Portable Laptop Bag Multi-function Cross Body Grey"
+      },
+      {
+        "vid": "1653683239455830016",
+        "name": "Portable Laptop Bag Multi-function Cross Body Black"
+      },
+      {
+        "vid": "1653683239518744576",
+        "name": "Portable Laptop Bag Multi-function Cross Body Pink"
+      },
+      {
+        "vid": "1653683239577464832",
+        "name": "Portable Laptop Bag Multi-function Cross Body Blue"
+      },
+      {
+        "vid": "1653683239636185088",
+        "name": "Portable Laptop Bag Multi-function Cross Body Green"
+      }
+    ],
+    "costUSD": 3.84,
+    "addedAt": "2026-08-04T16:14:27.788Z"
+  },
+  {
+    "id": 282,
+    "catClass": "bags",
+    "price": 518,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/9cdf5686-9410-466a-b946-ffd25af7f673.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/9cdf5686-9410-466a-b946-ffd25af7f673.jpg",
+      "https://cf.cjdropshipping.com/de5ac31b-dcb9-4875-8290-d0e0378204a9.jpg",
+      "https://cf.cjdropshipping.com/cfe7aa91-db50-4457-9169-55d35041963c.jpg",
+      "https://cf.cjdropshipping.com/fa91ab8b-a9e5-44a2-8900-d14ebc17aa5a.jpg",
+      "https://cf.cjdropshipping.com/be7fa73f-782a-47af-9ba0-c944092ff154.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Computer Handbag Casual One Shoulder Bag Large Capacity Diag",
+        "desc": "返工返學旅行都啱用。團隊嚴選做工先上架,實用又襯衫。"
+      },
+      "zh-Hans": {
+        "name": "Computer Handbag Casual One Shoulder Bag Large Capacity Diag",
+        "desc": "上班上学旅行都合适。团队严选做工才上架,实用又百搭。"
+      },
+      "en": {
+        "name": "Computer Handbag Casual One Shoulder Bag Large Capacity Diag",
+        "desc": "For work, school, and travel — carefully selected by our team."
+      }
+    },
+    "cjPid": "1620239230746243072",
+    "cjVid": "1620239230809157632",
+    "shipUSD": 6.02,
+    "variants": [
+      {
+        "vid": "1620239230809157632",
+        "name": "Computer Handbag Casual One Shoulder Bag Large Capacity Diagonal Span Black"
+      },
+      {
+        "vid": "1620239230813351936",
+        "name": "Computer Handbag Casual One Shoulder Bag Large Capacity Diagonal Span Coffee"
+      }
+    ],
+    "costUSD": 21.23,
+    "addedAt": "2026-08-04T16:14:31.218Z"
+  },
+  {
+    "id": 283,
+    "catClass": "bags",
+    "price": 1368,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/c14cb6e7-9f83-4808-8b8b-b54f0f99aa94.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/c14cb6e7-9f83-4808-8b8b-b54f0f99aa94.jpg",
+      "https://cf.cjdropshipping.com/df1cf699-ae7f-4e05-8721-246587b032ef.jpg",
+      "https://cf.cjdropshipping.com/0b13a0c3-768d-4240-98b6-37bb549ab902.jpg",
+      "https://cf.cjdropshipping.com/7da2be27-c973-45e9-b9ba-9e425edfdc9c.jpg",
+      "https://cf.cjdropshipping.com/14855fed-db80-4b19-aa86-b1bab08090ba.jpg",
+      "https://cf.cjdropshipping.com/57c4efba-2438-4048-8c35-17e423a4f4f7.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Genuine Leather Mens Business Travel Handbag Top Layer Cowh",
+        "desc": "返工返學旅行都啱用。團隊嚴選做工先上架,實用又襯衫。"
+      },
+      "zh-Hans": {
+        "name": "Genuine Leather Mens Business Travel Handbag Top Layer Cowh",
+        "desc": "上班上学旅行都合适。团队严选做工才上架,实用又百搭。"
+      },
+      "en": {
+        "name": "Genuine Leather Mens Business Travel Handbag Top Layer Cowh",
+        "desc": "For work, school, and travel — carefully selected by our team."
+      }
+    },
+    "cjPid": "1422513896153026560",
+    "cjVid": "1422513898761883648",
+    "shipUSD": 7.96,
+    "variants": [
+      {
+        "vid": "1422513898761883648",
+        "name": "Genuine Leather Men's Business Travel Handbag Top Layer Cowhide One-shoulder Travel Bag Duffel Bag Brown"
+      }
+    ],
+    "costUSD": 59.71,
+    "addedAt": "2026-08-04T16:14:34.589Z"
+  },
+  {
+    "id": 284,
+    "catClass": "bags",
+    "price": 308,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/15607008/2127512892673.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/15607008/2127512892673.jpg",
+      "https://cf.cjdropshipping.com/15607008/1419900567002.jpg",
+      "https://cf.cjdropshipping.com/15607008/327132783690.jpg",
+      "https://cf.cjdropshipping.com/15607008/1210529715336.jpg",
+      "https://cf.cjdropshipping.com/15607008/453623862543.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Spot spring new European and American style neutral travel b",
+        "desc": "返工返學旅行都啱用。團隊嚴選做工先上架,實用又襯衫。"
+      },
+      "zh-Hans": {
+        "name": "Spot spring new European and American style neutral travel b",
+        "desc": "上班上学旅行都合适。团队严选做工才上架,实用又百搭。"
+      },
+      "en": {
+        "name": "Spot spring new European and American style neutral travel b",
+        "desc": "For work, school, and travel — carefully selected by our team."
+      }
+    },
+    "cjPid": "8B1D299E-30DD-440E-A542-9DD09ECD509E",
+    "cjVid": "4C7EB6C9-5E33-4B6D-A07E-73AA8F93685C",
+    "shipUSD": 7.57,
+    "variants": [
+      {
+        "vid": "4C7EB6C9-5E33-4B6D-A07E-73AA8F93685C",
+        "name": "Spot spring new European and American style neutral travel bag business portable big bag solid color single shoulder hand-woven bagSpot spring new European and American style neutral travel bag business portable big bag solid color single shoulder hand-woven bag Black"
+      }
+    ],
+    "costUSD": 11.37,
+    "addedAt": "2026-08-04T16:14:38.030Z"
   }
 ]
