@@ -699,5 +699,298 @@
     "cjVid": "8EBFFB1D-D419-42AD-9EF7-480AB2DC50B6",
     "costUSD": 2.88,
     "addedAt": "2026-08-04T09:48:36.145Z"
+  },
+  {
+    "id": 33,
+    "catClass": "beauty",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/1620717888281.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/1620717888281.jpg",
+      "https://cf.cjdropshipping.com/1620717888221.jpg",
+      "https://cf.cjdropshipping.com/1620717888250.jpg",
+      "https://cf.cjdropshipping.com/1620717888213.jpg",
+      "https://cf.cjdropshipping.com/1620717888224.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Detachable Artistic Wearable Finished Fake Nails False Nails",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "Detachable Artistic Wearable Finished Fake Nails False Nails",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "Detachable Artistic Wearable Finished Fake Nails False Nails",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "1392018088622428160",
+    "cjVid": "1392018089993965568",
+    "costUSD": 1.17,
+    "addedAt": "2026-08-04T09:48:50.101Z"
+  },
+  {
+    "id": 34,
+    "catClass": "beauty",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/2047/276847883414.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/2047/276847883414.jpg",
+      "https://cf.cjdropshipping.com/2047/5007725736457.jpg",
+      "https://cf.cjdropshipping.com/2047/464942395126.jpg",
+      "https://cf.cjdropshipping.com/2047/1423402970590.jpg",
+      "https://cf.cjdropshipping.com/15762528/633172285144.jpg",
+      "https://cf.cjdropshipping.com/2047/457757104090.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "500 transparent  natural fake nails",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "500 transparent  natural fake nails",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "500 transparent  natural fake nails",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "A5F040B6-15A0-4664-801F-3D31D7CFBE75",
+    "cjVid": "01EACD72-C8EF-424A-B279-2A1AB4AB1134",
+    "costUSD": 0.98,
+    "addedAt": "2026-08-04T09:48:51.500Z"
+  },
+  {
+    "id": 35,
+    "catClass": "beauty",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/15987168/9104761951730.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/15987168/9104761951730.jpg",
+      "https://cf.cjdropshipping.com/20200830/606266672685.jpg",
+      "https://cf.cjdropshipping.com/20200830/1063975554829.jpg",
+      "https://cf.cjdropshipping.com/20200830/1659871396528.jpg",
+      "https://cf.cjdropshipping.com/20200830/4584072735523.jpg",
+      "https://cf.cjdropshipping.com/20200830/513465777674.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Wearable false nails",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "Wearable false nails",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "Wearable false nails",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "137BC9A2-8598-454B-AB4A-3FCACEE7972A",
+    "cjVid": "73703721-50A0-49EF-9DD7-97A4F20E6FDA",
+    "costUSD": 0.53,
+    "addedAt": "2026-08-04T09:48:52.912Z"
+  },
+  {
+    "id": 36,
+    "catClass": "beauty",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/2058/316183165141.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/2058/316183165141.jpg",
+      "https://cf.cjdropshipping.com/2058/1640735736713.jpg",
+      "https://cf.cjdropshipping.com/2058/882863683004.jpg",
+      "https://cf.cjdropshipping.com/2058/503862952042.jpg",
+      "https://cf.cjdropshipping.com/2058/909580590383.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "8 Box Mix Glitter Nail Art Powder Flakes Set",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "8 Box Mix Glitter Nail Art Powder Flakes Set",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "8 Box Mix Glitter Nail Art Powder Flakes Set",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "0781FD2D-C6D5-4073-BF89-C42F63D7D344",
+    "cjVid": "140EDE67-92A4-4242-8DE6-70225EDF449F",
+    "costUSD": 0.97,
+    "addedAt": "2026-08-04T09:48:54.238Z"
+  },
+  {
+    "id": 37,
+    "catClass": "beauty",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20190827/61702514259.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/20190827/61702514259.jpg",
+      "https://cf.cjdropshipping.com/20190827/659930259539.jpg",
+      "https://cf.cjdropshipping.com/20190827/907681807568.jpg",
+      "https://cf.cjdropshipping.com/15667488/422452017456.jpg",
+      "https://cf.cjdropshipping.com/20190827/461654542597.jpg",
+      "https://cf.cjdropshipping.com/20190827/481311070899.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Nail sticker beauty products",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "Nail sticker beauty products",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "Nail sticker beauty products",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "114676C1-6FA4-4552-9144-6172B11AE7B0",
+    "cjVid": "2C4C0F75-AC09-4507-8B50-A142D35891F3",
+    "costUSD": 0.63,
+    "addedAt": "2026-08-04T09:48:55.564Z"
+  },
+  {
+    "id": 38,
+    "catClass": "beauty",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/1620288594320.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/1620288594320.jpg",
+      "https://cf.cjdropshipping.com/1620288594324.jpg?bid=2408280152141920600",
+      "https://cf.cjdropshipping.com/1620288594327.jpg",
+      "https://cf.cjdropshipping.com/1620288594312.jpg",
+      "https://cf.cjdropshipping.com/1620288594317.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Ballet Coffin Fake Nails",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "Ballet Coffin Fake Nails",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "Ballet Coffin Fake Nails",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "1390217685484310528",
+    "cjVid": "1390217686822293504",
+    "costUSD": 1.51,
+    "addedAt": "2026-08-04T09:48:57.244Z"
+  },
+  {
+    "id": 39,
+    "catClass": "beauty",
+    "price": 78,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20200516/473842728094.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/20200516/473842728094.jpg",
+      "https://cf.cjdropshipping.com/20200516/388245059540.jpg",
+      "https://cf.cjdropshipping.com/20200516/1396073322240.png",
+      "https://cf.cjdropshipping.com/20200516/2538379626636.jpg",
+      "https://cf.cjdropshipping.com/20200516/2505508643359.jpg",
+      "https://cf.cjdropshipping.com/20200516/17356429731304.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "500 French nails",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "500 French nails",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "500 French nails",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "6B95FCAE-AFA9-4F68-9AA5-EFB7294EC80C",
+    "cjVid": "2B506665-1052-42E2-B692-375779FBBFDE",
+    "costUSD": 3.36,
+    "addedAt": "2026-08-04T09:48:58.705Z"
+  },
+  {
+    "id": 40,
+    "catClass": "beauty",
+    "price": 58,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20200914/1480139477590.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/20200914/1480139477590.jpg",
+      "https://cf.cjdropshipping.com/20200914/1043417773992.jpg",
+      "https://cf.cjdropshipping.com/20200914/1058497433282.jpg",
+      "https://cf.cjdropshipping.com/20200914/2370769952608.jpg",
+      "https://cf.cjdropshipping.com/20200914/58082335645.jpg",
+      "https://cf.cjdropshipping.com/20200914/1591736394417.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Non-marking false nails",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "Non-marking false nails",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "Non-marking false nails",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "38F8365D-F2AD-4D73-BC48-E7A1DDBB0754",
+    "cjVid": "1E49BD3D-4CDE-440D-B715-357ACAEBDB9B",
+    "costUSD": 2.64,
+    "addedAt": "2026-08-04T09:49:00.119Z"
   }
 ]
