@@ -2,6 +2,7 @@
 <html lang="zh-Hant-HK">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex,nofollow">
 <title>揀啱 · 產品管理</title>
@@ -112,7 +113,9 @@
         <input type="password" id="secret" placeholder="ADMIN_SYNC_SECRET" autocomplete="off" style="width:100%">
       </div>
       <button class="btn" id="loadBtn" onclick="loadProducts()">載入產品清單</button>
+      <button class="btn" id="syncBtn" onclick="syncPrices()" style="background:var(--ink);box-shadow:none">🔄 同步CJ價格</button>
     </div>
+    <p class="note">「同步CJ價格」會逐件產品查CJ最新成本,成本變咗就按返上架時嘅利潤倍數自動調價(例:倍數2倍,CJ由US$1加到US$2,賣價自動由HK$16變HK$32)。系統每日都會自動同步一次,呢個掣係畀你即時手動觸發用。</p>
     <div class="status" id="topStatus"></div>
   </div>
 
@@ -148,6 +151,33 @@ function toast(msg, type){
   el.className = 'toast show ' + (type||'');
   clearTimeout(toastTimer);
   toastTimer = setTimeout(()=>{ el.className = 'toast'; }, 3200);
+}
+
+async function syncPrices(){
+  const secret = document.getElementById('secret').value.trim();
+  if(!secret){ setStatus('請先輸入管理密碼','err'); return; }
+  const btn = document.getElementById('syncBtn');
+  btn.disabled = true; btn.textContent = '同步緊...(每件產品約1.5秒)';
+  try{
+    const res = await fetch(`/api/cron/price-sync?secret=${encodeURIComponent(secret)}`);
+    const data = await res.json();
+    if(data.error) throw new Error(data.error);
+    const r = data.report || {};
+    if((r.updated||[]).length > 0){
+      const lines = r.updated.map(u => `#${u.id} ${u.name}: HK$${u.priceHKD}`).join('\n');
+      setStatus(`✓ ${data.message}\n${lines}`,'ok');
+      toast(`已調整 ${r.updated.length} 件產品價格`,'ok');
+      loadProducts(); // 重新載入最新價
+    }else{
+      setStatus(`✓ ${data.message}(檢查咗${r.checked||0}件)`,'ok');
+      toast('價格已係最新,無需調整','ok');
+    }
+  }catch(e){
+    setStatus('同步失敗:' + e.message,'err');
+    toast('同步失敗','err');
+  }finally{
+    btn.disabled = false; btn.textContent = '🔄 同步CJ價格';
+  }
 }
 
 async function loadProducts(){

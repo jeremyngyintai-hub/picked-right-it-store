@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard.html
+Disallow: /admin.html
+Disallow: /manage.html
+Disallow: /api/
+
+Sitemap: https://picked-right.it.com/sitemap.xml

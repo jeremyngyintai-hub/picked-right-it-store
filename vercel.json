@@ -1,0 +1,18 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/price-sync",
+      "schedule": "0 19 * * *"
+    },
+    {
+      "path": "/api/cron/store-maintain",
+      "schedule": "30 19 * * *"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/sitemap.xml",
+      "destination": "/api/sitemap"
+    }
+  ]
+}

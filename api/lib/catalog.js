@@ -16,6 +16,7 @@ async function getCatalog() {
         dynamic[p.id] = {
           name: (p.i18n && p.i18n["zh-Hant"] && p.i18n["zh-Hant"].name) || `Product ${p.id}`,
           sellPriceHKD: p.price,
+          costUSD: p.costUSD || null,
           cjPid: p.cjPid,
           cjVid: p.cjVid,
         };

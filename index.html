@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>揀啱 PICKED RIGHT IT — 香港生活選物</title>
-<meta name="description" content="揀啱・香港生活選物店。家居、美妝(PDRN韓系護膚)、電子配件,每款團隊實測先上架。48小時內處理出貨,順豐站自取,7日試用包退。">
+<meta name="description" content="揀啱・香港生活選物店。家居、美妝(PDRN韓系護膚)、電子配件,每款團隊實測先上架。落單48小時內安排出貨,順豐站自取,壞貨寄錯7日內包換。">
 <meta property="og:title" content="揀啱 PICKED RIGHT IT — 香港生活選物">
 <meta property="og:description" content="唔係乜都賣,而係乜都幫你揀好。家居、美妝、電子配件,團隊實測先上架,香港48小時直送。">
 <meta property="og:type" content="website">
@@ -12,6 +12,12 @@
 <meta property="og:url" content="https://picked-right.it.com">
 <meta name="twitter:card" content="summary">
 <link rel="canonical" href="https://picked-right.it.com">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="keywords" content="香港網購,生活選物,PDRN,韓國護膚,家居用品,電子配件,寵物用品,dropshipping,揀啱,Picked Right It">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"OnlineStore","name":"揀啱 PICKED RIGHT IT","alternateName":"Picked Right It","url":"https://picked-right.it.com","logo":"https://picked-right.it.com/favicon.svg","description":"香港生活選物店,家居、美妝、電子等9大類,每款團隊實測先上架。","areaServed":"HK","currenciesAccepted":"HKD","paymentAccepted":"Credit Card, WhatsApp Order","contactPoint":{"@type":"ContactPoint","telephone":"+852-5104-4417","contactType":"customer service","availableLanguage":["zh-HK","zh-CN","en"]}}
+</script>
 <script type="application/ld+json" id="productSchema"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -180,6 +186,12 @@
   .cat-home-bg{background:var(--sage-soft);color:var(--sage);}
   .cat-beauty-bg{background:var(--mark-soft);color:var(--mark);}
   .cat-tech-bg{background:var(--tech-soft);color:var(--tech);}
+  .cat-pets-bg{background:var(--sage-soft);color:var(--sage);}
+  .cat-baby-bg{background:var(--mark-soft);color:var(--mark);}
+  .cat-sports-bg{background:var(--tech-soft);color:var(--tech);}
+  .cat-accessories-bg{background:var(--mark-soft);color:var(--mark);}
+  .cat-bags-bg{background:var(--sage-soft);color:var(--sage);}
+  .cat-auto-bg{background:var(--tech-soft);color:var(--tech);}
   .badge{position:absolute;top:10px;left:10px;z-index:2;background:var(--accent-grad);color:#fff;font-size:.66rem;font-weight:600;letter-spacing:.06em;padding:5px 10px;border-radius:999px;animation:pulseBadge 2.2s ease-in-out infinite;box-shadow:0 4px 12px rgba(255,61,122,.35);}
   @keyframes pulseBadge{0%,100%{transform:scale(1);}50%{transform:scale(1.07);}}
   .product-info{padding:16px 18px 18px;display:flex;flex-direction:column;}
@@ -214,6 +226,46 @@
   .pd-badges span{font-size:.68rem;color:var(--ink-soft);border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-family:'Inter',sans-serif;}
   .cart-secure{display:flex;align-items:center;justify-content:center;gap:6px;font-size:.72rem;color:var(--ink-soft);margin:8px 0 2px;}
   .cart-secure svg{width:13px;height:13px;color:var(--sage);}
+  /* product media gallery */
+  .pd-thumbs{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;}
+  .pd-thumb{width:58px;height:58px;border-radius:12px;border:2px solid var(--line);object-fit:cover;cursor:pointer;transition:border-color .15s;background:#eee;}
+  .pd-thumb.on{border-color:var(--accent-a);}
+  .pd-thumb-video{display:flex;align-items:center;justify-content:center;background:var(--ink);color:#fff;font-size:1.1rem;width:58px;height:58px;border-radius:12px;border:2px solid var(--line);cursor:pointer;}
+  .pd-thumb-video.on{border-color:var(--accent-a);}
+  .pd-visual video{width:100%;height:100%;object-fit:cover;}
+
+  /* AI chat widget */
+  .chat-fab{position:fixed;right:18px;bottom:18px;z-index:56;width:58px;height:58px;border-radius:50%;background:var(--accent-grad);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px -6px rgba(255,61,122,.6);cursor:pointer;transition:transform .15s;border:none;font-size:1.5rem;}
+  .chat-fab:hover{transform:scale(1.06);}
+  .chat-panel{position:fixed;right:18px;bottom:86px;z-index:57;width:360px;max-width:calc(100vw - 32px);height:480px;max-height:calc(100vh - 120px);background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:0 24px 60px -12px rgba(31,23,38,.45);display:flex;flex-direction:column;overflow:hidden;transform:translateY(16px) scale(.98);opacity:0;pointer-events:none;transition:all .25s ease;}
+  .chat-panel.open{transform:none;opacity:1;pointer-events:auto;}
+  .chat-head{background:var(--accent-grad);color:#fff;padding:14px 18px;display:flex;align-items:center;gap:10px;}
+  .chat-head b{font-size:.95rem;}
+  .chat-head small{display:block;font-size:.68rem;opacity:.85;font-weight:400;}
+  .chat-head .chat-close{margin-left:auto;background:none;border:none;color:#fff;font-size:1.1rem;cursor:pointer;}
+  .chat-msgs{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;}
+  .cmsg{max-width:82%;padding:10px 14px;border-radius:16px;font-size:.86rem;line-height:1.55;white-space:pre-wrap;word-break:break-word;}
+  .cmsg.bot{background:var(--paper);border:1px solid var(--line);align-self:flex-start;border-bottom-left-radius:6px;}
+  .cmsg.user{background:var(--accent-grad);color:#fff;align-self:flex-end;border-bottom-right-radius:6px;}
+  .cmsg.typing{color:var(--ink-soft);font-style:italic;}
+  .chat-chips{display:flex;gap:8px;flex-wrap:wrap;padding:0 16px 10px;}
+  .chat-chip{font-size:.74rem;border:1px solid var(--line);border-radius:999px;padding:6px 12px;background:var(--card);cursor:pointer;color:var(--ink-soft);transition:all .15s;}
+  .chat-chip:hover{border-color:var(--accent-a);color:var(--accent-a);}
+  .chat-inrow{display:flex;gap:8px;padding:12px 14px;border-top:1px solid var(--line);}
+  .chat-inrow input{flex:1;padding:11px 14px;border:1px solid var(--line);border-radius:999px;font-family:inherit;font-size:.86rem;background:#fff;}
+  .chat-inrow input:focus{outline:none;border-color:var(--accent-a);}
+  .chat-send{width:42px;height:42px;border-radius:50%;background:var(--accent-grad);color:#fff;border:none;cursor:pointer;flex:none;font-size:1rem;}
+  @media(max-width:640px){.chat-panel{right:8px;left:8px;width:auto;}}
+
+  /* abandoned-cart nudge */
+  .nudge{position:fixed;left:16px;right:16px;bottom:16px;z-index:55;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 20px 44px -12px rgba(31,23,38,.4);transform:translateY(130%);transition:transform .35s ease;max-width:420px;margin:0 auto;}
+  .nudge.show{transform:none;}
+  .nudge h4{margin:0 0 6px;font-size:1rem;font-family:var(--font-display);}
+  .nudge p{margin:0 0 14px;font-size:.84rem;color:var(--ink-soft);}
+  .nudge .nudge-row{display:flex;gap:10px;}
+  .nudge .btn{flex:1;padding:11px;}
+  .nudge .nudge-close{position:absolute;top:10px;right:12px;color:var(--ink-soft);font-size:1.1rem;cursor:pointer;background:none;border:none;}
+
   .related-title{font-size:1.2rem;margin-bottom:22px;}
   .product-bottom-pad{padding:20px 0 80px;}
 
@@ -244,6 +296,34 @@
   .newsletter .wrap{padding:56px 24px;text-align:center;}
   .newsletter h2{font-size:clamp(1.4rem,3vw,1.9rem);margin:12px 0 12px;}
   .newsletter p{color:var(--ink-soft);font-size:.94rem;max-width:36em;margin:0 auto 26px;}
+
+  /* rejected picks(落選區)*/
+  .rejected-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .reject-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;position:relative;overflow:hidden;}
+  .reject-stamp{position:absolute;top:14px;right:-30px;background:var(--mark);color:#fff;font-size:.66rem;font-weight:700;letter-spacing:.2em;padding:5px 40px;transform:rotate(35deg);opacity:.9;}
+  .reject-card h3{font-size:1rem;font-family:var(--font-body);font-weight:500;margin-bottom:8px;color:var(--ink-soft);text-decoration:line-through;text-decoration-color:var(--mark);text-decoration-thickness:2px;}
+  .reject-card p{font-size:.85rem;color:var(--ink-soft);margin:0;}
+  .reject-card p b{color:var(--mark);}
+  .rejected-note{font-size:.8rem;color:var(--ink-soft);margin-top:18px;text-align:center;}
+
+  /* concierge(幫你搵貨)*/
+  .concierge{position:relative;border-radius:24px;overflow:hidden;background:var(--ink);color:var(--paper-inv);padding:52px 30px;text-align:center;}
+  .concierge::before{content:"";position:absolute;top:-50%;left:-10%;width:60%;height:200%;background:var(--accent-grad);opacity:.22;filter:blur(60px);}
+  .concierge::after{content:"";position:absolute;bottom:-50%;right:-10%;width:50%;height:180%;background:var(--accent-grad);opacity:.16;filter:blur(60px);}
+  .concierge>*{position:relative;z-index:1;}
+  .concierge h2{font-size:clamp(1.4rem,3vw,1.9rem);margin:12px 0 14px;}
+  .concierge p{color:#c9c5ba;font-size:.94rem;max-width:34em;margin:0 auto 26px;}
+  .concierge .eyebrow{color:#a9a49a;}
+
+  /* FAQ */
+  .faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px;}
+  .faq-item{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;}
+  .faq-q{width:100%;text-align:left;padding:18px 22px;font-size:.95rem;font-weight:500;display:flex;justify-content:space-between;align-items:center;gap:12px;}
+  .faq-q::after{content:"+";font-size:1.2rem;color:var(--accent-a);transition:transform .2s;flex:none;}
+  .faq-item.open .faq-q::after{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+  .faq-a-inner{padding:0 22px 18px;font-size:.88rem;color:var(--ink-soft);}
+  .faq-item.open .faq-a{max-height:300px;}
 
   /* story */
   .story{background:var(--ink);color:var(--paper-inv);}
@@ -441,7 +521,7 @@
         <div class="trust-item"><svg class="icon-sm"><use href="#icon-truck"/></svg><span data-i18n="trust.0">48小時內處理出貨</span></div>
         <div class="trust-item"><svg class="icon-sm"><use href="#icon-box"/></svg><span data-i18n="trust.1">順豐站 / 智能櫃自取</span></div>
         <div class="trust-item"><svg class="icon-sm"><use href="#icon-chat"/></svg><span data-i18n="trust.2">WhatsApp 真人客服</span></div>
-        <div class="trust-item"><svg class="icon-sm"><use href="#icon-shield"/></svg><span data-i18n="trust.3">7日試用,唔啱包退</span></div>
+        <div class="trust-item"><svg class="icon-sm"><use href="#icon-shield"/></svg><span data-i18n="trust.3">壞貨/寄錯 7日內包換</span></div>
       </div>
     </div>
 
@@ -455,6 +535,16 @@
           <div class="process-step"><span class="num">02</span><h3 data-i18n="process.steps.1.title">直送</h3><p data-i18n="process.steps.1.desc">香港倉直發,支援順豐站、智能櫃自取,唔使成日喺屋企等收件。</p></div>
           <div class="process-step"><span class="num">03</span><h3 data-i18n="process.steps.2.title">保證</h3><p data-i18n="process.steps.2.desc">唔啱用?7日內可退換,唔會齋得個「落單易、退款難」。</p></div>
         </div>
+      </div>
+    </section>
+
+    <section class="block reveal" style="padding-top:0">
+      <div class="wrap">
+        <div class="block-head">
+          <div><span class="eyebrow" data-i18n="rejected.eyebrow">誠實選物 · 落選都話你知</span><h2 data-i18n="rejected.title">今週試咗,但唔過關嘅</h2></div>
+        </div>
+        <div class="rejected-grid" id="rejectedGrid"></div>
+        <p class="rejected-note" data-i18n="rejected.note">「揀啱」唔係乜都上架 — 唔過關嘅,我哋公開講點解。你見到上咗架嘅,先係真係過咗關。</p>
       </div>
     </section>
 
@@ -534,6 +624,28 @@
       </div>
     </section>
 
+    <section class="block reveal" style="padding-bottom:0">
+      <div class="wrap">
+        <div class="concierge">
+          <span class="eyebrow" data-i18n="concierge.eyebrow">巨頭做唔到嘅服務</span>
+          <h2 data-i18n="concierge.title">搵唔到想要嘅嘢?我哋幫你搵</h2>
+          <p data-i18n="concierge.desc">WhatsApp話我哋知你想搵乜(一張相、一條link都得),我哋幫你格價、驗質素,48小時內回覆你搵唔搵到、幾錢。大平台淨係俾你自己喺10萬件貨度撈 — 我哋係真人幫你落手搵。</p>
+          <button class="btn btn-primary" onclick="conciergeWhatsApp()">
+            <svg class="icon-sm"><use href="#icon-chat"/></svg><span data-i18n="concierge.cta">WhatsApp開個搵貨請求</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="block reveal">
+      <div class="wrap">
+        <div class="block-head" style="justify-content:center;text-align:center">
+          <div><span class="eyebrow" data-i18n="faq.eyebrow">買之前想知</span><h2 data-i18n="faq.title">常見問題</h2></div>
+        </div>
+        <div class="faq-list" id="faqList"></div>
+      </div>
+    </section>
+
     <section class="newsletter reveal">
       <div class="wrap">
         <span class="eyebrow" data-i18n="newsletter.eyebrow">揀啱情報網</span>
@@ -594,6 +706,7 @@
       <div>
         <h4 data-i18n="footer.contactTitle">聯絡我哋</h4>
         <a href="#" onclick="return false" data-i18n="footer.link1">WhatsApp 客服</a>
+        <a href="/track.html">訂單追蹤</a>
         <a href="#" onclick="return false" data-i18n="footer.link2">送貨與退換政策</a>
         <a href="#" onclick="return false" data-i18n="footer.link3">常見問題</a>
       </div>
@@ -627,6 +740,40 @@
   </div>
 </aside>
 
+<!-- ============ AI 客服 CHATBOX ============ -->
+<button class="chat-fab" id="chatFab" onclick="toggleChat()" aria-label="開啟客服對話">💬</button>
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-head">
+    <span style="font-size:1.3rem">🤖</span>
+    <div><b>揀啱小助手</b><small>AI客服 · 24小時在線 · 複雜問題會轉真人</small></div>
+    <button class="chat-close" onclick="toggleChat()" aria-label="關閉">✕</button>
+  </div>
+  <div class="chat-msgs" id="chatMsgs">
+    <div class="cmsg bot">你好!我係揀啱小助手 👋 送貨、退換、追蹤訂單都可以問我。想追蹤訂單,直接貼個追蹤號碼畀我就得!</div>
+  </div>
+  <div class="chat-chips">
+    <button class="chat-chip" onclick="chipAsk('送貨要幾耐?')">送貨時間</button>
+    <button class="chat-chip" onclick="chipAsk('退換貨政策係點?')">退換政策</button>
+    <button class="chat-chip" onclick="chipAsk('我想追蹤訂單')">追蹤訂單</button>
+    <button class="chat-chip" onclick="window.open('https://wa.me/85251044417','_blank')">真人客服</button>
+  </div>
+  <div class="chat-inrow">
+    <input id="chatInput" placeholder="輸入問題..." onkeydown="if(event.key==='Enter')sendChat()">
+    <button class="chat-send" onclick="sendChat()" aria-label="送出">➤</button>
+  </div>
+</div>
+
+<!-- ============ 棄單挽回 NUDGE ============ -->
+<div class="nudge" id="cartNudge">
+  <button class="nudge-close" onclick="closeNudge()" aria-label="關閉">✕</button>
+  <h4>購物車仲有嘢等緊你 🛒</h4>
+  <p>有咩想問可以直接WhatsApp我哋,真人即時覆你;或者用優惠碼 <b>PICKED10</b> 即刻落單有9折。</p>
+  <div class="nudge-row">
+    <button class="btn btn-whatsapp" onclick="nudgeWhatsApp()" style="width:auto">WhatsApp 問問</button>
+    <button class="btn btn-primary" onclick="nudgeCheckout()">去結帳</button>
+  </div>
+</div>
+
 <!-- ============ STICKY MOBILE ADD-TO-CART BAR ============ -->
 <div class="sticky-bar" id="stickyBar">
   <div class="sb-info">
@@ -645,10 +792,11 @@ const LANG_META = {
 };
 
 const CAT_LABELS = {
-  'zh-Hant':{all:'全部',home:'家居',beauty:'美妝',tech:'電子'},
-  'zh-Hans':{all:'全部',home:'家居',beauty:'美妆',tech:'电子'},
-  'en':{all:'All',home:'Home & Living',beauty:'Beauty',tech:'Tech'}
+  'zh-Hant':{all:'全部',home:'家居',beauty:'美妝',tech:'電子',pets:'寵物',baby:'母嬰玩具',sports:'運動戶外',accessories:'飾物配件',bags:'袋・鞋',auto:'汽車用品'},
+  'zh-Hans':{all:'全部',home:'家居',beauty:'美妆',tech:'电子',pets:'宠物',baby:'母婴玩具',sports:'运动户外',accessories:'饰品配件',bags:'包・鞋',auto:'汽车用品'},
+  'en':{all:'All',home:'Home & Living',beauty:'Beauty',tech:'Tech',pets:'Pets',baby:'Baby & Kids',sports:'Sports & Outdoors',accessories:'Accessories',bags:'Bags & Shoes',auto:'Auto'}
 };
+const ALL_CATS = ['all','home','beauty','tech','pets','baby','sports','accessories','bags','auto'];
 const SHOP_TITLES = {
   'zh-Hant':{all:'全部選物',home:'家居選物',beauty:'美妝選物',tech:'電子選物'},
   'zh-Hans':{all:'全部选品',home:'家居选品',beauty:'美妆选品',tech:'电子选品'},
@@ -666,35 +814,51 @@ const I18N = {
   hero:{eyebrow:'香港生活選物 · 每週更新',h1a:'幫你由幾百款貨中',h1circled:'揀啱',h1b:'一件',
     lead:'家居、美妝、電子小物,我哋逐款試用先上架。唔使自己喺淘寶大海度搵,揀啱幫你篩走9成唔啱嘅選擇。',cta1:'即刻揀',cta2:'了解點揀',
     trustline:'★ 4.8/5 · 已服務2,000+位香港客戶'},
-  trust:['48小時內處理出貨','順豐站 / 智能櫃自取','WhatsApp 真人客服','7日試用,唔啱包退'],
+  trust:['落單48小時內安排出貨','順豐站 / 智能櫃自取','WhatsApp 真人客服','壞貨/寄錯 7日內包換'],
   marquee:['家居生活','美妝護理','電子配件'],
   process:{eyebrow:'我哋點揀',title:'由揀貨到送到你手,三步',steps:[
     {title:'精選',desc:'每款產品經過團隊實測,先睇質素同耐用度,先決定上唔上架。'},
-    {title:'直送',desc:'香港倉直發,支援順豐站、智能櫃自取,唔使成日喺屋企等收件。'},
-    {title:'保證',desc:'唔啱用?7日內可退換,唔會齋得個「落單易、退款難」。'}]},
+    {title:'直送',desc:'落單後48小時內安排出貨,全程有追蹤號碼,支援順豐站、智能櫃自取,一般7-12日送到。'},
+    {title:'保證',desc:'收到貨有損壞、寄錯或者運送壞咗?7日內影相WhatsApp我哋,包補寄或退款,真人跟到尾。'}]},
   categories:{eyebrow:'三大選物系列',title:'揀返適合你屋企嘅類別',cards:{
     home:{title:'家居生活',desc:'啱晒香港細單位嘅收納、靜音家電同小物,慳位又實用。',link:'睇家居選物'},
     beauty:{title:'美妝護理',desc:'主打韓系PDRN成分護膚,同輕巧美容儀器,自己屋企都可以做medi-facial。',link:'睇美妝選物'},
     tech:{title:'電子配件',desc:'充電、耳機、手機支架,返工放假都用得著嘅日常科技小物。',link:'睇電子選物'}}},
   trending:{eyebrow:'呢刻最多人揀',title:'熱賣推薦',more:'睇晒全部產品'},
+  rejected:{eyebrow:'誠實選物 · 落選都話你知',title:'今週試咗,但唔過關嘅',
+    note:'「揀啱」唔係乜都上架 — 唔過關嘅,我哋公開講點解。你見到上咗架嘅,先係真係過咗關。',
+    items:[
+      {name:'某款9.9蚊USB風扇',reason:'實測3日摩打開始有雜音,用多兩星期就死火。<b>平,但唔抵。</b>'},
+      {name:'某爆款「膠原蛋白」面膜',reason:'成分表查唔到有效濃度,供應商又答唔出。<b>唔清楚嘅嘢唔賣得。</b>'},
+      {name:'某網紅摺疊置物架',reason:'相好靚,實物膠料飄味,承重同宣稱差一截。<b>照騙,落選。</b>'}]},
+  faq:{eyebrow:'買之前想知',title:'常見問題',items:[
+    {q:'點解唔直接喺淘寶/低價平台買?平好多喎。',a:'可以㗎,不過嗰邊係「自己賭」——質素參差、出事嗰陣海外商戶喺香港冇辦事處,消委會都好難幫你追。揀啱每款團隊實測先上架,係香港登記嘅店舖,WhatsApp搵到真人,壞貨寄錯7日內包換。你俾多少少,買嘅係「唔使賭」。'},
+    {q:'送貨要幾耐?點解唔係即日/明日達?',a:'落單後48小時內安排出貨,一般7-12日送到,全程有追蹤號碼,支援順豐站/智能櫃自取。我哋唔鬥快——因為每款貨都經過篩選同實測,呢個先係你等緊嘅嘢。'},
+    {q:'收到貨有問題點算?',a:'如果件貨有損壞、寄錯款,或者運送途中壞咗,收貨7日內影低張相WhatsApp我哋,我哋包補寄或者退款,真人跟進到尾。(溫馨提示:落單前唔肯定啱唔啱用,可以先WhatsApp問我哋攞多啲資料。)'},
+    {q:'你哋係咪香港店?信唔信得過?',a:'係,香港登記業務,廣東話真人客服(+852 5104 4417)。同海外平台唔同,有咩事你搵得到我哋,消委會都搵得到我哋。'},
+    {q:'點解價錢貴過低價平台少少?',a:'因為你唔使自己喺幾萬件貨度撈、唔使賭質素,壞貨寄錯有人孭。我哋幫你試咗、篩咗、擔保埋——呢啲先係你俾嘅價錢入面包埋嘅嘢。'}]},
+  concierge:{eyebrow:'巨頭做唔到嘅服務',title:'搵唔到想要嘅嘢?我哋幫你搵',
+    desc:'WhatsApp話我哋知你想搵乜(一張相、一條link都得),我哋幫你格價、驗質素,48小時內回覆你搵唔搵到、幾錢。大平台淨係俾你自己喺10萬件貨度撈 — 我哋係真人幫你落手搵。',
+    cta:'WhatsApp開個搵貨請求',
+    waMsg:'你好!我想開個搵貨請求,我想搵:'},
   reviews:{eyebrow:'真實客戶評價',title:'佢哋都揀啱咗',items:[
     {avatar:'陳',name:'陳小姐',tag:'家居生活 · 已購買',quote:'個收納箱質素幾好,重要係摺得返平,唔用嗰陣唔佔位,啱晒我間劏房。',rating:5},
     {avatar:'李',name:'李太',tag:'美妝護理 · 已購買',quote:'用開PDRN面霜大概兩星期,皮膚明顯冇咁乾,質地又清爽,啱夏天用。',rating:5},
     {avatar:'M',name:'Marcus',tag:'電子配件 · 已購買',quote:'耳機降噪幾正,落單嗰晚已經有客服覆WhatsApp確認,第二日就到順豐站。',rating:4}]},
   diff:{eyebrow:'點解揀我哋',title:'同一般網購平台有咩唔同',themTitle:'一般網購平台',usTitle:'揀啱',
-    themPoints:['成千上萬選擇,要自己慢慢篩','跨境直送,通常要等7-14日','客服機械人回覆,答非所問','質素參差,靠賭運氣'],
-    usPoints:['每款產品團隊實測先上架','香港倉直發,48小時內處理','WhatsApp真人客服親自跟進','7日試用,唔啱包退']},
+    themPoints:['成千上萬選擇,要自己慢慢篩','訂單狀態不明,查極都冇人理','客服機械人回覆,答非所問','質素參差,靠賭運氣'],
+    usPoints:['每款產品團隊實測先上架','落單48小時內安排出貨,全程單號追蹤','WhatsApp真人客服親自跟進','壞貨/寄錯,7日內包換,真人跟到尾']},
   story:{eyebrow:'關於揀啱',title:'唔係乜都賣,而係乜都幫你揀好',
     desc:'市面上嘅選擇太多,揀啱嘅角色好簡單:喺你買之前,我哋已經幫你試用、比較、篩走唔值得嘅選擇。你見到嘅每一款,都係我哋覺得「啱」先會放上嚟。'},
   newsletter:{eyebrow:'揀啱情報網',title:'加入WhatsApp情報網,新客戶即享9折',
     desc:'第一時間收到新品上架、限定優惠同補貨通知,唔想錯過就click低面個掣。',cta:'用WhatsApp加入',
     waMsg:'你好,我想加入揀啱嘅WhatsApp情報網,接收新品同優惠通知。'},
   product:{add:'加入購物車',added:'已加入 ✓',back:'返回產品列表',related:'你可能都啱用',
-    ship:'48小時內處理出貨,順豐站自取',guarantee:'7日試用,唔啱包退',securePay:'Stripe安全加密付款',badge:'熱賣',detailTrending:'熱賣中',reviewsWord:'則評價'},
+    ship:'48小時內安排出貨 · 一般7-12日送到,順豐站自取',guarantee:'壞貨/寄錯,7日內包換',securePay:'Stripe安全加密付款',badge:'熱賣',detailTrending:'熱賣中',reviewsWord:'則評價'},
   cart:{title:'購物車',empty:'購物車暫時得個吉,<br>返去揀啲啱你嘅嘢啦。',subtotal:'小計',
     checkout:'透過 WhatsApp 落單',note:'運費另計,落單後客服會盡快同你確認',secureNote:'SSL加密 · Stripe安全付款',remove:'移除',
     waGreeting:'你好,我想落單:',waTotal:'總計'},
-  promo:{msg1:'新客戶專享:首次落單輸入優惠碼 PICKED10 即享9折',msg2:'滿HK$300免運費 · 順豐站48小時內送達'},
+  promo:{msg1:'新客戶專享:首次落單輸入優惠碼 PICKED10 即享9折',msg2:'滿HK$300免運費 · 全程單號追蹤'},
   footer:{desc:'香港生活選物店,由家居、美妝到電子配件,每款都經團隊實測先上架。',seriesTitle:'選物系列',
     contactTitle:'聯絡我哋',link1:'WhatsApp 客服',link2:'送貨與退換政策',link3:'常見問題',
     copyright:'© 2026 揀啱 PICKED RIGHT IT. 版權所有。',tagline:'由香港出發,直送到你手。'}
@@ -704,35 +868,51 @@ const I18N = {
   hero:{eyebrow:'香港生活选物 · 每周更新',h1a:'帮你从几百款商品中',h1circled:'选对',h1b:'一件',
     lead:'家居、美妆、电子小物,我们逐款试用后才上架。不用自己在电商海洋里大海捞针,拣啱帮你筛走九成不合适的选择。',cta1:'立即选购',cta2:'了解我们怎么选',
     trustline:'★ 4.8/5 · 已服务2,000+位香港客户'},
-  trust:['48小时内处理发货','顺丰站 / 智能柜自取','WhatsApp真人客服','7天试用,不满意包退'],
+  trust:['下单48小时内安排发货','顺丰站 / 智能柜自取','WhatsApp真人客服','坏货/发错 7天内包换'],
   marquee:['家居生活','美妆护理','电子配件'],
   process:{eyebrow:'我们怎么选',title:'从选品到送到你手,三步',steps:[
     {title:'精选',desc:'每款产品都经团队实测,先看质量与耐用度,再决定是否上架。'},
-    {title:'直送',desc:'香港仓直发,支持顺丰站、智能柜自取,不用整天在家等收件。'},
-    {title:'保证',desc:'用得不满意?7天内可退换,不会只是"下单容易、退款难"。'}]},
+    {title:'直送',desc:'下单后48小时内安排发货,全程有跟踪号码,支持顺丰站、智能柜自取,一般7-12天送达。'},
+    {title:'保证',desc:'收到货有损坏、发错款或运输破损?7天内拍照WhatsApp我们,包补发或退款,真人跟进到底。'}]},
   categories:{eyebrow:'三大选品系列',title:'选出适合你家的类别',cards:{
     home:{title:'家居生活',desc:'专为香港细小单位设计的收纳、静音家电与小物,省空间又实用。',link:'查看家居选品'},
     beauty:{title:'美妆护理',desc:'主打韩系PDRN成分护肤品,搭配轻巧美容仪,在家也能做medi-facial。',link:'查看美妆选品'},
     tech:{title:'电子配件',desc:'充电、耳机、手机支架,上班放假都用得上的日常科技小物。',link:'查看电子选品'}}},
   trending:{eyebrow:'此刻最多人选',title:'热卖推荐',more:'查看全部产品'},
+  rejected:{eyebrow:'诚实选品 · 落选也告诉你',title:'本周试过,但没过关的',
+    note:'「拣啱」不是什么都上架 — 没过关的,我们公开说明原因。你看到上架的,才是真正过了关。',
+    items:[
+      {name:'某款9.9元USB风扇',reason:'实测3天电机开始有杂音,再用两周就报废。<b>便宜,但不值。</b>'},
+      {name:'某爆款「胶原蛋白」面膜',reason:'成分表查不到有效浓度,供应商也答不上来。<b>不清楚的东西不能卖。</b>'},
+      {name:'某网红折叠置物架',reason:'图片很美,实物塑料味重,承重与宣称差一截。<b>照骗,落选。</b>'}]},
+  faq:{eyebrow:'购买前想知道',title:'常见问题',items:[
+    {q:'为什么不直接在低价平台买?便宜很多。',a:'当然可以,不过那边是「自己赌」——质量参差,出问题时海外商户在香港没有办事处,消委会也很难帮你追讨。拣啱每款都经团队实测才上架,是香港登记的店铺,WhatsApp能找到真人,坏货发错7天内包换。'},
+    {q:'配送要多久?为什么不是次日达?',a:'下单后48小时内安排发货,一般7-12天送达,全程有跟踪号码,支持顺丰站/智能柜自取。我们不拼快——因为每款货都经过筛选和实测。'},
+    {q:'收到货有问题怎么办?',a:'如果货品有损坏、发错款,或运输途中破损,收货7天内拍照WhatsApp我们,包补发或退款,真人跟进到底。(下单前不确定合不合适,欢迎先WhatsApp咨询。)'},
+    {q:'你们是香港店吗?可信吗?',a:'是,香港登记业务,真人客服(+852 5104 4417)。和海外平台不同,有任何问题你找得到我们,消委会也找得到我们。'},
+    {q:'为什么价格比低价平台稍贵?',a:'因为你不用自己在几万件商品里捞、不用赌质量,坏货发错有人负责。我们帮你试过、筛过、担保过——这些都包含在价格里。'}]},
+  concierge:{eyebrow:'大平台做不到的服务',title:'找不到想要的?我们帮你找',
+    desc:'WhatsApp告诉我们你想找什么(一张图、一条链接都行),我们帮你比价、验质量,48小时内回复能不能找到、多少钱。大平台只让你自己在10万件商品里捞 — 我们是真人帮你动手找。',
+    cta:'WhatsApp发起找货请求',
+    waMsg:'您好!我想发起找货请求,我想找:'},
   reviews:{eyebrow:'真实客户评价',title:'他们也选对了',items:[
     {avatar:'陈',name:'陈小姐',tag:'家居生活 · 已购买',quote:'收纳箱质量不错,重点是能折叠收平,不用的时候不占地方,很适合小户型。',rating:5},
     {avatar:'李',name:'李太太',tag:'美妆护理 · 已购买',quote:'用PDRN面霜大概两周,皮肤明显没那么干,质地清爽,夏天用刚好。',rating:5},
     {avatar:'M',name:'Marcus',tag:'电子配件 · 已购买',quote:'耳机降噪效果不错,下单当晚客服就用WhatsApp确认订单,第二天就到顺丰站取货了。',rating:4}]},
   diff:{eyebrow:'为什么选我们',title:'和一般网购平台有什么不同',themTitle:'一般网购平台',usTitle:'拣啱',
-    themPoints:['成千上万个选择,要自己慢慢筛选','跨境直送,通常要等7-14天','客服机器人回复,答非所问','质量参差,全靠运气'],
-    usPoints:['每款产品团队实测才上架','香港仓直发,48小时内处理','WhatsApp真人客服亲自跟进','7天试用,不满意包退']},
+    themPoints:['成千上万个选择,要自己慢慢筛选','订单状态不明,查了也没人理','客服机器人回复,答非所问','质量参差,全靠运气'],
+    usPoints:['每款产品团队实测才上架','下单48小时内安排发货,全程单号跟踪','WhatsApp真人客服亲自跟进','坏货/发错,7天内包换,真人跟进到底']},
   story:{eyebrow:'关于拣啱',title:'不是什么都卖,而是什么都帮你选好',
     desc:'市面上的选择太多,拣啱的角色很简单:在你下单之前,我们已经帮你试用、比较、筛走不值得的选择。你看到的每一款,都是我们认为"对"才会上架的。'},
   newsletter:{eyebrow:'拣啱情报网',title:'加入WhatsApp情报网,新客户即享9折',
     desc:'第一时间收到新品上架、限定优惠和补货通知,不想错过就点下面的按钮。',cta:'用WhatsApp加入',
     waMsg:'您好,我想加入拣啱的WhatsApp情报网,接收新品和优惠通知。'},
   product:{add:'加入购物车',added:'已加入 ✓',back:'返回产品列表',related:'你可能也用得上',
-    ship:'48小时内处理发货,顺丰站自取',guarantee:'7天试用,不满意包退',securePay:'Stripe安全加密付款',badge:'热卖',detailTrending:'热卖中',reviewsWord:'条评价'},
+    ship:'48小时内安排发货 · 一般7-12天送达,顺丰站自取',guarantee:'坏货/发错,7天内包换',securePay:'Stripe安全加密付款',badge:'热卖',detailTrending:'热卖中',reviewsWord:'条评价'},
   cart:{title:'购物车',empty:'购物车暂时是空的,<br>回去挑些适合你的东西吧。',subtotal:'小计',
     checkout:'通过 WhatsApp 下单',note:'运费另计,下单后客服会尽快与你确认',secureNote:'SSL加密 · Stripe安全付款',remove:'移除',
     waGreeting:'您好,我想下单:',waTotal:'总计'},
-  promo:{msg1:'新客户专享:首次下单输入优惠码 PICKED10 即享9折',msg2:'满HK$300免运费 · 顺丰站48小时内送达'},
+  promo:{msg1:'新客户专享:首次下单输入优惠码 PICKED10 即享9折',msg2:'满HK$300免运费 · 全程单号跟踪'},
   footer:{desc:'香港生活选品店,从家居、美妆到电子配件,每款都经团队实测才上架。',seriesTitle:'选品系列',
     contactTitle:'联系我们',link1:'WhatsApp客服',link2:'配送与退换政策',link3:'常见问题',
     copyright:'© 2026 拣啱 PICKED RIGHT IT. 版权所有。',tagline:'从香港出发,直送到你手。'}
@@ -742,35 +922,51 @@ const I18N = {
   hero:{eyebrow:'Hong Kong Lifestyle Edit · Updated Weekly',h1a:'We narrow down hundreds of products',h1circled:'so you pick right',h1b:'every time',
     lead:"Home goods, skincare, and everyday tech — each one tested by our team before it earns a place on the shelf. Skip the endless scroll; we've already filtered out the 90% that isn't worth your time.",
     cta1:'Start Browsing',cta2:'How We Curate',trustline:'★ 4.8/5 · Trusted by 2,000+ Hong Kong customers'},
-  trust:['Ships within 48 hours','SF Locker & Store Pickup','Real Humans on WhatsApp','7-Day Trial, Easy Returns'],
+  trust:['Dispatched within 48 hours','SF Locker & Store Pickup','Real Humans on WhatsApp','Damaged/Wrong Item? Replaced Within 7 Days'],
   marquee:['Home & Living','Beauty','Tech'],
   process:{eyebrow:'How We Curate',title:'Three steps from shelf to your door',steps:[
     {title:'Curate',desc:"Every product is tested in-house for quality and durability before it's approved for listing."},
-    {title:'Deliver',desc:'Shipped from our Hong Kong warehouse, with SF Locker and store pickup — no waiting around all day.'},
-    {title:'Guarantee',desc:'Not the right fit? Return it within 7 days. No fine print, no runaround.'}]},
+    {title:'Deliver',desc:'Dispatched within 48 hours of your order with full tracking. SF Locker and store pickup, typically 7-12 days.'},
+    {title:'Guarantee',desc:'Arrived damaged, wrong, or broken in transit? Send us a photo on WhatsApp within 7 days — replacement or refund, handled by a real person.'}]},
   categories:{eyebrow:'Three Curated Edits',title:'Find the edit that fits your home',cards:{
     home:{title:'Home & Living',desc:"Storage, quiet appliances, and small essentials designed for Hong Kong's compact spaces.",link:'Shop Home & Living'},
     beauty:{title:'Beauty & Care',desc:'K-beauty PDRN skincare paired with compact devices — a medi-facial routine, right at home.',link:'Shop Beauty'},
     tech:{title:'Everyday Tech',desc:'Chargers, earbuds, and phone stands for the daily commute and the weekend off.',link:'Shop Tech'}}},
   trending:{eyebrow:'Trending Right Now',title:'Bestsellers',more:'View All Products'},
+  rejected:{eyebrow:'Honest Curation · Rejects Included',title:"Tested This Week — Didn't Make the Cut",
+    note:"We don't list everything. When something fails, we tell you why — so what you see on our shelf has genuinely passed.",
+    items:[
+      {name:'A $9.9 USB fan',reason:'Motor started buzzing after 3 days of testing; died within two weeks. <b>Cheap, but not worth it.</b>'},
+      {name:'A viral "collagen" face mask',reason:"Couldn't verify active concentration; supplier had no answer. <b>If we can't verify it, we won't sell it.</b>"},
+      {name:'An influencer folding rack',reason:'Great photos, but the real thing smelled of plastic and held far less weight. <b>Catfish product. Rejected.</b>'}]},
+  faq:{eyebrow:'Before You Buy',title:'FAQ',items:[
+    {q:'Why not just buy from ultra-cheap platforms?',a:"You can — but there you're gambling alone. Quality varies wildly, and when overseas merchants have no Hong Kong office, even the Consumer Council struggles to help. We test every item before listing, we're a Hong Kong-registered business, and a real human answers on WhatsApp, and damaged or wrong items are replaced within 7 days."},
+    {q:'How long is delivery? Why not next-day?',a:'Dispatched within 48 hours, typically 7-12 days with full tracking and SF Locker pickup. We compete on curation, not speed — every item has been vetted first.'},
+    {q:"What if something's wrong with my order?",a:'If your item arrives damaged, incorrect, or broken in transit, send us a photo on WhatsApp within 7 days — we will replace or refund it, with a real person following through. (Not sure before ordering? Message us first and we will help you decide.)'},
+    {q:'Are you actually a Hong Kong store?',a:"Yes — a Hong Kong-registered business with Cantonese-speaking human support (+852 5104 4417). Unlike overseas platforms, you can actually reach us, and so can the Consumer Council."},
+    {q:'Why slightly pricier than the cheapest platforms?',a:"Because you're not digging through 100,000 listings, gambling on quality, or being left alone when something arrives broken. Testing, filtering, and standing behind the product — that's what's included in the price."}]},
+  concierge:{eyebrow:'What Big Platforms Cannot Do',title:"Can't Find What You Want? We'll Source It",
+    desc:"Message us on WhatsApp with a photo or link. We'll price-check, vet the quality, and reply within 48 hours with whether we can get it and for how much. Big platforms leave you digging through 100,000 listings — we're real humans doing the digging for you.",
+    cta:'Start a Sourcing Request on WhatsApp',
+    waMsg:"Hi! I'd like to make a sourcing request. I'm looking for:"},
   reviews:{eyebrow:'What Customers Say',title:'They Picked Right It Too',items:[
     {avatar:'C',name:'Ms. Chan',tag:'Home & Living · Verified Buyer',quote:"The storage box folds flat when I'm not using it, perfect for my small apartment. Good quality for the price.",rating:5},
     {avatar:'L',name:'Mrs. Lee',tag:'Beauty & Care · Verified Buyer',quote:"After about two weeks with the PDRN cream, my skin feels noticeably less dry. Lightweight texture, great for summer.",rating:5},
     {avatar:'M',name:'Marcus',tag:'Tech · Verified Buyer',quote:"Noise cancellation is solid, and their WhatsApp team confirmed my order the same night. Picked it up at the SF locker the next day.",rating:4}]},
   diff:{eyebrow:'Why Picked Right It',title:"How We're Different From a Typical Marketplace",themTitle:'A Typical Marketplace',usTitle:'Picked Right It',
-    themPoints:['Thousands of listings — you do all the filtering','Cross-border shipping, often 7–14 days','Chatbot replies that miss the point',"Inconsistent quality, it's a gamble"],
-    usPoints:['Every product tested in-house before listing','Shipped from our HK warehouse within 48 hours','Real humans on WhatsApp, not a bot','7-day trial with easy returns']},
+    themPoints:['Thousands of listings — you do all the filtering','No visibility on your order status','Chatbot replies that miss the point',"Inconsistent quality, it's a gamble"],
+    usPoints:['Every product tested in-house before listing','Dispatched within 48 hours, tracked door to door','Real humans on WhatsApp, not a bot','Damaged/wrong items replaced within 7 days, human follow-up']},
   story:{eyebrow:'About Picked Right It',title:"We don't sell everything — we pick what's worth it",
     desc:"There's too much out there to choose from. Our job is simple: test it, compare it, and cut what isn't worth your money before it ever reaches you. If it's on our shelf, we've already decided it's right."},
   newsletter:{eyebrow:'Join the List',title:'Join Our WhatsApp List — Get 10% Off Your First Order',
     desc:'Be the first to know about new arrivals, exclusive offers, and restocks.',cta:'Join via WhatsApp',
     waMsg:"Hi, I'd like to join the Picked Right It WhatsApp list for new arrivals and offers."},
   product:{add:'Add to Cart',added:'Added ✓',back:'Back to Products',related:'You Might Also Like',
-    ship:'Ships within 48 hours · SF Locker pickup',guarantee:'7-day trial, easy returns',securePay:'Secure encrypted payment via Stripe',badge:'Hot',detailTrending:'Trending',reviewsWord:'reviews'},
+    ship:'Dispatched within 48 hours · typically 7-12 days · SF Locker pickup',guarantee:'Damaged or wrong item? Replaced within 7 days',securePay:'Secure encrypted payment via Stripe',badge:'Hot',detailTrending:'Trending',reviewsWord:'reviews'},
   cart:{title:'Your Cart',empty:"Your cart is empty right now.<br>Go find something that's right for you.",subtotal:'Subtotal',
     checkout:'Order via WhatsApp',note:'Shipping calculated separately — our team will confirm shortly after you order',secureNote:'SSL encrypted · Secure payment via Stripe',remove:'Remove',
     waGreeting:"Hi, I'd like to place an order:",waTotal:'Total'},
-  promo:{msg1:"New here? Use code PICKED10 for 10% off your first order",msg2:'Free shipping over HK$300 · Delivered within 48 hours'},
+  promo:{msg1:"New here? Use code PICKED10 for 10% off your first order",msg2:'Free shipping over HK$300 · Tracked door to door'},
   footer:{desc:'A Hong Kong lifestyle store spanning home goods, beauty, and everyday tech — every item tested by our team first.',
     seriesTitle:'Shop by Edit',contactTitle:'Get in Touch',link1:'WhatsApp Support',link2:'Shipping & Returns',link3:'FAQ',
     copyright:'© 2026 Picked Right It. All rights reserved.',tagline:'Shipped from Hong Kong, straight to your door.'}
@@ -827,7 +1023,7 @@ const PRODUCTS = [
     'zh-Hans':{name:'Press-On免胶假指甲(艺术款)',desc:'按压式即戴,不用去美甲店也有精致美甲。一盒多款设计,佩戴摘取不伤真甲,约会拍照前5分钟搞定。'},
     'en':{name:'Press-On Artistic Nails',desc:'Salon-look nails in 5 minutes — press on, no glue damage, multiple designs per box. Perfect before a date or photo day.'}}},
 ];
-const WHATSAPP_NUMBER = "85290000000"; // TODO: 換成你哋真實嘅 WhatsApp Business 號碼
+const WHATSAPP_NUMBER = "85251044417"; // TODO: 換成你哋真實嘅 WhatsApp Business 號碼
 
 let currentLang = 'zh-Hant';
 let cart = {};
@@ -891,6 +1087,8 @@ function applyI18n(){
 
   renderMarquee();
   renderReviews();
+  renderRejected();
+  renderFAQ();
   renderDiff();
   updatePromoText();
   document.getElementById('trendingGrid').innerHTML = PRODUCTS.filter(p => p.trending).map(productCardHTML).join('');
@@ -910,6 +1108,41 @@ function renderMarquee(){
   const words = I18N[currentLang].marquee;
   const group = words.map(w => `<span class="word">${w}</span><svg><use href="#mark-circle"/></svg>`).join('');
   document.getElementById('marqueeTrack').innerHTML = `<div class="mq-group">${group}</div><div class="mq-group">${group}</div>`;
+}
+
+function renderRejected(){
+  const items = (I18N[currentLang].rejected||{}).items || [];
+  const grid = document.getElementById('rejectedGrid');
+  if(!grid) return;
+  const stampText = {'zh-Hant':'落選','zh-Hans':'落选','en':'REJECTED'}[currentLang];
+  grid.innerHTML = items.map(r => `
+    <div class="reject-card">
+      <span class="reject-stamp">${stampText}</span>
+      <h3>${r.name}</h3>
+      <p>${r.reason}</p>
+    </div>`).join('');
+}
+function conciergeWhatsApp(){
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(t('concierge.waMsg'))}`;
+  window.open(url, '_blank');
+}
+
+function renderFAQ(){
+  const items = (I18N[currentLang].faq||{}).items || [];
+  const box = document.getElementById('faqList');
+  if(!box) return;
+  box.innerHTML = items.map((f,i)=>`
+    <div class="faq-item" id="faq-${i}">
+      <button class="faq-q" onclick="document.getElementById('faq-${i}').classList.toggle('open')">${f.q}</button>
+      <div class="faq-a"><div class="faq-a-inner">${f.a}</div></div>
+    </div>`).join('');
+  // FAQPage結構化數據(SEO rich result)
+  let el = document.getElementById('faqSchema');
+  if(!el){ el = document.createElement('script'); el.type='application/ld+json'; el.id='faqSchema'; document.head.appendChild(el); }
+  el.textContent = JSON.stringify({
+    "@context":"https://schema.org","@type":"FAQPage",
+    "mainEntity": items.map(f=>({"@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a}}))
+  });
 }
 
 function renderReviews(){
@@ -963,6 +1196,10 @@ function setupReveal(){
 
 /* ================= VIEW SWITCHING ================= */
 function showView(name){
+  if(name !== 'product'){
+    try{ history.replaceState(null,'', location.pathname); }catch(e){}
+    document.title = '揀啱 PICKED RIGHT IT — 香港生活選物';
+  }
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
   document.getElementById('view-' + name).classList.add('active');
   document.getElementById('stickyBar').classList.toggle('show', name === 'product');
@@ -978,11 +1215,13 @@ function showShop(catKey){
   renderShopGrid(catKey);
 }
 function renderShopTitle(catKey){
-  document.getElementById('shopTitle').textContent = SHOP_TITLES[currentLang][catKey];
-  document.getElementById('shopEyebrow').textContent = SHOP_EYEBROWS[currentLang][catKey];
+  const label = CAT_LABELS[currentLang][catKey] || catKey;
+  const suffix = {'zh-Hant':'選物','zh-Hans':'选品','en':' Edit'}[currentLang];
+  document.getElementById('shopTitle').textContent = SHOP_TITLES[currentLang][catKey] || (currentLang==='en' ? label+suffix : label+suffix);
+  document.getElementById('shopEyebrow').textContent = SHOP_EYEBROWS[currentLang][catKey] || label;
 }
 function renderFilters(active){
-  const cats = ['all','home','beauty','tech'];
+  const cats = ALL_CATS;
   document.getElementById('filterRow').innerHTML = cats.map(c =>
     `<button class="filter-pill ${c===active?'on':''}" onclick="showShop('${c}')">${CAT_LABELS[currentLang][c]}</button>`
   ).join('');
@@ -996,9 +1235,27 @@ function showProduct(id, silent){
   const p = findProduct(id);
   lastProductId = id;
   currentProductCat = p.catClass;
-  if(!silent) { showView('product'); pdQty = 1; }
+  if(!silent) {
+    showView('product'); pdQty = 1;
+    try{ fetch('/api/pv?t=product&id='+p.id, {keepalive:true}); }catch(e){}
+    try{ history.replaceState(null,'', '?p='+p.id); }catch(e){}
+    document.title = pName(p) + ' — 揀啱 PICKED RIGHT IT';
+  }
+  const galleryImgs = (p.images && p.images.length ? p.images : [p.image]).filter(Boolean);
+  window._pdGallery = { imgs: galleryImgs, video: p.video || "", cat: p.catClass, icon: p.icon, name: pName(p) };
+  const mainMedia = galleryImgs.length
+    ? `<img src="${galleryImgs[0]}" alt="${pName(p)}">`
+    : `<svg><use href="#icon-${p.icon}"/></svg>`;
+  const thumbsHTML = (galleryImgs.length > 1 || window._pdGallery.video) ? `
+    <div class="pd-thumbs">
+      ${galleryImgs.map((img,i)=>`<img class="pd-thumb ${i===0?'on':''}" src="${img}" onclick="pdShowMedia(${i},this)" alt="">`).join('')}
+      ${window._pdGallery.video ? `<div class="pd-thumb-video" onclick="pdShowMedia('video',this)">▶</div>` : ''}
+    </div>` : '';
   document.getElementById('pdInner').innerHTML = `
-    <div class="pd-visual cat-${p.catClass}-bg">${p.image ? `<img src="${p.image}" alt="${pName(p)}" style="width:100%;height:100%;object-fit:cover">` : `<svg><use href="#icon-${p.icon}"/></svg>`}</div>
+    <div>
+      <div class="pd-visual cat-${p.catClass}-bg" id="pdMainMedia">${mainMedia}</div>
+      ${thumbsHTML}
+    </div>
     <div class="pd-info">
       <span class="pd-cat" style="color:var(--${p.catClass==='home'?'sage':p.catClass==='beauty'?'mark':'tech'})">${CAT_LABELS[currentLang][p.catClass]}${p.trending?' · '+t('product.detailTrending'):''}</span>
       <h1>${pName(p)}</h1>
@@ -1164,6 +1421,92 @@ document.querySelectorAll('.main-nav a').forEach(a => {
   });
 });
 
+function pdShowMedia(which, el){
+  const g = window._pdGallery || {};
+  const box = document.getElementById('pdMainMedia');
+  if(!box) return;
+  document.querySelectorAll('.pd-thumb, .pd-thumb-video').forEach(t=>t.classList.remove('on'));
+  if(el) el.classList.add('on');
+  if(which === 'video' && g.video){
+    box.innerHTML = `<video src="${g.video}" controls autoplay muted playsinline></video>`;
+  }else{
+    box.innerHTML = `<img src="${g.imgs[which]}" alt="${g.name||''}">`;
+  }
+}
+
+/* ===== 棄單挽回:購物車有嘢但一段時間冇結帳,彈WhatsApp跟進 ===== */
+let nudgeShown = false;
+function maybeShowNudge(){
+  if(nudgeShown) return;
+  if(Object.keys(cart).length === 0) return;
+  if(document.getElementById('cartDrawer').classList.contains('show')) return;
+  nudgeShown = true;
+  document.getElementById('cartNudge').classList.add('show');
+}
+setTimeout(maybeShowNudge, 75000); // 加咗嘢入車75秒後仲未結帳
+document.addEventListener('mouseout', (e) => { // 桌面版:滑鼠移出頁面頂部(想關頁)
+  if(e.clientY <= 0 && Object.keys(cart).length > 0) maybeShowNudge();
+});
+function closeNudge(){ document.getElementById('cartNudge').classList.remove('show'); }
+function nudgeWhatsApp(){
+  closeNudge();
+  checkoutWhatsApp();
+}
+function nudgeCheckout(){
+  closeNudge();
+  openCart();
+}
+
+/* ===== AI 客服 ===== */
+let chatHistory = [];
+let chatBusy = false;
+function toggleChat(){
+  document.getElementById('chatPanel').classList.toggle('open');
+  if(document.getElementById('chatPanel').classList.contains('open')){
+    setTimeout(()=>document.getElementById('chatInput').focus(), 250);
+  }
+}
+function chatAppend(role, text, typing){
+  const box = document.getElementById('chatMsgs');
+  const div = document.createElement('div');
+  div.className = 'cmsg ' + (role==='user'?'user':'bot') + (typing?' typing':'');
+  div.textContent = text;
+  box.appendChild(div);
+  box.scrollTop = box.scrollHeight;
+  return div;
+}
+function chipAsk(q){ document.getElementById('chatInput').value = q; sendChat(); }
+async function sendChat(){
+  if(chatBusy) return;
+  const input = document.getElementById('chatInput');
+  const text = input.value.trim();
+  if(!text) return;
+  input.value = '';
+  chatAppend('user', text);
+  chatHistory.push({role:'user', content:text});
+  chatBusy = true;
+  const typingEl = chatAppend('bot', '諗緊...', true);
+  try{
+    const res = await fetch('/api/chat', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({messages: chatHistory.slice(-12)})
+    });
+    const data = await res.json();
+    typingEl.remove();
+    const reply = data.reply || '唔好意思出咗啲問題,請WhatsApp我哋:+852 5104 4417';
+    chatAppend('bot', reply);
+    chatHistory.push({role:'assistant', content:reply});
+  }catch(e){
+    typingEl.remove();
+    chatAppend('bot', '網絡繁忙,請稍後再試,或者WhatsApp真人客服:+852 5104 4417');
+  }finally{
+    chatBusy = false;
+  }
+}
+
+/* ===== 瀏覽量追蹤 ===== */
+try{ fetch('/api/pv?t=page', {keepalive:true}); }catch(e){}
+
 /* header滾動陰影 */
 window.addEventListener('scroll', () => {
   document.querySelector('.site-header').classList.toggle('scrolled', window.scrollY > 8);
@@ -1206,15 +1549,28 @@ renderProductSchema();
     const list = await res.json();
     if(!Array.isArray(list) || list.length === 0) return;
     list.forEach(p => {
+      if(p.delisted) return; // 自動落架嘅唔顯示
       if(!PRODUCTS.some(x => x.id === p.id)) PRODUCTS.push(p);
     });
+    // Bestseller自動置頂:有銷量嘅排最前(stable sort,其餘保持原有次序)
+    PRODUCTS.sort((a,b) => (b.soldQty||0) - (a.soldQty||0));
     // 重新render受影響嘅區塊
     document.getElementById('trendingGrid').innerHTML = PRODUCTS.filter(p => p.trending).map(productCardHTML).join('');
     const activeView = document.querySelector('.view.active').id;
     if(activeView === 'view-shop') renderShopGrid(currentProductCat);
     renderProductSchema();
   }catch(e){ /* 動態目錄載入失敗唔影響內置產品 */ }
+  openDeepLink();
 })();
+
+/* SEO深層連結:/?p=13 直接開產品頁 */
+function openDeepLink(){
+  try{
+    const pid = parseInt(new URLSearchParams(location.search).get('p'));
+    if(pid && findProduct(pid)) showProduct(pid);
+  }catch(e){}
+}
+openDeepLink();
 </script>
 
 </body>

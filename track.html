@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>訂單追蹤 — 揀啱 PICKED RIGHT IT</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f2eef4; --card:#fbf9fb; --ink:#1f1726; --ink-soft:#726a78;
+    --accent-a:#ff3d7a; --accent-b:#5b3df5;
+    --accent-grad:linear-gradient(135deg,var(--accent-a),var(--accent-b));
+    --line:#ddd5df; --ok:#2e9e5b; --err:#b3372f; --err-bg:#fbe9e9;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Noto Sans TC','Inter',sans-serif;line-height:1.7;}
+  a{color:inherit;}
+  .topbar{border-bottom:1px solid var(--line);background:rgba(242,238,244,.9);}
+  .topbar-inner{max-width:760px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:10px;}
+  .brand-mark{width:34px;height:34px;position:relative;flex:none;color:var(--accent-a);}
+  .brand-mark svg{position:absolute;inset:0;width:100%;height:100%;}
+  .brand-mark span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif TC',serif;font-weight:600;font-size:.95rem;color:var(--ink);}
+  .brand-text{font-family:'Noto Serif TC',serif;font-weight:600;}
+  .wrap{max-width:760px;margin:0 auto;padding:40px 20px 80px;}
+  h1{font-family:'Noto Serif TC',serif;font-size:1.6rem;margin:0 0 8px;font-weight:600;}
+  .sub{color:var(--ink-soft);font-size:.9rem;margin-bottom:28px;}
+  .search-row{display:flex;gap:10px;}
+  input{flex:1;padding:14px 18px;border:1px solid var(--line);border-radius:999px;font-family:'Inter',sans-serif;font-size:.95rem;background:#fff;}
+  input:focus{outline:none;border-color:var(--accent-a);}
+  .btn{padding:14px 28px;border:none;border-radius:999px;background:var(--accent-grad);color:#fff;font-family:inherit;font-size:.9rem;font-weight:600;cursor:pointer;box-shadow:0 8px 20px -8px rgba(255,61,122,.5);}
+  .btn:disabled{opacity:.55;cursor:not-allowed;}
+  .result{margin-top:30px;}
+  .timeline{border-left:2px solid var(--line);margin-left:8px;padding-left:22px;display:flex;flex-direction:column;gap:18px;}
+  .tl-item{position:relative;}
+  .tl-item::before{content:"";position:absolute;left:-28px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--line);}
+  .tl-item:first-child::before{background:var(--accent-a);box-shadow:0 0 0 4px rgba(255,61,122,.18);}
+  .tl-time{font-size:.74rem;color:var(--ink-soft);font-family:'Inter',sans-serif;}
+  .tl-desc{font-size:.9rem;}
+  .err-box{margin-top:24px;background:var(--err-bg);color:var(--err);padding:16px 20px;border-radius:14px;font-size:.88rem;}
+  .err-box a{font-weight:600;}
+  .raw{margin-top:20px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;font-size:.78rem;font-family:'Inter',monospace;white-space:pre-wrap;word-break:break-all;color:var(--ink-soft);}
+  .wa-tip{margin-top:30px;font-size:.85rem;color:var(--ink-soft);}
+  .wa-tip a{color:var(--accent-a);font-weight:600;text-decoration:none;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-inner">
+    <span class="brand-mark">
+      <svg viewBox="0 0 100 100"><path d="M50,8 C22,6 6,28 8,50 C10,74 28,92 52,90 C76,92 94,70 92,46 C90,20 74,6 50,8 Z" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+      <span>揀</span>
+    </span>
+    <a class="brand-text" href="/" style="text-decoration:none">揀啱 PICKED RIGHT IT</a>
+  </div>
+</div>
+
+<div class="wrap">
+  <h1>訂單追蹤</h1>
+  <p class="sub">輸入你嘅追蹤號碼(出貨後我哋會經WhatsApp發畀你),即刻睇件貨去到邊。</p>
+  <div class="search-row">
+    <input id="trackNum" placeholder="例:CJPHK1234567890" autocomplete="off" onkeydown="if(event.key==='Enter')doTrack()">
+    <button class="btn" id="trackBtn" onclick="doTrack()">查詢</button>
+  </div>
+  <div class="result" id="result"></div>
+  <p class="wa-tip">搵唔到追蹤號碼?<a href="https://wa.me/85251044417?text=%E4%BD%A0%E5%A5%BD%2C%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2%E8%A8%82%E5%96%AE%E7%8B%80%E6%85%8B">WhatsApp我哋</a>,真人幫你查。</p>
+</div>
+
+<script>
+async function doTrack(){
+  const num = document.getElementById('trackNum').value.trim();
+  const box = document.getElementById('result');
+  if(!num){ box.innerHTML = '<div class="err-box">請輸入追蹤號碼</div>'; return; }
+  const btn = document.getElementById('trackBtn');
+  btn.disabled = true; btn.textContent = '查緊...';
+  box.innerHTML = '';
+  try{
+    const res = await fetch(`/api/track?num=${encodeURIComponent(num)}`);
+    const data = await res.json();
+    if(data.error){
+      box.innerHTML = `<div class="err-box">暫時查唔到(${data.error})。<br>你可以試下用官方追蹤網:<a href="${data.fallbackUrl||('https://www.cjpacket.com/?trackNumber='+encodeURIComponent(num))}" target="_blank" rel="noopener">撳呢度直接查 ↗</a></div>`;
+      return;
+    }
+    const t = data.tracking;
+    // CJ回傳結構可能係array of events或者object,兩種都處理
+    const events = Array.isArray(t) ? t : (t && (t.trackingInfo || t.list || t.details)) || null;
+    if(events && events.length){
+      box.innerHTML = '<div class="timeline">' + events.map(e => `
+        <div class="tl-item">
+          <div class="tl-time">${e.date || e.time || e.trackTime || ''}</div>
+          <div class="tl-desc">${e.description || e.content || e.trackContent || JSON.stringify(e)}</div>
+        </div>`).join('') + '</div>';
+    }else{
+      box.innerHTML = `<div class="raw">${JSON.stringify(t, null, 2)}</div>`;
+    }
+  }catch(e){
+    box.innerHTML = `<div class="err-box">查詢出錯,請稍後再試,或者 <a href="https://www.cjpacket.com/?trackNumber=${encodeURIComponent(num)}" target="_blank" rel="noopener">用官方追蹤網查 ↗</a></div>`;
+  }finally{
+    btn.disabled = false; btn.textContent = '查詢';
+  }
+}
+</script>
+</body>
+</html>

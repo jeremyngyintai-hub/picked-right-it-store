@@ -1,0 +1,103 @@
+// ============================================================
+// POST /api/chat
+// ------------------------------------------------------------
+// AI客服:用Claude Haiku(平價快速)回答一般客服問題。
+// 特別功能:客人message入面有追蹤號碼,會自動查CJ物流,答埋去到邊。
+//
+// 需要環境變數:ANTHROPIC_API_KEY(console.anthropic.com攞)
+// ============================================================
+
+const CJ_BASE = "https://developers.cjdropshipping.com/api2.0/v1";
+
+const SYSTEM_PROMPT = `你係「揀啱 PICKED RIGHT IT」(picked-right.it.com)嘅網店客服助手。用客人嘅語言回覆(廣東話客人用廣東話,簡體用簡體,英文用英文),語氣親切、簡潔,每次回覆唔好超過120字。
+
+商店資料:
+- 香港生活選物店,9大類:家居、美妝(主打PDRN韓系護膚)、電子、寵物、母嬰玩具、運動戶外、飾物配件、袋鞋、汽車用品
+- 出貨:落單後48小時內安排出貨,一般7-12日送到,支援順豐站/智能櫃自取,全程有追蹤號碼
+- 退換政策:只限「壞貨、寄錯款、運送損壞」— 收貨7日內影相WhatsApp客服可補寄或退款;「唔啱心水/改變主意」唔屬退換範圍,可以引導客人落單前先問清楚
+- 付款:信用卡(Visa/Mastercard,經Stripe安全處理),或者WhatsApp落單
+- 新客優惠碼:PICKED10(首單9折)
+- 訂單追蹤:picked-right.it.com/track.html,或者直接畀追蹤號碼我
+- WhatsApp真人客服:+852 5104 4417(https://wa.me/85251044417)
+
+規則:
+- 唔好作資料。唔知/查唔到嘅嘢(例如具體訂單內容、退款進度),叫客人WhatsApp真人客服跟進
+- 涉及改地址、取消訂單、退款申請:一律引導去WhatsApp真人處理
+- 唔好承諾確實送達日期,只講一般7-12日
+- 如果對話入面有[物流查詢結果],用嗰啲資料簡潔咁答客人件貨去到邊`;
+
+async function tryTrack(text) {
+  // 偵測似追蹤號碼嘅字串(8-30位英數,起碼有2個數字)
+  const m = text.match(/\b[A-Z]{0,6}\d[\dA-Z-]{7,28}\b/i);
+  if (!m || !process.env.CJ_API_KEY) return null;
+  const num = m[0];
+  try {
+    const authRes = await fetch(`${CJ_BASE}/authentication/getAccessToken`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ apiKey: process.env.CJ_API_KEY }),
+    });
+    const auth = await authRes.json();
+    if (!auth.result) return null;
+    await new Promise((r) => setTimeout(r, 1100));
+    const tRes = await fetch(`${CJ_BASE}/logistic/getTrackInfo?trackNumber=${encodeURIComponent(num)}`, {
+      headers: { "CJ-Access-Token": auth.data.accessToken },
+    });
+    const t = await tRes.json();
+    if (!t.result && !t.success) return { num, info: "查唔到呢個號碼,可能未起卷或者號碼有誤" };
+    return { num, info: JSON.stringify(t.data).slice(0, 1200) };
+  } catch {
+    return null;
+  }
+}
+
+module.exports = async (req, res) => {
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+  if (!process.env.ANTHROPIC_API_KEY) {
+    return res.status(500).json({ reply: "AI客服暫時未啟用(店主未設定ANTHROPIC_API_KEY)。請直接WhatsApp我哋:+852 5104 4417" });
+  }
+
+  try {
+    let { messages } = req.body || {};
+    if (!Array.isArray(messages) || messages.length === 0) {
+      return res.status(400).json({ error: "要提供messages" });
+    }
+    // 防濫用:最多留最近12個message,每個最長1200字
+    messages = messages.slice(-12).map((m) => ({
+      role: m.role === "assistant" ? "assistant" : "user",
+      content: String(m.content || "").slice(0, 1200),
+    }));
+
+    // 最後一個user message有追蹤號碼?自動查埋
+    const lastUser = [...messages].reverse().find((m) => m.role === "user");
+    let systemExtra = "";
+    if (lastUser) {
+      const track = await tryTrack(lastUser.content);
+      if (track) systemExtra = `\n\n[物流查詢結果] 追蹤號碼 ${track.num}:${track.info}`;
+    }
+
+    const apiRes = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": process.env.ANTHROPIC_API_KEY,
+        "anthropic-version": "2023-06-01",
+      },
+      body: JSON.stringify({
+        model: "claude-haiku-4-5",
+        max_tokens: 400,
+        system: SYSTEM_PROMPT + systemExtra,
+        messages,
+      }),
+    });
+    const data = await apiRes.json();
+    if (data.error) throw new Error(data.error.message || "AI API錯誤");
+    const reply = (data.content || []).filter((c) => c.type === "text").map((c) => c.text).join("\n") || "唔好意思,暫時答唔到,請WhatsApp我哋:+852 5104 4417";
+    res.status(200).json({ reply });
+  } catch (err) {
+    console.error(err);
+    res.status(200).json({ reply: "系統繁忙,請稍後再試,或者直接WhatsApp真人客服:+852 5104 4417" });
+  }
+};
+
+module.exports.config = { maxDuration: 30 };

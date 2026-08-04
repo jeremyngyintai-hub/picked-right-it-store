@@ -7,6 +7,12 @@ const CATEGORY_KEYWORDS = {
   home: ["Home, Garden & Furniture", "Home Improvement"],
   beauty: ["Health, Beauty & Hair"],
   tech: ["Consumer Electronics", "Phones & Accessories"],
+  pets: ["Pet Supplies"],
+  baby: ["Toys, Kids & Babies"],
+  sports: ["Sports & Outdoors"],
+  accessories: ["Jewelry & Watches"],
+  bags: ["Bags & Shoes"],
+  auto: ["Automobiles & Motorcycles"],
 };
 
 const USD_TO_HKD = 7.8;
@@ -71,6 +77,7 @@ module.exports = async (req, res) => {
     return res.status(401).json({ error: "密碼錯誤" });
   }
 
+  const pageNum = Math.max(1, parseInt(req.query.page) || 1);
   try {
     const accessToken = await getAccessToken();
     await sleep(1100);
@@ -90,8 +97,8 @@ module.exports = async (req, res) => {
             categoryId,
             orderBy: "listedNum",
             sort: "desc",
-            pageNum: "1",
-            pageSize: "10",
+            pageNum: String(pageNum),
+            pageSize: "20",
           });
           const list = await cjGet(`/product/list?${params.toString()}`, accessToken);
           if (list && list.list) candidates.push(...list.list);
@@ -111,7 +118,7 @@ module.exports = async (req, res) => {
           return true;
         })
         .sort((a, b) => (b.listedNum || 0) - (a.listedNum || 0))
-        .slice(0, 5);
+        .slice(0, 20);
 
       results[ourCat] = uniqueTop.map((p) => ({
         cjPid: p.pid,
@@ -135,3 +142,6 @@ module.exports = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+
+
+module.exports.config = { maxDuration: 60 };

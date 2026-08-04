@@ -14,6 +14,7 @@
 
 const Stripe = require("stripe");
 const { getCatalog } = require("./lib/catalog");
+const { kvReady, kv, pipeline } = require("./lib/kv");
 const cj = require("./lib/cjClient");
 
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
@@ -59,6 +60,33 @@ module.exports = async (req, res) => {
       const shipping = fullSession.shipping_details || fullSession.customer_details;
       const cart = JSON.parse(session.metadata.cart);
       const productMap = await getCatalog();
+
+      // ===== 銷售記錄(KV有設定先做,失敗唔影響落單流程)=====
+      try {
+        if (kvReady()) {
+          const now = Date.now();
+          const items = Object.entries(cart).map(([id, qty]) => {
+            const prod = productMap[id] || {};
+            return {
+              id: Number(id), name: prod.name || `#${id}`, qty,
+              priceHKD: prod.sellPriceHKD || 0,
+              costHKD: prod.costUSD ? Math.round(prod.costUSD * 7.8) : null,
+            };
+          });
+          const totalHKD = items.reduce((s, it) => s + it.priceHKD * it.qty, 0);
+          await kv(["LPUSH", "orders", JSON.stringify({ sid: session.id, ts: now, totalHKD, items })]);
+          await kv(["LTRIM", "orders", "0", "999"]); // 最多keep最近1000張單
+          const cmds = [];
+          items.forEach((it) => {
+            cmds.push(["INCRBY", `sold:qty:${it.id}`, String(it.qty)]);
+            cmds.push(["INCRBYFLOAT", `sold:rev:${it.id}`, String(it.priceHKD * it.qty)]);
+            cmds.push(["SET", `lastsale:${it.id}`, String(now)]);
+          });
+          if (cmds.length) await pipeline(cmds);
+        }
+      } catch (kvErr) {
+        console.error("KV訂單記錄失敗(唔影響落單):", kvErr.message);
+      }
 
       const accessToken = await cj.getAccessToken();
 

@@ -43,9 +43,39 @@ function draftCopy(nameEn, cat) {
       "en": { name: short, desc: "Salon-level results at home. Tested by our team before listing — ships within 48 hours." },
     },
     tech: {
-      "zh-Hant": { name: short, desc: "返工打機兩用嘅實用之選。團隊實測先上架,即插即用,48小時內出貨,順豐站自取。" },
-      "zh-Hans": { name: short, desc: "办公游戏两用的实用之选。团队实测才上架,即插即用,48小时内发货,顺丰站自取。" },
-      "en": { name: short, desc: "A practical pick for work and play, tested by our team. Plug and play — ships within 48 hours." },
+      "zh-Hant": { name: short, desc: "返工打機兩用嘅實用之選。團隊實測先上架,即插即用,落單48小時內安排出貨。" },
+      "zh-Hans": { name: short, desc: "办公游戏两用的实用之选。团队实测才上架,即插即用,下单48小时内安排发货。" },
+      "en": { name: short, desc: "A practical pick for work and play, tested by our team. Dispatched within 48 hours." },
+    },
+    pets: {
+      "zh-Hant": { name: short, desc: "毛孩都值得好嘢。團隊實測質料安全先上架,主子鍾意先算數,落單48小時內安排出貨。" },
+      "zh-Hans": { name: short, desc: "毛孩也值得好东西。团队实测材质安全才上架,下单48小时内安排发货。" },
+      "en": { name: short, desc: "Your furry friend deserves the good stuff. Material-checked by our team before listing." },
+    },
+    baby: {
+      "zh-Hant": { name: short, desc: "陪住小朋友成長嘅好幫手。團隊實測用料同安全性先上架,爸媽買得放心。" },
+      "zh-Hans": { name: short, desc: "陪伴孩子成长的好帮手。团队实测用料与安全性才上架,爸妈买得放心。" },
+      "en": { name: short, desc: "A trusted companion for growing kids — safety-checked by our team before listing." },
+    },
+    sports: {
+      "zh-Hant": { name: short, desc: "行山跑步健身都用得著。團隊實測耐用度先上架,運動裝備一步到位。" },
+      "zh-Hans": { name: short, desc: "登山跑步健身都用得上。团队实测耐用度才上架,运动装备一步到位。" },
+      "en": { name: short, desc: "Built for hikes, runs, and workouts — durability-tested by our team before listing." },
+    },
+    accessories: {
+      "zh-Hant": { name: short, desc: "日常造型點睛之選。團隊實測質感先上架,返工約會都襯得起。" },
+      "zh-Hans": { name: short, desc: "日常造型点睛之选。团队实测质感才上架,上班约会都配得上。" },
+      "en": { name: short, desc: "The finishing touch to any look — quality-checked by our team before listing." },
+    },
+    bags: {
+      "zh-Hant": { name: short, desc: "返工返學旅行都啱用。團隊實測車工同容量先上架,實用又襯衫。" },
+      "zh-Hans": { name: short, desc: "上班上学旅行都合适。团队实测做工与容量才上架,实用又百搭。" },
+      "en": { name: short, desc: "For work, school, and travel — stitching and capacity checked by our team." },
+    },
+    auto: {
+      "zh-Hant": { name: short, desc: "架車嘅實用升級。團隊實測安裝簡易度先上架,新手都裝到。" },
+      "zh-Hans": { name: short, desc: "爱车的实用升级。团队实测安装简易度才上架,新手也能装。" },
+      "en": { name: short, desc: "A practical upgrade for your car — installation-tested by our team before listing." },
     },
   };
   return t[cat] || t.tech;
@@ -100,94 +130,122 @@ async function ghPutFile(path, contentStr, sha, message) {
 module.exports = async (req, res) => {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
-  const { secret, pid, cat, markup, priceHKD, vid } = req.body || {};
+  const { secret, pid, cat, markup, priceHKD, vid, items } = req.body || {};
   if (secret !== process.env.ADMIN_SYNC_SECRET) {
     return res.status(401).json({ error: "密碼錯誤" });
   }
-  if (!pid) return res.status(400).json({ error: "要提供 pid" });
   if (!process.env.GITHUB_TOKEN || !process.env.GITHUB_REPO) {
     return res.status(500).json({ error: "未設定 GITHUB_TOKEN / GITHUB_REPO 環境變數" });
   }
 
-  const category = ["home", "beauty", "tech"].includes(cat) ? cat : "tech";
+  // 批量模式:items = [{pid, cat}, ...](最多10件);單件模式照舊用pid
+  const queue = Array.isArray(items) && items.length
+    ? items.slice(0, 10)
+    : (pid ? [{ pid, cat, priceHKD, vid }] : []);
+  if (queue.length === 0) return res.status(400).json({ error: "要提供 pid 或 items" });
+
+  const mk = parseFloat(markup) || 2.8;
+  const report = { imported: [], skipped: [], errors: [] };
 
   try {
-    // 1. 攞CJ產品詳情
     const accessToken = await cjAuth();
     await sleep(1100);
-    const cjRes = await fetch(`${CJ_BASE}/product/query?pid=${encodeURIComponent(pid)}`, {
-      headers: { "CJ-Access-Token": accessToken },
-    });
-    const cjData = await cjRes.json();
-    if (!cjData.result && !cjData.success) throw new Error(cjData.message || "CJ查詢失敗");
-    const p = cjData.data;
 
-    const variants = p.variants || [];
-    const chosenVariant = vid
-      ? variants.find((v) => v.vid === vid) || variants[0]
-      : variants[0];
-    if (!chosenVariant) throw new Error("呢個產品冇variants,無法自動落單,唔建議上架");
-
-    const costUSD = parseCostUSD(chosenVariant.variantSellPrice) || parseCostUSD(p.sellPrice) || 0;
-
-    // 2. 計售價:優先用你直接指定嘅priceHKD;否則用倍數markup(預設2.8)
-    const mk = parseFloat(markup) || 2.8;
-    const finalPrice = parseInt(priceHKD) || prettyPrice(costUSD * USD_TO_HKD * mk);
-
-    // 3. 讀取而家嘅products.json,計新id
+    // 讀一次products.json,批量處理完先commit一次
     const { content, sha } = await ghGetFile("data/products.json");
     const list = content ? JSON.parse(content) : [];
-    const maxExisting = Math.max(12, ...list.map((x) => x.id || 0)); // 12 = index.html內置產品最大id
-    const newId = maxExisting + 1;
+    let nextId = Math.max(12, ...list.map((x) => x.id || 0)) + 1;
+    let anyAdded = false;
 
-    // 防止重複上架同一件貨
-    if (list.some((x) => x.cjPid === pid)) {
-      return res.status(409).json({ error: "呢件產品已經上架咗(pid重複)" });
+    for (const item of queue) {
+      const VALID_CATS = ["home","beauty","tech","pets","baby","sports","accessories","bags","auto"];
+        const itemCat = VALID_CATS.includes(item.cat) ? item.cat : "tech";
+      try {
+        if (list.some((x) => x.cjPid === item.pid)) {
+          report.skipped.push({ pid: item.pid, reason: "已上架(pid重複)" });
+          continue;
+        }
+        const cjRes = await fetch(`${CJ_BASE}/product/query?pid=${encodeURIComponent(item.pid)}`, {
+          headers: { "CJ-Access-Token": accessToken },
+        });
+        const cjData = await cjRes.json();
+        if (!cjData.result && !cjData.success) throw new Error(cjData.message || "CJ查詢失敗");
+        const p = cjData.data;
+
+        const variants = p.variants || [];
+        const chosenVariant = item.vid
+          ? variants.find((v) => v.vid === item.vid) || variants[0]
+          : variants[0];
+        if (!chosenVariant) throw new Error("冇variants,無法自動落單");
+
+        const costUSD = parseCostUSD(chosenVariant.variantSellPrice) || parseCostUSD(p.sellPrice) || 0;
+        const finalPrice = parseInt(item.priceHKD) || prettyPrice(costUSD * USD_TO_HKD * mk);
+        const copy = draftCopy(p.productNameEn, itemCat);
+        const images = (p.productImageSet || [p.bigImage].filter(Boolean)).slice(0, 6);
+        const video = p.productVideo || p.video || "";
+
+        list.push({
+          id: nextId,
+          catClass: itemCat,
+          price: finalPrice,
+          icon: "box",
+          image: images[0] || "",
+          images,
+          video,
+          trending: true,
+          rating: 4.5,
+          reviews: 30,
+          i18n: copy,
+          cjPid: item.pid,
+          cjVid: chosenVariant.vid,
+          costUSD,
+          addedAt: new Date().toISOString(),
+        });
+        report.imported.push({
+          id: nextId,
+          name: copy["zh-Hant"].name,
+          priceHKD: finalPrice,
+          estGrossMarginHKD: Math.round(finalPrice - costUSD * USD_TO_HKD),
+        });
+        nextId++;
+        anyAdded = true;
+      } catch (e) {
+        report.errors.push({ pid: item.pid, error: e.message });
+      }
+      await sleep(1100); // CJ每秒1次限制
     }
 
-    const copy = draftCopy(p.productNameEn, category);
-    const images = p.productImageSet || [p.bigImage].filter(Boolean);
+    if (anyAdded) {
+      await ghPutFile(
+        "data/products.json",
+        JSON.stringify(list, null, 2),
+        sha,
+        `auto-import: ${report.imported.length} product(s)`
+      );
+    }
 
-    const newProduct = {
-      id: newId,
-      catClass: category,
-      price: finalPrice,
-      icon: "box",
-      image: images[0] || "",
-      trending: true,
-      rating: 4.5,
-      reviews: 30,
-      i18n: copy,
-      cjPid: pid,
-      cjVid: chosenVariant.vid,
-      costUSD,
-      addedAt: new Date().toISOString(),
-    };
-    list.push(newProduct);
-
-    // 4. commit返上GitHub → Vercel自動重新部署
-    await ghPutFile(
-      "data/products.json",
-      JSON.stringify(list, null, 2),
-      sha,
-      `auto-import: ${copy["zh-Hant"].name} (HK$${finalPrice})`
-    );
+    // 單件模式維持返舊回應格式,dashboard批量模式用report
+    if (!Array.isArray(items) && report.imported.length === 1) {
+      return res.status(200).json({
+        success: true,
+        message: "已上架!等Vercel重新部署完(約1分鐘)就會喺網站見到。",
+        product: { ...report.imported[0], vid: undefined },
+      });
+    }
+    if (!Array.isArray(items) && report.imported.length === 0) {
+      const why = report.skipped[0] ? report.skipped[0].reason : (report.errors[0] ? report.errors[0].error : "未知錯誤");
+      return res.status(409).json({ error: why });
+    }
 
     res.status(200).json({
       success: true,
-      message: `已上架!等Vercel重新部署完(約1分鐘)就會喺網站見到。`,
-      product: {
-        id: newId,
-        name: copy["zh-Hant"].name,
-        priceHKD: finalPrice,
-        costUSD,
-        estGrossMarginHKD: Math.round(finalPrice - costUSD * USD_TO_HKD),
-        vid: chosenVariant.vid,
-        image: images[0],
-      },
+      message: `批量完成:上架${report.imported.length}件、跳過${report.skipped.length}件、失敗${report.errors.length}件`,
+      report,
     });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: err.message });
+    res.status(500).json({ error: err.message, report });
   }
 };
+
+module.exports.config = { maxDuration: 60 };
