@@ -11,11 +11,7 @@ module.exports = async (req, res) => {
     { loc: `${base}/track.html`, priority: "0.5", changefreq: "monthly" },
   ];
 
-  // 內置產品 id 1-12
-  for (let i = 1; i <= 12; i++) {
-    urls.push({ loc: `${base}/?p=${i}`, priority: "0.8", changefreq: "weekly" });
-  }
-  // 動態上架產品
+  // 動態上架產品(全部產品由dashboard管理)
   try {
     const list = await fetch(`${base}/data/products.json`).then((r) => r.json());
     (list || []).forEach((p) => {

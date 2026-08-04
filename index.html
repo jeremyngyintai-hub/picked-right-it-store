@@ -94,6 +94,12 @@
   .logo-text b{font-family:var(--font-display);font-size:1.15rem;font-weight:600;}
   .logo-text em{font-style:normal;font-family:'Inter',sans-serif;font-size:.6rem;letter-spacing:.2em;color:var(--ink-soft);}
   .main-nav{display:flex;gap:26px;}
+  .nav-more{position:relative;}
+  .nav-drop{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 16px 40px -12px rgba(31,23,38,.25);padding:8px;display:none;min-width:150px;z-index:45;}
+  .nav-drop a{display:block;padding:9px 16px;border-radius:9px;font-size:.86rem;white-space:nowrap;}
+  .nav-drop a:hover{background:var(--paper);color:var(--accent-a);}
+  .nav-more.open .nav-drop{display:block;}
+  @media(hover:hover){ .nav-more:hover .nav-drop{display:block;} }
   .main-nav a{font-size:.92rem;color:var(--ink-soft);position:relative;padding:4px 0;}
   .main-nav a:hover,.main-nav a.on{color:var(--ink);}
   .main-nav a.on::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:2px;background:var(--accent-grad);}
@@ -351,7 +357,7 @@
   .story .wrap{padding:72px 24px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
   .story .eyebrow{color:#a9a49a;}
   .story h2{font-size:clamp(1.5rem,3vw,2rem);margin:14px 0 18px;}
-  .story p{color:#c9c5ba;font-size:.95rem;max-width:34em;}
+  .story p{white-space:pre-line;color:#c9c5ba;font-size:.95rem;max-width:34em;}
   .story-mark{justify-self:center;width:180px;height:180px;color:var(--mark);position:relative;}
   .story-mark span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:2.6rem;color:var(--paper-inv);}
 
@@ -409,6 +415,9 @@
   @media (max-width:640px){
     .header-inner{gap:10px;}
     .main-nav{position:absolute;top:100%;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;gap:0;padding:6px 24px;display:none;}
+    .nav-more{position:static;}
+    .nav-drop{position:static;transform:none;display:block;border:none;box-shadow:none;background:none;padding:0 0 0 14px;min-width:0;}
+    #navMoreBtn{display:none;}
     .main-nav.show{display:flex;}
     .main-nav a{padding:12px 0;border-bottom:1px solid var(--line);}
     .main-nav a:last-child{border-bottom:none;}
@@ -484,6 +493,10 @@
       <a data-i18n="cat.home" onclick="showShop('home')">家居</a>
       <a data-i18n="cat.beauty" onclick="showShop('beauty')">美妝</a>
       <a data-i18n="cat.tech" onclick="showShop('tech')">電子</a>
+      <div class="nav-more" id="navMore">
+        <a id="navMoreBtn" onclick="toggleNavMore(event)">更多 ▾</a>
+        <div class="nav-drop" id="navDrop"></div>
+      </div>
     </nav>
     <div class="lang-switch" role="group" aria-label="Language">
       <button id="langBtn-zh-Hant" onclick="setLang('zh-Hant')">繁</button>
@@ -875,11 +888,12 @@ const I18N = {
   diff:{eyebrow:'點解揀我哋',title:'同一般網購平台有咩唔同',themTitle:'一般網購平台',usTitle:'揀啱',
     themPoints:['成千上萬選擇,要自己慢慢篩','訂單狀態不明,查極都冇人理','客服機械人回覆,答非所問','質素參差,靠賭運氣'],
     usPoints:['每款產品團隊嚴選先上架','落單後一般一般48小時內安排出貨(工作日計),全程單號追蹤','WhatsApp真人客服親自跟進','壞貨/寄錯,7日內包換,真人跟到尾']},
-  story:{eyebrow:'關於揀啱',title:'唔係乜都賣,而係乜都幫你揀好',
-    desc:'市面上嘅選擇太多,揀啱嘅角色好簡單:喺你買之前,我哋已經幫你試用、比較、篩走唔值得嘅選擇。你見到嘅每一款,都係我哋覺得「啱」先會放上嚟。'},
+  story:{eyebrow:'創辦故事',title:'一切由一個「幫到手」開始',
+    desc:'成立呢間店,唔係源於一個宏大嘅商業計劃,而係源於一次好平凡嘅對話。\n\n幾年前,我留意到身邊最親近嘅人,日復日被同一個問題困擾——想搵一件真正合用嘅嘢,但市面上嘅選擇,唔係價錢貴得離譜,就係質素參差,買完又後悔。有一晚,聽住佢無奈咁講「算啦,將就下用啦」,嗰一刻我心入面好唔舒服。\n\n我開始四圍搵、逐樣格價、逐間廠比較。當我終於搵到真正合適嘅嘢交到佢手上,見到佢鬆一口氣嘅笑容,我先明白:原來一件小小嘅產品,可以令一個人嘅生活輕鬆好多。\n\n於是我問自己——如果我身邊嘅人有呢個困難,係咪仲有好多人同樣咁徬徨?揀啱就係咁誕生。我哋唔求做最大,只求做最上心:每一件上架嘅產品,我都會當「呢件嘢係咪放心交畀屋企人用」咁去揀。\n\n一路走嚟,最想講嘅係多謝。多謝當初嗰位畀我睇見問題嘅人,多謝每一位願意信任一間小店嘅顧客。你哋每一個訂單,唔止係一單生意,而係一份託付。\n\n我哋會繼續用「幫屋企人揀嘢」嘅心,服務每一位客人。'},
   newsletter:{eyebrow:'揀啱情報網',title:'加入WhatsApp情報網,新客戶即享9折',
     desc:'第一時間收到新品上架、限定優惠同補貨通知,唔想錯過就click低面個掣。',cta:'用WhatsApp加入',
     waMsg:'你好,我想加入揀啱嘅WhatsApp情報網,接收新品同優惠通知。'},
+  shop:{empty:'新一批嚴選貨品準備緊,好快返嚟!有咩想搵可以WhatsApp我哋。'},
   product:{add:'加入購物車',added:'已加入 ✓',back:'返回產品列表',related:'你可能都啱用',
     chooseVariant:'揀款式 / 尺碼',ship:'一般48小時內安排出貨 · 一般7-12日送到,順豐站自取',guarantee:'壞貨/寄錯,7日內包換',securePay:'Stripe安全加密付款',badge:'推介',detailTrending:'店長推介',reviewsWord:'則評價'},
   cart:{title:'購物車',empty:'購物車暫時得個吉,<br>返去揀啲啱你嘅嘢啦。',subtotal:'小計',
@@ -929,11 +943,12 @@ const I18N = {
   diff:{eyebrow:'为什么选我们',title:'和一般网购平台有什么不同',themTitle:'一般网购平台',usTitle:'拣啱',
     themPoints:['成千上万个选择,要自己慢慢筛选','订单状态不明,查了也没人理','客服机器人回复,答非所问','质量参差,全靠运气'],
     usPoints:['每款产品团队严选才上架','下单后一般一般48小时内安排发货(工作日计),全程单号跟踪','WhatsApp真人客服亲自跟进','坏货/发错,7天内包换,真人跟进到底']},
-  story:{eyebrow:'关于拣啱',title:'不是什么都卖,而是什么都帮你选好',
-    desc:'市面上的选择太多,拣啱的角色很简单:在你下单之前,我们已经帮你试用、比较、筛走不值得的选择。你看到的每一款,都是我们认为"对"才会上架的。'},
+  story:{eyebrow:'创办故事',title:'一切由一个「帮到手」开始',
+    desc:'成立这家店,不是源于一个宏大的商业计划,而是源于一次很平凡的对话。\n\n几年前,我留意到身边最亲近的人,日复一日被同一个问题困扰——想找一件真正合用的东西,但市面上的选择,不是价格贵得离谱,就是质量参差,买完又后悔。有一晚,听着他无奈地说「算了,将就着用吧」,那一刻我心里很不舒服。\n\n我开始四处找、逐样比价、逐家厂比较。当我终于找到真正合适的东西交到他手上,看到他松一口气的笑容,我才明白:原来一件小小的产品,可以让一个人的生活轻松很多。\n\n于是我问自己——如果我身边的人有这个困难,是不是还有很多人同样彷徨?拣啱就是这样诞生。我们不求做最大,只求做最上心:每一件上架的产品,我都会以「这件东西能不能放心交给家人用」的标准去挑。\n\n一路走来,最想说的是感谢。感谢当初那位让我看见问题的人,感谢每一位愿意信任一家小店的顾客。你们每一个订单,不只是一单生意,而是一份托付。\n\n我们会继续用「帮家人挑东西」的心,服务每一位客人。'},
   newsletter:{eyebrow:'拣啱情报网',title:'加入WhatsApp情报网,新客户即享9折',
     desc:'第一时间收到新品上架、限定优惠和补货通知,不想错过就点下面的按钮。',cta:'用WhatsApp加入',
     waMsg:'您好,我想加入拣啱的WhatsApp情报网,接收新品和优惠通知。'},
+  shop:{empty:'新一批严选货品准备中,很快回来!想找什么可以WhatsApp我们。'},
   product:{add:'加入购物车',added:'已加入 ✓',back:'返回产品列表',related:'你可能也用得上',
     chooseVariant:'选择款式 / 尺码',ship:'一般48小时内安排发货 · 一般7-12天送达,顺丰站自取',guarantee:'坏货/发错,7天内包换',securePay:'Stripe安全加密付款',badge:'推荐',detailTrending:'店长推荐',reviewsWord:'条评价'},
   cart:{title:'购物车',empty:'购物车暂时是空的,<br>回去挑些适合你的东西吧。',subtotal:'小计',
@@ -983,11 +998,12 @@ const I18N = {
   diff:{eyebrow:'Why Picked Right It',title:"How We're Different From a Typical Marketplace",themTitle:'A Typical Marketplace',usTitle:'Picked Right It',
     themPoints:['Thousands of listings — you do all the filtering','No visibility on your order status','Chatbot replies that miss the point',"Inconsistent quality, it's a gamble"],
     usPoints:['Every product hand-picked by our team','Usually dispatched within 48 hours (business days), tracked door to door','Real humans on WhatsApp, not a bot','Damaged/wrong items replaced within 7 days, human follow-up']},
-  story:{eyebrow:'About Picked Right It',title:"We don't sell everything — we pick what's worth it",
-    desc:"There's too much out there to choose from. Our job is simple: test it, compare it, and cut what isn't worth your money before it ever reaches you. If it's on our shelf, we've already decided it's right."},
+  story:{eyebrow:'Our Story',title:'It All Started With Wanting to Help',
+    desc:"This shop wasn't born from a grand business plan — it began with an ordinary conversation.\n\nYears ago, I watched someone I love struggle with the same problem day after day: finding one genuinely useful thing, when everything on the market was either absurdly overpriced or a quality gamble. One night, hearing them sigh 'never mind, I'll just make do' — that moment stayed with me.\n\nSo I searched everywhere, compared prices, contacted factories. When I finally placed the right one in their hands and saw the relief in their smile, I understood: one small product can genuinely lighten someone's life.\n\nThat's how PICKED RIGHT IT was born. We don't aim to be the biggest, only the most caring: every product listed here passes one test — would I hand this to my own family?\n\nAbove all, thank you: to the person who first showed me the problem, and to every customer who trusts a small shop. Every order isn't just business — it's trust placed in our hands.\n\nWe'll keep choosing for you the way we choose for family."},
   newsletter:{eyebrow:'Join the List',title:'Join Our WhatsApp List — Get 10% Off Your First Order',
     desc:'Be the first to know about new arrivals, exclusive offers, and restocks.',cta:'Join via WhatsApp',
     waMsg:"Hi, I'd like to join the Picked Right It WhatsApp list for new arrivals and offers."},
+  shop:{empty:'A fresh batch of hand-picked products is on its way! Message us on WhatsApp if you are looking for something.'},
   product:{add:'Add to Cart',added:'Added ✓',back:'Back to Products',related:'You Might Also Like',
     chooseVariant:'Choose Style / Size',ship:'Usually dispatched within 48 hours (business days) · typically 7-12 days · SF Locker pickup',guarantee:'Damaged or wrong item? Replaced within 7 days',securePay:'Secure encrypted payment via Stripe',badge:'Our Pick',detailTrending:"Editor's Pick",reviewsWord:'reviews'},
   cart:{title:'Your Cart',empty:"Your cart is empty right now.<br>Go find something that's right for you.",subtotal:'Subtotal',
@@ -1000,56 +1016,7 @@ const I18N = {
 }};
 
 /* ================= PRODUCT DATA ================= */
-const PRODUCTS = [
-  {id:1,catClass:'home',price:168,icon:'box',trending:false,rating:4.7,reviews:156,i18n:{
-    'zh-Hant':{name:'三件套摺疊收納箱',desc:'軟身牛津布配摺疊支架,唔用嘅時候可以摺得平,啱晒香港細單位。三個尺寸一套,分類衣物、雜物都啱用。'},
-    'zh-Hans':{name:'三件套折叠收纳箱',desc:'软身牛津布搭配可折叠支架,不用时能收得平整,专为香港的小户型设计。一套三种尺寸,分类收纳衣物和杂物都合适。'},
-    'en':{name:'Foldable Storage Box Set (3-Piece)',desc:"Soft Oxford fabric with a collapsible frame that folds flat when not in use — built for Hong Kong's compact apartments. Three sizes in one set."}}},
-  {id:2,catClass:'home',price:128,icon:'fan',trending:false,rating:4.5,reviews:98,i18n:{
-    'zh-Hant':{name:'靜音迷你風扇',desc:'USB充電,三段風速,運行聲浪低過30分貝。放喺床頭、書枱都唔嘈,租樓一族必備。'},
-    'zh-Hans':{name:'静音迷你风扇',desc:'USB充电,三档风速可调,运行噪音低于30分贝。放在床头或书桌都不吵,适合租房一族。'},
-    'en':{name:'Silent Mini Desk Fan',desc:'USB-powered with three speed settings and noise under 30 decibels. Quiet enough for your bedside or desk.'}}},
-  {id:3,catClass:'home',price:158,icon:'droplet',trending:false,rating:4.6,reviews:210,i18n:{
-    'zh-Hant':{name:'USB香薰加濕器',desc:'300ml水箱,7色氛圍燈,靜音運作。返工放喺公司枱面都得,滋潤又唔怕嘈到同事。'},
-    'zh-Hans':{name:'USB香薰加湿器',desc:'300毫升水箱,7色氛围灯,静音运行。放在办公桌上也没问题,滋润空气又不打扰同事。'},
-    'en':{name:'USB Aroma Humidifier',desc:'300ml tank with 7-colour ambient lighting and silent operation. Compact enough for any desk.'}}},
-  {id:4,catClass:'beauty',price:268,icon:'droplet',trending:true,rating:4.8,reviews:342,i18n:{
-    'zh-Hant':{name:'PDRN鮭魚精華面霜',desc:'韓國醫美熱門成分PDRN(鮭魚DNA修復因子),主打修護肌膚屏障、提升保濕力。質地清爽唔黐立立。'},
-    'zh-Hans':{name:'PDRN鲑鱼精华面霜',desc:'采用韩国医美热门成分PDRN(鲑鱼DNA修复因子),有助修护肌肤屏障、提升保湿力。质地清爽不粘腻。'},
-    'en':{name:'PDRN Salmon Serum Cream',desc:'Formulated with PDRN, a trending ingredient in Korean medical aesthetics, to help repair the skin barrier and boost hydration.'}}},
-  {id:5,catClass:'beauty',price:198,icon:'droplet',trending:true,rating:4.7,reviews:189,i18n:{
-    'zh-Hant':{name:'PDRN保濕爽膚水',desc:'同系列爽膚水,可以疊搽面霜加強保濕效果。敏感肌都岩用,配方溫和唔刺激。'},
-    'zh-Hans':{name:'PDRN保湿爽肤水',desc:'可叠加面霜使用,加强保湿效果。配方温和,敏感肌也适用。'},
-    'en':{name:'PDRN Hydrating Toner',desc:'Layer under the PDRN cream for extra hydration. Gentle formula suitable for sensitive skin.'}}},
-  {id:6,catClass:'beauty',price:398,icon:'ring',trending:false,rating:4.4,reviews:76,i18n:{
-    'zh-Hant':{name:'LED光療美容儀',desc:'紅光+藍光雙模式,每日用10分鐘,幫助提亮膚色同舒緩暗瘡困擾。USB充電,出門都帶得走。'},
-    'zh-Hans':{name:'LED光疗美容仪',desc:'红光+蓝光双模式,每天使用10分钟,有助提亮肤色、舒缓痘痘困扰。USB充电,便于携带。'},
-    'en':{name:'LED Light Therapy Device',desc:'Dual red and blue light modes. Just 10 minutes a day to even skin tone and calm breakouts.'}}},
-  {id:7,catClass:'tech',price:178,icon:'bolt',trending:false,rating:4.6,reviews:133,i18n:{
-    'zh-Hant':{name:'磁吸無線充電座',desc:'支援磁吸快充,三合一座台式設計,手機、耳機、手錶一次過叉電,枱面靚咁擺齊晒。'},
-    'zh-Hans':{name:'磁吸无线充电座',desc:'支持磁吸快充,三合一设计,手机、耳机、手表可同时充电,桌面整洁不杂乱。'},
-    'en':{name:'Magnetic Wireless Charging Stand',desc:'Magnetic fast charging in a 3-in-1 dock — charge your phone, earbuds, and watch at once.'}}},
-  {id:8,catClass:'tech',price:328,icon:'earbud',trending:true,rating:4.8,reviews:421,i18n:{
-    'zh-Hant':{name:'真無線藍牙耳機',desc:'主動降噪,續航8小時(連充電盒24小時),防水防汗,運動返工都啱用。'},
-    'zh-Hans':{name:'真无线蓝牙耳机',desc:'主动降噪,续航8小时(配充电盒达24小时),防水防汗,通勤运动皆宜。'},
-    'en':{name:'True Wireless Earbuds',desc:'Active noise cancellation, 8-hour playback (24 with the case), sweat and water resistant.'}}},
-  {id:9,catClass:'tech',price:88,icon:'box',trending:false,rating:4.5,reviews:264,i18n:{
-    'zh-Hant':{name:'手機摺疊支架',desc:'鋁合金材質,多角度調節,追劇、開會用嚟企手機啱晒,摺埋落袋方便帶出街。'},
-    'zh-Hans':{name:'手机折叠支架',desc:'铝合金材质,多角度可调节,追剧、开会立手机都合适,折叠后方便放进包里。'},
-    'en':{name:'Foldable Phone Stand',desc:'Aluminium build with multi-angle adjustment. Folds flat to slip into your bag.'}}},
-  {id:10,catClass:'tech',price:98,icon:'bolt',trending:true,rating:4.6,reviews:87,i18n:{
-    'zh-Hant':{name:'RGB發光電競滑鼠',desc:'七彩RGB燈效,高精度感應,打機返工兩用。有線設計冇延遲,手感輕巧,係打機新手升級裝備嘅入門首選。'},
-    'zh-Hans':{name:'RGB发光电竞鼠标',desc:'七彩RGB灯效,高精度传感,游戏办公两用。有线设计零延迟,手感轻巧,是升级装备的入门首选。'},
-    'en':{name:'RGB Glowing Gaming Mouse',desc:'Vibrant RGB lighting with a high-precision sensor. Wired for zero lag — an easy first upgrade for work and play.'}}},
-  {id:11,catClass:'tech',price:128,icon:'bolt',trending:true,rating:4.5,reviews:64,i18n:{
-    'zh-Hant':{name:'發光電競鍵鼠套裝',desc:'鍵盤+滑鼠一套過,炫彩背光,開學返工升級裝備一步到位。膜片式鍵盤聲量溫和,夜晚打機唔嘈屋企人。'},
-    'zh-Hans':{name:'发光电竞键鼠套装',desc:'键盘+鼠标一套搞定,炫彩背光,开学办公升级装备一步到位。薄膜键盘声音温和,深夜游戏不吵家人。'},
-    'en':{name:'Backlit Gaming Keyboard & Mouse Set',desc:'Keyboard and mouse in one set with vivid backlighting. Membrane keys stay quiet for late-night sessions.'}}},
-  {id:12,catClass:'beauty',price:58,icon:'ring',trending:true,rating:4.4,reviews:112,i18n:{
-    'zh-Hant':{name:'Press-On免膠假指甲(藝術款)',desc:'按壓式即戴,唔使去美甲舖都有靚甲。一盒多款設計,配戴、除低都唔傷真甲,約會影相前5分鐘搞掂。'},
-    'zh-Hans':{name:'Press-On免胶假指甲(艺术款)',desc:'按压式即戴,不用去美甲店也有精致美甲。一盒多款设计,佩戴摘取不伤真甲,约会拍照前5分钟搞定。'},
-    'en':{name:'Press-On Artistic Nails',desc:'Salon-look nails in 5 minutes — press on, no glue damage, multiple designs per box. Perfect before a date or photo day.'}}},
-];
+const PRODUCTS = []; // 產品全部由dashboard上架(data/products.json),唔再有內置樣板貨
 const WHATSAPP_NUMBER = "85251044417"; // TODO: 換成你哋真實嘅 WhatsApp Business 號碼
 
 let currentLang = 'zh-Hant';
@@ -1112,12 +1079,13 @@ function applyI18n(){
   });
 
   renderMarquee();
+  renderNavMore();
   /* renderReviews(); ← 有真實客戶評價先開返(虛構評價違反商品說明條例) */
   renderRejected();
   renderFAQ();
   renderDiff();
   updatePromoText();
-  document.getElementById('trendingGrid').innerHTML = PRODUCTS.filter(p => p.trending).map(productCardHTML).join('');
+  document.getElementById('trendingGrid').innerHTML = PRODUCTS.filter(p => p.trending).map(productCardHTML).join('') || `<p style="grid-column:1/-1;color:var(--ink-soft);text-align:center;padding:30px 0">${t('shop.empty')}</p>`;
 
   const activeView = document.querySelector('.view.active').id;
   if(activeView === 'view-shop'){ renderFilters(currentProductCat); renderShopTitle(currentProductCat); renderShopGrid(currentProductCat); }
@@ -1254,7 +1222,9 @@ function renderFilters(active){
 }
 function renderShopGrid(catKey){
   const list = catKey === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.catClass === catKey);
-  document.getElementById('shopGrid').innerHTML = list.map(productCardHTML).join('');
+  document.getElementById('shopGrid').innerHTML = list.length
+    ? list.map(productCardHTML).join('')
+    : `<p style="grid-column:1/-1;color:var(--ink-soft);text-align:center;padding:40px 0">${t('shop.empty')}</p>`;
 }
 
 function showProduct(id, silent){
@@ -1593,6 +1563,26 @@ window.addEventListener('appinstalled', () => {
 /* ===== 瀏覽量追蹤 ===== */
 try{ fetch('/api/pv?t=page', {keepalive:true}); }catch(e){}
 
+/* ===== 「更多」分類dropdown ===== */
+const NAV_MORE_CATS = ['pets','baby','sports','accessories','bags','auto'];
+function renderNavMore(){
+  const drop = document.getElementById('navDrop');
+  if(!drop) return;
+  drop.innerHTML = NAV_MORE_CATS.map(k =>
+    `<a onclick="showShop('${k}');document.getElementById('navMore').classList.remove('open');document.getElementById('mainNav').classList.remove('show')">${CAT_LABELS[currentLang][k]}</a>`
+  ).join('');
+  const moreLbl = {'zh-Hant':'更多','zh-Hans':'更多','en':'More'}[currentLang];
+  document.getElementById('navMoreBtn').textContent = moreLbl + ' ▾';
+}
+function toggleNavMore(e){
+  e.stopPropagation();
+  document.getElementById('navMore').classList.toggle('open');
+}
+document.addEventListener('click', (e) => {
+  const nm = document.getElementById('navMore');
+  if(nm && !nm.contains(e.target)) nm.classList.remove('open');
+});
+
 /* header滾動陰影 */
 window.addEventListener('scroll', () => {
   document.querySelector('.site-header').classList.toggle('scrolled', window.scrollY > 8);
@@ -1636,7 +1626,8 @@ renderProductSchema();
     // Bestseller自動置頂:有銷量嘅排最前(stable sort,其餘保持原有次序)
     PRODUCTS.sort((a,b) => (b.soldQty||0) - (a.soldQty||0));
     // 重新render受影響嘅區塊
-    document.getElementById('trendingGrid').innerHTML = PRODUCTS.filter(p => p.trending).map(productCardHTML).join('');
+    const trendHTML = PRODUCTS.filter(p => p.trending).map(productCardHTML).join('');
+    document.getElementById('trendingGrid').innerHTML = trendHTML || `<p style="grid-column:1/-1;color:var(--ink-soft);text-align:center;padding:30px 0">${t('shop.empty')}</p>`;
     const activeView = document.querySelector('.view.active').id;
     if(activeView === 'view-shop') renderShopGrid(currentProductCat);
     renderProductSchema();
