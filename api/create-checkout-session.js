@@ -46,13 +46,14 @@ module.exports = async (req, res) => {
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
+      allow_promotion_codes: true, // 客人結帳頁可以入PICKED10等優惠碼
       line_items,
       // 收集客人送貨地址 —— 之後要傳畀CJ Dropshipping寄貨用
       shipping_address_collection: {
         allowed_countries: ["HK"],
       },
       phone_number_collection: { enabled: true },
-      success_url: `${process.env.SITE_URL}/?order=success`,
+      success_url: `${process.env.SITE_URL}/thanks.html`,
       cancel_url: `${process.env.SITE_URL}/?order=cancelled`,
       // metadata 會喺 webhook 度攞返;每個value上限500字,
       // 所以將cart JSON斬做450字一段,分開儲(cart, cart1, cart2...)

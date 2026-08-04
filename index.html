@@ -1080,7 +1080,6 @@ function applyI18n(){
 
   renderMarquee();
   renderNavMore();
-  /* renderReviews(); ← 有真實客戶評價先開返(虛構評價違反商品說明條例) */
   renderRejected();
   renderFAQ();
   renderDiff();
@@ -1633,6 +1632,25 @@ renderProductSchema();
     renderProductSchema();
   }catch(e){ /* 動態目錄載入失敗唔影響內置產品 */ }
   openDeepLink();
+})();
+
+/* ===== 真實客戶評價:儲夠5個自動開返評論區 ===== */
+(async function loadRealReviews(){
+  try{
+    const res = await fetch('/api/reviews');
+    const data = await res.json();
+    if(!data.enabled || !data.reviews || !data.reviews.length) return;
+    const sec = document.getElementById('reviewsSection');
+    if(sec) sec.style.display = '';
+    const grid = document.getElementById('reviewsGrid');
+    if(!grid) return;
+    grid.innerHTML = data.reviews.slice(0,9).map(r => `
+      <div class="review-card">
+        <div class="review-stars">${'★'.repeat(Math.min(5,Math.max(1,r.rating)))+'☆'.repeat(5-Math.min(5,Math.max(1,r.rating)))}</div>
+        <p class="review-quote">&ldquo;${String(r.text).replace(/</g,'&lt;')}&rdquo;</p>
+        <div class="review-who"><div class="review-name">${String(r.name).replace(/</g,'&lt;')}</div></div>
+      </div>`).join('');
+  }catch(e){}
 })();
 
 /* SEO深層連結:/?p=13 直接開產品頁 */

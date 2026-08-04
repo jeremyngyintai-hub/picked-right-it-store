@@ -6,6 +6,43 @@
 
 module.exports = async (req, res) => {
   const base = process.env.SITE_URL || "https://picked-right.it.com";
+
+  // ===== Google Merchant Center product feed(/merchant-feed.xml)=====
+  if (req.query.type === "merchant") {
+    let items = [];
+    try {
+      const list = await fetch(`${base}/data/products.json`).then((r) => r.json());
+      items = (list || []).filter((p) => !p.delisted).map((p) => {
+        const name = (p.i18n?.["zh-Hant"]?.name || `Product ${p.id}`).replace(/[<>&]/g, "");
+        const desc = (p.i18n?.["zh-Hant"]?.desc || name).replace(/[<>&]/g, "");
+        return `  <item>
+    <g:id>PRIT-${p.id}</g:id>
+    <g:title>${name}</g:title>
+    <g:description>${desc}</g:description>
+    <g:link>${base}/?p=${p.id}</g:link>
+    <g:image_link>${p.image || ""}</g:image_link>
+    <g:availability>in stock</g:availability>
+    <g:price>${p.price}.00 HKD</g:price>
+    <g:condition>new</g:condition>
+    <g:brand>PICKED RIGHT IT</g:brand>
+    <g:identifier_exists>false</g:identifier_exists>
+    <g:shipping><g:country>HK</g:country><g:price>0.00 HKD</g:price></g:shipping>
+  </item>`;
+      });
+    } catch {}
+    const feed = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+<channel>
+  <title>揀啱 PICKED RIGHT IT</title>
+  <link>${base}</link>
+  <description>香港生活選物店</description>
+${items.join("\n")}
+</channel>
+</rss>`;
+    res.setHeader("Content-Type", "application/xml; charset=utf-8");
+    res.setHeader("Cache-Control", "s-maxage=3600");
+    return res.status(200).send(feed);
+  }
   const urls = [
     { loc: `${base}/`, priority: "1.0", changefreq: "daily" },
     { loc: `${base}/track.html`, priority: "0.5", changefreq: "monthly" },

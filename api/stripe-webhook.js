@@ -15,6 +15,7 @@
 const Stripe = require("stripe");
 const { getCatalog } = require("./_lib/catalog");
 const { kvReady, kv, pipeline } = require("./_lib/kv");
+const { sendEmail, orderConfirmHTML } = require("./_lib/mail");
 const cj = require("./_lib/cjClient");
 
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
@@ -87,7 +88,8 @@ module.exports = async (req, res) => {
             };
           });
           const totalHKD = items.reduce((s, it) => s + it.priceHKD * it.qty, 0);
-          await kv(["LPUSH", "orders", JSON.stringify({ sid: session.id, ts: now, totalHKD, items })]);
+          const custEmail = (fullSession.customer_details && fullSession.customer_details.email) || "";
+          await kv(["LPUSH", "orders", JSON.stringify({ sid: session.id, ts: now, totalHKD, items, email: custEmail })]);
           await kv(["LTRIM", "orders", "0", "999"]); // 最多keep最近1000張單
           const cmds = [];
           items.forEach((it) => {
@@ -99,6 +101,27 @@ module.exports = async (req, res) => {
         }
       } catch (kvErr) {
         console.error("KV訂單記錄失敗(唔影響落單):", kvErr.message);
+      }
+
+      // ===== 落單確認email(未設定RESEND_API_KEY會自動跳過)=====
+      try {
+        const custEmail = fullSession.customer_details && fullSession.customer_details.email;
+        if (custEmail) {
+          const productMapC = await getCatalog();
+          const items2 = Object.entries(cart).map(([key, qty]) => {
+            const [pid] = String(key).split("::");
+            const prod = productMapC[pid] || {};
+            return { name: prod.name || `#${pid}`, qty, priceHKD: prod.sellPriceHKD || 0 };
+          });
+          const totalHKD2 = items2.reduce((s, it) => s + it.priceHKD * it.qty, 0);
+          await sendEmail({
+            to: custEmail,
+            subject: "✅ 訂單已確認 — 揀啱 PICKED RIGHT IT",
+            html: orderConfirmHTML({ items: items2, totalHKD: totalHKD2, siteUrl: process.env.SITE_URL || "https://picked-right.it.com" }),
+          });
+        }
+      } catch (mailErr) {
+        console.error("確認email發送失敗(唔影響落單):", mailErr.message);
       }
 
       const accessToken = await cj.getAccessToken();
@@ -129,6 +152,7 @@ module.exports = async (req, res) => {
       });
 
       console.log("CJ草稿訂單已建立:", draftOrder);
+      try { if (kvReady() && draftOrder && draftOrder.orderId) await kv(["SET", `cjorder:${session.id}`, String(draftOrder.orderId)]); } catch {}
 
       // 只有你確認過流程穩陣,先將 CJ_AUTO_SUBMIT 環境變數設做 "true"
       if (process.env.CJ_AUTO_SUBMIT === "true") {

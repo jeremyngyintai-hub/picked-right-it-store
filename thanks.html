@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>多謝你嘅訂單 — 揀啱 PICKED RIGHT IT</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600&family=Noto+Serif+TC:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#f2eef4;--card:#fbf9fb;--ink:#1f1726;--ink-soft:#726a78;--accent-a:#ff3d7a;--accent-b:#5b3df5;
+    --accent-grad:linear-gradient(135deg,var(--accent-a),var(--accent-b));--line:#ddd5df;--ok:#2e9e5b;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Noto Sans TC','Inter',sans-serif;line-height:1.7;}
+  .wrap{max-width:600px;margin:0 auto;padding:48px 20px 90px;text-align:center;}
+  .tick{width:76px;height:76px;border-radius:50%;background:var(--accent-grad);color:#fff;font-size:2rem;display:flex;align-items:center;justify-content:center;margin:0 auto 22px;box-shadow:0 16px 36px -10px rgba(255,61,122,.5);}
+  h1{font-family:'Noto Serif TC',serif;font-size:1.7rem;margin:0 0 10px;}
+  .sub{color:var(--ink-soft);margin-bottom:34px;}
+  .steps{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px 24px;text-align:left;margin-bottom:22px;}
+  .step{display:flex;gap:14px;padding:12px 0;}
+  .step+.step{border-top:1px dashed var(--line);}
+  .step .no{width:30px;height:30px;flex:none;border-radius:50%;background:var(--accent-grad);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;}
+  .step b{display:block;font-size:.95rem;}
+  .step p{margin:2px 0 0;font-size:.84rem;color:var(--ink-soft);}
+  .step a{color:var(--accent-a);font-weight:600;}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 28px;border:none;border-radius:999px;background:var(--accent-grad);color:#fff;font-family:inherit;font-size:.9rem;font-weight:600;cursor:pointer;text-decoration:none;box-shadow:0 10px 26px -8px rgba(255,61,122,.5);}
+  .btn-ghost{background:none;color:var(--ink);border:1.5px solid var(--line);box-shadow:none;}
+  .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:36px;}
+  .review-box{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px 24px;text-align:left;}
+  .review-box h3{font-family:'Noto Serif TC',serif;margin:0 0 6px;}
+  .review-box .hint{font-size:.82rem;color:var(--ink-soft);margin-bottom:16px;}
+  input,textarea{width:100%;padding:12px 15px;border:1px solid var(--line);border-radius:12px;font-family:inherit;font-size:.9rem;background:#fff;margin-bottom:12px;}
+  input:focus,textarea:focus{outline:none;border-color:var(--accent-a);}
+  textarea{min-height:90px;resize:vertical;}
+  .stars-pick{display:flex;gap:6px;margin-bottom:14px;font-size:1.6rem;cursor:pointer;user-select:none;}
+  .stars-pick span{color:#d8d0da;transition:color .1s;}
+  .stars-pick span.on{color:var(--accent-a);}
+  .rv-status{margin-top:10px;font-size:.85rem;display:none;padding:10px 14px;border-radius:10px;}
+  .rv-status.ok{display:block;background:#e5f4ea;color:var(--ok);}
+  .rv-status.err{display:block;background:#fbe9e9;color:#b3372f;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="tick">✓</div>
+  <h1>多謝你嘅訂單!</h1>
+  <p class="sub">確認email已經(或即將)寄到你郵箱。以下係接住會發生嘅事:</p>
+
+  <div class="steps">
+    <div class="step"><span class="no">1</span><div><b>我哋安排出貨</b><p>一般48小時內(工作日計)處理你張單。</p></div></div>
+    <div class="step"><span class="no">2</span><div><b>Email通知追蹤號碼</b><p>件貨一起卷,我哋會email你追蹤號碼。</p></div></div>
+    <div class="step"><span class="no">3</span><div><b>7-12日左右送到</b><p>隨時去<a href="/track.html">訂單追蹤頁</a>睇件貨去到邊,支援順豐站/智能櫃自取。</p></div></div>
+    <div class="step"><span class="no">4</span><div><b>有問題?真人幫到你</b><p><a href="https://wa.me/85251044417">WhatsApp +852 5104 4417</a>,唔係機械人。</p></div></div>
+  </div>
+
+  <div class="row">
+    <a class="btn" href="/">← 返去繼續行下</a>
+    <a class="btn btn-ghost" href="https://wa.me/85251044417" target="_blank" rel="noopener">WhatsApp我哋</a>
+  </div>
+
+  <div class="review-box">
+    <h3>買過嘢嘅舊客?留返個評價 🙏</h3>
+    <p class="hint">你一句真心話,幫到下一位客人揀啱。(評價會經審核先刊出)</p>
+    <input id="rvName" placeholder="稱呼(例:陳小姐)" maxlength="30">
+    <div class="stars-pick" id="starsPick"></div>
+    <textarea id="rvText" placeholder="講下件貨用落點、送貨快唔快、服務好唔好..." maxlength="400"></textarea>
+    <button class="btn" onclick="submitReview()" id="rvBtn">送出評價</button>
+    <div class="rv-status" id="rvStatus"></div>
+  </div>
+</div>
+
+<script>
+let rvRating = 5;
+const sp = document.getElementById('starsPick');
+function renderStars(){
+  sp.innerHTML = [1,2,3,4,5].map(i=>`<span class="${i<=rvRating?'on':''}" onclick="rvRating=${i};renderStars()">★</span>`).join('');
+}
+renderStars();
+async function submitReview(){
+  const name = document.getElementById('rvName').value.trim();
+  const text = document.getElementById('rvText').value.trim();
+  const st = document.getElementById('rvStatus');
+  const btn = document.getElementById('rvBtn');
+  if(!name || text.length < 5){ st.textContent='請填寫稱呼同評價內容(最少5個字)'; st.className='rv-status err'; return; }
+  btn.disabled = true; btn.textContent = '送緊...';
+  try{
+    const res = await fetch('/api/reviews', {method:'POST',headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({name, rating: rvRating, text})});
+    const data = await res.json();
+    if(data.error) throw new Error(data.error);
+    st.textContent = '✓ ' + (data.message || '多謝你!');
+    st.className = 'rv-status ok';
+    btn.textContent = '已送出 ✓';
+  }catch(e){
+    st.textContent = '送出失敗:' + e.message;
+    st.className = 'rv-status err';
+    btn.disabled = false; btn.textContent = '送出評價';
+  }
+}
+</script>
+</body>
+</html>

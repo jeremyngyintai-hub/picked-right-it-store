@@ -301,6 +301,13 @@
       <button class="btn btn-sm btn-dark" onclick="runMaintain()" data-dt="btnMaintain">🧹 執行自動落架</button>
     </div>
     <div class="mpanel" id="plist"><p class="empty">輸入密碼後撳「📦 產品管理」會自動載入。</p></div>
+    <div class="mpanel" style="margin-top:14px">
+      <div style="display:flex;align-items:center;gap:10px;padding:8px 0">
+        <div class="chart-title" style="margin:0" data-dt="rvTitle">💬 待審核評價</div>
+        <button class="btn btn-sm btn-dark" onclick="loadPendingReviews()" data-dt="rvLoad">載入</button>
+      </div>
+      <div id="rvList"><p class="empty" data-dt="rvHint">客人喺thanks頁提交嘅評價會喺呢度等你批核 — 批夠5個,商店評論區自動開。</p></div>
+    </div>
   </div>
 
   <!-- ============ SALES / ANALYTICS VIEW ============ -->
@@ -355,7 +362,7 @@ const DI = {
   scanning:'掃描緊...(9大類·約40秒)',needKey:'請先輸入管理密碼',loadMore:'載入更多結果(第',page:'頁)',selCountA:'已揀 ',selCountB:' 件',
   kRev:'30日營業額',kProfit:'30日毛利(扣成本+手續費)',kOrders:'30日訂單 / 平均單值',kViews:'30日瀏覽量 / 轉換率',
   colDate:'日期',colRev:'營業額',colCost:'貨品成本',colFee:'手續費(估)',colProfit:'毛利',colOrders:'訂單',
-  colProduct:'產品',colViews:'瀏覽',colQty:'銷量',colConv:'轉換率',margin:'毛利',sold:'賣出',pcs:'件',linkCJ:'CJ原頁 ↗',linkStore:'商店頁 ↗',shipLbl:'運',inclShip:'(連運)',mSelAllLbl:'全選',btnDelistSel:'🗑 落架已選',noneSelected:'未揀任何產品',markedDelist:'已標記 ',markedDelist2:' 件落架 — 記得撳「儲存」先生效',
+  colProduct:'產品',colViews:'瀏覽',colQty:'銷量',colConv:'轉換率',margin:'毛利',sold:'賣出',pcs:'件',linkCJ:'CJ原頁 ↗',linkStore:'商店頁 ↗',shipLbl:'運',inclShip:'(連運)',mSelAllLbl:'全選',rvTitle:'💬 待審核評價',rvLoad:'載入',rvHint:'客人喺thanks頁提交嘅評價會喺呢度等你批核 — 批夠5個,商店評論區自動開。',btnDelistSel:'🗑 落架已選',noneSelected:'未揀任何產品',markedDelist:'已標記 ',markedDelist2:' 件落架 — 記得撳「儲存」先生效',
   catHome:'🏠 家居',catBeauty:'💄 美妝',catTech:'⚡ 電子',catPets:'🐾 寵物',catBaby:'🧸 母嬰玩具',catSports:'⛺ 運動戶外',catAccessories:'💍 飾物配件',catBags:'👜 袋&鞋',catAuto:'🚗 汽車用品'},
  en:{openStore:'Open Store ↗',pageTitle:'Winner Product Console',pageSub:'Scan CJ bestsellers → set your markup → one-click import. Live on the store in ~1 minute.',
   lblKey:'Access Key',lblMarkup:'Markup Multiplier',lblShip:'Est. Shipping US$/pc',btnScan:'⚡ Scan Winners',btnSync:'🔄 Sync CJ Prices',
@@ -365,7 +372,7 @@ const DI = {
   scanning:'Scanning... (9 categories · ~40s)',needKey:'Enter the access key first',loadMore:'Load more (page ',page:')',selCountA:'',selCountB:' selected',
   kRev:'Revenue (30d)',kProfit:'Gross Profit (30d)',kOrders:'Orders / Avg Order (30d)',kViews:'Views / Conversion (30d)',
   colDate:'Date',colRev:'Revenue',colCost:'COGS',colFee:'Fees (est)',colProfit:'Profit',colOrders:'Orders',
-  colProduct:'Product',colViews:'Views',colQty:'Sold',colConv:'Conv.',margin:'margin',sold:'sold',pcs:'',linkCJ:'View on CJ ↗',linkStore:'Store page ↗',shipLbl:'ship',inclShip:' (incl. ship)',mSelAllLbl:'Select all',btnDelistSel:'🗑 Delist selected',noneSelected:'Nothing selected',markedDelist:'Marked ',markedDelist2:' item(s) for removal — press Save to apply',
+  colProduct:'Product',colViews:'Views',colQty:'Sold',colConv:'Conv.',margin:'margin',sold:'sold',pcs:'',linkCJ:'View on CJ ↗',linkStore:'Store page ↗',shipLbl:'ship',inclShip:' (incl. ship)',mSelAllLbl:'Select all',rvTitle:'💬 Pending Reviews',rvLoad:'Load',rvHint:'Reviews submitted on the thank-you page appear here for approval — approve 5 and the storefront review section opens automatically.',btnDelistSel:'🗑 Delist selected',noneSelected:'Nothing selected',markedDelist:'Marked ',markedDelist2:' item(s) for removal — press Save to apply',
   catHome:'🏠 Home',catBeauty:'💄 Beauty',catTech:'⚡ Tech',catPets:'🐾 Pets',catBaby:'🧸 Baby & Kids',catSports:'⛺ Sports',catAccessories:'💍 Accessories',catBags:'👜 Bags & Shoes',catAuto:'🚗 Auto'}
 };
 function dt(k){ return (DI[DLANG]&&DI[DLANG][k])||DI.zh[k]||k; }
@@ -557,7 +564,7 @@ async function syncPrices(){
   const btn=document.getElementById('syncBtn');
   btn.disabled=true; btn.textContent='同步緊...';
   try{
-    const res = await fetch(`/api/cron/price-sync?secret=${encodeURIComponent(secretVal())}`);
+    const res = await fetch(`/api/cron/daily?task=price&secret=${encodeURIComponent(secretVal())}`);
     const data = await res.json();
     if(data.error) throw new Error(data.error);
     const r = data.report||{};
@@ -678,7 +685,7 @@ async function runMaintain(){
   if(!secretVal()){ setStatus(dt('needKey'),'err'); return; }
   toast('執行緊自動落架檢查...');
   try{
-    const res=await fetch(`/api/cron/store-maintain?secret=${encodeURIComponent(secretVal())}`);
+    const res=await fetch(`/api/cron/daily?task=maintain&secret=${encodeURIComponent(secretVal())}`);
     const data=await res.json();
     if(data.error) throw new Error(data.error);
     toast('✓ '+data.message,'ok');
@@ -803,6 +810,41 @@ async function saveAll(){
 
 applyTheme();
 applyDashLang();
+
+/* ===== 評價審核 ===== */
+async function loadPendingReviews(){
+  if(!secretVal()){ setStatus(dt('needKey'),'err'); return; }
+  const box=document.getElementById('rvList');
+  box.innerHTML='<div class="skel" style="height:60px;margin:10px 0"></div>';
+  try{
+    const res=await fetch(`/api/reviews?secret=${encodeURIComponent(secretVal())}&pending=1`);
+    const data=await res.json();
+    if(data.error) throw new Error(data.error);
+    const list=data.pending||[];
+    if(!list.length){ box.innerHTML='<p class="empty">// 暫時冇待審評價</p>'; return; }
+    box.innerHTML=list.map(r=>`
+      <div class="prow" style="grid-template-columns:1fr auto auto">
+        <div>
+          <div style="font-size:.84rem"><b>${String(r.name).replace(/</g,'&lt;')}</b> <span style="color:var(--warn)">${'★'.repeat(r.rating)}</span></div>
+          <div style="font-size:.8rem;color:var(--tx-soft);margin-top:4px">${String(r.text).replace(/</g,'&lt;')}</div>
+          <div class="rmeta">${new Date(r.ts).toLocaleString('zh-HK')}</div>
+        </div>
+        <button class="btn btn-sm" onclick="modReview('${r.id}','approve',this)">✓ 批核</button>
+        <button class="del-btn" onclick="modReview('${r.id}','delete',this)">刪除</button>
+      </div>`).join('');
+  }catch(e){ box.innerHTML=`<p class="empty">${e.message}</p>`; }
+}
+async function modReview(id, action, btn){
+  btn.disabled=true;
+  try{
+    const res=await fetch('/api/reviews',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({secret:secretVal(), action, id})});
+    const data=await res.json();
+    if(data.error) throw new Error(data.error);
+    toast(action==='approve'?'✓ 已批核刊出':'已刪除','ok');
+    loadPendingReviews();
+  }catch(e){ toast('失敗:'+e.message,'err'); btn.disabled=false; }
+}
 
 /* manage tab載入trigger */
 document.getElementById('mt-manage').addEventListener('click',()=>{ if(!manageLoaded && secretVal()) loadProducts(); });

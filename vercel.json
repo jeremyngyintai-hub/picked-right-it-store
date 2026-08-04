@@ -1,18 +1,18 @@
 {
   "crons": [
     {
-      "path": "/api/cron/price-sync",
+      "path": "/api/cron/daily",
       "schedule": "0 19 * * *"
-    },
-    {
-      "path": "/api/cron/store-maintain",
-      "schedule": "30 19 * * *"
     }
   ],
   "rewrites": [
     {
       "source": "/sitemap.xml",
       "destination": "/api/sitemap"
+    },
+    {
+      "source": "/merchant-feed.xml",
+      "destination": "/api/sitemap?type=merchant"
     }
   ]
 }
