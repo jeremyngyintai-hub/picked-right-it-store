@@ -52,19 +52,19 @@ function draftCopy(nameEn, cat) {
   const short = (nameEn || "New Product").slice(0, 60);
   const angles = {
     home: {
-      hant: { name: short, desc: `香港細單位都啱用,慳位實用之選。團隊實測過質素先上架,48小時內出貨,順豐站自取。` },
-      hans: { name: short, desc: `小户型也适用,省空间实用之选。团队实测质量才上架,48小时内发货,顺丰站自取。` },
-      en:   { name: short, desc: `A practical, space-saving pick tested by our team — ships within 48 hours with SF Locker pickup.` },
+      hant: { name: short, desc: `香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。` },
+      hans: { name: short, desc: `小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。` },
+      en:   { name: short, desc: `A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup.` },
     },
     beauty: {
-      hant: { name: short, desc: `屋企就做到嘅精緻感。團隊親身試用先上架,溫和好用,48小時內出貨直送到你手。` },
-      hans: { name: short, desc: `在家也能拥有的精致感。团队亲身试用才上架,温和好用,48小时内发货直达。` },
-      en:   { name: short, desc: `Salon-level results at home. Tested by our team before listing — ships within 48 hours.` },
+      hant: { name: short, desc: `屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。` },
+      hans: { name: short, desc: `在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。` },
+      en:   { name: short, desc: `Salon-level results at home. Hand-picked by our team — ships within 48 hours.` },
     },
     tech: {
-      hant: { name: short, desc: `返工打機兩用嘅實用之選。團隊實測先上架,即插即用,48小時內出貨,順豐站自取。` },
-      hans: { name: short, desc: `办公游戏两用的实用之选。团队实测才上架,即插即用,48小时内发货,顺丰站自取。` },
-      en:   { name: short, desc: `A practical pick for work and play, tested by our team. Plug and play — ships within 48 hours.` },
+      hant: { name: short, desc: `返工打機兩用嘅實用之選。團隊嚴選先上架,即插即用,48小時內出貨,順豐站自取。` },
+      hans: { name: short, desc: `办公游戏两用的实用之选。团队严选才上架,即插即用,48小时内发货,顺丰站自取。` },
+      en:   { name: short, desc: `A practical pick for work and play, hand-picked by our team. Plug and play — ships within 48 hours.` },
     },
   };
   return angles[cat] || angles.tech;
