@@ -231,6 +231,14 @@
   .pd-badges span{font-size:.68rem;color:var(--ink-soft);border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-family:'Inter',sans-serif;}
   .cart-secure{display:flex;align-items:center;justify-content:center;gap:6px;font-size:.72rem;color:var(--ink-soft);margin:8px 0 2px;}
   .cart-secure svg{width:13px;height:13px;color:var(--sage);}
+  /* variant picker */
+  .variant-wrap{margin:18px 0 4px;}
+  .variant-label{font-size:.76rem;font-weight:600;color:var(--ink-soft);margin-bottom:8px;display:block;}
+  .variant-pills{display:flex;gap:8px;flex-wrap:wrap;max-height:132px;overflow-y:auto;}
+  .variant-pill{padding:8px 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);font-family:inherit;font-size:.78rem;cursor:pointer;color:var(--ink-soft);transition:all .15s;}
+  .variant-pill:hover{border-color:var(--ink);color:var(--ink);}
+  .variant-pill.on{background:var(--accent-grad);color:#fff;border-color:transparent;font-weight:600;}
+
   /* product media gallery */
   .pd-thumbs{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;}
   .pd-thumb{width:58px;height:58px;border-radius:12px;border:2px solid var(--line);object-fit:cover;cursor:pointer;transition:border-color .15s;background:#eee;}
@@ -873,7 +881,7 @@ const I18N = {
     desc:'第一時間收到新品上架、限定優惠同補貨通知,唔想錯過就click低面個掣。',cta:'用WhatsApp加入',
     waMsg:'你好,我想加入揀啱嘅WhatsApp情報網,接收新品同優惠通知。'},
   product:{add:'加入購物車',added:'已加入 ✓',back:'返回產品列表',related:'你可能都啱用',
-    ship:'一般48小時內安排出貨 · 一般7-12日送到,順豐站自取',guarantee:'壞貨/寄錯,7日內包換',securePay:'Stripe安全加密付款',badge:'推介',detailTrending:'店長推介',reviewsWord:'則評價'},
+    chooseVariant:'揀款式 / 尺碼',ship:'一般48小時內安排出貨 · 一般7-12日送到,順豐站自取',guarantee:'壞貨/寄錯,7日內包換',securePay:'Stripe安全加密付款',badge:'推介',detailTrending:'店長推介',reviewsWord:'則評價'},
   cart:{title:'購物車',empty:'購物車暫時得個吉,<br>返去揀啲啱你嘅嘢啦。',subtotal:'小計',
     checkout:'透過 WhatsApp 落單',note:'運費另計,落單後客服會盡快同你確認',secureNote:'SSL加密 · Stripe安全付款',remove:'移除',
     waGreeting:'你好,我想落單:',waTotal:'總計'},
@@ -927,7 +935,7 @@ const I18N = {
     desc:'第一时间收到新品上架、限定优惠和补货通知,不想错过就点下面的按钮。',cta:'用WhatsApp加入',
     waMsg:'您好,我想加入拣啱的WhatsApp情报网,接收新品和优惠通知。'},
   product:{add:'加入购物车',added:'已加入 ✓',back:'返回产品列表',related:'你可能也用得上',
-    ship:'一般48小时内安排发货 · 一般7-12天送达,顺丰站自取',guarantee:'坏货/发错,7天内包换',securePay:'Stripe安全加密付款',badge:'推荐',detailTrending:'店长推荐',reviewsWord:'条评价'},
+    chooseVariant:'选择款式 / 尺码',ship:'一般48小时内安排发货 · 一般7-12天送达,顺丰站自取',guarantee:'坏货/发错,7天内包换',securePay:'Stripe安全加密付款',badge:'推荐',detailTrending:'店长推荐',reviewsWord:'条评价'},
   cart:{title:'购物车',empty:'购物车暂时是空的,<br>回去挑些适合你的东西吧。',subtotal:'小计',
     checkout:'通过 WhatsApp 下单',note:'运费另计,下单后客服会尽快与你确认',secureNote:'SSL加密 · Stripe安全付款',remove:'移除',
     waGreeting:'您好,我想下单:',waTotal:'总计'},
@@ -981,7 +989,7 @@ const I18N = {
     desc:'Be the first to know about new arrivals, exclusive offers, and restocks.',cta:'Join via WhatsApp',
     waMsg:"Hi, I'd like to join the Picked Right It WhatsApp list for new arrivals and offers."},
   product:{add:'Add to Cart',added:'Added ✓',back:'Back to Products',related:'You Might Also Like',
-    ship:'Usually dispatched within 48 hours (business days) · typically 7-12 days · SF Locker pickup',guarantee:'Damaged or wrong item? Replaced within 7 days',securePay:'Secure encrypted payment via Stripe',badge:'Our Pick',detailTrending:"Editor's Pick",reviewsWord:'reviews'},
+    chooseVariant:'Choose Style / Size',ship:'Usually dispatched within 48 hours (business days) · typically 7-12 days · SF Locker pickup',guarantee:'Damaged or wrong item? Replaced within 7 days',securePay:'Secure encrypted payment via Stripe',badge:'Our Pick',detailTrending:"Editor's Pick",reviewsWord:'reviews'},
   cart:{title:'Your Cart',empty:"Your cart is empty right now.<br>Go find something that's right for you.",subtotal:'Subtotal',
     checkout:'Order via WhatsApp',note:'Shipping calculated separately — our team will confirm shortly after you order',secureNote:'SSL encrypted · Secure payment via Stripe',remove:'Remove',
     waGreeting:"Hi, I'd like to place an order:",waTotal:'Total'},
@@ -1255,6 +1263,7 @@ function showProduct(id, silent){
   currentProductCat = p.catClass;
   if(!silent) {
     showView('product'); pdQty = 1;
+    pdSelectedVid = (p.variants&&p.variants.length>1) ? p.variants[0].vid : null;
     try{ fetch('/api/pv?t=product&id='+p.id, {keepalive:true}); }catch(e){}
     try{ history.replaceState(null,'', '?p='+p.id); }catch(e){}
     document.title = pName(p) + ' — 揀啱 PICKED RIGHT IT';
@@ -1287,6 +1296,13 @@ function showProduct(id, silent){
         </div>
         <button class="btn btn-primary" id="pdAddBtn" onclick="addPdToCart(${p.id})">${t('product.add')}</button>
       </div>
+      ${(p.variants&&p.variants.length>1)?`
+      <div class="variant-wrap">
+        <span class="variant-label">${t('product.chooseVariant')}</span>
+        <div class="variant-pills" id="variantPills">
+          ${p.variants.map((v,vi)=>`<button class="variant-pill ${vi===0?'on':''}" onclick="pdPickVariant('${v.vid}',this)">${(v.name||('款式'+(vi+1))).replace(/</g,'&lt;')}</button>`).join('')}
+        </div>
+      </div>`:''}
       <div class="pd-trust">
         <div><svg><use href="#icon-truck"/></svg>${t('product.ship')}</div>
         <div><svg><use href="#icon-shield"/></svg>${t('product.guarantee')}</div>
@@ -1307,7 +1323,7 @@ function stepQty(delta){
   document.getElementById('pdQty').textContent = pdQty;
 }
 function addPdToCart(id){
-  addToCart(id, document.getElementById('pdAddBtn'), pdQty);
+  addToCart(id, document.getElementById('pdAddBtn'), pdQty, pdSelectedVid || null);
   pdQty = 1;
   document.getElementById('pdQty').textContent = 1;
 }
@@ -1321,13 +1337,19 @@ function updateStickyBar(p){
 }
 function stickyAdd(){
   const id = Number(document.getElementById('stickyBar').dataset.pid);
-  addToCart(id, document.getElementById('stickyAddBtn'), 1);
+  addToCart(id, document.getElementById('stickyAddBtn'), 1, pdSelectedVid || null);
 }
 
 /* ================= CART LOGIC ================= */
-function addToCart(id, btnEl, qty){
+function addToCart(id, btnEl, qty, vid){
   qty = qty || 1;
-  cart[id] = (cart[id] || 0) + qty;
+  const p0 = findProduct(Number(id));
+  if(p0 && p0.variants && p0.variants.length > 1 && vid === undefined){
+    showProduct(Number(id)); // 有多款式:先入詳情頁揀款
+    return;
+  }
+  const key = cartKey(id, vid);
+  cart[key] = (cart[key] || 0) + qty;
   renderCartCount();
   if(btnEl){
     const original = btnEl.textContent;
@@ -1341,7 +1363,7 @@ function renderCartCount(){
   document.getElementById('cartCount').textContent = total;
 }
 function cartSubtotal(){
-  return Object.entries(cart).reduce((sum, [id,qty]) => sum + findProduct(Number(id)).price * qty, 0);
+  return Object.entries(cart).reduce((sum, [key,qty]) => sum + (keyProduct(key)?.price || 0) * qty, 0);
 }
 function renderCartDrawer(){
   const ids = Object.keys(cart);
@@ -1350,21 +1372,22 @@ function renderCartDrawer(){
     box.innerHTML = `<div class="cart-empty">${t('cart.empty')}</div>`;
   } else {
     box.innerHTML = ids.map(idStr => {
-      const p = findProduct(Number(idStr));
+      const p = keyProduct(idStr);
       const qty = cart[idStr];
+      const vName = keyVariantName(idStr);
       return `
       <div class="cart-row">
         <div class="cv cat-${p.catClass}-bg">${p.image ? `<img src="${p.image}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:10px">` : `<svg><use href="#icon-${p.icon}"/></svg>`}</div>
         <div class="ci">
-          <h4>${pName(p)}</h4>
+          <h4>${pName(p)}${vName?` <span style="font-size:.72rem;color:var(--ink-soft);font-weight:400">(${vName})</span>`:''}</h4>
           <div class="price">${fmt(p.price)}</div>
           <div class="actions">
             <div class="qty-stepper">
-              <button onclick="changeCartQty(${p.id}, -1)" aria-label="-"><svg class="icon-sm"><use href="#icon-minus"/></svg></button>
+              <button onclick="changeCartQty('${idStr}', -1)" aria-label="-"><svg class="icon-sm"><use href="#icon-minus"/></svg></button>
               <span>${qty}</span>
-              <button onclick="changeCartQty(${p.id}, 1)" aria-label="+"><svg class="icon-sm"><use href="#icon-plus"/></svg></button>
+              <button onclick="changeCartQty('${idStr}', 1)" aria-label="+"><svg class="icon-sm"><use href="#icon-plus"/></svg></button>
             </div>
-            <a class="remove" onclick="removeFromCart(${p.id})">${t('cart.remove')}</a>
+            <a class="remove" onclick="removeFromCart('${idStr}')">${t('cart.remove')}</a>
           </div>
         </div>
       </div>`;
@@ -1422,8 +1445,9 @@ function checkoutWhatsApp(){
   if(ids.length === 0) return;
   let msg = t('cart.waGreeting') + "\n";
   ids.forEach(idStr => {
-    const p = findProduct(Number(idStr));
-    msg += `- ${pName(p)} x${cart[idStr]} (${fmt(p.price)})\n`;
+    const p = keyProduct(idStr);
+    const vName = keyVariantName(idStr);
+    msg += `- ${pName(p)}${vName?` [${vName}]`:''} x${cart[idStr]} (${fmt(p.price)})\n`;
   });
   msg += `\n${t('cart.waTotal')}: ${fmt(cartSubtotal())}`;
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
@@ -1437,6 +1461,22 @@ document.querySelectorAll('.main-nav a').forEach(a => {
     a.classList.add('on');
   });
 });
+
+let pdSelectedVid = null;
+function pdPickVariant(vid, el){
+  pdSelectedVid = vid;
+  document.querySelectorAll('.variant-pill').forEach(x=>x.classList.remove('on'));
+  if(el) el.classList.add('on');
+}
+function cartKey(id, vid){ return vid ? id+'::'+vid : String(id); }
+function parseKey(key){ const [pid,vid]=String(key).split('::'); return {pid:Number(pid), vid:vid||null}; }
+function keyProduct(key){ return findProduct(parseKey(key).pid); }
+function keyVariantName(key){
+  const {pid,vid}=parseKey(key); if(!vid) return '';
+  const p=findProduct(pid); if(!p||!p.variants) return '';
+  const v=p.variants.find(x=>x.vid===vid);
+  return v&&v.name ? v.name : '';
+}
 
 function pdShowMedia(which, el){
   const g = window._pdGallery || {};

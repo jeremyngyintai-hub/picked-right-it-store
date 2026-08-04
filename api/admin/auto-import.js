@@ -198,6 +198,7 @@ module.exports = async (req, res) => {
           i18n: copy,
           cjPid: item.pid,
           cjVid: chosenVariant.vid,
+          variants: variants.slice(0, 60).map((v) => ({ vid: v.vid, name: v.variantNameEn || v.variantKey || "" })),
           costUSD,
           addedAt: new Date().toISOString(),
         });

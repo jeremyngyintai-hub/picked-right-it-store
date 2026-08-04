@@ -19,6 +19,7 @@ async function getCatalog() {
           costUSD: p.costUSD || null,
           cjPid: p.cjPid,
           cjVid: p.cjVid,
+          variants: p.variants || [],
         };
       });
     }

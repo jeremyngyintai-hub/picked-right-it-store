@@ -79,6 +79,12 @@ module.exports = async (req, res) => {
 
   const pageNum = Math.max(1, parseInt(req.query.page) || 1);
   try {
+    // 已上架嘅pid唔再出現喺搜尋結果(上咗架嘅去「產品管理」tab睇)
+    let listedPids = new Set();
+    try {
+      const pj = await fetch(`${process.env.SITE_URL}/data/products.json`).then((r) => r.json());
+      (pj || []).forEach((p) => p.cjPid && listedPids.add(p.cjPid));
+    } catch {}
     const accessToken = await getAccessToken();
     await sleep(1100);
     const tree = await cjGet("/product/getCategory", accessToken);
@@ -98,7 +104,7 @@ module.exports = async (req, res) => {
             orderBy: "listedNum",
             sort: "desc",
             pageNum: String(pageNum),
-            pageSize: "20",
+            pageSize: "40",
           });
           const list = await cjGet(`/product/list?${params.toString()}`, accessToken);
           if (list && list.list) candidates.push(...list.list);
@@ -113,12 +119,13 @@ module.exports = async (req, res) => {
       const seen = new Set();
       const uniqueTop = candidates
         .filter((p) => {
+          if (listedPids.has(p.pid)) return false; // 已上架,唔再顯示
           if (seen.has(p.pid)) return false;
           seen.add(p.pid);
           return true;
         })
         .sort((a, b) => (b.listedNum || 0) - (a.listedNum || 0))
-        .slice(0, 20);
+        .slice(0, 40);
 
       results[ourCat] = uniqueTop.map((p) => ({
         cjPid: p.pid,

@@ -65,10 +65,16 @@ module.exports = async (req, res) => {
       try {
         if (kvReady()) {
           const now = Date.now();
-          const items = Object.entries(cart).map(([id, qty]) => {
-            const prod = productMap[id] || {};
+          const items = Object.entries(cart).map(([key, qty]) => {
+            const [pid, vid] = String(key).split("::");
+            const prod = productMap[pid] || {};
+            let nm = prod.name || `#${pid}`;
+            if (vid && prod.variants) {
+              const v = prod.variants.find((x) => x.vid === vid);
+              if (v && v.name) nm += ` (${v.name})`;
+            }
             return {
-              id: Number(id), name: prod.name || `#${id}`, qty,
+              id: Number(pid), name: nm, qty,
               priceHKD: prod.sellPriceHKD || 0,
               costHKD: prod.costUSD ? Math.round(prod.costUSD * 7.8) : null,
             };
@@ -91,9 +97,10 @@ module.exports = async (req, res) => {
       const accessToken = await cj.getAccessToken();
 
       // 將本地產品對應返CJ嘅pid/vid
-      const products = Object.entries(cart).map(([id, qty]) => {
-        const p = productMap[id];
-        return { cjPid: p.cjPid, cjVid: p.cjVid, quantity: qty };
+      const products = Object.entries(cart).map(([key, qty]) => {
+        const [pid, vid] = String(key).split("::");
+        const p = productMap[pid];
+        return { cjPid: p.cjPid, cjVid: vid || p.cjVid, quantity: qty };
       });
 
       const addressResult = await cj.ensureShippingAddress(accessToken, {

@@ -25,16 +25,22 @@ module.exports = async (req, res) => {
     const productMap = await getCatalog();
 
     // 價錢一律以伺服器呢邊 productMap 為準,唔信前端傳嚟嘅價錢
-    const line_items = ids.map((id) => {
-      const p = productMap[id];
-      if (!p) throw new Error(`搵唔到產品 id=${id}`);
+    const line_items = ids.map((key) => {
+      const [pid, vid] = String(key).split("::");
+      const p = productMap[pid];
+      if (!p) throw new Error(`搵唔到產品 id=${pid}`);
+      let name = p.name;
+      if (vid && p.variants) {
+        const v = p.variants.find((x) => x.vid === vid);
+        if (v && v.name) name += ` (${v.name})`;
+      }
       return {
         price_data: {
           currency: "hkd",
-          product_data: { name: p.name },
+          product_data: { name },
           unit_amount: Math.round(p.sellPriceHKD * 100), // Stripe 用「分」做單位
         },
-        quantity: cart[id],
+        quantity: cart[key],
       };
     });
 
