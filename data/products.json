@@ -9208,5 +9208,785 @@
     ],
     "costUSD": 18.74,
     "addedAt": "2026-08-04T13:21:17.549Z"
+  },
+  {
+    "id": 125,
+    "catClass": "tech",
+    "price": 158,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/4518b727-28ab-4dd2-a11d-ee9c16388f9d.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/4518b727-28ab-4dd2-a11d-ee9c16388f9d.jpg",
+      "https://cf.cjdropshipping.com/44a9317a-ab54-4132-afcd-0cdf203db0e4.jpg",
+      "https://cf.cjdropshipping.com/05b207f1-09b1-44f3-8ee9-661e1a38a3cc.jpg",
+      "https://cf.cjdropshipping.com/fbbd309e-e710-4e24-9fdf-a4d7ad6d513c.jpg",
+      "https://cf.cjdropshipping.com/272c7df2-a2a3-4c4b-82cb-f304437cc0e7.jpg",
+      "https://cf.cjdropshipping.com/b087dca7-15af-483b-893c-748420acb508.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "One-handed RGB Mechanical Gaming Keypad",
+        "desc": "返工打機兩用嘅實用之選。團隊嚴選先上架,即插即用,落單48小時內安排出貨。"
+      },
+      "zh-Hans": {
+        "name": "One-handed RGB Mechanical Gaming Keypad",
+        "desc": "办公游戏两用的实用之选。团队严选才上架,即插即用,下单48小时内安排发货。"
+      },
+      "en": {
+        "name": "One-handed RGB Mechanical Gaming Keypad",
+        "desc": "A practical pick for work and play, hand-picked by our team. Dispatched within 48 hours."
+      }
+    },
+    "cjPid": "1547790123264389120",
+    "cjVid": "1547790123344080896",
+    "shipUSD": 5.88,
+    "variants": [
+      {
+        "vid": "1547790123344080896",
+        "name": "One-handed RGB Mechanical Gaming Keypad Mixed color version"
+      },
+      {
+        "vid": "1547790123348275200",
+        "name": "One-handed RGB Mechanical Gaming Keypad RGB"
+      },
+      {
+        "vid": "1547790123348275201",
+        "name": "One-handed RGB Mechanical Gaming Keypad G30 single mix"
+      },
+      {
+        "vid": "1547790123348275202",
+        "name": "One-handed RGB Mechanical Gaming Keypad G30RGB"
+      },
+      {
+        "vid": "1547790123352469504",
+        "name": "One-handed RGB Mechanical Gaming Keypad G40 single mix"
+      },
+      {
+        "vid": "1547790123352469505",
+        "name": "One-handed RGB Mechanical Gaming Keypad G40RGB"
+      },
+      {
+        "vid": "1547790123356663808",
+        "name": "One-handed RGB Mechanical Gaming Keypad Black"
+      }
+    ],
+    "costUSD": 5,
+    "addedAt": "2026-08-04T13:21:25.362Z"
+  },
+  {
+    "id": 126,
+    "catClass": "tech",
+    "price": 78,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/1621259915888.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/1621259915888.jpg",
+      "https://cf.cjdropshipping.com/1621259915917.jpg",
+      "https://cf.cjdropshipping.com/203009/1685820777382.jpg",
+      "https://cf.cjdropshipping.com/1623390193268.png",
+      "https://cf.cjdropshipping.com/1614827710551.jpg",
+      "https://cf.cjdropshipping.com/203009/1357783079759.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Compatible with Apple , Magnetic USB Cable Fast Charging Mic",
+        "desc": "返工打機兩用嘅實用之選。團隊嚴選先上架,即插即用,落單48小時內安排出貨。"
+      },
+      "zh-Hans": {
+        "name": "Compatible with Apple , Magnetic USB Cable Fast Charging Mic",
+        "desc": "办公游戏两用的实用之选。团队严选才上架,即插即用,下单48小时内安排发货。"
+      },
+      "en": {
+        "name": "Compatible with Apple , Magnetic USB Cable Fast Charging Mic",
+        "desc": "A practical pick for work and play, hand-picked by our team. Dispatched within 48 hours."
+      }
+    },
+    "cjPid": "1C30BC2B-A588-4B03-B955-6A20D9EBCB01",
+    "cjVid": "0909D46B-C699-4056-A191-96E2B3077F73",
+    "shipUSD": 4.26,
+    "variants": [
+      {
+        "vid": "0909D46B-C699-4056-A191-96E2B3077F73",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Blue 3A elbow 2m"
+      },
+      {
+        "vid": "1394292722696851456",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Black 1m With 3heads"
+      },
+      {
+        "vid": "1394292722705240064",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Blue 1m With 3heads"
+      },
+      {
+        "vid": "1394292722713628672",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Red 1m With 3heads"
+      },
+      {
+        "vid": "1394292722722017280",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Silver 1m With 3heads"
+      },
+      {
+        "vid": "1394292722734600192",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Black 2m With 3heads"
+      },
+      {
+        "vid": "1394292722747183104",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Blue 2m With 3heads"
+      },
+      {
+        "vid": "1394292722755571712",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Red 2m With 3heads"
+      },
+      {
+        "vid": "1394292722763960320",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Silver 2m With 3heads"
+      },
+      {
+        "vid": "1403187942939299840",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable A set Without cable"
+      },
+      {
+        "vid": "1403220602206162944",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Black 2pcs 1m With 3heads"
+      },
+      {
+        "vid": "1403220602218745856",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Black 3pcs 1m With 3heads"
+      },
+      {
+        "vid": "1403220602227134464",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Black 2pcs 2m With 3heads"
+      },
+      {
+        "vid": "1403220602235523072",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Black 3pcs 2m With 3heads"
+      },
+      {
+        "vid": "1403220602243911680",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Black 2pcs 3A elbow 1m"
+      },
+      {
+        "vid": "1403220602252300288",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Black 3pcs 3A elbow 1m"
+      },
+      {
+        "vid": "1403220602260688896",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Black 2pcs 3A elbow 2m"
+      },
+      {
+        "vid": "1403220602269077504",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Black 3pcs 3A elbow 2m"
+      },
+      {
+        "vid": "1403234629560963072",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Blue 2pcs 1m With 3heads"
+      },
+      {
+        "vid": "1403234629573545984",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Blue 3pcs 1m With 3heads"
+      },
+      {
+        "vid": "1403234629586128896",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Blue 2pcs 2m With 3heads"
+      },
+      {
+        "vid": "1403234629594517504",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Blue 3pcs 2m With 3heads"
+      },
+      {
+        "vid": "1403234629607100416",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Blue 2pcs 3A elbow 1m"
+      },
+      {
+        "vid": "1403234629619683328",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Blue 3pcs 3A elbow 1m"
+      },
+      {
+        "vid": "1403234629628071936",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Blue 2pcs 3A elbow 2m"
+      },
+      {
+        "vid": "1403234629640654848",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Blue 3pcs 3A elbow 2m"
+      },
+      {
+        "vid": "1403234629653237760",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Red 2pcs 1m With 3heads"
+      },
+      {
+        "vid": "1403234629665820672",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Red 3pcs 1m With 3heads"
+      },
+      {
+        "vid": "1403234629678403584",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Red 2pcs 2m With 3heads"
+      },
+      {
+        "vid": "1403234629686792192",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Red 3pcs 2m With 3heads"
+      },
+      {
+        "vid": "1403234629699375104",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Red 2pcs 3A ebow 1m"
+      },
+      {
+        "vid": "1403234629711958016",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Red 3pcs 3A ebow 1m"
+      },
+      {
+        "vid": "1403234629724540928",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Red 2pcs 3A elbow 2m"
+      },
+      {
+        "vid": "1403234629732929536",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Red 3pcs 3A elbow 2m"
+      },
+      {
+        "vid": "1403234629745512448",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Siver 2pcs 1m With 3heads"
+      },
+      {
+        "vid": "1403234629766483968",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Siver 3pcs 1m With 3heads"
+      },
+      {
+        "vid": "1403234629774872576",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Siver 2pcs 2m With 3heads"
+      },
+      {
+        "vid": "1403234629787455488",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Siver 3pcs 2m With 3heads"
+      },
+      {
+        "vid": "1403234629800038400",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Siver 2pcs 3A elbow 1m"
+      },
+      {
+        "vid": "1403234629808427008",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Siver 3pcs 3A elbow 1m"
+      },
+      {
+        "vid": "1403234629821009920",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Siver 2pcs 3A ebow 2m"
+      },
+      {
+        "vid": "1403234629833592832",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Siver 3pcs 3A ebow 2m"
+      },
+      {
+        "vid": "3405C543-1E34-4C3E-B929-7F5D0AE9E1A5",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Silver 3A elbow 1m"
+      },
+      {
+        "vid": "54722BF1-56A5-4B50-A1B3-C6D9B44F1FE7",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Red 3A elbow 2m"
+      },
+      {
+        "vid": "7092A7C6-B12C-46C7-8BA4-FC50B67D797C",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Type C Without cable"
+      },
+      {
+        "vid": "72F4F87B-5DB2-4BE2-A07F-5AA3DAFEEA9F",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Red 3A elbow 1m"
+      },
+      {
+        "vid": "79B274E3-D19E-4E0D-B9CF-37A1522AB667",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Blue 3A elbow 1m"
+      },
+      {
+        "vid": "CEB270BB-72A1-40E6-AB8D-4CFF7175D183",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Android Without cable"
+      },
+      {
+        "vid": "D01D65B6-486A-4891-84EF-FC0B48C148C1",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Black 3A elbow 1m"
+      },
+      {
+        "vid": "D36F1E1C-BCF6-4CD0-AADB-0C4A0CD9FF09",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Black 3A elbow 2m"
+      },
+      {
+        "vid": "E7C61D40-C0F1-4113-A739-C22FA52FA2E4",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Apple Without cable"
+      },
+      {
+        "vid": "ED40011D-5418-4E19-BCA6-D3B698787484",
+        "name": "Magnetic USB Cable Fast Charging Micro USB Type C Data Wire Cord Magnet Charger Mobile Phone Cable Silver 3A elbow 2m"
+      }
+    ],
+    "costUSD": 1.95,
+    "addedAt": "2026-08-04T13:21:28.597Z"
+  },
+  {
+    "id": 127,
+    "catClass": "tech",
+    "price": 738,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/15596640/2739499406325.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/15596640/2739499406325.jpg",
+      "https://cf.cjdropshipping.com/15596640/32571547586988.jpg",
+      "https://cf.cjdropshipping.com/15596640/301049727440.jpg",
+      "https://cf.cjdropshipping.com/15596640/1066003528479.jpg",
+      "https://cf.cjdropshipping.com/15596640/1819877874398.jpg",
+      "https://cf.cjdropshipping.com/15596640/3637522285992.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "BAMBOO KEYBOARD AND MOUSE",
+        "desc": "返工打機兩用嘅實用之選。團隊嚴選先上架,即插即用,落單48小時內安排出貨。"
+      },
+      "zh-Hans": {
+        "name": "BAMBOO KEYBOARD AND MOUSE",
+        "desc": "办公游戏两用的实用之选。团队严选才上架,即插即用,下单48小时内安排发货。"
+      },
+      "en": {
+        "name": "BAMBOO KEYBOARD AND MOUSE",
+        "desc": "A practical pick for work and play, hand-picked by our team. Dispatched within 48 hours."
+      }
+    },
+    "cjPid": "6E0649FC-D07E-4076-B5C8-5C5800680879",
+    "cjVid": "1706638467008045056",
+    "shipUSD": 10.08,
+    "variants": [
+      {
+        "vid": "1706638467008045056",
+        "name": "BAMBOO KEYBOARD AND MOUSE Natural French version"
+      },
+      {
+        "vid": "ADC639A6-7A63-4CE5-A8B1-7054B2EFD18F",
+        "name": "BAMBOO KEYBOARD AND MOUSE Wooden lubricious"
+      }
+    ],
+    "costUSD": 29.85,
+    "addedAt": "2026-08-04T13:21:32.021Z"
+  },
+  {
+    "id": 128,
+    "catClass": "tech",
+    "price": 68,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20200701/216354930907.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/20200701/216354930907.jpg",
+      "https://cf.cjdropshipping.com/20200701/2236628941901.jpg",
+      "https://cf.cjdropshipping.com/20200701/91474124044.jpg",
+      "https://cf.cjdropshipping.com/20200701/1973950994369.jpg",
+      "https://cf.cjdropshipping.com/20200701/1539659557202.jpg",
+      "https://cf.cjdropshipping.com/20200701/186110922665.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "USB Type C Cable Fast Charging cable",
+        "desc": "返工打機兩用嘅實用之選。團隊嚴選先上架,即插即用,落單48小時內安排出貨。"
+      },
+      "zh-Hans": {
+        "name": "USB Type C Cable Fast Charging cable",
+        "desc": "办公游戏两用的实用之选。团队严选才上架,即插即用,下单48小时内安排发货。"
+      },
+      "en": {
+        "name": "USB Type C Cable Fast Charging cable",
+        "desc": "A practical pick for work and play, hand-picked by our team. Dispatched within 48 hours."
+      }
+    },
+    "cjPid": "BF8E611A-1AF9-41F4-A8C3-A7FAD726D103",
+    "cjVid": "F198DDF6-524C-47F6-BF9D-6EFC750E405E",
+    "shipUSD": 2.55,
+    "variants": [
+      {
+        "vid": "F198DDF6-524C-47F6-BF9D-6EFC750E405E",
+        "name": "USB Type C Cable Fast Charging cable Black"
+      }
+    ],
+    "costUSD": 1.96,
+    "addedAt": "2026-08-04T13:21:35.316Z"
+  },
+  {
+    "id": 129,
+    "catClass": "tech",
+    "price": 358,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/15295968/152320174008.png",
+    "images": [
+      "https://cf.cjdropshipping.com/15295968/152320174008.png",
+      "https://cf.cjdropshipping.com/6c98c640-8585-4451-928c-c2a06bb223da.png",
+      "https://cf.cjdropshipping.com/15295968/53752653774540.png",
+      "https://cf.cjdropshipping.com/5939844b-91fc-4d14-a731-1736df19be4b.png"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Leather Surface Wireless Mini Bluetooth Folding Keyboard Lap",
+        "desc": "返工打機兩用嘅實用之選。團隊嚴選先上架,即插即用,落單48小時內安排出貨。"
+      },
+      "zh-Hans": {
+        "name": "Leather Surface Wireless Mini Bluetooth Folding Keyboard Lap",
+        "desc": "办公游戏两用的实用之选。团队严选才上架,即插即用,下单48小时内安排发货。"
+      },
+      "en": {
+        "name": "Leather Surface Wireless Mini Bluetooth Folding Keyboard Lap",
+        "desc": "A practical pick for work and play, hand-picked by our team. Dispatched within 48 hours."
+      }
+    },
+    "cjPid": "A2CA7C4C-5CA9-4F28-A1C1-518CB57B333B",
+    "cjVid": "24899975-A604-423E-9252-AE4D385B096C",
+    "shipUSD": 3.28,
+    "variants": [
+      {
+        "vid": "24899975-A604-423E-9252-AE4D385B096C",
+        "name": "Leather Surface Wireless Mini Bluetooth Folding Keyboard Laptop Tablet Phone Keyboard Black"
+      }
+    ],
+    "costUSD": 15,
+    "addedAt": "2026-08-04T13:21:38.416Z"
+  },
+  {
+    "id": 130,
+    "catClass": "tech",
+    "price": 88,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/1619680525977.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/1619680525977.jpg",
+      "https://cf.cjdropshipping.com/1619680525985.png",
+      "https://cf.cjdropshipping.com/1619680525978.jpg",
+      "https://cf.cjdropshipping.com/1619680525986.png",
+      "https://cf.cjdropshipping.com/1619680525980.png"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "TYPE-C Charging Cable Android Micro Elbow Data Cable",
+        "desc": "返工打機兩用嘅實用之選。團隊嚴選先上架,即插即用,落單48小時內安排出貨。"
+      },
+      "zh-Hans": {
+        "name": "TYPE-C Charging Cable Android Micro Elbow Data Cable",
+        "desc": "办公游戏两用的实用之选。团队严选才上架,即插即用,下单48小时内安排发货。"
+      },
+      "en": {
+        "name": "TYPE-C Charging Cable Android Micro Elbow Data Cable",
+        "desc": "A practical pick for work and play, hand-picked by our team. Dispatched within 48 hours."
+      }
+    },
+    "cjPid": "1387667418104598528",
+    "cjVid": "1387667419413221376",
+    "shipUSD": 2.51,
+    "variants": [
+      {
+        "vid": "1387667419413221376",
+        "name": "TYPE-C Charging Cable Android Micro Elbow Data Cable Black 0.5m Type c"
+      },
+      {
+        "vid": "1387667419421609984",
+        "name": "TYPE-C Charging Cable Android Micro Elbow Data Cable Black 0.5m Micro"
+      },
+      {
+        "vid": "1387667419434192896",
+        "name": "TYPE-C Charging Cable Android Micro Elbow Data Cable Black 1.2m Type c"
+      },
+      {
+        "vid": "1387667419438387200",
+        "name": "TYPE-C Charging Cable Android Micro Elbow Data Cable Black 1.2m Micro"
+      },
+      {
+        "vid": "1387667419450970112",
+        "name": "TYPE-C Charging Cable Android Micro Elbow Data Cable Black 1.8m Type c"
+      },
+      {
+        "vid": "1387667419459358720",
+        "name": "TYPE-C Charging Cable Android Micro Elbow Data Cable Black 1.8m Micro"
+      },
+      {
+        "vid": "1387667419467747328",
+        "name": "TYPE-C Charging Cable Android Micro Elbow Data Cable Black 3m Type c"
+      },
+      {
+        "vid": "1387667419476135936",
+        "name": "TYPE-C Charging Cable Android Micro Elbow Data Cable Black 3m Micro"
+      }
+    ],
+    "costUSD": 3.17,
+    "addedAt": "2026-08-04T13:21:41.784Z"
+  },
+  {
+    "id": 131,
+    "catClass": "tech",
+    "price": 68,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20190726/2793236994102.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/20190726/2793236994102.jpg",
+      "https://cf.cjdropshipping.com/20190726/1641409073193.jpg",
+      "https://cf.cjdropshipping.com/20190726/909715743734.jpg",
+      "https://cf.cjdropshipping.com/20190726/5954221021071.jpg",
+      "https://cf.cjdropshipping.com/20190726/6199710959971.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "USB 2.0 HUB Hub Multi-Card Reader",
+        "desc": "返工打機兩用嘅實用之選。團隊嚴選先上架,即插即用,落單48小時內安排出貨。"
+      },
+      "zh-Hans": {
+        "name": "USB 2.0 HUB Hub Multi-Card Reader",
+        "desc": "办公游戏两用的实用之选。团队严选才上架,即插即用,下单48小时内安排发货。"
+      },
+      "en": {
+        "name": "USB 2.0 HUB Hub Multi-Card Reader",
+        "desc": "A practical pick for work and play, hand-picked by our team. Dispatched within 48 hours."
+      }
+    },
+    "cjPid": "44292496-B545-4EA4-9DEA-319A5D7E98F5",
+    "cjVid": "54B744FF-DDA8-43B6-8BAB-7E81199EAC6D",
+    "shipUSD": 2.63,
+    "variants": [
+      {
+        "vid": "54B744FF-DDA8-43B6-8BAB-7E81199EAC6D",
+        "name": "USB 2.0 HUB Hub Multi-Card Reader White"
+      }
+    ],
+    "costUSD": 1.9,
+    "addedAt": "2026-08-04T13:21:45.335Z"
+  },
+  {
+    "id": 132,
+    "catClass": "tech",
+    "price": 178,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/afe837b1-fba5-40c9-8414-71b46550b907.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/afe837b1-fba5-40c9-8414-71b46550b907.jpg",
+      "https://cf.cjdropshipping.com/26953223-916e-4799-8574-a91969578776.jpg",
+      "https://cf.cjdropshipping.com/f3a50d02-2c30-4b28-a39f-19f1fb2f341e.jpg",
+      "https://cf.cjdropshipping.com/2ce1a977-1429-4f3f-9144-d2dfce1cd86e.jpg",
+      "https://cf.cjdropshipping.com/2a8e93cf-7382-42fd-bb9d-d00aa4f3777e.jpg",
+      "https://cf.cjdropshipping.com/a402706d-0dd7-45e1-832e-d91999c6bcc4.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt",
+        "desc": "返工打機兩用嘅實用之選。團隊嚴選先上架,即插即用,落單48小時內安排出貨。"
+      },
+      "zh-Hans": {
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt",
+        "desc": "办公游戏两用的实用之选。团队严选才上架,即插即用,下单48小时内安排发货。"
+      },
+      "en": {
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt",
+        "desc": "A practical pick for work and play, hand-picked by our team. Dispatched within 48 hours."
+      }
+    },
+    "cjPid": "1458263904407916544",
+    "cjVid": "1458263904487608320",
+    "shipUSD": 4.9,
+    "variants": [
+      {
+        "vid": "1458263904487608320",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights US 1meter set"
+      },
+      {
+        "vid": "1458263904491802624",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights US 2meter set"
+      },
+      {
+        "vid": "1458263904495996928",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights US 3meter set"
+      },
+      {
+        "vid": "1458263904495996929",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights US 4meter set"
+      },
+      {
+        "vid": "1458263904495996930",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights US 5meter set"
+      },
+      {
+        "vid": "1458263904500191232",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights US 6meter set"
+      },
+      {
+        "vid": "1458263904500191233",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights EU 1meter set"
+      },
+      {
+        "vid": "1458263904504385536",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights EU 2meter set"
+      },
+      {
+        "vid": "1458263904504385537",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights EU 3meter set"
+      },
+      {
+        "vid": "1458263904508579840",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights EU 4meter set"
+      },
+      {
+        "vid": "1458263904508579841",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights EU 5meter set"
+      },
+      {
+        "vid": "1458263904512774144",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights EU 6meter set"
+      },
+      {
+        "vid": "1458263904512774145",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights UK 1meter set"
+      },
+      {
+        "vid": "1458263904516968448",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights UK 2meter set"
+      },
+      {
+        "vid": "1458263904516968449",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights UK 3meter set"
+      },
+      {
+        "vid": "1458263904521162752",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights UK 4meter set"
+      },
+      {
+        "vid": "1458263904521162753",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights UK 5meter set"
+      },
+      {
+        "vid": "1458263904525357056",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights UK 6meter set"
+      },
+      {
+        "vid": "1458263904525357057",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights AU 1meter set"
+      },
+      {
+        "vid": "1458263904529551360",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights AU 2meter set"
+      },
+      {
+        "vid": "1458263904529551361",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights AU 3meter set"
+      },
+      {
+        "vid": "1458263904529551362",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights AU 4meter set"
+      },
+      {
+        "vid": "1458263904533745664",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights AU 5meter set"
+      },
+      {
+        "vid": "1458263904533745665",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 30lights AU 6meter set"
+      },
+      {
+        "vid": "1458263904537939968",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 60lights US 1meter set"
+      },
+      {
+        "vid": "1458263904537939969",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 60lights US 2meter set"
+      },
+      {
+        "vid": "1458263904542134272",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 60lights US 3meter set"
+      },
+      {
+        "vid": "1458263904542134273",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 60lights US 4meter set"
+      },
+      {
+        "vid": "1458263904546328576",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 60lights US 5meter set"
+      },
+      {
+        "vid": "1458263904546328577",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 60lights EU 1meter set"
+      },
+      {
+        "vid": "1458263904546328578",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 60lights EU 2meter set"
+      },
+      {
+        "vid": "1458263904550522880",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 60lights EU 3meter set"
+      },
+      {
+        "vid": "1458263904550522881",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 60lights EU 4meter set"
+      },
+      {
+        "vid": "1458263904550522882",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 60lights EU 5meter set"
+      },
+      {
+        "vid": "1458263904554717184",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 60lights UK 1meter set"
+      },
+      {
+        "vid": "1458263904554717185",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 60lights UK 2meter set"
+      },
+      {
+        "vid": "1458263904558911488",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 60lights UK 3meter set"
+      },
+      {
+        "vid": "1458263904558911489",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 60lights UK 4meter set"
+      },
+      {
+        "vid": "1458263904558911490",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 60lights UK 5meter set"
+      },
+      {
+        "vid": "1458263904563105792",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 60lights AU 1meter set"
+      },
+      {
+        "vid": "1458263904563105793",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 60lights AU 2meter set"
+      },
+      {
+        "vid": "1458263904567300096",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 60lights AU 3meter set"
+      },
+      {
+        "vid": "1458263904567300097",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 60lights AU 4meter set"
+      },
+      {
+        "vid": "1458263904571494400",
+        "name": "Monitor Computer LCD Screen Overflow Color Sync Light Belt 60lights AU 5meter set"
+      }
+    ],
+    "costUSD": 6.09,
+    "addedAt": "2026-08-04T13:21:48.798Z"
   }
 ]
