@@ -1,1 +1,292 @@
-[]
+[
+  {
+    "id": 13,
+    "catClass": "home",
+    "price": 98,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20200915/3742733885274.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/20200915/3742733885274.jpg",
+      "https://cf.cjdropshipping.com/20200915/4433763307738.png",
+      "https://cf.cjdropshipping.com/20200915/792107395220.png",
+      "https://cf.cjdropshipping.com/20200915/7717801546957.jpg",
+      "https://cf.cjdropshipping.com/20200915/1827523962878.png",
+      "https://cf.cjdropshipping.com/20200915/586994733798.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Simple blackout curtains",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Simple blackout curtains",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Simple blackout curtains",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "60A3189A-F783-4287-8A90-93AE8D7E8AC6",
+    "cjVid": "1609723883832225792",
+    "costUSD": 4.33,
+    "addedAt": "2026-08-04T09:47:58.701Z"
+  },
+  {
+    "id": 14,
+    "catClass": "home",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/fe1d4a5a-0570-48d3-b37f-459f93a9f2db.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/fe1d4a5a-0570-48d3-b37f-459f93a9f2db.jpg",
+      "https://cf.cjdropshipping.com/20190528/1694570239715.png",
+      "https://cf.cjdropshipping.com/20190528/387525185991.png",
+      "https://cf.cjdropshipping.com/20190528/1431185534541.png",
+      "https://cf.cjdropshipping.com/20190528/865729897001.png",
+      "https://cf.cjdropshipping.com/20190528/1525128555721.png"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Living Room Rug Area Solid Carpet Fluffy Soft Home Decor Whi",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Living Room Rug Area Solid Carpet Fluffy Soft Home Decor Whi",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Living Room Rug Area Solid Carpet Fluffy Soft Home Decor Whi",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "49A3C354-DC98-4C4F-B0CA-349418D8E4D6",
+    "cjVid": "0CD2BEEA-8CA0-41B5-AD5F-BE24F4F1565B",
+    "costUSD": 0.93,
+    "addedAt": "2026-08-04T09:48:00.029Z"
+  },
+  {
+    "id": 15,
+    "catClass": "home",
+    "price": 198,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/d3ab8af8-f120-4e6c-9d16-62d053f2e9f9.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/d3ab8af8-f120-4e6c-9d16-62d053f2e9f9.jpg",
+      "https://cf.cjdropshipping.com/5a0a940d-4198-460d-8fee-c995d698f0ae.jpg",
+      "https://cf.cjdropshipping.com/d60b242d-460b-435c-a8a4-c56a007910a8.jpg",
+      "https://cf.cjdropshipping.com/18806f79-c71f-492b-9f4e-c6fe295bb1fa.jpg",
+      "https://cf.cjdropshipping.com/d7fbf872-5e61-43ad-b8eb-ae23919ecc35.jpg",
+      "https://cf.cjdropshipping.com/e545cb3a-0868-420b-a126-5f74b2806355.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Solid Color Simple Modern Light Luxury Living Room Chenille ",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Solid Color Simple Modern Light Luxury Living Room Chenille ",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Solid Color Simple Modern Light Luxury Living Room Chenille ",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "1502494542795386880",
+    "cjVid": "1502494542946381824",
+    "costUSD": 8.85,
+    "addedAt": "2026-08-04T09:48:04.173Z"
+  },
+  {
+    "id": 16,
+    "catClass": "home",
+    "price": 98,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/1621048755792.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/1621048755792.jpg",
+      "https://cf.cjdropshipping.com/1621048755787.jpg",
+      "https://cf.cjdropshipping.com/1621048764853.jpg",
+      "https://cf.cjdropshipping.com/1621048755794.jpg",
+      "https://cf.cjdropshipping.com/1621048755793.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Easy Installation Curtains For Bedroom",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Easy Installation Curtains For Bedroom",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Easy Installation Curtains For Bedroom",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "1393407608219635712",
+    "cjVid": "1393407609591173120",
+    "costUSD": 4.27,
+    "addedAt": "2026-08-04T09:48:06.241Z"
+  },
+  {
+    "id": 17,
+    "catClass": "home",
+    "price": 128,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/2d787d0a-010c-47a7-bc4d-27da4ca3ef00.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/2d787d0a-010c-47a7-bc4d-27da4ca3ef00.jpg",
+      "https://cf.cjdropshipping.com/b77a4042-8e80-4ba4-b5f6-de3b720f46c9.jpg",
+      "https://cf.cjdropshipping.com/368518df-f061-4b1d-9388-d829691b3679.jpg",
+      "https://cf.cjdropshipping.com/35a2bbc0-77fd-4e07-b09b-8ceeb8b7aa95.jpg",
+      "https://cf.cjdropshipping.com/e5346392-5949-4f92-be3f-f758d4608091.jpg",
+      "https://cf.cjdropshipping.com/f5e3fd9b-d39f-44d0-a59c-72e46f18407f.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Dark Blue Bedroom Blackout Fabric Printed Curtains",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Dark Blue Bedroom Blackout Fabric Printed Curtains",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Dark Blue Bedroom Blackout Fabric Printed Curtains",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "1450275773595389952",
+    "cjVid": "1450275773649915904",
+    "costUSD": 5.72,
+    "addedAt": "2026-08-04T09:48:08.919Z"
+  },
+  {
+    "id": 18,
+    "catClass": "home",
+    "price": 78,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/7560b9ac-d1ba-494a-b1b5-a8a7abdbab5f.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/7560b9ac-d1ba-494a-b1b5-a8a7abdbab5f.jpg",
+      "https://cf.cjdropshipping.com/28c8bc95-76c2-4cfc-8c46-d96c1f74b8d5.jpg",
+      "https://cf.cjdropshipping.com/fd01f725-f8d0-4943-9223-dc708a3dd521.jpg",
+      "https://cf.cjdropshipping.com/8f742fd7-1144-48f3-92a6-6cb8ff469e1b.jpg",
+      "https://cf.cjdropshipping.com/8b4669c2-18c9-4c22-982b-cadab01d54e7.jpg",
+      "https://cf.cjdropshipping.com/84075c11-b042-4e8c-bdde-6f70bc5a64c1.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Modern And Simple Pure Color Cotton And Linen Window Screen",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Modern And Simple Pure Color Cotton And Linen Window Screen",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Modern And Simple Pure Color Cotton And Linen Window Screen",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "1460083331856207872",
+    "cjVid": "1460083331977842688",
+    "costUSD": 3.35,
+    "addedAt": "2026-08-04T09:48:10.302Z"
+  },
+  {
+    "id": 19,
+    "catClass": "home",
+    "price": 68,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20190808/1812515695545.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/20190808/1812515695545.jpg",
+      "https://cf.cjdropshipping.com/20190808/3502407697646.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Big Tapestry Beautiful Natural Forest Large Wall Hanging Hip",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Big Tapestry Beautiful Natural Forest Large Wall Hanging Hip",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Big Tapestry Beautiful Natural Forest Large Wall Hanging Hip",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "7F567A30-4AEF-468E-83A9-498D3B040209",
+    "cjVid": "06F4F21F-82D8-457E-9DF6-FB892FE714C4",
+    "costUSD": 3.15,
+    "addedAt": "2026-08-04T09:48:11.755Z"
+  },
+  {
+    "id": 20,
+    "catClass": "home",
+    "price": 258,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/1615282089554.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/1615282089554.jpg",
+      "https://cf.cjdropshipping.com/1615282089550.jpg",
+      "https://cf.cjdropshipping.com/1615282089549.jpg",
+      "https://cf.cjdropshipping.com/1615282088921.jpg",
+      "https://cf.cjdropshipping.com/1615282089068.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Bohemian Hand-Woven Tapestry Curtain Partition Bohemian Wedd",
+        "desc": "香港細單位都啱用,慳位實用之選。團隊嚴選先上架,48小時內出貨,順豐站自取。"
+      },
+      "zh-Hans": {
+        "name": "Bohemian Hand-Woven Tapestry Curtain Partition Bohemian Wedd",
+        "desc": "小户型也适用,省空间实用之选。团队严选才上架,48小时内发货,顺丰站自取。"
+      },
+      "en": {
+        "name": "Bohemian Hand-Woven Tapestry Curtain Partition Bohemian Wedd",
+        "desc": "A practical, space-saving pick hand-picked by our team — ships within 48 hours with SF Locker pickup."
+      }
+    },
+    "cjPid": "1369220301346443264",
+    "cjVid": "1369220302738952192",
+    "costUSD": 11.86,
+    "addedAt": "2026-08-04T09:48:13.139Z"
+  }
+]
