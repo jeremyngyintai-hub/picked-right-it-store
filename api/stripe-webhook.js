@@ -13,9 +13,9 @@
 // ============================================================
 
 const Stripe = require("stripe");
-const { getCatalog } = require("./lib/catalog");
-const { kvReady, kv, pipeline } = require("./lib/kv");
-const cj = require("./lib/cjClient");
+const { getCatalog } = require("./_lib/catalog");
+const { kvReady, kv, pipeline } = require("./_lib/kv");
+const cj = require("./_lib/cjClient");
 
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 

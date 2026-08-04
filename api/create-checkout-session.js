@@ -6,7 +6,7 @@
 // ============================================================
 
 const Stripe = require("stripe");
-const { getCatalog } = require("./lib/catalog");
+const { getCatalog } = require("./_lib/catalog");
 
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 

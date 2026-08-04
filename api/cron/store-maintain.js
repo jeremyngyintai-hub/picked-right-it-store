@@ -9,7 +9,7 @@
 //      如果之後有單返嚟,會自動上返架
 // ============================================================
 
-const { kvReady, pipeline } = require("../lib/kv");
+const { kvReady, pipeline } = require("../_lib/kv");
 
 const DELIST_DAYS = parseInt(process.env.AUTO_DELIST_DAYS) || 14;
 

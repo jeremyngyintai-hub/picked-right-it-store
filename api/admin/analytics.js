@@ -6,8 +6,8 @@
 //   - 每件產品:瀏覽量、銷量、營業額、轉換率
 // ============================================================
 
-const { kvReady, kv, pipeline } = require("../lib/kv");
-const { getCatalog } = require("../lib/catalog");
+const { kvReady, kv, pipeline } = require("../_lib/kv");
+const { getCatalog } = require("../_lib/catalog");
 
 const USD_TO_HKD = 7.8;
 const DAY = 86400e3;

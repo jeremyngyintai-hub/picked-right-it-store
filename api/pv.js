@@ -3,7 +3,7 @@
 // 輕量瀏覽量追蹤(KV有設定先記,冇就靜靜跳過)
 // ============================================================
 
-const { kvReady, pipeline } = require("./lib/kv");
+const { kvReady, pipeline } = require("./_lib/kv");
 
 function ymdHK(ts) {
   // 香港時區(UTC+8)嘅YYYYMMDD
