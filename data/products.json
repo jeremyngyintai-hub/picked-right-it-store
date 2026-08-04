@@ -6800,5 +6800,494 @@
     ],
     "costUSD": 0.58,
     "addedAt": "2026-08-04T13:18:27.591Z"
+  },
+  {
+    "id": 85,
+    "catClass": "beauty",
+    "price": 88,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/quick/product/f68edff5-4a0a-425c-af00-e85c450e1270.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/quick/product/f68edff5-4a0a-425c-af00-e85c450e1270.jpg",
+      "https://cf.cjdropshipping.com/quick/product/af80e457-0f78-45ee-a216-7feec9090fc7.jpg",
+      "https://cf.cjdropshipping.com/quick/product/8dbf321b-70ef-47fe-8aee-93c865948f38.jpg",
+      "https://cf.cjdropshipping.com/quick/product/7301de35-b973-4981-b9d9-aa86f9cc665b.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Handmade UV Nail Beauty Patch Finished Product",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "Handmade UV Nail Beauty Patch Finished Product",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "Handmade UV Nail Beauty Patch Finished Product",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "1785940823100628992",
+    "cjVid": "1785940823171932160",
+    "shipUSD": 2.4,
+    "variants": [
+      {
+        "vid": "1785940823171932160",
+        "name": "Handmade UV Nail Beauty Patch Finished Product 1456 Long Ladder XS"
+      },
+      {
+        "vid": "1785940823230652416",
+        "name": "Handmade UV Nail Beauty Patch Finished Product 1456 Long Ladder S"
+      },
+      {
+        "vid": "1785940823293566976",
+        "name": "Handmade UV Nail Beauty Patch Finished Product 1456 Long Ladder M"
+      },
+      {
+        "vid": "1785940823352287232",
+        "name": "Handmade UV Nail Beauty Patch Finished Product 1456 Long Ladder L"
+      }
+    ],
+    "costUSD": 3.15,
+    "addedAt": "2026-08-04T13:18:34.720Z"
+  },
+  {
+    "id": 86,
+    "catClass": "beauty",
+    "price": 58,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/e4a82441-7c7f-465e-a77a-49e1972a7f15.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/e4a82441-7c7f-465e-a77a-49e1972a7f15.jpg",
+      "https://cf.cjdropshipping.com/3f24a6bd-c027-4839-888b-1bd285c60bcc.jpg",
+      "https://cf.cjdropshipping.com/09132364-f2e1-4587-88ef-c4874dfaff51.jpg",
+      "https://cf.cjdropshipping.com/71d288ca-3365-4662-a52f-3572080b5d3d.jpg",
+      "https://cf.cjdropshipping.com/6e908d81-9501-44f3-8a5c-e62cb01c8f4f.jpg",
+      "https://cf.cjdropshipping.com/quick/product/8132ca5e-211a-4858-9a18-384942a168e2.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Manicure Valentines Day Fake Nails Love",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "Manicure Valentines Day Fake Nails Love",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "Manicure Valentines Day Fake Nails Love",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "1687667446502666240",
+    "cjVid": "1687667446532026368",
+    "shipUSD": 5,
+    "variants": [
+      {
+        "vid": "1687667446532026368",
+        "name": "Manicure Valentine's Day Fake Nails Love Magenta"
+      }
+    ],
+    "costUSD": 0.59,
+    "addedAt": "2026-08-04T13:18:37.938Z"
+  },
+  {
+    "id": 87,
+    "catClass": "beauty",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/2058/1729736179358.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/2058/1729736179358.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Christmas nail stickers",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "Christmas nail stickers",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "Christmas nail stickers",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "3379C1B8-F32A-4407-9888-60E18A31AEF5",
+    "cjVid": "0137CB25-CBE8-4AB5-8457-27AB8470E54B",
+    "shipUSD": 2.27,
+    "variants": [
+      {
+        "vid": "0137CB25-CBE8-4AB5-8457-27AB8470E54B",
+        "name": "Christmas nail stickers 591style"
+      },
+      {
+        "vid": "1F2A540F-75A9-4B07-8864-7D5CF354028F",
+        "name": "Christmas nail stickers 593style"
+      },
+      {
+        "vid": "44F946D6-6247-4640-8B10-DC27FA85DFFE",
+        "name": "Christmas nail stickers 596style"
+      },
+      {
+        "vid": "59B6EBC4-0893-4427-957E-92DA78E89135",
+        "name": "Christmas nail stickers 602style"
+      },
+      {
+        "vid": "6FCA3652-B21A-4934-985E-95EA0799E0C2",
+        "name": "Christmas nail stickers 595style"
+      },
+      {
+        "vid": "7AAB370E-BDE8-4293-B5B7-5A4E8AE13AA3",
+        "name": "Christmas nail stickers 600style"
+      },
+      {
+        "vid": "CA5B50BD-7C0F-4F5A-A103-F7C80AD3F3CF",
+        "name": "Christmas nail stickers 592style"
+      },
+      {
+        "vid": "CCF978CA-34F5-469C-A8F6-3A8AFFA61C2B",
+        "name": "Christmas nail stickers 597style"
+      },
+      {
+        "vid": "E7AC3320-12E2-4884-A062-299C67DD8312",
+        "name": "Christmas nail stickers 599style"
+      },
+      {
+        "vid": "EE8CBF1B-4B3F-466B-8877-15338AC71F94",
+        "name": "Christmas nail stickers 594style"
+      },
+      {
+        "vid": "EFE3CA3C-D6F7-4901-B139-1975A3CD58A2",
+        "name": "Christmas nail stickers 598style"
+      },
+      {
+        "vid": "F154BFD7-3EE3-4AE0-BFDD-F4A4838A796E",
+        "name": "Christmas nail stickers 601style"
+      }
+    ],
+    "costUSD": 0.67,
+    "addedAt": "2026-08-04T13:18:41.110Z"
+  },
+  {
+    "id": 88,
+    "catClass": "beauty",
+    "price": 68,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/6e38a3e9-e211-45da-97ff-fddac895a586.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/6e38a3e9-e211-45da-97ff-fddac895a586.jpg",
+      "https://cf.cjdropshipping.com/c8910620-8a7d-493e-b632-097192c1cba1.jpg",
+      "https://cf.cjdropshipping.com/b8966908-655d-41b5-aa36-4364f986c179.jpg",
+      "https://cf.cjdropshipping.com/2a9ea6a1-d435-43d5-8c3e-8710462fe72d.jpg",
+      "https://cf.cjdropshipping.com/2e2b7d68-9dda-4d88-ba04-523362e9178a.jpg",
+      "https://cf.cjdropshipping.com/23f93980-1da5-4857-a5c0-568eee22d0ee.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Oblique French Simple Wearing Manicure Finished Fake Nails",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "Oblique French Simple Wearing Manicure Finished Fake Nails",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "Oblique French Simple Wearing Manicure Finished Fake Nails",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "1556199246960013312",
+    "cjVid": "1556199246989373440",
+    "shipUSD": 6.83,
+    "variants": [
+      {
+        "vid": "1556199246989373440",
+        "name": "Oblique French Simple Wearing Manicure Finished Fake Nails JP823"
+      },
+      {
+        "vid": "1556199246993567744",
+        "name": "Oblique French Simple Wearing Manicure Finished Fake Nails JP1489"
+      },
+      {
+        "vid": "1556199246993567745",
+        "name": "Oblique French Simple Wearing Manicure Finished Fake Nails CDJR147 glue"
+      },
+      {
+        "vid": "1556199246997762048",
+        "name": "Oblique French Simple Wearing Manicure Finished Fake Nails CDJR147 tool kit"
+      },
+      {
+        "vid": "1651791554027204608",
+        "name": "Oblique French Simple Wearing Manicure Finished Fake Nails Set"
+      }
+    ],
+    "costUSD": 0.69,
+    "addedAt": "2026-08-04T13:18:44.166Z"
+  },
+  {
+    "id": 89,
+    "catClass": "beauty",
+    "price": 78,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/15995808/16596525318849.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/15995808/16596525318849.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Nail glitter powder Nail glitter powder",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "Nail glitter powder Nail glitter powder",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "Nail glitter powder Nail glitter powder",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "EAF348FD-8281-4745-8E28-639980204696",
+    "cjVid": "1C13F988-30C2-4CFE-AC2D-B77272CC5FCE",
+    "shipUSD": 6.83,
+    "variants": [
+      {
+        "vid": "1C13F988-30C2-4CFE-AC2D-B77272CC5FCE",
+        "name": "Nail glitter powder Nail glitter powder Blackish green"
+      },
+      {
+        "vid": "20A3D222-D1C8-4496-845F-0843BA9E8DCB",
+        "name": "Nail glitter powder Nail glitter powder Red"
+      },
+      {
+        "vid": "2BE0AE40-DB27-42BF-A212-8F4A703D47CB",
+        "name": "Nail glitter powder Nail glitter powder Lemon yellow"
+      },
+      {
+        "vid": "2D08C8AD-6F7C-4F7C-839F-C37082239256",
+        "name": "Nail glitter powder Nail glitter powder Black"
+      },
+      {
+        "vid": "3A9F1B2E-E2EC-4B15-8207-9D95251CC4A7",
+        "name": "Nail glitter powder Nail glitter powder Light purple"
+      },
+      {
+        "vid": "49EECEA4-1289-4A48-BB17-D2FB8D9C4615",
+        "name": "Nail glitter powder Nail glitter powder Rose red"
+      },
+      {
+        "vid": "57A336E4-C969-459D-80CC-03ED667FF247",
+        "name": "Nail glitter powder Nail glitter powder Deep purple"
+      },
+      {
+        "vid": "63169EBC-48C2-46B2-ADDC-879A8845E268",
+        "name": "Nail glitter powder Nail glitter powder Orange red"
+      },
+      {
+        "vid": "6E310F08-842B-4257-8E58-6A3A7D6965B8",
+        "name": "Nail glitter powder Nail glitter powder Gold"
+      },
+      {
+        "vid": "6FCFB9E0-C1A9-4440-814F-272EEE293A27",
+        "name": "Nail glitter powder Nail glitter powder Peach red"
+      },
+      {
+        "vid": "73A551C1-7522-40F2-BC24-7E2BA18C63A4",
+        "name": "Nail glitter powder Nail glitter powder Coffee"
+      },
+      {
+        "vid": "94F2C1AE-4DAD-4C79-9A5D-F5FB2A0BE0D7",
+        "name": "Nail glitter powder Nail glitter powder Blue"
+      },
+      {
+        "vid": "9693493E-2EA8-4C96-A12A-3D8B94BB43CB",
+        "name": "Nail glitter powder Nail glitter powder Green"
+      },
+      {
+        "vid": "9ED23698-1B34-4B60-8679-5683C3BF32F6",
+        "name": "Nail glitter powder Nail glitter powder Yellow"
+      },
+      {
+        "vid": "A00E2461-1754-4B6A-8C90-416199DA368E",
+        "name": "Nail glitter powder Nail glitter powder Orange"
+      },
+      {
+        "vid": "DDF6D9B1-A964-428D-A711-B1193C44AA0D",
+        "name": "Nail glitter powder Nail glitter powder Royal blue"
+      },
+      {
+        "vid": "E17DB1F2-00F1-4090-9F13-15E2D68D6CAC",
+        "name": "Nail glitter powder Nail glitter powder Silver"
+      },
+      {
+        "vid": "E7F005E6-F2BD-439C-ABE0-FDFDF5248A57",
+        "name": "Nail glitter powder Nail glitter powder Deep green"
+      },
+      {
+        "vid": "FD9B2612-8929-4601-AD61-CBB80BC96066",
+        "name": "Nail glitter powder Nail glitter powder Light blue"
+      }
+    ],
+    "costUSD": 1.22,
+    "addedAt": "2026-08-04T13:18:47.255Z"
+  },
+  {
+    "id": 90,
+    "catClass": "beauty",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20200906/135719619909812.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/20200906/135719619909812.jpg",
+      "https://cf.cjdropshipping.com/20200906/701850526546.jpg",
+      "https://cf.cjdropshipping.com/15992352/149960914281.jpg",
+      "https://cf.cjdropshipping.com/20200906/1983424933644.jpg",
+      "https://cf.cjdropshipping.com/20200906/630047620886.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "24 pieces of matte metallic nude nails",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "24 pieces of matte metallic nude nails",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "24 pieces of matte metallic nude nails",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "0C81A35F-F44D-4152-AB2E-BB95F5C2190D",
+    "cjVid": "B0B2858A-400F-4CC1-9A22-660199D508FA",
+    "shipUSD": 2.4,
+    "variants": [
+      {
+        "vid": "B0B2858A-400F-4CC1-9A22-660199D508FA",
+        "name": "24 pieces of matte metallic nude nails F01"
+      }
+    ],
+    "costUSD": 1.36,
+    "addedAt": "2026-08-04T13:18:50.729Z"
+  },
+  {
+    "id": 91,
+    "catClass": "beauty",
+    "price": 98,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/65821163-b038-4578-b6fe-6809c6885636.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/65821163-b038-4578-b6fe-6809c6885636.jpg",
+      "https://cf.cjdropshipping.com/168de253-03e6-4716-b456-5fb301792757.jpg",
+      "https://cf.cjdropshipping.com/6ddc466e-b653-4a1b-aeb3-71529047d79c.jpg",
+      "https://cf.cjdropshipping.com/63f96e63-945f-4dfc-a595-76c58ddbc4a8.jpg",
+      "https://cf.cjdropshipping.com/77436a92-710a-4f68-9eba-c541a531b7f4.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Fake Nails Multicolored Wave Pattern Extra Long Ballerina Fr",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "Fake Nails Multicolored Wave Pattern Extra Long Ballerina Fr",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "Fake Nails Multicolored Wave Pattern Extra Long Ballerina Fr",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "1485455496235323392",
+    "cjVid": "1485455496361152512",
+    "shipUSD": 6.83,
+    "variants": [
+      {
+        "vid": "1485455496361152512",
+        "name": "Fake Nails Multicolored Wave Pattern Extra Long Ballerina Frosted Nail Art Glue model"
+      },
+      {
+        "vid": "1485455496365346816",
+        "name": "Fake Nails Multicolored Wave Pattern Extra Long Ballerina Frosted Nail Art Jelly glue model"
+      },
+      {
+        "vid": "1485455496365346817",
+        "name": "Fake Nails Multicolored Wave Pattern Extra Long Ballerina Frosted Nail Art Wearing armor"
+      }
+    ],
+    "costUSD": 1.86,
+    "addedAt": "2026-08-04T13:18:54.308Z"
+  },
+  {
+    "id": 92,
+    "catClass": "beauty",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20200508/972937778866.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/20200508/972937778866.jpg",
+      "https://cf.cjdropshipping.com/20200508/2317161226339.jpg",
+      "https://cf.cjdropshipping.com/20200508/704882374822.jpg",
+      "https://cf.cjdropshipping.com/20200508/11175964210416.jpg",
+      "https://cf.cjdropshipping.com/15875712/1050768612012.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Geometric  DIY Art Nail Polish Stickers",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "Geometric  DIY Art Nail Polish Stickers",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "Geometric  DIY Art Nail Polish Stickers",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "57C0FC0B-4638-467D-8BB8-DEB766FCB825",
+    "cjVid": "E7F196DE-87B2-4CE4-9E65-1423D9C1AFB1",
+    "shipUSD": 2.35,
+    "variants": [
+      {
+        "vid": "E7F196DE-87B2-4CE4-9E65-1423D9C1AFB1",
+        "name": "Geometric  DIY Art Nail Polish Stickers DC306"
+      }
+    ],
+    "costUSD": 0.28,
+    "addedAt": "2026-08-04T13:18:57.611Z"
   }
 ]
