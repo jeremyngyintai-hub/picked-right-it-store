@@ -5273,5 +5273,492 @@
     ],
     "costUSD": 1.7,
     "addedAt": "2026-08-04T13:16:53.922Z"
+  },
+  {
+    "id": 61,
+    "catClass": "beauty",
+    "price": 238,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/4ea04a93-17b9-4514-825a-b8b4c40335bb.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/4ea04a93-17b9-4514-825a-b8b4c40335bb.jpg",
+      "https://cf.cjdropshipping.com/94a12459-37c7-4a77-9fd0-dc34fd8ea81f.jpg",
+      "https://cf.cjdropshipping.com/e43629bc-fe93-4e70-8dd6-28167ce4bffb.jpg",
+      "https://cf.cjdropshipping.com/0af5f6fc-648b-4926-9373-7886b5424633.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Star Girl Wears Nail Patch",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "Star Girl Wears Nail Patch",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "Star Girl Wears Nail Patch",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "1598918111003160576",
+    "cjVid": "1598918111082852352",
+    "shipUSD": 6.83,
+    "variants": [
+      {
+        "vid": "1598918111082852352",
+        "name": "Star Girl Wears Nail Patch Ultra short square circle XS"
+      },
+      {
+        "vid": "1598918111082852353",
+        "name": "Star Girl Wears Nail Patch Ultra short square circle S"
+      },
+      {
+        "vid": "1598918111082852354",
+        "name": "Star Girl Wears Nail Patch Ultra short square circle M"
+      },
+      {
+        "vid": "1598918111087046656",
+        "name": "Star Girl Wears Nail Patch Ultra short square circle L"
+      },
+      {
+        "vid": "1598918111087046657",
+        "name": "Star Girl Wears Nail Patch Short square XS"
+      },
+      {
+        "vid": "1598918111087046658",
+        "name": "Star Girl Wears Nail Patch Short square S"
+      },
+      {
+        "vid": "1598918111087046659",
+        "name": "Star Girl Wears Nail Patch Short square M"
+      },
+      {
+        "vid": "1598918111091240960",
+        "name": "Star Girl Wears Nail Patch Short square L"
+      }
+    ],
+    "costUSD": 8.11,
+    "addedAt": "2026-08-04T13:17:00.382Z"
+  },
+  {
+    "id": 62,
+    "catClass": "beauty",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20200909/1644224335950.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/20200909/1644224335950.jpg",
+      "https://cf.cjdropshipping.com/20200909/29996344859635.jpg",
+      "https://cf.cjdropshipping.com/20200909/973444195612.jpg",
+      "https://cf.cjdropshipping.com/20200909/2385047922566.jpg",
+      "https://cf.cjdropshipping.com/20200909/11121467358526.jpg",
+      "https://cf.cjdropshipping.com/20200909/3240522736651.png"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Light khaki smudge false nails",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "Light khaki smudge false nails",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "Light khaki smudge false nails",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "9A359992-9F23-422E-AB7C-C185E3953F9A",
+    "cjVid": "6FFB7A0C-6F46-4BB0-AF50-BE4C14E3014B",
+    "shipUSD": 2.43,
+    "variants": [
+      {
+        "vid": "6FFB7A0C-6F46-4BB0-AF50-BE4C14E3014B",
+        "name": "Light khaki smudge false nails Khaki"
+      }
+    ],
+    "costUSD": 0.5,
+    "addedAt": "2026-08-04T13:17:04.073Z"
+  },
+  {
+    "id": 63,
+    "catClass": "beauty",
+    "price": 68,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/15718464/482846389953.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/15718464/482846389953.jpg",
+      "https://cf.cjdropshipping.com/15718464/398330252548.jpg",
+      "https://cf.cjdropshipping.com/15718464/11369162166736.jpg",
+      "https://cf.cjdropshipping.com/15718464/4253372726323.jpg",
+      "https://cf.cjdropshipping.com/15718464/6611199264720.jpg",
+      "https://cf.cjdropshipping.com/15718464/1515847715616.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Nail glitter",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "Nail glitter",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "Nail glitter",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "47AEFD4D-CB98-4CF2-90AD-49786A312476",
+    "cjVid": "13822B4C-38F5-4E54-A74B-98CFF6886C39",
+    "shipUSD": 6.83,
+    "variants": [
+      {
+        "vid": "13822B4C-38F5-4E54-A74B-98CFF6886C39",
+        "name": "Nail glitter Gold"
+      },
+      {
+        "vid": "1CCAA42C-C310-4D84-85BF-3FC021206C13",
+        "name": "Nail glitter Green"
+      },
+      {
+        "vid": "28FC0D67-8DA3-42D3-AE97-0921785D34CF",
+        "name": "Nail glitter Silver"
+      },
+      {
+        "vid": "517463B2-A523-4A02-B1C3-0F19B82CB6F5",
+        "name": "Nail glitter Lilac purple"
+      },
+      {
+        "vid": "6D08261C-629C-486F-ADDF-0FAF3AFF4F11",
+        "name": "Nail glitter Bronze"
+      },
+      {
+        "vid": "71C4EFCE-DEE9-4757-8CE6-DDA896AB7DBD",
+        "name": "Nail glitter Rose gold"
+      },
+      {
+        "vid": "80404B2A-D622-4AB2-8A9C-071AFB38B765",
+        "name": "Nail glitter Light blue"
+      },
+      {
+        "vid": "9B3D1A0C-06EE-4119-A914-C0BD603100D8",
+        "name": "Nail glitter Light pink"
+      },
+      {
+        "vid": "9BFFEEF4-C2DA-4184-9B4E-0219866FECAB",
+        "name": "Nail glitter Rose powder"
+      },
+      {
+        "vid": "A31B9A0F-071C-4397-B99B-0C58DA85F49A",
+        "name": "Nail glitter Red"
+      },
+      {
+        "vid": "AA881B5A-403C-4FF1-BAE6-10F663517A63",
+        "name": "Nail glitter Dark blue"
+      },
+      {
+        "vid": "BFA9DFDE-8F17-40B0-BBA5-B39EF14AD958",
+        "name": "Nail glitter Purple"
+      }
+    ],
+    "costUSD": 0.71,
+    "addedAt": "2026-08-04T13:17:07.331Z"
+  },
+  {
+    "id": 64,
+    "catClass": "beauty",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/20200904/834079415046.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/20200904/834079415046.jpg",
+      "https://cf.cjdropshipping.com/20200904/29138130959665.jpg",
+      "https://cf.cjdropshipping.com/20200904/876733832928.jpg",
+      "https://cf.cjdropshipping.com/15991488/1686312231108.jpg",
+      "https://cf.cjdropshipping.com/20200907/217010760009.jpg",
+      "https://cf.cjdropshipping.com/20200904/3723168986250.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "24 pieces of trendy wearable fake nail pieces",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "24 pieces of trendy wearable fake nail pieces",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "24 pieces of trendy wearable fake nail pieces",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "1949BD9E-2A7A-4DA2-82A7-FAC8AC1E6727",
+    "cjVid": "06AA7B8C-6420-4B9D-B42E-AA79A3B33F76",
+    "shipUSD": 2.51,
+    "variants": [
+      {
+        "vid": "06AA7B8C-6420-4B9D-B42E-AA79A3B33F76",
+        "name": "24 pieces of trendy wearable fake nail pieces 1Style"
+      },
+      {
+        "vid": "1647863840916385792",
+        "name": "24 pieces of trendy wearable fake nail pieces Set"
+      },
+      {
+        "vid": "265DA099-01A1-40A3-AD54-4BDFE5816D7E",
+        "name": "24 pieces of trendy wearable fake nail pieces 4Style"
+      },
+      {
+        "vid": "3740B963-AAF4-417E-957D-FB7B310297B3",
+        "name": "24 pieces of trendy wearable fake nail pieces 5Style"
+      },
+      {
+        "vid": "62E2BCC2-7C41-40E3-B6BC-EE8ABF42DB0A",
+        "name": "24 pieces of trendy wearable fake nail pieces 2Style"
+      },
+      {
+        "vid": "B4BE2FCD-81A9-48AF-B92D-F2C8FBDA2B19",
+        "name": "24 pieces of trendy wearable fake nail pieces 6Style"
+      },
+      {
+        "vid": "DE5407E1-FB6E-469B-A901-A2CCCE180E6D",
+        "name": "24 pieces of trendy wearable fake nail pieces 3Style"
+      }
+    ],
+    "costUSD": 1.35,
+    "addedAt": "2026-08-04T13:17:10.678Z"
+  },
+  {
+    "id": 65,
+    "catClass": "beauty",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/1618994966555.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/1618994966555.jpg",
+      "https://cf.cjdropshipping.com/1618994966562.jpg",
+      "https://cf.cjdropshipping.com/1618994966564.jpg",
+      "https://cf.cjdropshipping.com/1618994966563.jpg",
+      "https://cf.cjdropshipping.com/1618994966558.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Nail Art Sticker Snake Skin Animal Grain Nail Star Paper Tra",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "Nail Art Sticker Snake Skin Animal Grain Nail Star Paper Tra",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "Nail Art Sticker Snake Skin Animal Grain Nail Star Paper Tra",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "1384792775135989760",
+    "cjVid": "1384929401698914304",
+    "shipUSD": 2.55,
+    "variants": [
+      {
+        "vid": "1384929401698914304",
+        "name": "Nail Art Sticker Snake Skin Animal Grain Nail Star Paper Transfer Paper Laser Paper A 10pcs"
+      }
+    ],
+    "costUSD": 1.08,
+    "addedAt": "2026-08-04T13:17:13.810Z"
+  },
+  {
+    "id": 66,
+    "catClass": "beauty",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/1620714632323.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/1620714632323.jpg",
+      "https://cf.cjdropshipping.com/1620714632317.jpg",
+      "https://cf.cjdropshipping.com/1620714632324.jpg",
+      "https://cf.cjdropshipping.com/1620714632325.jpg",
+      "https://cf.cjdropshipping.com/1620714632326.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Short Ballet Black Flame French Wearing Nail Fake Nail Nail ",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "Short Ballet Black Flame French Wearing Nail Fake Nail Nail ",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "Short Ballet Black Flame French Wearing Nail Fake Nail Nail ",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "1392004582162436096",
+    "cjVid": "1392004583471058944",
+    "shipUSD": 2.39,
+    "variants": [
+      {
+        "vid": "1392004583471058944",
+        "name": "Short Ballet Black Flame French Wearing Nail Fake Nail Nail Patch Waterproof Nail Patch Removable Nail Patch JP942"
+      }
+    ],
+    "costUSD": 1,
+    "addedAt": "2026-08-04T13:17:16.912Z"
+  },
+  {
+    "id": 67,
+    "catClass": "beauty",
+    "price": 48,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/15423840/1526000791368.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/15423840/1526000791368.jpg",
+      "https://cf.cjdropshipping.com/15423840/3200553960989.jpg",
+      "https://cf.cjdropshipping.com/15423840/1393495529162.jpg",
+      "https://cf.cjdropshipping.com/2046/2252994305789.jpg",
+      "https://cf.cjdropshipping.com/15423840/5899422255480.jpg",
+      "https://cf.cjdropshipping.com/15423840/5805035901942.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "10Pcs 3D Nail Art Rhinestones Long Water Drop Shaped Glitter",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "10Pcs 3D Nail Art Rhinestones Long Water Drop Shaped Glitter",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "10Pcs 3D Nail Art Rhinestones Long Water Drop Shaped Glitter",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "E217A32C-97CA-4FB7-8221-E4022ECA4E13",
+    "cjVid": "1AC9BE12-EA2B-4A76-BAA1-EB64ADEB192E",
+    "shipUSD": 2.33,
+    "variants": [
+      {
+        "vid": "1AC9BE12-EA2B-4A76-BAA1-EB64ADEB192E",
+        "name": "10Pcs 3D Nail Art Rhinestones Long Water Drop Shaped Glitter Nail Art Decorations Accessoires Nail Supplies 614"
+      },
+      {
+        "vid": "222FF50F-A7CC-47EE-BD70-38FC411855BB",
+        "name": "10Pcs 3D Nail Art Rhinestones Long Water Drop Shaped Glitter Nail Art Decorations Accessoires Nail Supplies 622"
+      },
+      {
+        "vid": "385A211A-6288-4705-9256-DB60B72C1248",
+        "name": "10Pcs 3D Nail Art Rhinestones Long Water Drop Shaped Glitter Nail Art Decorations Accessoires Nail Supplies 621"
+      },
+      {
+        "vid": "471B13BC-54AD-4B93-A6B0-5CE9D1DE55F7",
+        "name": "10Pcs 3D Nail Art Rhinestones Long Water Drop Shaped Glitter Nail Art Decorations Accessoires Nail Supplies 612"
+      },
+      {
+        "vid": "55973C18-F050-43F2-8D5C-7BBDF579CC6A",
+        "name": "10Pcs 3D Nail Art Rhinestones Long Water Drop Shaped Glitter Nail Art Decorations Accessoires Nail Supplies 619"
+      },
+      {
+        "vid": "691A83D1-8B64-473B-BF32-EDB0FA7DA017",
+        "name": "10Pcs 3D Nail Art Rhinestones Long Water Drop Shaped Glitter Nail Art Decorations Accessoires Nail Supplies 613"
+      },
+      {
+        "vid": "69DF0995-E718-4B25-845F-B302E7105668",
+        "name": "10Pcs 3D Nail Art Rhinestones Long Water Drop Shaped Glitter Nail Art Decorations Accessoires Nail Supplies 611"
+      },
+      {
+        "vid": "6E3371D8-28BD-4989-B8C5-583D1EA4A881",
+        "name": "10Pcs 3D Nail Art Rhinestones Long Water Drop Shaped Glitter Nail Art Decorations Accessoires Nail Supplies 617"
+      },
+      {
+        "vid": "75CF5FF5-856D-4EBC-9FCC-EAAF2CF22673",
+        "name": "10Pcs 3D Nail Art Rhinestones Long Water Drop Shaped Glitter Nail Art Decorations Accessoires Nail Supplies 616"
+      },
+      {
+        "vid": "9D26C931-8E60-480A-B5D1-390759F53F58",
+        "name": "10Pcs 3D Nail Art Rhinestones Long Water Drop Shaped Glitter Nail Art Decorations Accessoires Nail Supplies 620"
+      },
+      {
+        "vid": "A54E119D-DCB3-4FB6-9B2A-0F0F527EFCEF",
+        "name": "10Pcs 3D Nail Art Rhinestones Long Water Drop Shaped Glitter Nail Art Decorations Accessoires Nail Supplies 615"
+      },
+      {
+        "vid": "CC83FBE0-D786-45C9-9A1E-60AF79169217",
+        "name": "10Pcs 3D Nail Art Rhinestones Long Water Drop Shaped Glitter Nail Art Decorations Accessoires Nail Supplies 618"
+      }
+    ],
+    "costUSD": 0.48,
+    "addedAt": "2026-08-04T13:17:20.210Z"
+  },
+  {
+    "id": 68,
+    "catClass": "beauty",
+    "price": 68,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/bfcf2865-781f-4243-8b97-f9ebb98072f5.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/bfcf2865-781f-4243-8b97-f9ebb98072f5.jpg",
+      "https://cf.cjdropshipping.com/0b689633-bc38-40ca-b7e9-50f56066802d.jpg",
+      "https://cf.cjdropshipping.com/5c79a53d-a5b9-4155-a4a8-3304c212a5b3.jpg",
+      "https://cf.cjdropshipping.com/d44ed3f3-4c01-4bcd-98b1-567027c57d73.jpg",
+      "https://cf.cjdropshipping.com/e57108b5-abab-4a10-9afd-032662cace1a.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Ice Glitter Short Ballet Foreign Trade Section Wears Nail Ar",
+        "desc": "屋企就做到嘅精緻感。團隊嚴選先上架,溫和好用,48小時內出貨直送到你手。"
+      },
+      "zh-Hans": {
+        "name": "Ice Glitter Short Ballet Foreign Trade Section Wears Nail Ar",
+        "desc": "在家也能拥有的精致感。团队严选才上架,温和好用,48小时内发货直达。"
+      },
+      "en": {
+        "name": "Ice Glitter Short Ballet Foreign Trade Section Wears Nail Ar",
+        "desc": "Salon-level results at home. Hand-picked by our team — ships within 48 hours."
+      }
+    },
+    "cjPid": "1592724804480806912",
+    "cjVid": "1592724804510167040",
+    "shipUSD": 6.83,
+    "variants": [
+      {
+        "vid": "1592724804510167040",
+        "name": "Ice Glitter Short Ballet Foreign Trade Section Wears Nail Art JP921"
+      }
+    ],
+    "costUSD": 0.63,
+    "addedAt": "2026-08-04T13:17:23.796Z"
   }
 ]
