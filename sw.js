@@ -6,7 +6,7 @@
    - 靜態資源(icon/manifest):cache-first
    改版時記得升VERSION,舊cache會自動清走
    ============================================================ */
-const VERSION = "prit-v1";
+const VERSION = "prit-v2";
 const CORE = ["/", "/track.html", "/favicon.svg", "/icon-192.png", "/icon-512.png", "/manifest.json"];
 
 self.addEventListener("install", (e) => {
@@ -26,6 +26,16 @@ self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET") return;                 // 非GET唔掂
   if (url.origin !== location.origin) return;             // 第三方(Stripe/CJ圖)唔掂
   if (url.pathname.startsWith("/api/")) return;           // API一律直連
+  if (url.pathname.startsWith("/data/")) {                // 產品目錄:network-first(上新貨即時見到)
+    e.respondWith(
+      fetch(e.request).then((res) => {
+        const clone = res.clone();
+        caches.open(VERSION).then((c) => c.put(e.request, clone));
+        return res;
+      }).catch(() => caches.match(e.request))
+    );
+    return;
+  }
 
   // 靜態資源:cache-first
   if (/\.(png|svg|json|ico)$/.test(url.pathname)) {
