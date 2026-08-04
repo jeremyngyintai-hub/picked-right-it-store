@@ -4214,5 +4214,151 @@
     "cjVid": "1402146213142335488",
     "costUSD": 6.77,
     "addedAt": "2026-08-04T09:53:20.295Z"
+  },
+  {
+    "id": 129,
+    "catClass": "sports",
+    "price": 148,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/7dcaa0ec-c029-4b38-b412-c0e4a42e23b5.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/7dcaa0ec-c029-4b38-b412-c0e4a42e23b5.jpg",
+      "https://cf.cjdropshipping.com/f1e6e625-405f-4504-b41c-f04f65388776.jpg",
+      "https://cf.cjdropshipping.com/a6ac77d4-d751-46ea-999e-6ec8efb239ad.jpg",
+      "https://cf.cjdropshipping.com/f6a4648b-bd43-491b-abc4-2915b450e7e6.jpg",
+      "https://cf.cjdropshipping.com/15395d1a-c5b5-406c-b887-e07413adad54.jpg",
+      "https://cf.cjdropshipping.com/790a71f0-1d13-4dac-aafc-8c7e733784de.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Mesh Sneakers Men Breathable Lightweight Running Shoes",
+        "desc": "行山跑步健身都用得著。團隊嚴選耐用款式先上架,運動裝備一步到位。"
+      },
+      "zh-Hans": {
+        "name": "Mesh Sneakers Men Breathable Lightweight Running Shoes",
+        "desc": "登山跑步健身都用得上。团队严选耐用款式才上架,运动装备一步到位。"
+      },
+      "en": {
+        "name": "Mesh Sneakers Men Breathable Lightweight Running Shoes",
+        "desc": "Built for hikes, runs, and workouts — durability-hand-picked by our team."
+      }
+    },
+    "cjPid": "1559467007140581376",
+    "cjVid": "1559467007182524416",
+    "costUSD": 6.79,
+    "addedAt": "2026-08-04T09:53:25.248Z"
+  },
+  {
+    "id": 130,
+    "catClass": "sports",
+    "price": 118,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/e9ead422-2dd9-4d8f-939e-a78d7c608065.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/e9ead422-2dd9-4d8f-939e-a78d7c608065.jpg",
+      "https://cf.cjdropshipping.com/652d0406-c8e2-46fc-af42-ec698ed6767f.jpg",
+      "https://cf.cjdropshipping.com/d8ddea56-b6e9-49d2-865b-2196ac13f617.jpg",
+      "https://cf.cjdropshipping.com/c12b77b0-2d6f-4192-a6df-408c36c68649.jpg",
+      "https://cf.cjdropshipping.com/46148d64-5e87-4ea4-893b-8c6bd0d3b24f.jpg",
+      "https://cf.cjdropshipping.com/039c373c-7dca-4cf9-99f1-2756668908a1.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "New Breathable Student Running Sneakers",
+        "desc": "行山跑步健身都用得著。團隊嚴選耐用款式先上架,運動裝備一步到位。"
+      },
+      "zh-Hans": {
+        "name": "New Breathable Student Running Sneakers",
+        "desc": "登山跑步健身都用得上。团队严选耐用款式才上架,运动装备一步到位。"
+      },
+      "en": {
+        "name": "New Breathable Student Running Sneakers",
+        "desc": "Built for hikes, runs, and workouts — durability-hand-picked by our team."
+      }
+    },
+    "cjPid": "1426032314743394304",
+    "cjVid": "1426032317331279872",
+    "costUSD": 5.49,
+    "addedAt": "2026-08-04T09:53:26.562Z"
+  },
+  {
+    "id": 131,
+    "catClass": "sports",
+    "price": 188,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/51a2327e-c37c-419a-88de-e09c5d535291.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/51a2327e-c37c-419a-88de-e09c5d535291.jpg",
+      "https://cf.cjdropshipping.com/1ea8ce4b-248c-4c78-8b75-3e5ba4e57c41.jpg",
+      "https://cf.cjdropshipping.com/bdaecd0c-dd60-4165-bf8f-16236fe63faa.jpg",
+      "https://cf.cjdropshipping.com/6089c5d6-5b30-450e-adec-99bd8879dfde.jpg",
+      "https://cf.cjdropshipping.com/1c88d6d6-68a5-44a0-acd3-5fecc29bc7e7.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Sports High-top Sneakers For Teenagers",
+        "desc": "行山跑步健身都用得著。團隊嚴選耐用款式先上架,運動裝備一步到位。"
+      },
+      "zh-Hans": {
+        "name": "Sports High-top Sneakers For Teenagers",
+        "desc": "登山跑步健身都用得上。团队严选耐用款式才上架,运动装备一步到位。"
+      },
+      "en": {
+        "name": "Sports High-top Sneakers For Teenagers",
+        "desc": "Built for hikes, runs, and workouts — durability-hand-picked by our team."
+      }
+    },
+    "cjPid": "1449272491250946048",
+    "cjVid": "1449272491301277696",
+    "costUSD": 8.56,
+    "addedAt": "2026-08-04T09:53:27.915Z"
+  },
+  {
+    "id": 132,
+    "catClass": "sports",
+    "price": 78,
+    "icon": "box",
+    "image": "https://cf.cjdropshipping.com/1c1345e6-ce90-4ed1-9bf4-8fb9e6f9beb7.jpg",
+    "images": [
+      "https://cf.cjdropshipping.com/1c1345e6-ce90-4ed1-9bf4-8fb9e6f9beb7.jpg",
+      "https://cf.cjdropshipping.com/d0417f4d-1578-4258-8770-7d5062ada411.jpg",
+      "https://cf.cjdropshipping.com/28ff2e80-bafc-48e2-8f30-a15da939e198.jpg",
+      "https://cf.cjdropshipping.com/69067d88-267c-4d7b-916d-c76f73b59a38.jpg",
+      "https://cf.cjdropshipping.com/f2507066-1f8a-4eed-992b-7f4e26d9a254.jpg"
+    ],
+    "video": "",
+    "trending": true,
+    "rating": 4.5,
+    "reviews": 30,
+    "i18n": {
+      "zh-Hant": {
+        "name": "Mens Fashion Casual Breathable Sports Shoes",
+        "desc": "行山跑步健身都用得著。團隊嚴選耐用款式先上架,運動裝備一步到位。"
+      },
+      "zh-Hans": {
+        "name": "Mens Fashion Casual Breathable Sports Shoes",
+        "desc": "登山跑步健身都用得上。团队严选耐用款式才上架,运动装备一步到位。"
+      },
+      "en": {
+        "name": "Mens Fashion Casual Breathable Sports Shoes",
+        "desc": "Built for hikes, runs, and workouts — durability-hand-picked by our team."
+      }
+    },
+    "cjPid": "1667457212844879872",
+    "cjVid": "1667457213008457728",
+    "costUSD": 3.35,
+    "addedAt": "2026-08-04T09:53:29.387Z"
   }
 ]
