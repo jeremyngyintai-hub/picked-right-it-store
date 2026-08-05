@@ -1238,7 +1238,7 @@ function showProduct(id, silent){
   if(!silent) {
     showView('product'); pdQty = 1;
     pdSelectedVid = (p.variants&&p.variants.length>1) ? p.variants[0].vid : null;
-    try{ fetch('/api/pv?t=product&id='+p.id, {keepalive:true}); }catch(e){}
+    try{ fetch('/api/track?t=product&id='+p.id, {keepalive:true}); }catch(e){}
     try{ history.replaceState(null,'', '?p='+p.id); }catch(e){}
     document.title = pName(p) + ' — 揀啱 PICKED RIGHT IT';
   }
@@ -1565,7 +1565,7 @@ window.addEventListener('appinstalled', () => {
 });
 
 /* ===== 瀏覽量追蹤 ===== */
-try{ fetch('/api/pv?t=page', {keepalive:true}); }catch(e){}
+try{ fetch('/api/track?t=page', {keepalive:true}); }catch(e){}
 
 /* ===== 「更多」分類dropdown ===== */
 const NAV_MORE_CATS = ['pets','baby','sports','accessories','bags','auto'];

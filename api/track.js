@@ -22,7 +22,38 @@ async function cjAuth() {
   return data.data.accessToken;
 }
 
+const { kvReady, pipeline } = require("./_lib/kv");
+
+function ymdHK(ts) {
+  const d = new Date(ts + 8 * 3600e3);
+  return d.toISOString().slice(0, 10).replace(/-/g, "");
+}
+
 module.exports = async (req, res) => {
+  // ===== 瀏覽量beacon(由/api/pv合併入嚟):/api/track?t=page 或 ?t=product&id=13 =====
+  if (req.query.t) {
+    res.setHeader("Cache-Control", "no-store");
+    try {
+      if (!kvReady()) return res.status(200).json({ ok: false });
+      const day = ymdHK(Date.now());
+      const cmds = [];
+      if (req.query.t === "page") {
+        cmds.push(["INCR", `pv:day:${day}`]);
+      } else if (req.query.t === "product") {
+        const id = parseInt(req.query.id);
+        if (!id || id < 1 || id > 100000) return res.status(400).json({ ok: false });
+        cmds.push(["INCR", `pv:product:${id}`]);
+        cmds.push(["INCR", `pv:day:${day}`]);
+      } else {
+        return res.status(400).json({ ok: false });
+      }
+      await pipeline(cmds);
+      return res.status(200).json({ ok: true });
+    } catch {
+      return res.status(200).json({ ok: false });
+    }
+  }
+
   const num = (req.query.num || "").trim();
   if (!num || num.length < 6 || num.length > 40 || !/^[A-Za-z0-9-]+$/.test(num)) {
     return res.status(400).json({ error: "追蹤號碼格式不正確" });
