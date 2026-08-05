@@ -19,6 +19,7 @@ const { kvReady, kv, pipeline } = require("../_lib/kv");
 const { sendEmail, shippedHTML } = require("../_lib/mail");
 const { sendDiscord } = require("../_lib/discord");
 const { getViewsSeries, spark } = require("../_lib/stats");
+const { aiCopy } = require("../_lib/copywriter");
 
 const CJ_BASE = "https://developers.cjdropshipping.com/api2.0/v1";
 const USD_TO_HKD = 7.8;
@@ -208,7 +209,7 @@ async function taskAutoImport(token, list, report){
         id:nextId, catClass:p._cat, price, icon:"box",
         image:images[0]||"", images, video:d.productVideo||"",
         trending:true, rating:4.5, reviews:0,
-        i18n:draftCopy(d.productNameEn,p._cat),
+        i18n:(await aiCopy(d.productNameEn,p._cat)) || draftCopy(d.productNameEn,p._cat),
         cjPid:p.pid, cjVid:cv.vid,
         shipUSD:Math.round(shipUSD*100)/100,
         variants:variants.slice(0,60).map(v=>({vid:v.vid,name:v.variantNameEn||v.variantKey||""})),

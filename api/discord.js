@@ -20,6 +20,24 @@ const crypto = require("crypto");
 const { kvReady, kv } = require("./_lib/kv");
 const { getViewsSeries, spark } = require("./_lib/stats");
 
+// GitHub helpers(/price /delist 用)
+async function ghGetFile(path) {
+  const res = await fetch(`https://api.github.com/repos/${process.env.GITHUB_REPO}/contents/${path}`,
+    { headers: { Authorization: `Bearer ${process.env.GITHUB_TOKEN}`, "User-Agent": "picked-right-it" } });
+  if (res.status === 404) return { content: null, sha: null };
+  const d = await res.json();
+  if (!d.content) throw new Error(d.message || "GitHub read failed");
+  return { content: Buffer.from(d.content, "base64").toString("utf8"), sha: d.sha };
+}
+async function ghPutFile(path, contentStr, sha, message) {
+  const body = { message, content: Buffer.from(contentStr, "utf8").toString("base64") };
+  if (sha) body.sha = sha;
+  const res = await fetch(`https://api.github.com/repos/${process.env.GITHUB_REPO}/contents/${path}`,
+    { method: "PUT", headers: { Authorization: `Bearer ${process.env.GITHUB_TOKEN}`, "User-Agent": "picked-right-it", "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  const d = await res.json();
+  if (!d.commit) throw new Error(d.message || "GitHub write failed");
+}
+
 const USD_TO_HKD = 7.8;
 
 // Ed25519簽名驗證(Discord要求,防偽冒)
@@ -160,10 +178,66 @@ async function cmdProducts() {
   };
 }
 
+async function cmdOrders() {
+  const orders = (await getOrders()).slice(0, 10);
+  if (!orders.length) return { title: "🧾 最近訂單", color: 0x3ddc84, description: "未有訂單" };
+  const lines = orders.map((o) => {
+    const when = new Date(o.ts + 8 * 3600e3).toISOString().slice(5, 16).replace("T", " ");
+    const items = (o.items || []).map((i) => `${i.name}×${i.qty}`).join(", ").slice(0, 80);
+    const mail = o.email ? o.email.replace(/^(..).*(@.*)$/, "$1***$2") : "—";
+    return `**HK$${o.totalHKD}** · ${when} · ${mail}\n${items}`;
+  }).join("\n\n");
+  return { title: "🧾 最近10張訂單", color: 0x3ddc84, description: lines.slice(0, 3900) };
+}
+
+async function cmdReviewQ() {
+  if (!kvReady()) return { title: "💬 待審評價", color: 0xffb547, description: "KV未設定" };
+  const raw = await kv(["LRANGE", "reviews:pending", "0", "9"]);
+  const list = (raw || []).map((s) => { try { return JSON.parse(s); } catch { return null; } }).filter(Boolean);
+  const approved = parseInt(await kv(["LLEN", "reviews:approved"])) || 0;
+  if (!list.length) return { title: "💬 評價隊列", color: 0xffb547, description: `冇待審評價\n已刊出:**${approved}** 個${approved < 5 ? `(仲爭${5 - approved}個開放評論區)` : "(評論區已開放)"}` };
+  const lines = list.map((r) => `**${r.name}** ${"★".repeat(r.rating)}\n${String(r.text).slice(0, 100)}`).join("\n\n");
+  return { title: `💬 待審評價(${list.length})`, color: 0xffb547, description: lines.slice(0, 3800) + "\n\n→ 去Dashboard產品管理批核", };
+}
+
+async function cmdPrice(opts) {
+  const id = parseInt(opts.id), price = parseInt(opts.hkd);
+  if (!id || !price || price < 1) throw new Error("格式:/price id:<產品編號> hkd:<新價錢>");
+  const { content, sha } = await ghGetFile("data/products.json");
+  const list = content ? JSON.parse(content) : [];
+  const p = list.find((x) => x.id === id);
+  if (!p) throw new Error(`搵唔到產品 #${id}`);
+  const old = p.price;
+  p.price = price;
+  await ghPutFile("data/products.json", JSON.stringify(list, null, 2), sha, `discord: reprice #${id} ${old}→${price}`);
+  const costHKD = p.costUSD ? Math.round((p.costUSD + (p.shipUSD || 0)) * 7.8) : null;
+  return {
+    title: "💵 已改價",
+    color: 0x3de0ff,
+    description: `**#${id} ${(p.i18n?.["zh-Hant"]?.name || "").slice(0, 40)}**\nHK$${old} → **HK$${price}**${costHKD != null ? `\n毛利(連運):HK$${price - costHKD}` : ""}\n約1分鐘後生效`,
+  };
+}
+
+async function cmdDelist(opts) {
+  const id = parseInt(opts.id);
+  if (!id) throw new Error("格式:/delist id:<產品編號>");
+  const { content, sha } = await ghGetFile("data/products.json");
+  const list = content ? JSON.parse(content) : [];
+  const p = list.find((x) => x.id === id);
+  if (!p) throw new Error(`搵唔到產品 #${id}`);
+  p.delisted = !p.delisted;
+  await ghPutFile("data/products.json", JSON.stringify(list, null, 2), sha, `discord: ${p.delisted ? "delist" : "relist"} #${id}`);
+  return {
+    title: p.delisted ? "🧹 已落架" : "✅ 已上返架",
+    color: p.delisted ? 0xff5c5c : 0x3ddc84,
+    description: `**#${id} ${(p.i18n?.["zh-Hant"]?.name || "").slice(0, 40)}**\n約1分鐘後生效(再打一次 /delist id:${id} 可還原)`,
+  };
+}
+
 const HELP_EMBED = {
   title: "🤖 揀啱 Bot 指令",
   color: 0xff3d7a,
-  description: "`/stats` — 今日戰報\n`/sales` — 30日銷售總覽\n`/products` — 店舖產品狀態\n`/views` — 瀏覽量趨勢\n`/help` — 呢張清單",
+  description: "`/stats` — 今日戰報\n`/sales` — 30日銷售總覽\n`/products` — 店舖產品狀態\n`/views` — 瀏覽量趨勢\n`/orders` — 最近10張訂單\n`/reviewq` — 待審評價隊列\n`/price id: hkd:` — 即刻改價\n`/delist id:` — 落架/上返架\n`/help` — 呢張清單",
 };
 
 // ===== 指令註冊 =====
@@ -172,6 +246,13 @@ const COMMANDS = [
   { name: "sales", description: "30日銷售總覽 + Top產品" },
   { name: "products", description: "店舖產品狀態 + Bestsellers" },
   { name: "views", description: "瀏覽量:今日/7日/30日 + 趨勢圖" },
+  { name: "orders", description: "最近10張訂單" },
+  { name: "reviewq", description: "待審評價隊列" },
+  { name: "price", description: "改產品價錢", options: [
+    { name: "id", description: "產品編號(#後面個數字)", type: 4, required: true },
+    { name: "hkd", description: "新價錢(港幣)", type: 4, required: true }] },
+  { name: "delist", description: "落架/上返架產品", options: [
+    { name: "id", description: "產品編號", type: 4, required: true }] },
   { name: "help", description: "指令清單" },
 ];
 
@@ -239,6 +320,13 @@ module.exports = async (req, res) => {
       else if (name === "sales") embed = await cmdSales();
       else if (name === "products") embed = await cmdProducts();
       else if (name === "views") embed = await cmdViews();
+      else if (name === "orders") embed = await cmdOrders();
+      else if (name === "reviewq") embed = await cmdReviewQ();
+      else if (name === "price" || name === "delist") {
+        const opts = {};
+        (body.data.options || []).forEach((o) => { opts[o.name] = o.value; });
+        embed = name === "price" ? await cmdPrice(opts) : await cmdDelist(opts);
+      }
       else embed = HELP_EMBED;
       return res.status(200).json({ type: 4, data: { embeds: [embed] } });
     } catch (e) {

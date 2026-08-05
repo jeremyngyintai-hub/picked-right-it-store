@@ -17,6 +17,7 @@ const CJ_BASE = "https://developers.cjdropshipping.com/api2.0/v1";
 const USD_TO_HKD = 7.8;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const { aiCopy } = require("../_lib/copywriter");
 
 function parseCostUSD(v) {
   if (v == null) return null;
@@ -198,7 +199,7 @@ module.exports = async (req, res) => {
 
         // 售價 = 貨價×倍數 + 運費直通(運費唔賺唔蝕),調靚尾數
         const finalPrice = parseInt(item.priceHKD) || prettyPrice(costUSD * USD_TO_HKD * mk + shipUSD * USD_TO_HKD);
-        const copy = draftCopy(p.productNameEn, itemCat);
+        const copy = (await aiCopy(p.productNameEn, itemCat)) || draftCopy(p.productNameEn, itemCat);
         const images = (p.productImageSet || [p.bigImage].filter(Boolean)).slice(0, 6);
         const video = p.productVideo || p.video || "";
 
