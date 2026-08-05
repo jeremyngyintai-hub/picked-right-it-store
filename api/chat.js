@@ -51,9 +51,16 @@ async function tryTrack(text) {
   }
 }
 
-async function askGemini(systemPrompt, messages) {
-  // Google AI Studio 免費tier:https://aistudio.google.com
-  const model = process.env.GEMINI_MODEL || "gemini-2.0-flash";
+// 免費Gemini:model名會隨Google更新,自動輪替試到通為止
+const GEMINI_MODELS = [
+  process.env.GEMINI_MODEL,        // 你手動指定嘅(如有)
+  "gemini-2.5-flash",
+  "gemini-2.0-flash",
+  "gemini-flash-latest",
+  "gemini-1.5-flash",
+].filter(Boolean);
+
+async function askGeminiModel(model, systemPrompt, messages) {
   const contents = messages.map((m) => ({
     role: m.role === "assistant" ? "model" : "user",
     parts: [{ text: m.content }],
@@ -71,9 +78,28 @@ async function askGemini(systemPrompt, messages) {
     }
   );
   const data = await res.json();
-  if (data.error) throw new Error(data.error.message || "Gemini API錯誤");
+  if (data.error) {
+    const err = new Error(`[${model}] ${data.error.message || "Gemini API錯誤"}`);
+    err.code = data.error.code;
+    throw err;
+  }
   const parts = data.candidates && data.candidates[0] && data.candidates[0].content && data.candidates[0].content.parts;
   return (parts || []).map((p) => p.text || "").join("").trim();
+}
+
+async function askGemini(systemPrompt, messages) {
+  let lastErr = null;
+  for (const model of GEMINI_MODELS) {
+    try {
+      const reply = await askGeminiModel(model, systemPrompt, messages);
+      if (reply) return reply;
+    } catch (e) {
+      lastErr = e;
+      // 404/400通常係model名唔存在→試下一個;其他錯誤(quota/key)冇得救,即刻停
+      if (e.code && e.code !== 404 && e.code !== 400) throw e;
+    }
+  }
+  throw lastErr || new Error("所有Gemini model都試唔通");
 }
 
 async function askClaude(systemPrompt, messages) {
@@ -97,6 +123,26 @@ async function askClaude(systemPrompt, messages) {
 }
 
 module.exports = async (req, res) => {
+  // ===== 診斷模式(店主用):/api/chat?debug=你嘅ADMIN_SYNC_SECRET =====
+  if (req.method === "GET") {
+    if (req.query.debug !== process.env.ADMIN_SYNC_SECRET) {
+      return res.status(405).json({ error: "Method not allowed" });
+    }
+    const diag = { hasGeminiKey: !!process.env.GEMINI_API_KEY, hasClaudeKey: !!process.env.ANTHROPIC_API_KEY, models: {} };
+    if (process.env.GEMINI_API_KEY) {
+      for (const model of GEMINI_MODELS) {
+        try {
+          const r = await askGeminiModel(model, "You are a test.", [{ role: "user", content: "Reply with OK only." }]);
+          diag.models[model] = "✅ " + (r || "").slice(0, 20);
+          break; // 有一個通就夠
+        } catch (e) {
+          diag.models[model] = "❌ " + e.message.slice(0, 160);
+        }
+      }
+    }
+    return res.status(200).json(diag);
+  }
+
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
   const hasGemini = !!process.env.GEMINI_API_KEY;
   const hasClaude = !!process.env.ANTHROPIC_API_KEY;
