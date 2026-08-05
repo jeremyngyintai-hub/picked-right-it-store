@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "stripe": "^17.0.0"
+    "stripe": "^17.0.0",
+    "@vercel/functions": "^1.5.0"
   }
 }
