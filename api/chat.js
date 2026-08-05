@@ -51,10 +51,57 @@ async function tryTrack(text) {
   }
 }
 
+async function askGemini(systemPrompt, messages) {
+  // Google AI Studio 免費tier:https://aistudio.google.com
+  const model = process.env.GEMINI_MODEL || "gemini-2.0-flash";
+  const contents = messages.map((m) => ({
+    role: m.role === "assistant" ? "model" : "user",
+    parts: [{ text: m.content }],
+  }));
+  const res = await fetch(
+    `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${process.env.GEMINI_API_KEY}`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        system_instruction: { parts: [{ text: systemPrompt }] },
+        contents,
+        generationConfig: { maxOutputTokens: 400, temperature: 0.5 },
+      }),
+    }
+  );
+  const data = await res.json();
+  if (data.error) throw new Error(data.error.message || "Gemini API錯誤");
+  const parts = data.candidates && data.candidates[0] && data.candidates[0].content && data.candidates[0].content.parts;
+  return (parts || []).map((p) => p.text || "").join("").trim();
+}
+
+async function askClaude(systemPrompt, messages) {
+  const res = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key": process.env.ANTHROPIC_API_KEY,
+      "anthropic-version": "2023-06-01",
+    },
+    body: JSON.stringify({
+      model: "claude-haiku-4-5",
+      max_tokens: 400,
+      system: systemPrompt,
+      messages,
+    }),
+  });
+  const data = await res.json();
+  if (data.error) throw new Error(data.error.message || "AI API錯誤");
+  return (data.content || []).filter((c) => c.type === "text").map((c) => c.text).join("\n");
+}
+
 module.exports = async (req, res) => {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
-  if (!process.env.ANTHROPIC_API_KEY) {
-    return res.status(500).json({ reply: "AI客服暫時未啟用(店主未設定ANTHROPIC_API_KEY)。請直接WhatsApp我哋:+852 5104 4417" });
+  const hasGemini = !!process.env.GEMINI_API_KEY;
+  const hasClaude = !!process.env.ANTHROPIC_API_KEY;
+  if (!hasGemini && !hasClaude) {
+    return res.status(200).json({ reply: "AI客服暫時未啟用。請直接WhatsApp我哋:+852 5104 4417" });
   }
 
   try {
@@ -76,23 +123,20 @@ module.exports = async (req, res) => {
       if (track) systemExtra = `\n\n[物流查詢結果] 追蹤號碼 ${track.num}:${track.info}`;
     }
 
-    const apiRes = await fetch("https://api.anthropic.com/v1/messages", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": process.env.ANTHROPIC_API_KEY,
-        "anthropic-version": "2023-06-01",
-      },
-      body: JSON.stringify({
-        model: "claude-haiku-4-5",
-        max_tokens: 400,
-        system: SYSTEM_PROMPT + systemExtra,
-        messages,
-      }),
-    });
-    const data = await apiRes.json();
-    if (data.error) throw new Error(data.error.message || "AI API錯誤");
-    const reply = (data.content || []).filter((c) => c.type === "text").map((c) => c.text).join("\n") || "唔好意思,暫時答唔到,請WhatsApp我哋:+852 5104 4417";
+    let reply = "";
+    const sys = SYSTEM_PROMPT + systemExtra;
+    if (hasGemini) {
+      try {
+        reply = await askGemini(sys, messages);
+      } catch (gErr) {
+        console.error("Gemini失敗,試後備引擎:", gErr.message);
+        if (hasClaude) reply = await askClaude(sys, messages);
+        else throw gErr;
+      }
+    } else {
+      reply = await askClaude(sys, messages);
+    }
+    if (!reply) reply = "唔好意思,暫時答唔到,請WhatsApp我哋:+852 5104 4417";
     res.status(200).json({ reply });
   } catch (err) {
     console.error(err);
