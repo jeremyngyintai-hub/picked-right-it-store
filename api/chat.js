@@ -54,9 +54,9 @@ async function tryTrack(text) {
 // 免費Gemini:model名會隨Google更新,自動輪替試到通為止
 const GEMINI_MODELS = [
   process.env.GEMINI_MODEL,        // 你手動指定嘅(如有)
+  "gemini-flash-latest",
   "gemini-2.5-flash",
   "gemini-2.0-flash",
-  "gemini-flash-latest",
   "gemini-1.5-flash",
 ].filter(Boolean);
 
@@ -95,8 +95,8 @@ async function askGemini(systemPrompt, messages) {
       if (reply) return reply;
     } catch (e) {
       lastErr = e;
-      // 404/400通常係model名唔存在→試下一個;其他錯誤(quota/key)冇得救,即刻停
-      if (e.code && e.code !== 404 && e.code !== 400) throw e;
+      // model唔存在(404/400)或該model冇quota(429)→試下一個;其他錯誤先停
+      if (e.code && ![404, 400, 429].includes(e.code)) throw e;
     }
   }
   throw lastErr || new Error("所有Gemini model都試唔通");
