@@ -18,6 +18,7 @@
 
 const crypto = require("crypto");
 const { kvReady, kv } = require("./_lib/kv");
+const { getViewsSeries, spark } = require("./_lib/stats");
 
 const USD_TO_HKD = 7.8;
 
@@ -114,6 +115,27 @@ async function cmdSales() {
   };
 }
 
+async function cmdViews() {
+  const series = await getViewsSeries(30);
+  if (!series.length) return { title: "👀 瀏覽量", color: 0x8b5cf6, description: "KV未設定,冇數據" };
+  const today = series[series.length - 1].views;
+  const last7 = series.slice(-7);
+  const v7 = last7.reduce((s, d) => s + d.views, 0);
+  const v30 = series.reduce((s, d) => s + d.views, 0);
+  const prev7 = series.slice(-14, -7).reduce((s, d) => s + d.views, 0);
+  const wow = prev7 ? Math.round(((v7 - prev7) / prev7) * 100) : null;
+  return {
+    title: "👀 網站瀏覽量",
+    color: 0x8b5cf6,
+    description: `**近7日趨勢**\n\`${spark(last7.map(d => d.views))}\`\n${last7.map(d => d.label).join(" · ")}`,
+    fields: [
+      { name: "今日", value: `${today}`, inline: true },
+      { name: "7日", value: `${v7}${wow != null ? ` (${wow >= 0 ? "+" : ""}${wow}% vs上週)` : ""}`, inline: true },
+      { name: "30日", value: `${v30}`, inline: true },
+    ],
+  };
+}
+
 async function cmdProducts() {
   let list = [];
   try {
@@ -141,7 +163,7 @@ async function cmdProducts() {
 const HELP_EMBED = {
   title: "🤖 揀啱 Bot 指令",
   color: 0xff3d7a,
-  description: "`/stats` — 今日戰報\n`/sales` — 30日銷售總覽\n`/products` — 店舖產品狀態\n`/help` — 呢張清單",
+  description: "`/stats` — 今日戰報\n`/sales` — 30日銷售總覽\n`/products` — 店舖產品狀態\n`/views` — 瀏覽量趨勢\n`/help` — 呢張清單",
 };
 
 // ===== 指令註冊 =====
@@ -149,6 +171,7 @@ const COMMANDS = [
   { name: "stats", description: "今日戰報:營業額/訂單/瀏覽量" },
   { name: "sales", description: "30日銷售總覽 + Top產品" },
   { name: "products", description: "店舖產品狀態 + Bestsellers" },
+  { name: "views", description: "瀏覽量:今日/7日/30日 + 趨勢圖" },
   { name: "help", description: "指令清單" },
 ];
 
@@ -156,7 +179,24 @@ module.exports = async (req, res) => {
   // ===== 一次性註冊指令(店主用)=====
   if (req.method === "GET") {
     if (req.query.register !== process.env.ADMIN_SYNC_SECRET) {
-      return res.status(200).json({ status: "揀啱 Discord Bot endpoint 運作中" });
+      // 自檢:public key格式啱唔啱
+      const pk = process.env.DISCORD_PUBLIC_KEY || "";
+      let pkValid = false;
+      try {
+        if (/^[0-9a-fA-F]{64}$/.test(pk.trim())) {
+          crypto.createPublicKey({
+            key: Buffer.concat([Buffer.from("302a300506032b6570032100", "hex"), Buffer.from(pk.trim(), "hex")]),
+            format: "der", type: "spki",
+          });
+          pkValid = true;
+        }
+      } catch {}
+      return res.status(200).json({
+        status: "揀啱 Discord Bot endpoint 運作中",
+        hasPublicKey: !!pk,
+        publicKeyLength: pk.length,
+        publicKeyValid: pkValid,
+      });
     }
     if (!process.env.DISCORD_APP_ID || !process.env.DISCORD_BOT_TOKEN) {
       return res.status(500).json({ error: "未設定 DISCORD_APP_ID / DISCORD_BOT_TOKEN" });
@@ -176,7 +216,12 @@ module.exports = async (req, res) => {
   const sig = req.headers["x-signature-ed25519"];
   const ts = req.headers["x-signature-timestamp"];
   const raw = await getRawBody(req);
-  if (!sig || !ts || !process.env.DISCORD_PUBLIC_KEY || !verifySig(process.env.DISCORD_PUBLIC_KEY, ts, raw, sig)) {
+  const rawSource = typeof req.body === "string" ? "string-body" : (req.body && Object.keys(req.body || {}).length ? "parsed-body" : "raw-stream");
+  const verified = sig && ts && process.env.DISCORD_PUBLIC_KEY
+    ? verifySig(process.env.DISCORD_PUBLIC_KEY.trim(), ts, raw, sig)
+    : false;
+  console.log(`[discord] sig=${!!sig} ts=${!!ts} pk=${!!process.env.DISCORD_PUBLIC_KEY} rawLen=${raw.length} src=${rawSource} verified=${verified}`);
+  if (!verified) {
     return res.status(401).json({ error: "invalid request signature" });
   }
 
@@ -193,6 +238,7 @@ module.exports = async (req, res) => {
       if (name === "stats") embed = await cmdStats();
       else if (name === "sales") embed = await cmdSales();
       else if (name === "products") embed = await cmdProducts();
+      else if (name === "views") embed = await cmdViews();
       else embed = HELP_EMBED;
       return res.status(200).json({ type: 4, data: { embeds: [embed] } });
     } catch (e) {

@@ -18,6 +18,7 @@
 const { kvReady, kv, pipeline } = require("../_lib/kv");
 const { sendEmail, shippedHTML } = require("../_lib/mail");
 const { sendDiscord } = require("../_lib/discord");
+const { getViewsSeries, spark } = require("../_lib/stats");
 
 const CJ_BASE = "https://developers.cjdropshipping.com/api2.0/v1";
 const USD_TO_HKD = 7.8;
@@ -249,24 +250,28 @@ module.exports = async (req, res) => {
       await ghPutFile("data/products.json", JSON.stringify(list,null,2), sha,
         `daily: reprice ${report.repriced.length} / delist ${report.delisted.length} / auto-import ${report.autoimport.length}`);
     }
-    // ===== Discord每日統計digest =====
+    // ===== Discord每日統計digest(連7日瀏覽趨勢)=====
     try {
       let statLine = "";
+      let trendLine = "";
+      let allOrders = [];
       if (kvReady()) {
-        const raw = await kv(["LRANGE", "orders", "0", "199"]);
-        const orders = (raw || []).map((s) => { try { return JSON.parse(s); } catch { return null; } }).filter(Boolean);
+        const raw = await kv(["LRANGE", "orders", "0", "499"]);
+        allOrders = (raw || []).map((s) => { try { return JSON.parse(s); } catch { return null; } }).filter(Boolean);
         const d1 = Date.now() - 86400e3;
-        const today = orders.filter((o) => o.ts >= d1);
+        const today = allOrders.filter((o) => o.ts >= d1);
         const rev = today.reduce((s, o) => s + (o.totalHKD || 0), 0);
-        const ymd = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10).replace(/-/g, "");
-        const pv = parseInt(await kv(["GET", `pv:day:${ymd}`])) || 0;
+        const series7 = await getViewsSeries(7);
+        const pv = series7.length ? series7[series7.length - 1].views : 0;
+        const v7 = series7.reduce((s, d) => s + d.views, 0);
         statLine = `24小時營業額 **HK$${rev}** · 訂單 **${today.length}** 張 · 今日瀏覽 **${pv}**`;
+        trendLine = `\n7日瀏覽 **${v7}** \`${spark(series7.map(d => d.views))}\``;
       }
       await sendDiscord({
         title: "📊 揀啱每日戰報",
         channel: "stats",
         color: 0x8b5cf6,
-        description: statLine || "(KV未設定,冇統計數據)",
+        description: (statLine || "(KV未設定,冇統計數據)") + trendLine,
         fields: [
           { name: "🔄 自動調價", value: String(report.repriced.length), inline: true },
           { name: "🧹 自動落架", value: String(report.delisted.length), inline: true },
@@ -274,6 +279,53 @@ module.exports = async (req, res) => {
           { name: "🤖 AI入貨", value: report.autoimport.length ? report.autoimport.join("\n").slice(0, 900) : "0", inline: false },
         ],
       });
+
+      // ===== 逢星期一:每週總結(vs上週) =====
+      const hkNow = new Date(Date.now() + 8 * 3600e3);
+      if (kvReady() && hkNow.getUTCDay() === 1) {
+        const wk = 7 * 86400e3;
+        const now = Date.now();
+        const thisWk = allOrders.filter((o) => o.ts >= now - wk);
+        const prevWk = allOrders.filter((o) => o.ts >= now - 2 * wk && o.ts < now - wk);
+        const rev1 = thisWk.reduce((s, o) => s + (o.totalHKD || 0), 0);
+        const rev0 = prevWk.reduce((s, o) => s + (o.totalHKD || 0), 0);
+        const series14 = await getViewsSeries(14);
+        const v1 = series14.slice(-7).reduce((s, d) => s + d.views, 0);
+        const v0 = series14.slice(0, 7).reduce((s, d) => s + d.views, 0);
+        const pct = (a, b) => (b ? `${a >= b ? "+" : ""}${Math.round(((a - b) / b) * 100)}%` : "—");
+        await sendDiscord({
+          title: "📅 每週總結(過去7日 vs 前7日)",
+          channel: "stats",
+          color: 0x3de0ff,
+          fields: [
+            { name: "💰 營業額", value: `HK$${rev1} (${pct(rev1, rev0)})`, inline: true },
+            { name: "🧾 訂單", value: `${thisWk.length} (${pct(thisWk.length, prevWk.length)})`, inline: true },
+            { name: "👀 瀏覽", value: `${v1} (${pct(v1, v0)})`, inline: true },
+          ],
+        });
+      }
+
+      // ===== 每月1號:月度總結(上個月) =====
+      if (kvReady() && hkNow.getUTCDate() === 1) {
+        const y = hkNow.getUTCFullYear(), m = hkNow.getUTCMonth(); // 今個月
+        const monthStart = Date.UTC(y, m - 1, 1) - 8 * 3600e3;      // 上個月1號(HK)
+        const monthEnd = Date.UTC(y, m, 1) - 8 * 3600e3;
+        const mo = allOrders.filter((o) => o.ts >= monthStart && o.ts < monthEnd);
+        const revM = mo.reduce((s, o) => s + (o.totalHKD || 0), 0);
+        const series = await getViewsSeries(62);
+        const prefix = `${y}${String(m).padStart(2, "0")}`; // 上月YYYYMM(m係0-based,啱啱好係上月)
+        const vM = series.filter((d) => d.key.startsWith(prefix)).reduce((s, d) => s + d.views, 0);
+        await sendDiscord({
+          title: `🗓 月度總結(${y}年${m}月)`,
+          channel: "stats",
+          color: 0xff3d7a,
+          fields: [
+            { name: "💰 營業額", value: `HK$${revM}`, inline: true },
+            { name: "🧾 訂單", value: `${mo.length} 張`, inline: true },
+            { name: "👀 瀏覽", value: `${vM}`, inline: true },
+          ],
+        });
+      }
     } catch {}
 
     res.status(200).json({
