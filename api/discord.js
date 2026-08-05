@@ -36,12 +36,28 @@ function verifySig(publicKeyHex, timestamp, rawBody, sigHex) {
 }
 
 function readRaw(req) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const chunks = [];
+    // 保險絲:1.5秒內讀唔到(stream已被Vercel消化咗)就放棄,行fallback
+    const timer = setTimeout(() => resolve(null), 1500);
     req.on("data", (c) => chunks.push(c));
-    req.on("end", () => resolve(Buffer.concat(chunks)));
-    req.on("error", reject);
+    req.on("end", () => { clearTimeout(timer); resolve(Buffer.concat(chunks)); });
+    req.on("error", () => { clearTimeout(timer); resolve(null); });
   });
+}
+
+// 攞原始body:優先讀raw stream;Vercel已parse咗就用req.body重組
+async function getRawBody(req) {
+  if (typeof req.body === "string" && req.body.length) return Buffer.from(req.body);
+  if (Buffer.isBuffer(req.body)) return req.body;
+  if (req.body && typeof req.body === "object" && Object.keys(req.body).length) {
+    return Buffer.from(JSON.stringify(req.body));
+  }
+  const raw = await readRaw(req);
+  if (raw && raw.length) return raw;
+  // 最後fallback:parse咗但上面miss咗
+  if (req.body != null) return Buffer.from(typeof req.body === "string" ? req.body : JSON.stringify(req.body));
+  return Buffer.alloc(0);
 }
 
 async function getOrders() {
@@ -159,7 +175,7 @@ module.exports = async (req, res) => {
   // ===== 簽名驗證 =====
   const sig = req.headers["x-signature-ed25519"];
   const ts = req.headers["x-signature-timestamp"];
-  const raw = await readRaw(req);
+  const raw = await getRawBody(req);
   if (!sig || !ts || !process.env.DISCORD_PUBLIC_KEY || !verifySig(process.env.DISCORD_PUBLIC_KEY, ts, raw, sig)) {
     return res.status(401).json({ error: "invalid request signature" });
   }
