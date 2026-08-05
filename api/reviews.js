@@ -75,6 +75,7 @@ module.exports = async (req, res) => {
       try {
         await sendDiscord({
           title: "💬 新評價等緊你審核",
+          channel: "reviews",
           color: 0xffb547,
           description: `**${name}** ${"★".repeat(rating)}\n${text.slice(0, 200)}`,
         });

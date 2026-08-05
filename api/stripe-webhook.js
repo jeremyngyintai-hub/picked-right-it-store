@@ -117,6 +117,7 @@ module.exports = async (req, res) => {
         }, 0);
         await sendDiscord({
           title: "💰 新訂單!",
+          channel: "orders",
           color: 0x3ddc84,
           description: dItems,
           fields: [

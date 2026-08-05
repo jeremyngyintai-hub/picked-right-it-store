@@ -264,6 +264,7 @@ module.exports = async (req, res) => {
       }
       await sendDiscord({
         title: "📊 揀啱每日戰報",
+        channel: "stats",
         color: 0x8b5cf6,
         description: statLine || "(KV未設定,冇統計數據)",
         fields: [
