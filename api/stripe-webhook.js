@@ -16,6 +16,7 @@ const Stripe = require("stripe");
 const { getCatalog } = require("./_lib/catalog");
 const { kvReady, kv, pipeline } = require("./_lib/kv");
 const { sendEmail, orderConfirmHTML } = require("./_lib/mail");
+const { sendDiscord } = require("./_lib/discord");
 const cj = require("./_lib/cjClient");
 
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
@@ -102,6 +103,28 @@ module.exports = async (req, res) => {
       } catch (kvErr) {
         console.error("KV訂單記錄失敗(唔影響落單):", kvErr.message);
       }
+
+      // ===== Discord新訂單通知 =====
+      try {
+        const dItems = Object.entries(cart).map(([key, qty]) => {
+          const [pid] = String(key).split("::");
+          const prod = productMap[pid] || {};
+          return `${prod.name || "#" + pid} × ${qty}`;
+        }).join("\n");
+        const dTotal = Object.entries(cart).reduce((s, [key, qty]) => {
+          const [pid] = String(key).split("::");
+          return s + ((productMap[pid] || {}).sellPriceHKD || 0) * qty;
+        }, 0);
+        await sendDiscord({
+          title: "💰 新訂單!",
+          color: 0x3ddc84,
+          description: dItems,
+          fields: [
+            { name: "金額", value: `HK$${dTotal}`, inline: true },
+            { name: "訂單", value: session.id.slice(-10), inline: true },
+          ],
+        });
+      } catch {}
 
       // ===== 落單確認email(未設定RESEND_API_KEY會自動跳過)=====
       try {

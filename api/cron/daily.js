@@ -17,6 +17,7 @@
 
 const { kvReady, kv, pipeline } = require("../_lib/kv");
 const { sendEmail, shippedHTML } = require("../_lib/mail");
+const { sendDiscord } = require("../_lib/discord");
 
 const CJ_BASE = "https://developers.cjdropshipping.com/api2.0/v1";
 const USD_TO_HKD = 7.8;
@@ -248,6 +249,32 @@ module.exports = async (req, res) => {
       await ghPutFile("data/products.json", JSON.stringify(list,null,2), sha,
         `daily: reprice ${report.repriced.length} / delist ${report.delisted.length} / auto-import ${report.autoimport.length}`);
     }
+    // ===== Discord每日統計digest =====
+    try {
+      let statLine = "";
+      if (kvReady()) {
+        const raw = await kv(["LRANGE", "orders", "0", "199"]);
+        const orders = (raw || []).map((s) => { try { return JSON.parse(s); } catch { return null; } }).filter(Boolean);
+        const d1 = Date.now() - 86400e3;
+        const today = orders.filter((o) => o.ts >= d1);
+        const rev = today.reduce((s, o) => s + (o.totalHKD || 0), 0);
+        const ymd = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10).replace(/-/g, "");
+        const pv = parseInt(await kv(["GET", `pv:day:${ymd}`])) || 0;
+        statLine = `24小時營業額 **HK$${rev}** · 訂單 **${today.length}** 張 · 今日瀏覽 **${pv}**`;
+      }
+      await sendDiscord({
+        title: "📊 揀啱每日戰報",
+        color: 0x8b5cf6,
+        description: statLine || "(KV未設定,冇統計數據)",
+        fields: [
+          { name: "🔄 自動調價", value: String(report.repriced.length), inline: true },
+          { name: "🧹 自動落架", value: String(report.delisted.length), inline: true },
+          { name: "📦 出貨通知", value: String(report.notified.length), inline: true },
+          { name: "🤖 AI入貨", value: report.autoimport.length ? report.autoimport.join("\n").slice(0, 900) : "0", inline: false },
+        ],
+      });
+    } catch {}
+
     res.status(200).json({
       message:`調價${report.repriced.length} · 落架${report.delisted.length} · 出貨通知${report.notified.length} · 自動入貨${report.autoimport.length}`,
       report,

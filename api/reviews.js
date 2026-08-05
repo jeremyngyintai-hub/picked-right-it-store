@@ -10,6 +10,7 @@
 // ============================================================
 
 const { kvReady, kv } = require("./_lib/kv");
+const { sendDiscord } = require("./_lib/discord");
 
 const MIN_TO_SHOW = 5;
 
@@ -71,6 +72,13 @@ module.exports = async (req, res) => {
       };
       await kv(["LPUSH", "reviews:pending", JSON.stringify(review)]);
       await kv(["LTRIM", "reviews:pending", "0", "199"]);
+      try {
+        await sendDiscord({
+          title: "💬 新評價等緊你審核",
+          color: 0xffb547,
+          description: `**${name}** ${"★".repeat(rating)}\n${text.slice(0, 200)}`,
+        });
+      } catch {}
       return res.status(200).json({ success: true, message: "多謝你嘅評價!審核後就會刊出。" });
     }
 

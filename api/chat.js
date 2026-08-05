@@ -9,7 +9,7 @@
 
 const CJ_BASE = "https://developers.cjdropshipping.com/api2.0/v1";
 
-const SYSTEM_PROMPT = `你係「揀啱 PICKED RIGHT IT」(picked-right.it.com)嘅網店客服助手。用客人嘅語言回覆(廣東話客人用廣東話,簡體用簡體,英文用英文),語氣親切、簡潔,每次回覆唔好超過120字。
+const SYSTEM_PROMPT = `你係「揀啱 PICKED RIGHT IT」(picked-right.it.com)嘅網店客服助手。用客人嘅語言回覆(廣東話客人用廣東話,簡體用簡體,英文用英文),語氣親切、簡潔,每次回覆唔好超過120字。用純文字回覆,唔好用任何markdown符號(**、#、-、*)。
 
 商店資料:
 - 香港生活選物店,9大類:家居、美妝(主打PDRN韓系護膚)、電子、寵物、母嬰玩具、運動戶外、飾物配件、袋鞋、汽車用品
@@ -73,7 +73,7 @@ async function askGeminiModel(model, systemPrompt, messages) {
       body: JSON.stringify({
         system_instruction: { parts: [{ text: systemPrompt }] },
         contents,
-        generationConfig: { maxOutputTokens: 400, temperature: 0.5 },
+        generationConfig: { maxOutputTokens: 1200, temperature: 0.5 },
       }),
     }
   );
@@ -182,6 +182,7 @@ module.exports = async (req, res) => {
     } else {
       reply = await askClaude(sys, messages);
     }
+    reply = reply.replace(/\*\*/g, "").replace(/^[#*-] /gm, "");
     if (!reply) reply = "唔好意思,暫時答唔到,請WhatsApp我哋:+852 5104 4417";
     res.status(200).json({ reply });
   } catch (err) {
